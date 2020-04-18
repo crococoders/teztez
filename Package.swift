@@ -4,7 +4,8 @@
 import PackageDescription
 
 let package = Package(
-    name: "teztez",
+    name: "BuildTools",
+    platforms: [.macOS(.v10_11)],
     dependencies: [
         .package(
             url: "https://github.com/realm/SwiftLint",
@@ -17,10 +18,7 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "teztez",
+            name: "BuildTools",
             dependencies: []),
-        .testTarget(
-            name: "teztezTests",
-            dependencies: ["teztez"]),
     ]
 )
