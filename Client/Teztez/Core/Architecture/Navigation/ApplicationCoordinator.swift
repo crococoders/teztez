@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 public final class ApplicationCoordinator: ParentCoordinator {
     private let instructor: ApplicationLaunchInstructor

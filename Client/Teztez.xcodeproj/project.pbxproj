@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -40,6 +40,9 @@
 		C4F81960244B891800AE73CE /* ThirdPartiesAppDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8195D244B891800AE73CE /* ThirdPartiesAppDelegateConfigurator.swift */; };
 		C4F81961244B891800AE73CE /* UIAppDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8195E244B891800AE73CE /* UIAppDelegateConfigurator.swift */; };
 		C4F81963244B89ED00AE73CE /* CompositeAppDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F81962244B89ED00AE73CE /* CompositeAppDelegateConfigurator.swift */; };
+		C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4F8196F244B9AFF00AE73CE /* Localizable.strings */; };
+		C4F81971244B9E5700AE73CE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F81970244B9E5700AE73CE /* R.generated.swift */; };
+		C4F81974244BA02C00AE73CE /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = C4F81973244BA02C00AE73CE /* Rswift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +81,8 @@
 		C4F8195D244B891800AE73CE /* ThirdPartiesAppDelegateConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdPartiesAppDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4F8195E244B891800AE73CE /* UIAppDelegateConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAppDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4F81962244B89ED00AE73CE /* CompositeAppDelegateConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeAppDelegateConfigurator.swift; sourceTree = "<group>"; };
+		C4F8196E244B9AFF00AE73CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C4F81970244B9E5700AE73CE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F81974244BA02C00AE73CE /* Rswift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +139,7 @@
 		C4F81905244B720000AE73CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C4F81965244B952F00AE73CE /* Generated */,
 				C4F81906244B721900AE73CE /* Plists */,
 				C4F818ED244B289400AE73CE /* LaunchScreen.storyboard */,
 				C4F818EB244B289400AE73CE /* Assets.xcassets */,
@@ -144,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				C4F818F0244B289400AE73CE /* Info.plist */,
+				C4F8196F244B9AFF00AE73CE /* Localizable.strings */,
 			);
 			path = Plists;
 			sourceTree = "<group>";
@@ -348,6 +356,14 @@
 			path = Configurators;
 			sourceTree = "<group>";
 		};
+		C4F81965244B952F00AE73CE /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				C4F81970244B9E5700AE73CE /* R.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -355,17 +371,22 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4F818F3244B289400AE73CE /* Build configuration list for PBXNativeTarget "Teztez" */;
 			buildPhases = (
-				C4F818DB244B289200AE73CE /* Sources */,
-				C4F818DC244B289200AE73CE /* Frameworks */,
 				C4F818DD244B289200AE73CE /* Resources */,
+				C4F818DC244B289200AE73CE /* Frameworks */,
+				C4F81964244B919A00AE73CE /* R.Swift */,
 				C4F818F7244B451900AE73CE /* Swift Format */,
 				C4F818FB244B4FAF00AE73CE /* SwiftLint */,
+				C4F8196A244B990D00AE73CE /* Update preferred Language in R.Swift */,
+				C4F818DB244B289200AE73CE /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Teztez;
+			packageProductDependencies = (
+				C4F81973244BA02C00AE73CE /* Rswift */,
+			);
 			productName = Teztez;
 			productReference = C4F818DF244B289200AE73CE /* Teztez.app */;
 			productType = "com.apple.product-type.application";
@@ -394,6 +415,9 @@
 				Base,
 			);
 			mainGroup = C4F818D6244B289200AE73CE;
+			packageReferences = (
+				C4F81972244BA02C00AE73CE /* XCRemoteSwiftPackageReference "R.swift" */,
+			);
 			productRefGroup = C4F818E0244B289200AE73CE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -409,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4F818EF244B289400AE73CE /* LaunchScreen.storyboard in Resources */,
+				C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */,
 				C4F818EC244B289400AE73CE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -452,6 +477,44 @@
 			shellPath = /bin/sh;
 			shellScript = "cd ..\nswift run swiftlint\n";
 		};
+		C4F81964244B919A00AE73CE /* R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.Swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/Teztez/Resources/Generated/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ..\nSDKROOT=macosx\nswift run -c release rswift generate \"$SRCROOT/Teztez/Resources/Generated/R.generated.swift\"\n";
+		};
+		C4F8196A244B990D00AE73CE /* Update preferred Language in R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Update preferred Language in R.Swift";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\nsed -i.backup 's/preferredLanguages: \\[String\\]\\? = nil/preferredLanguages: [String]? = Language.preferredLanguages/g' ./Teztez/Resources/Generated/R.generated.swift\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -486,6 +549,7 @@
 				C4F8191C244B763F00AE73CE /* UINavigationController+StatusBar.swift in Sources */,
 				C4F81963244B89ED00AE73CE /* CompositeAppDelegateConfigurator.swift in Sources */,
 				C4F81961244B891800AE73CE /* UIAppDelegateConfigurator.swift in Sources */,
+				C4F81971244B9E5700AE73CE /* R.generated.swift in Sources */,
 				C4F81960244B891800AE73CE /* ThirdPartiesAppDelegateConfigurator.swift in Sources */,
 				C4F81923244B76A500AE73CE /* UITableView+Dequeue.swift in Sources */,
 				C4F81929244B76BA00AE73CE /* UITableViewCell+DisclosureIndicator.swift in Sources */,
@@ -502,6 +566,14 @@
 				C4F818EE244B289400AE73CE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C4F8196F244B9AFF00AE73CE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4F8196E244B9AFF00AE73CE /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -557,7 +629,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -611,7 +683,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -679,6 +751,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C4F81972244BA02C00AE73CE /* XCRemoteSwiftPackageReference "R.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C4F81973244BA02C00AE73CE /* Rswift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4F81972244BA02C00AE73CE /* XCRemoteSwiftPackageReference "R.swift" */;
+			productName = Rswift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C4F818D7244B289200AE73CE /* Project object */;
 }

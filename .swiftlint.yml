@@ -3,8 +3,7 @@ excluded:
   - Client/Pods
   - Server/Pods
   - Specs
-  - Client/Resources/Generated
-  - Fastlane
+  - Client/Teztez/Resources/Generated
   - Templates
   - Tests
 included: 

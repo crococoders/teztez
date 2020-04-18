@@ -15,6 +15,10 @@ let package = Package(
             url: "https://github.com/nicklockwood/SwiftFormat",
             from: "0.44.4"
         ),
+        .package(
+            url: "https://github.com/mac-cain13/R.swift",
+            from: "5.1.0"
+        ),
     ],
     targets: [
         .target(
