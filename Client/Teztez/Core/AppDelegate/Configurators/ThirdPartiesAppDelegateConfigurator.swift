@@ -6,6 +6,7 @@
 //  Copyright © 2020 crococoders. All rights reserved.
 //
 
+import IQKeyboardManagerSwift
 import UIKit
 
 final class ThirdPartiesAppDelegateConfigurator: AppDelegateConfigurator {
@@ -15,12 +16,12 @@ final class ThirdPartiesAppDelegateConfigurator: AppDelegateConfigurator {
     }
 
     private func setupKeyboardManager() {
-//        IQKeyboardManager.shared.enable = true
-//        IQKeyboardManager.shared.previousNextDisplayMode = .alwaysHide
-//        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
-//        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
-//        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = R.string.localizable.buttonDone()
-//        IQKeyboardManager.shared.toolbarTintColor = .brPrimary
-//        IQKeyboardManager.shared.toolbarBarTintColor = .bgSecondary
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.previousNextDisplayMode = .alwaysHide
+        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.toolbarDoneBarButtonItemText = R.string.localizable.buttonDone()
+        IQKeyboardManager.shared.toolbarTintColor = .accentBlue
+        IQKeyboardManager.shared.toolbarBarTintColor = .systemGray
     }
 }

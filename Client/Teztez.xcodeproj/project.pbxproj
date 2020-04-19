@@ -43,6 +43,17 @@
 		C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4F8196F244B9AFF00AE73CE /* Localizable.strings */; };
 		C4F81971244B9E5700AE73CE /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F81970244B9E5700AE73CE /* R.generated.swift */; };
 		C4F81974244BA02C00AE73CE /* Rswift in Frameworks */ = {isa = PBXBuildFile; productRef = C4F81973244BA02C00AE73CE /* Rswift */; };
+		C4F81977244C4F3200AE73CE /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C4F81976244C4F3200AE73CE /* IQKeyboardManagerSwift */; };
+		C4F8197A244C4FCD00AE73CE /* ViewAnimator in Frameworks */ = {isa = PBXBuildFile; productRef = C4F81979244C4FCD00AE73CE /* ViewAnimator */; };
+		C4F8197D244C508F00AE73CE /* Hero in Frameworks */ = {isa = PBXBuildFile; productRef = C4F8197C244C508F00AE73CE /* Hero */; };
+		C4F81982244C557100AE73CE /* SFProText-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4F81981244C557100AE73CE /* SFProText-Regular.otf */; };
+		C4F81984244C559000AE73CE /* SFProText-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4F81983244C559000AE73CE /* SFProText-Semibold.otf */; };
+		C4F81986244C55D300AE73CE /* SFProDisplay-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4F81985244C55D300AE73CE /* SFProDisplay-Bold.otf */; };
+		C4F81988244C55DF00AE73CE /* SFProDisplay-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4F81987244C55DF00AE73CE /* SFProDisplay-Medium.otf */; };
+		C4F8198A244C55FB00AE73CE /* SFProRounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4F81989244C55FB00AE73CE /* SFProRounded-Bold.otf */; };
+		C4F8198C244C560C00AE73CE /* SFProRounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4F8198B244C560C00AE73CE /* SFProRounded-Semibold.otf */; };
+		C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4F8198D244C562400AE73CE /* SFProRounded-Regular.otf */; };
+		C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8198F244C582B00AE73CE /* FontStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +94,14 @@
 		C4F81962244B89ED00AE73CE /* CompositeAppDelegateConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeAppDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4F8196E244B9AFF00AE73CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4F81970244B9E5700AE73CE /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		C4F81981244C557100AE73CE /* SFProText-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Regular.otf"; sourceTree = "<group>"; };
+		C4F81983244C559000AE73CE /* SFProText-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Semibold.otf"; sourceTree = "<group>"; };
+		C4F81985244C55D300AE73CE /* SFProDisplay-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.otf"; sourceTree = "<group>"; };
+		C4F81987244C55DF00AE73CE /* SFProDisplay-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.otf"; sourceTree = "<group>"; };
+		C4F81989244C55FB00AE73CE /* SFProRounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProRounded-Bold.otf"; sourceTree = "<group>"; };
+		C4F8198B244C560C00AE73CE /* SFProRounded-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProRounded-Semibold.otf"; sourceTree = "<group>"; };
+		C4F8198D244C562400AE73CE /* SFProRounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProRounded-Regular.otf"; sourceTree = "<group>"; };
+		C4F8198F244C582B00AE73CE /* FontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +110,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4F81974244BA02C00AE73CE /* Rswift in Frameworks */,
+				C4F81977244C4F3200AE73CE /* IQKeyboardManagerSwift in Frameworks */,
+				C4F8197D244C508F00AE73CE /* Hero in Frameworks */,
+				C4F8197A244C4FCD00AE73CE /* ViewAnimator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,10 +161,11 @@
 		C4F81905244B720000AE73CE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C4F8197F244C54A100AE73CE /* Fonts */,
 				C4F81965244B952F00AE73CE /* Generated */,
+				C4F8197E244C515200AE73CE /* Localization */,
 				C4F81906244B721900AE73CE /* Plists */,
-				C4F818ED244B289400AE73CE /* LaunchScreen.storyboard */,
-				C4F818EB244B289400AE73CE /* Assets.xcassets */,
+				C4F81980244C54B700AE73CE /* Suporting Files */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -151,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				C4F818F0244B289400AE73CE /* Info.plist */,
-				C4F8196F244B9AFF00AE73CE /* Localizable.strings */,
 			);
 			path = Plists;
 			sourceTree = "<group>";
@@ -342,6 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				C4F81957244B86EC00AE73CE /* ColorStyles.swift */,
+				C4F8198F244C582B00AE73CE /* FontStyles.swift */,
 			);
 			path = "Design System";
 			sourceTree = "<group>";
@@ -362,6 +385,37 @@
 				C4F81970244B9E5700AE73CE /* R.generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		C4F8197E244C515200AE73CE /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C4F8196F244B9AFF00AE73CE /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		C4F8197F244C54A100AE73CE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C4F81985244C55D300AE73CE /* SFProDisplay-Bold.otf */,
+				C4F81987244C55DF00AE73CE /* SFProDisplay-Medium.otf */,
+				C4F81989244C55FB00AE73CE /* SFProRounded-Bold.otf */,
+				C4F8198D244C562400AE73CE /* SFProRounded-Regular.otf */,
+				C4F8198B244C560C00AE73CE /* SFProRounded-Semibold.otf */,
+				C4F81981244C557100AE73CE /* SFProText-Regular.otf */,
+				C4F81983244C559000AE73CE /* SFProText-Semibold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C4F81980244C54B700AE73CE /* Suporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C4F818EB244B289400AE73CE /* Assets.xcassets */,
+				C4F818ED244B289400AE73CE /* LaunchScreen.storyboard */,
+			);
+			path = "Suporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +440,9 @@
 			name = Teztez;
 			packageProductDependencies = (
 				C4F81973244BA02C00AE73CE /* Rswift */,
+				C4F81976244C4F3200AE73CE /* IQKeyboardManagerSwift */,
+				C4F81979244C4FCD00AE73CE /* ViewAnimator */,
+				C4F8197C244C508F00AE73CE /* Hero */,
 			);
 			productName = Teztez;
 			productReference = C4F818DF244B289200AE73CE /* Teztez.app */;
@@ -417,6 +474,9 @@
 			mainGroup = C4F818D6244B289200AE73CE;
 			packageReferences = (
 				C4F81972244BA02C00AE73CE /* XCRemoteSwiftPackageReference "R.swift" */,
+				C4F81975244C4F3200AE73CE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				C4F81978244C4FCD00AE73CE /* XCRemoteSwiftPackageReference "ViewAnimator" */,
+				C4F8197B244C508F00AE73CE /* XCRemoteSwiftPackageReference "Hero" */,
 			);
 			productRefGroup = C4F818E0244B289200AE73CE /* Products */;
 			projectDirPath = "";
@@ -433,8 +493,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4F818EF244B289400AE73CE /* LaunchScreen.storyboard in Resources */,
+				C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */,
+				C4F8198A244C55FB00AE73CE /* SFProRounded-Bold.otf in Resources */,
 				C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */,
+				C4F81986244C55D300AE73CE /* SFProDisplay-Bold.otf in Resources */,
+				C4F81984244C559000AE73CE /* SFProText-Semibold.otf in Resources */,
+				C4F81982244C557100AE73CE /* SFProText-Regular.otf in Resources */,
 				C4F818EC244B289400AE73CE /* Assets.xcassets in Resources */,
+				C4F8198C244C560C00AE73CE /* SFProRounded-Semibold.otf in Resources */,
+				C4F81988244C55DF00AE73CE /* SFProDisplay-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +615,7 @@
 				C4F818E3244B289200AE73CE /* AppDelegate.swift in Sources */,
 				C4F8191C244B763F00AE73CE /* UINavigationController+StatusBar.swift in Sources */,
 				C4F81963244B89ED00AE73CE /* CompositeAppDelegateConfigurator.swift in Sources */,
+				C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */,
 				C4F81961244B891800AE73CE /* UIAppDelegateConfigurator.swift in Sources */,
 				C4F81971244B9E5700AE73CE /* R.generated.swift in Sources */,
 				C4F81960244B891800AE73CE /* ThirdPartiesAppDelegateConfigurator.swift in Sources */,
@@ -757,8 +825,32 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.0;
+				kind = exactVersion;
+				version = 5.1.0;
+			};
+		};
+		C4F81975244C4F3200AE73CE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.5;
+			};
+		};
+		C4F81978244C4FCD00AE73CE /* XCRemoteSwiftPackageReference "ViewAnimator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marcosgriselli/ViewAnimator";
+			requirement = {
+				kind = exactVersion;
+				version = 2.7.0;
+			};
+		};
+		C4F8197B244C508F00AE73CE /* XCRemoteSwiftPackageReference "Hero" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HeroTransitions/Hero.git";
+			requirement = {
+				kind = exactVersion;
+				version = 1.5.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -768,6 +860,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C4F81972244BA02C00AE73CE /* XCRemoteSwiftPackageReference "R.swift" */;
 			productName = Rswift;
+		};
+		C4F81976244C4F3200AE73CE /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4F81975244C4F3200AE73CE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		C4F81979244C4FCD00AE73CE /* ViewAnimator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4F81978244C4FCD00AE73CE /* XCRemoteSwiftPackageReference "ViewAnimator" */;
+			productName = ViewAnimator;
+		};
+		C4F8197C244C508F00AE73CE /* Hero */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4F8197B244C508F00AE73CE /* XCRemoteSwiftPackageReference "Hero" */;
+			productName = Hero;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
