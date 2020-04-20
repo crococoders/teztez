@@ -1,0 +1,19 @@
+# file options
+
+--exclude Fastlane,Pods,Specs,Teztez/Resources/Generated,Templates
+
+# format options
+--self remove # redundantSelf
+--importgrouping testable-bottom # sortedImports
+--commas inline # trailingCommas
+--trimwhitespace always # trailingSpace
+--stripunusedargs closure-only # unusedArguments
+--swiftversion 5
+--wraparguments after-first
+--wrapparameters after-first
+--wrapcollections after-first
+
+# rules
+
+--enable isEmpty
+--disable anyObjectProtocol
