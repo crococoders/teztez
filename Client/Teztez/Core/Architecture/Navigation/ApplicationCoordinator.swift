@@ -14,8 +14,7 @@ public final class ApplicationCoordinator: ParentCoordinator {
 
     init(instructor: ApplicationLaunchInstructor,
          router: Router,
-         coordinatorFactory: CoordinatorFactory,
-         notificationCenter: NotificationCenter = .default) {
+         coordinatorFactory: CoordinatorFactory) {
         self.instructor = instructor
         self.coordinatorFactory = coordinatorFactory
         super.init(router: router)

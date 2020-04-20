@@ -1,18 +1,18 @@
 //
-//  ThirdPartiesAppDelegateConfigurator.swift
+//  ThirdPartiesSceneDelegateConfigurator.swift
 //  Teztez
 //
-//  Created by Almas Zainoldin on 4/18/20.
+//  Created by Almas Zainoldin on 4/20/20.
 //  Copyright © 2020 crococoders. All rights reserved.
 //
 
 import IQKeyboardManagerSwift
 import UIKit
 
-final class ThirdPartiesAppDelegateConfigurator: AppDelegateConfigurator {
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+@available(iOS 13.0, *)
+class ThirdPartiesSceneDelegateConfigurator: SceneDelegateConfigurator {
+    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         setupKeyboardManager()
-        return true
     }
 
     private func setupKeyboardManager() {

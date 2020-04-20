@@ -5,15 +5,15 @@ import PackageDescription
 
 let package = Package(
     name: "BuildTools",
-    platforms: [.macOS(.v10_11)],
+   platforms: [.macOS(.v10_11)],
     dependencies: [
         .package(
             url: "https://github.com/realm/SwiftLint",
-            from: "0.39.1"
+            from: "0.39.2"
         ),
         .package(
             url: "https://github.com/nicklockwood/SwiftFormat",
-            from: "0.44.4"
+            from: "0.44.7"
         ),
         .package(
             url: "https://github.com/mac-cain13/R.swift",
@@ -24,5 +24,6 @@ let package = Package(
         .target(
             name: "BuildTools",
             dependencies: []),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )

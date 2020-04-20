@@ -1,6 +1,6 @@
 # file options
 
---exclude Fastlane,Pods,Specs,Altel/Resources/Generated,Templates
+--exclude Fastlane,Pods,Specs,Teztez/Resources/Generated,Templates
 
 # format options
 --self remove # redundantSelf

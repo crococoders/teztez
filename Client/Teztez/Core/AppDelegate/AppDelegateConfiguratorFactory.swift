@@ -9,8 +9,6 @@
 enum AppDelegateConfiguratorFactory {
     @discardableResult
     static func makeDefault() -> AppDelegateConfigurator {
-        return CompositeAppDelegateConfigurator(configurators: [StartupAppDelegateConfigurator(),
-                                                                ThirdPartiesAppDelegateConfigurator(),
-                                                                UIAppDelegateConfigurator()])
+        return CompositeAppDelegateConfigurator(configurators: [StartupAppDelegateConfigurator()])
     }
 }
