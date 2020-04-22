@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4197B7D2450A24E00811F37 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B7C2450A24E00811F37 /* TabBarCoordinator.swift */; };
+		C4197B802450A28600811F37 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B7F2450A28600811F37 /* TabBarController.swift */; };
+		C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4197B822450A2D300811F37 /* MainTabBar.strings */; };
 		C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */; };
 		C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */; };
 		C4BD0F2A244DEF3D0056E8C1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD0F29244DEF3D0056E8C1 /* R.generated.swift */; };
@@ -61,6 +64,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C4197B7C2450A24E00811F37 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		C4197B7F2450A28600811F37 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		C4197B822450A2D300811F37 /* MainTabBar.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = MainTabBar.strings; sourceTree = "<group>"; };
 		C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4BD0F29244DEF3D0056E8C1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -127,6 +133,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4197B7A2450A08700811F37 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B7E2450A27500811F37 /* Controller */,
+				C4197B7B2450A22E00811F37 /* Coordinator */,
+				C4197B812450A2C400811F37 /* Localization */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		C4197B7B2450A22E00811F37 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B7C2450A24E00811F37 /* TabBarCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C4197B7E2450A27500811F37 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B7F2450A28600811F37 /* TabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C4197B812450A2C400811F37 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B822450A2D300811F37 /* MainTabBar.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		C4197B842450A54300811F37 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
 		C4A98277244DFF8C005E98BC /* Configurators */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +269,8 @@
 		C4F81909244B724F00AE73CE /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				C4197B842450A54300811F37 /* Activities */,
+				C4197B7A2450A08700811F37 /* MainTabBar */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -522,6 +571,7 @@
 			files = (
 				C4F818EF244B289400AE73CE /* LaunchScreen.storyboard in Resources */,
 				C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */,
+				C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */,
 				C4F8198A244C55FB00AE73CE /* SFProRounded-Bold.otf in Resources */,
 				C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */,
 				C4F81986244C55D300AE73CE /* SFProDisplay-Bold.otf in Resources */,
@@ -627,6 +677,7 @@
 				C4F81924244B76A500AE73CE /* UITableView+Register.swift in Sources */,
 				C4BD0F2C244DF0020056E8C1 /* SceneDelegate.swift in Sources */,
 				C4F81952244B832A00AE73CE /* TransitionType.swift in Sources */,
+				C4197B7D2450A24E00811F37 /* TabBarCoordinator.swift in Sources */,
 				C4F81916244B760100AE73CE /* String+Replacing.swift in Sources */,
 				C4F81941244B824200AE73CE /* CoordinatorNavigationController.swift in Sources */,
 				C4F8194E244B830D00AE73CE /* Presentable.swift in Sources */,
@@ -643,6 +694,7 @@
 				C4BD0F2A244DEF3D0056E8C1 /* R.generated.swift in Sources */,
 				C4BD0F33244DF1280056E8C1 /* StartupSceneDelegateConfigurator.swift in Sources */,
 				C4D138DD244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift in Sources */,
+				C4197B802450A28600811F37 /* TabBarController.swift in Sources */,
 				C4F8194A244B82F000AE73CE /* ModuleFactory.swift in Sources */,
 				C4F81928244B76BA00AE73CE /* UITableViewCell+SelectedBackgroundView.swift in Sources */,
 				C4F8192F244B76DC00AE73CE /* UIView+CornerRadius.swift in Sources */,
