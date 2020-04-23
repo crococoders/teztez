@@ -33,7 +33,7 @@ enum Device: Equatable, CustomStringConvertible {
     case iPhone11Pro
     case iPhone11ProMax
 
-    public var description: String {
+    var description: String {
         switch self {
         case .iPhone5: return "iPhone 5"
         case .iPhone5c: return "iPhone 5c"
@@ -59,7 +59,7 @@ enum Device: Equatable, CustomStringConvertible {
         }
     }
 
-    public static func == (lhs: Device, rhs: Device) -> Bool {
+    static func == (lhs: Device, rhs: Device) -> Bool {
         return lhs.description == rhs.description
     }
 
@@ -91,11 +91,11 @@ enum Device: Equatable, CustomStringConvertible {
 }
 
 extension Device {
-    public static var current: Device {
+    static var current: Device {
         return Device.mapToDevice(identifier: Device.identifier)
     }
 
-    public var isSmall: Bool {
+    var isSmall: Bool {
         switch self {
         case let .simulator(device):
             return device.isOneOf(allSmallPhones)

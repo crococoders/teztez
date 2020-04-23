@@ -8,9 +8,9 @@
 
 import UIKit
 
-public typealias Callback = () -> Void
+typealias Callback = () -> Void
 
-public final class Router: Presentable {
+final class Router: Presentable {
     private weak var rootController: CoordinatorNavigationController?
     private var completions: [UIViewController: Callback] = [:]
 
@@ -18,11 +18,11 @@ public final class Router: Presentable {
         self.rootController = rootController
     }
 
-    public func toPresent() -> UIViewController? {
+    func toPresent() -> UIViewController? {
         return rootController
     }
 
-    public func show(_ module: Presentable?, with transitionType: TransitionType) {
+    func show(_ module: Presentable?, with transitionType: TransitionType) {
         guard let controller = module?.toPresent() else { return }
         switch transitionType {
         case .push:
@@ -37,23 +37,23 @@ public final class Router: Presentable {
         }
     }
 
-    public func dismissModule(animated: Bool = true, completion: Callback? = nil) {
+    func dismissModule(animated: Bool = true, completion: Callback? = nil) {
         rootController?.dismiss(animated: animated, completion: completion)
     }
 
-    public func popModule(animated: Bool = true) {
+    func popModule(animated: Bool = true) {
         if let controller = rootController?.popViewController(animated: animated) {
             runCompletion(for: controller)
         }
     }
 
-    public func setRootModule(_ module: Presentable?, hideBar: Bool = false) {
+    func setRootModule(_ module: Presentable?, hideBar: Bool = false) {
         guard let controller = module?.toPresent() else { return }
         rootController?.setViewControllers([controller], animated: false)
         rootController?.isNavigationBarHidden = hideBar
     }
 
-    public func popToRootModule(animated: Bool) {
+    func popToRootModule(animated: Bool) {
         if let controllers = rootController?.popToRootViewController(animated: animated) {
             controllers.forEach { controller in
                 runCompletion(for: controller)

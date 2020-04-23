@@ -6,7 +6,7 @@
 //  Copyright © 2020 Azimut Labs. All rights reserved.
 //
 
-public enum TransitionType {
+enum TransitionType {
     case push
     case presentInSheet(dismissable: Bool)
     case presentInFullScreen(animated: Bool)

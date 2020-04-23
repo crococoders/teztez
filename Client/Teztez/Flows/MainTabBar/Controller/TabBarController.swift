@@ -25,6 +25,7 @@ final class TabBarController: UITabBarController, TabBarPresentable {
         let navigationController = CoordinatorNavigationController()
         navigationController.title = R.string.mainTabBar.activitiesTitle()
         navigationController.tabBarItem.image = R.image.activities()
+        navigationController.navigationBar.prefersLargeTitles = true
         return navigationController
     }()
 

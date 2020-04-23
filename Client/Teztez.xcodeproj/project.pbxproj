@@ -10,6 +10,12 @@
 		C4197B7D2450A24E00811F37 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B7C2450A24E00811F37 /* TabBarCoordinator.swift */; };
 		C4197B802450A28600811F37 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B7F2450A28600811F37 /* TabBarController.swift */; };
 		C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4197B822450A2D300811F37 /* MainTabBar.strings */; };
+		C4197B892450A9EC00811F37 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B882450A9EC00811F37 /* ActivitiesViewController.swift */; };
+		C4197B8C2450ABA400811F37 /* ActivitiesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B8B2450ABA400811F37 /* ActivitiesCoordinator.swift */; };
+		C4197B8E2450ABF000811F37 /* ActivitiesModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B8D2450ABF000811F37 /* ActivitiesModuleFactory.swift */; };
+		C4197B902450AC5700811F37 /* ActivitiesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B8F2450AC5700811F37 /* ActivitiesStore.swift */; };
+		C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4197B912450B16700811F37 /* ActivitiesViewController.xib */; };
+		C4197B942450B1F900811F37 /* Activities.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4197B932450B1EE00811F37 /* Activities.strings */; };
 		C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */; };
 		C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */; };
 		C4BD0F2A244DEF3D0056E8C1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD0F29244DEF3D0056E8C1 /* R.generated.swift */; };
@@ -67,6 +73,12 @@
 		C4197B7C2450A24E00811F37 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		C4197B7F2450A28600811F37 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C4197B822450A2D300811F37 /* MainTabBar.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = MainTabBar.strings; sourceTree = "<group>"; };
+		C4197B882450A9EC00811F37 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		C4197B8B2450ABA400811F37 /* ActivitiesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCoordinator.swift; sourceTree = "<group>"; };
+		C4197B8D2450ABF000811F37 /* ActivitiesModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesModuleFactory.swift; sourceTree = "<group>"; };
+		C4197B8F2450AC5700811F37 /* ActivitiesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesStore.swift; sourceTree = "<group>"; };
+		C4197B912450B16700811F37 /* ActivitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesViewController.xib; sourceTree = "<group>"; };
+		C4197B932450B1EE00811F37 /* Activities.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Activities.strings; sourceTree = "<group>"; };
 		C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4BD0F29244DEF3D0056E8C1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -170,8 +182,46 @@
 		C4197B842450A54300811F37 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
+				C4197B8A2450AB4000811F37 /* Coordinator */,
+				C4197B852450A8E400811F37 /* Controller */,
+				C4197B872450A98300811F37 /* Localization */,
+				C4197B862450A97700811F37 /* Store */,
 			);
 			path = Activities;
+			sourceTree = "<group>";
+		};
+		C4197B852450A8E400811F37 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B882450A9EC00811F37 /* ActivitiesViewController.swift */,
+				C4197B912450B16700811F37 /* ActivitiesViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C4197B862450A97700811F37 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B8F2450AC5700811F37 /* ActivitiesStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		C4197B872450A98300811F37 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B932450B1EE00811F37 /* Activities.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		C4197B8A2450AB4000811F37 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B8B2450ABA400811F37 /* ActivitiesCoordinator.swift */,
+				C4197B8D2450ABF000811F37 /* ActivitiesModuleFactory.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		C4A98277244DFF8C005E98BC /* Configurators */ = {
@@ -569,11 +619,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4197B942450B1F900811F37 /* Activities.strings in Resources */,
 				C4F818EF244B289400AE73CE /* LaunchScreen.storyboard in Resources */,
 				C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */,
 				C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */,
 				C4F8198A244C55FB00AE73CE /* SFProRounded-Bold.otf in Resources */,
 				C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */,
+				C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */,
 				C4F81986244C55D300AE73CE /* SFProDisplay-Bold.otf in Resources */,
 				C4F81984244C559000AE73CE /* SFProText-Semibold.otf in Resources */,
 				C4F81982244C557100AE73CE /* SFProText-Regular.otf in Resources */,
@@ -670,6 +722,8 @@
 				C4F8195A244B890B00AE73CE /* AppDelegateConfiguratorFactory.swift in Sources */,
 				C4F81919244B761700AE73CE /* UIColor+Hex.swift in Sources */,
 				C4F81958244B86EC00AE73CE /* ColorStyles.swift in Sources */,
+				C4197B902450AC5700811F37 /* ActivitiesStore.swift in Sources */,
+				C4197B8C2450ABA400811F37 /* ActivitiesCoordinator.swift in Sources */,
 				C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */,
 				C4F81945244B82BB00AE73CE /* ParentCoordinator.swift in Sources */,
 				C4F81953244B832A00AE73CE /* Router.swift in Sources */,
@@ -697,6 +751,7 @@
 				C4197B802450A28600811F37 /* TabBarController.swift in Sources */,
 				C4F8194A244B82F000AE73CE /* ModuleFactory.swift in Sources */,
 				C4F81928244B76BA00AE73CE /* UITableViewCell+SelectedBackgroundView.swift in Sources */,
+				C4197B8E2450ABF000811F37 /* ActivitiesModuleFactory.swift in Sources */,
 				C4F8192F244B76DC00AE73CE /* UIView+CornerRadius.swift in Sources */,
 				C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */,
 				C4F818E3244B289200AE73CE /* AppDelegate.swift in Sources */,
@@ -704,6 +759,7 @@
 				C4F81963244B89ED00AE73CE /* CompositeAppDelegateConfigurator.swift in Sources */,
 				C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */,
 				C4F81923244B76A500AE73CE /* UITableView+Dequeue.swift in Sources */,
+				C4197B892450A9EC00811F37 /* ActivitiesViewController.swift in Sources */,
 				C4F81929244B76BA00AE73CE /* UITableViewCell+DisclosureIndicator.swift in Sources */,
 				C4F8191F244B768C00AE73CE /* UIStackView+Convenience.swift in Sources */,
 			);

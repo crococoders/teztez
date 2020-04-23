@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIColor {
+extension UIColor {
     static let systemGray = UIColor(hex: "#1C1C1E")
     static let systemGray2 = UIColor(hex: "#2C2C2E")
     static let systemGray3 = UIColor(hex: "#48484A")

@@ -20,19 +20,18 @@ final class TabBarCoordinator: ParentCoordinator {
 
     override func start() {
         router.setRootModule(tabBarPresentable, hideBar: true)
-
         tabBarPresentable.onViewDidLoad = runActivitiesFlow()
         tabBarPresentable.onActivitiesTabDidSelect = runActivitiesFlow()
     }
 
     private func runActivitiesFlow() -> ((CoordinatorNavigationController) -> Void) {
-        return { [weak self] _ in
-//            guard
-//                let self = self,
-//                navigationController.viewControllers.isEmpty else { return }
-//            let homeCooridnator = self.coordinatorFactory.makeHomeCoordiantor(navigationController: navigationController)
-//            self.addDependency(homeCooridnator)
-//            homeCooridnator.start()
+        return { [weak self] navigationController in
+            guard
+                let self = self,
+                navigationController.viewControllers.isEmpty else { return }
+            let activitiesCooridnator = self.coordinatorFactory.makeActivitiesCoordiantor(navigationController: navigationController)
+            self.addDependency(activitiesCooridnator)
+            activitiesCooridnator.start()
         }
     }
 }

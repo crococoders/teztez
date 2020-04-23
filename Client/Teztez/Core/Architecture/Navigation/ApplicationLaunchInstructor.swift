@@ -13,7 +13,7 @@ enum ApplicationLaunchInstruction {
 }
 
 final class ApplicationLaunchInstructor {
-    public var flow: ApplicationLaunchInstruction {
+    var flow: ApplicationLaunchInstruction {
         return .main
     }
 }
