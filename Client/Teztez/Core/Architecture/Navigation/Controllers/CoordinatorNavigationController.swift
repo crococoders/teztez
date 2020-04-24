@@ -53,7 +53,7 @@ final class CoordinatorNavigationController: UINavigationController {
 
     private func setupBackButton(viewController: UIViewController) {
         viewController.navigationItem.hidesBackButton = true
-        viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back-icon"),
+        viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: R.image.backIcon(),
                                                                           style: .done,
                                                                           target: self,
                                                                           action: #selector(backButtonDidTap))

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40AE0BA24535E27008BC71C /* ActivitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C40AE0B924535E27008BC71C /* ActivitiesCell.xib */; };
+		C40AE0BC24535E4B008BC71C /* ActivitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */; };
+		C40AE0BF245363D3008BC71C /* UICollectionView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0BE245363D3008BC71C /* UICollectionView+Dequeue.swift */; };
+		C40AE0C124536409008BC71C /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C024536409008BC71C /* UICollectionView+Register.swift */; };
+		C40AE0C424537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C324537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift */; };
+		C40AE0C624537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C524537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift */; };
 		C4197B7D2450A24E00811F37 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B7C2450A24E00811F37 /* TabBarCoordinator.swift */; };
 		C4197B802450A28600811F37 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B7F2450A28600811F37 /* TabBarController.swift */; };
 		C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4197B822450A2D300811F37 /* MainTabBar.strings */; };
@@ -70,6 +76,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C40AE0B924535E27008BC71C /* ActivitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesCell.xib; sourceTree = "<group>"; };
+		C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCell.swift; sourceTree = "<group>"; };
+		C40AE0BE245363D3008BC71C /* UICollectionView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue.swift"; sourceTree = "<group>"; };
+		C40AE0C024536409008BC71C /* UICollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
+		C40AE0C324537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		C40AE0C524537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		C4197B7C2450A24E00811F37 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		C4197B7F2450A28600811F37 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C4197B822450A2D300811F37 /* MainTabBar.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = MainTabBar.strings; sourceTree = "<group>"; };
@@ -145,6 +157,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C40AE0B824535B31008BC71C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C40AE0B924535E27008BC71C /* ActivitiesCell.xib */,
+				C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C40AE0BD245363B7008BC71C /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C40AE0BE245363D3008BC71C /* UICollectionView+Dequeue.swift */,
+				C40AE0C024536409008BC71C /* UICollectionView+Register.swift */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
 		C4197B7A2450A08700811F37 /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,10 +212,11 @@
 		C4197B842450A54300811F37 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
-				C4197B8A2450AB4000811F37 /* Coordinator */,
 				C4197B852450A8E400811F37 /* Controller */,
+				C4197B8A2450AB4000811F37 /* Coordinator */,
 				C4197B872450A98300811F37 /* Localization */,
 				C4197B862450A97700811F37 /* Store */,
+				C40AE0B824535B31008BC71C /* View */,
 			);
 			path = Activities;
 			sourceTree = "<group>";
@@ -193,6 +224,8 @@
 		C4197B852450A8E400811F37 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C40AE0C324537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift */,
+				C40AE0C524537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift */,
 				C4197B882450A9EC00811F37 /* ActivitiesViewController.swift */,
 				C4197B912450B16700811F37 /* ActivitiesViewController.xib */,
 			);
@@ -338,6 +371,7 @@
 			children = (
 				C4F81910244B75DE00AE73CE /* Device */,
 				C4F81913244B75F500AE73CE /* String */,
+				C40AE0BD245363B7008BC71C /* UICollectionView */,
 				C4F81917244B761700AE73CE /* UIColor */,
 				C4F8191A244B763F00AE73CE /* UINavigationController */,
 				C4F8191D244B768C00AE73CE /* UIStackView */,
@@ -631,6 +665,7 @@
 				C4F81982244C557100AE73CE /* SFProText-Regular.otf in Resources */,
 				C4F818EC244B289400AE73CE /* Assets.xcassets in Resources */,
 				C4F8198C244C560C00AE73CE /* SFProRounded-Semibold.otf in Resources */,
+				C40AE0BA24535E27008BC71C /* ActivitiesCell.xib in Resources */,
 				C4F81988244C55DF00AE73CE /* SFProDisplay-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -727,10 +762,13 @@
 				C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */,
 				C4F81945244B82BB00AE73CE /* ParentCoordinator.swift in Sources */,
 				C4F81953244B832A00AE73CE /* Router.swift in Sources */,
+				C40AE0C624537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift in Sources */,
 				C4F8192C244B76CE00AE73CE /* UITextField+Indent.swift in Sources */,
 				C4F81924244B76A500AE73CE /* UITableView+Register.swift in Sources */,
 				C4BD0F2C244DF0020056E8C1 /* SceneDelegate.swift in Sources */,
+				C40AE0C424537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift in Sources */,
 				C4F81952244B832A00AE73CE /* TransitionType.swift in Sources */,
+				C40AE0BC24535E4B008BC71C /* ActivitiesCell.swift in Sources */,
 				C4197B7D2450A24E00811F37 /* TabBarCoordinator.swift in Sources */,
 				C4F81916244B760100AE73CE /* String+Replacing.swift in Sources */,
 				C4F81941244B824200AE73CE /* CoordinatorNavigationController.swift in Sources */,
@@ -748,10 +786,12 @@
 				C4BD0F2A244DEF3D0056E8C1 /* R.generated.swift in Sources */,
 				C4BD0F33244DF1280056E8C1 /* StartupSceneDelegateConfigurator.swift in Sources */,
 				C4D138DD244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift in Sources */,
+				C40AE0BF245363D3008BC71C /* UICollectionView+Dequeue.swift in Sources */,
 				C4197B802450A28600811F37 /* TabBarController.swift in Sources */,
 				C4F8194A244B82F000AE73CE /* ModuleFactory.swift in Sources */,
 				C4F81928244B76BA00AE73CE /* UITableViewCell+SelectedBackgroundView.swift in Sources */,
 				C4197B8E2450ABF000811F37 /* ActivitiesModuleFactory.swift in Sources */,
+				C40AE0C124536409008BC71C /* UICollectionView+Register.swift in Sources */,
 				C4F8192F244B76DC00AE73CE /* UIView+CornerRadius.swift in Sources */,
 				C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */,
 				C4F818E3244B289200AE73CE /* AppDelegate.swift in Sources */,

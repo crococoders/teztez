@@ -16,9 +16,15 @@ final class ActivitiesViewController: UIViewController, ActivitiesPresentable {
     var onItemDidSelect: ((Int) -> Void)?
 
     private let store: ActivitiesStore
+    private let collectionViewDelegate: ActivitiesCollectionViewDelegate
+    private let collectionViewDataSource: ActivitiesCollectionViewDataSource
 
+    @IBOutlet var collectionView: UICollectionView!
     init(store: ActivitiesStore) {
         self.store = store
+        collectionViewDataSource = ActivitiesCollectionViewDataSource()
+        collectionViewDelegate = ActivitiesCollectionViewDelegate()
+
         super.init(nibName: String(describing: Self.self), bundle: nil)
     }
 
@@ -28,14 +34,22 @@ final class ActivitiesViewController: UIViewController, ActivitiesPresentable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = R.string.activities.navigationTitle()
+        setupUI()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.navigationBar.barStyle = .default
+        setupNavigationBar()
+    }
+
+    private func setupNavigationBar() {
+        title = R.string.activities.navigationTitle()
         navigationController?.navigationBar.barTintColor = .black
     }
 
-    private func setupNavigationBar() {}
+    private func setupUI() {
+        collectionView.dataSource = collectionViewDataSource
+        collectionView.delegate = collectionViewDelegate
+        collectionView.register(cellClass: ActivitiesCell.self)
+    }
 }
