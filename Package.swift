@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "BuildTools",
-   platforms: [.macOS(.v10_11)],
+    platforms: [.macOS(.v10_11)],
     dependencies: [
         .package(
             url: "https://github.com/realm/SwiftLint",
@@ -23,7 +23,8 @@ let package = Package(
     targets: [
         .target(
             name: "BuildTools",
-            dependencies: []),
+            dependencies: [],
+            path: "Shared/Tools"),
     ],
     swiftLanguageVersions: [.v5]
 )
