@@ -7,17 +7,32 @@
 
 import Vapor
 
+extension HTTPMethod {
+    public static var redirectableMethods: [HTTPMethod] {
+        return [GET, PUT, POST, DELETE]
+    }
+}
+
+extension RoutesBuilder {
+    func use<Response: ResponseEncodable>(handler: @escaping (Request) throws -> Response) {
+        HTTPMethod.redirectableMethods.forEach {
+            on($0, "*", use: handler)
+        }
+    }
+}
+
 final class GatewayController: RouteCollection {
     func boot(routes: RoutesBuilder) throws {
-        routes.get("test", "get", use: handle)
-        routes.post("test", "post", use: handle)
+        routes.grouped("test").use(handler: handle)
     }
     
-    func handle(_ req: Request) throws -> EventLoopFuture<ClientResponse> {
-        // TODO: Improve path checking
+    func handle(_ req: Request) throws -> String {
+        return "Hello, world!"
+    }
+    
+    func redirect(_ req: Request) throws -> EventLoopFuture<ClientResponse> {
         if req.url.string.contains("test") {
-//            guard let usersHost = Environment.get("TEST_HOST") else { throw Abort(.badRequest) }
-            let usersHost = "http://localhost:8081"
+            guard let usersHost = Environment.get("TEST_HOST") else { throw Abort(.badRequest) }
             return try handle(req, host: usersHost)
         }
         throw Abort(.badRequest)
