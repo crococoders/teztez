@@ -9,11 +9,17 @@
 /* Begin PBXBuildFile section */
 		C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */; };
 		C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */; };
+		C4B88F5B2450BCA700D1D1BA /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B88F5A2450BCA700D1D1BA /* CommonButton.swift */; };
+		C4B88F642450CF4500D1D1BA /* ActivitiesIntro.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4B88F632450CF4500D1D1BA /* ActivitiesIntro.strings */; };
+		C4B88F662450CF7400D1D1BA /* ActivitiesIntroStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B88F652450CF7400D1D1BA /* ActivitiesIntroStore.swift */; };
+		C4B88F692450CF9700D1D1BA /* ActivitiesIntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B88F672450CF9700D1D1BA /* ActivitiesIntroViewController.swift */; };
+		C4B88F6A2450CF9700D1D1BA /* ActivitiesIntroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4B88F682450CF9700D1D1BA /* ActivitiesIntroViewController.xib */; };
 		C4BD0F2A244DEF3D0056E8C1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD0F29244DEF3D0056E8C1 /* R.generated.swift */; };
 		C4BD0F2C244DF0020056E8C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD0F2B244DF0020056E8C1 /* SceneDelegate.swift */; };
 		C4BD0F33244DF1280056E8C1 /* StartupSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD0F32244DF1280056E8C1 /* StartupSceneDelegateConfigurator.swift */; };
 		C4D138DD244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D138DC244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift */; };
 		C4D138DF244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D138DE244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift */; };
+		C4F7AFCA24540C65007D6289 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7AFC924540C65007D6289 /* Observable.swift */; };
 		C4F818E3244B289200AE73CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F818E2244B289200AE73CE /* AppDelegate.swift */; };
 		C4F818EC244B289400AE73CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4F818EB244B289400AE73CE /* Assets.xcassets */; };
 		C4F818EF244B289400AE73CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F818ED244B289400AE73CE /* LaunchScreen.storyboard */; };
@@ -63,11 +69,17 @@
 /* Begin PBXFileReference section */
 		C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
+		C4B88F5A2450BCA700D1D1BA /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
+		C4B88F632450CF4500D1D1BA /* ActivitiesIntro.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = ActivitiesIntro.strings; sourceTree = "<group>"; };
+		C4B88F652450CF7400D1D1BA /* ActivitiesIntroStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesIntroStore.swift; sourceTree = "<group>"; };
+		C4B88F672450CF9700D1D1BA /* ActivitiesIntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesIntroViewController.swift; sourceTree = "<group>"; };
+		C4B88F682450CF9700D1D1BA /* ActivitiesIntroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesIntroViewController.xib; sourceTree = "<group>"; };
 		C4BD0F29244DEF3D0056E8C1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		C4BD0F2B244DF0020056E8C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C4BD0F32244DF1280056E8C1 /* StartupSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4D138DC244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4D138DE244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateConfiguratorFactory.swift; sourceTree = "<group>"; };
+		C4F7AFC924540C65007D6289 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		C4F818DF244B289200AE73CE /* Teztez.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Teztez.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F818E2244B289200AE73CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4F818EB244B289400AE73CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -137,6 +149,57 @@
 			path = Configurators;
 			sourceTree = "<group>";
 		};
+		C4B88F5C2450BCC500D1D1BA /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				C4C4BEBA245314B9001244E3 /* CommonButton */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		C4B88F5E2450CE8D00D1D1BA /* ActivitiesIntro */ = {
+			isa = PBXGroup;
+			children = (
+				C4B88F5F2450CE9700D1D1BA /* Controller */,
+				C4B88F622450CEDE00D1D1BA /* Store */,
+				C4B88F612450CED200D1D1BA /* Localization */,
+			);
+			path = ActivitiesIntro;
+			sourceTree = "<group>";
+		};
+		C4B88F5F2450CE9700D1D1BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4B88F672450CF9700D1D1BA /* ActivitiesIntroViewController.swift */,
+				C4B88F682450CF9700D1D1BA /* ActivitiesIntroViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C4B88F602450CEC400D1D1BA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C4B88F5E2450CE8D00D1D1BA /* ActivitiesIntro */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C4B88F612450CED200D1D1BA /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C4B88F632450CF4500D1D1BA /* ActivitiesIntro.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		C4B88F622450CEDE00D1D1BA /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				C4B88F652450CF7400D1D1BA /* ActivitiesIntroStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		C4BD0F2D244DF09F0056E8C1 /* SceneDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +209,14 @@
 				C4A98277244DFF8C005E98BC /* Configurators */,
 			);
 			path = SceneDelegate;
+			sourceTree = "<group>";
+		};
+		C4C4BEBA245314B9001244E3 /* CommonButton */ = {
+			isa = PBXGroup;
+			children = (
+				C4B88F5A2450BCA700D1D1BA /* CommonButton.swift */,
+			);
+			path = CommonButton;
 			sourceTree = "<group>";
 		};
 		C4F818D6244B289200AE73CE = {
@@ -184,6 +255,7 @@
 				C4F8190F244B75BB00AE73CE /* Extensions */,
 				C4BD0F2D244DF09F0056E8C1 /* SceneDelegate */,
 				C4F8190A244B72C800AE73CE /* Storages */,
+				C4B88F5C2450BCC500D1D1BA /* UIComponents */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -222,6 +294,7 @@
 		C4F81909244B724F00AE73CE /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				C4B88F602450CEC400D1D1BA /* Common */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -328,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				C4F81931244B791000AE73CE /* Navigation */,
+				C4F7AFC924540C65007D6289 /* Observable.swift */,
 			);
 			path = Architecture;
 			sourceTree = "<group>";
@@ -525,6 +599,8 @@
 				C4F8198A244C55FB00AE73CE /* SFProRounded-Bold.otf in Resources */,
 				C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */,
 				C4F81986244C55D300AE73CE /* SFProDisplay-Bold.otf in Resources */,
+				C4B88F642450CF4500D1D1BA /* ActivitiesIntro.strings in Resources */,
+				C4B88F6A2450CF9700D1D1BA /* ActivitiesIntroViewController.xib in Resources */,
 				C4F81984244C559000AE73CE /* SFProText-Semibold.otf in Resources */,
 				C4F81982244C557100AE73CE /* SFProText-Regular.otf in Resources */,
 				C4F818EC244B289400AE73CE /* Assets.xcassets in Resources */,
@@ -628,6 +704,7 @@
 				C4BD0F2C244DF0020056E8C1 /* SceneDelegate.swift in Sources */,
 				C4F81952244B832A00AE73CE /* TransitionType.swift in Sources */,
 				C4F81916244B760100AE73CE /* String+Replacing.swift in Sources */,
+				C4F7AFCA24540C65007D6289 /* Observable.swift in Sources */,
 				C4F81941244B824200AE73CE /* CoordinatorNavigationController.swift in Sources */,
 				C4F8194E244B830D00AE73CE /* Presentable.swift in Sources */,
 				C4F8190E244B730200AE73CE /* Language.swift in Sources */,
@@ -639,12 +716,15 @@
 				C4F8193C244B817800AE73CE /* ApplicationLaunchInstructor.swift in Sources */,
 				C4F81955244B834500AE73CE /* ApplicationCoordinator.swift in Sources */,
 				C4F81940244B824200AE73CE /* ViewController.swift in Sources */,
+				C4B88F692450CF9700D1D1BA /* ActivitiesIntroViewController.swift in Sources */,
 				C4F81946244B82BB00AE73CE /* Coordinator.swift in Sources */,
 				C4BD0F2A244DEF3D0056E8C1 /* R.generated.swift in Sources */,
 				C4BD0F33244DF1280056E8C1 /* StartupSceneDelegateConfigurator.swift in Sources */,
 				C4D138DD244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift in Sources */,
 				C4F8194A244B82F000AE73CE /* ModuleFactory.swift in Sources */,
 				C4F81928244B76BA00AE73CE /* UITableViewCell+SelectedBackgroundView.swift in Sources */,
+				C4B88F662450CF7400D1D1BA /* ActivitiesIntroStore.swift in Sources */,
+				C4B88F5B2450BCA700D1D1BA /* CommonButton.swift in Sources */,
 				C4F8192F244B76DC00AE73CE /* UIView+CornerRadius.swift in Sources */,
 				C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */,
 				C4F818E3244B289200AE73CE /* AppDelegate.swift in Sources */,
