@@ -35,15 +35,7 @@ final class CoordinatorNavigationController: UINavigationController {
         delegate = self
     }
 
-    func setupBackButton(viewController: UIViewController) {
-        viewController.navigationItem.hidesBackButton = true
-        viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "back-icon"),
-                                                                          style: .done,
-                                                                          target: self,
-                                                                          action: #selector(backButtonDidTap))
-    }
-
-    public override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         isPushBeingAnimated = true
         super.pushViewController(viewController, animated: animated)
         setupBackButton(viewController: viewController)
@@ -54,13 +46,22 @@ final class CoordinatorNavigationController: UINavigationController {
         interactivePopGestureRecognizer?.delegate = self
     }
 
-    @objc private func backButtonDidTap() {
+    @objc
+    private func backButtonDidTap() {
         coordinatorNavigationDelegate?.customBackButtonDidTap()
+    }
+
+    private func setupBackButton(viewController: UIViewController) {
+        viewController.navigationItem.hidesBackButton = true
+        viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: R.image.backIcon(),
+                                                                          style: .done,
+                                                                          target: self,
+                                                                          action: #selector(backButtonDidTap))
     }
 }
 
 extension CoordinatorNavigationController: UINavigationControllerDelegate {
-    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         guard let coordinator = navigationController.topViewController?.transitionCoordinator else { return }
         coordinator.notifyWhenInteractionChanges { [weak self] context in
             guard !context.isCancelled else { return }
@@ -68,20 +69,20 @@ extension CoordinatorNavigationController: UINavigationControllerDelegate {
         }
     }
 
-    public func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
         guard let swipeNavigationController = navigationController as? CoordinatorNavigationController else { return }
         swipeNavigationController.isPushBeingAnimated = false
     }
 }
 
 extension CoordinatorNavigationController: UIGestureRecognizerDelegate {
-    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         guard gestureRecognizer == interactivePopGestureRecognizer else { return true }
         return viewControllers.count > 1 && isPushBeingAnimated == false
     }
 
-    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
-                                  shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer,
+                           shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
 }

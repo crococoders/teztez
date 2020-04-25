@@ -11,6 +11,8 @@ import UIKit
 private enum Constants {
     static let titleTextAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.textSemibold17,
                                                                      .foregroundColor: UIColor.white]
+    static let largeTitleTextAttributes: [NSAttributedString.Key: Any] = [.font: UIFont.displayBold34,
+                                                                          .foregroundColor: UIColor.white]
 }
 
 @available(iOS 13.0, *)
@@ -25,6 +27,8 @@ class NavigationBarSceneDelegateConfigurator: SceneDelegateConfigurator {
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
         navigationBar.titleTextAttributes = Constants.titleTextAttributes
+        navigationBar.largeTitleTextAttributes = Constants.largeTitleTextAttributes
         navigationBar.tintColor = .buttonGray
+        navigationBar.barStyle = .default
     }
 }

@@ -9,6 +9,10 @@
 import UIKit
 
 extension UIFont {
+    static var displayBold34: UIFont {
+        R.font.sfProDisplayBold(size: 34) ?? systemFont(ofSize: 34, weight: .bold)
+    }
+
     static var displayBold32: UIFont {
         R.font.sfProDisplayBold(size: 32) ?? systemFont(ofSize: 32, weight: .bold)
     }

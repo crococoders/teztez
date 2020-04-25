@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40AE0BA24535E27008BC71C /* ActivitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C40AE0B924535E27008BC71C /* ActivitiesCell.xib */; };
+		C40AE0BC24535E4B008BC71C /* ActivitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */; };
+		C40AE0BF245363D3008BC71C /* UICollectionView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0BE245363D3008BC71C /* UICollectionView+Dequeue.swift */; };
+		C40AE0C124536409008BC71C /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C024536409008BC71C /* UICollectionView+Register.swift */; };
+		C40AE0C424537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C324537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift */; };
+		C40AE0C624537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C524537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift */; };
+		C40AE0C924537E44008BC71C /* ActivitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C824537E44008BC71C /* ActivitiesViewModel.swift */; };
+		C40AE0CB24537E6E008BC71C /* ActivitiesRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0CA24537E6E008BC71C /* ActivitiesRowType.swift */; };
+		C40AE0CD24543A04008BC71C /* UIView+GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0CC24543A04008BC71C /* UIView+GradientLayer.swift */; };
+		C4197B7D2450A24E00811F37 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B7C2450A24E00811F37 /* TabBarCoordinator.swift */; };
+		C4197B802450A28600811F37 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B7F2450A28600811F37 /* TabBarController.swift */; };
+		C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4197B822450A2D300811F37 /* MainTabBar.strings */; };
+		C4197B892450A9EC00811F37 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B882450A9EC00811F37 /* ActivitiesViewController.swift */; };
+		C4197B8C2450ABA400811F37 /* ActivitiesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B8B2450ABA400811F37 /* ActivitiesCoordinator.swift */; };
+		C4197B8E2450ABF000811F37 /* ActivitiesModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B8D2450ABF000811F37 /* ActivitiesModuleFactory.swift */; };
+		C4197B902450AC5700811F37 /* ActivitiesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B8F2450AC5700811F37 /* ActivitiesStore.swift */; };
+		C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4197B912450B16700811F37 /* ActivitiesViewController.xib */; };
+		C4197B942450B1F900811F37 /* Activities.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4197B932450B1EE00811F37 /* Activities.strings */; };
 		C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */; };
 		C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */; };
 		C4BD0F2A244DEF3D0056E8C1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BD0F29244DEF3D0056E8C1 /* R.generated.swift */; };
@@ -61,6 +79,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C40AE0B924535E27008BC71C /* ActivitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesCell.xib; sourceTree = "<group>"; };
+		C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCell.swift; sourceTree = "<group>"; };
+		C40AE0BE245363D3008BC71C /* UICollectionView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue.swift"; sourceTree = "<group>"; };
+		C40AE0C024536409008BC71C /* UICollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
+		C40AE0C324537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		C40AE0C524537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		C40AE0C824537E44008BC71C /* ActivitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewModel.swift; sourceTree = "<group>"; };
+		C40AE0CA24537E6E008BC71C /* ActivitiesRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesRowType.swift; sourceTree = "<group>"; };
+		C40AE0CC24543A04008BC71C /* UIView+GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GradientLayer.swift"; sourceTree = "<group>"; };
+		C4197B7C2450A24E00811F37 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		C4197B7F2450A28600811F37 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		C4197B822450A2D300811F37 /* MainTabBar.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = MainTabBar.strings; sourceTree = "<group>"; };
+		C4197B882450A9EC00811F37 /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		C4197B8B2450ABA400811F37 /* ActivitiesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCoordinator.swift; sourceTree = "<group>"; };
+		C4197B8D2450ABF000811F37 /* ActivitiesModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesModuleFactory.swift; sourceTree = "<group>"; };
+		C4197B8F2450AC5700811F37 /* ActivitiesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesStore.swift; sourceTree = "<group>"; };
+		C4197B912450B16700811F37 /* ActivitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesViewController.xib; sourceTree = "<group>"; };
+		C4197B932450B1EE00811F37 /* Activities.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Activities.strings; sourceTree = "<group>"; };
 		C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4BD0F29244DEF3D0056E8C1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -127,6 +163,116 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C40AE0B824535B31008BC71C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */,
+				C40AE0B924535E27008BC71C /* ActivitiesCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C40AE0BD245363B7008BC71C /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				C40AE0BE245363D3008BC71C /* UICollectionView+Dequeue.swift */,
+				C40AE0C024536409008BC71C /* UICollectionView+Register.swift */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		C40AE0C724537E2E008BC71C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C40AE0C824537E44008BC71C /* ActivitiesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C4197B7A2450A08700811F37 /* MainTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B7E2450A27500811F37 /* Controller */,
+				C4197B7B2450A22E00811F37 /* Coordinator */,
+				C4197B812450A2C400811F37 /* Localization */,
+			);
+			path = MainTabBar;
+			sourceTree = "<group>";
+		};
+		C4197B7B2450A22E00811F37 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B7C2450A24E00811F37 /* TabBarCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C4197B7E2450A27500811F37 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B7F2450A28600811F37 /* TabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C4197B812450A2C400811F37 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B822450A2D300811F37 /* MainTabBar.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		C4197B842450A54300811F37 /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B852450A8E400811F37 /* Controller */,
+				C4197B8A2450AB4000811F37 /* Coordinator */,
+				C4197B872450A98300811F37 /* Localization */,
+				C4197B862450A97700811F37 /* Store */,
+				C40AE0B824535B31008BC71C /* View */,
+				C40AE0C724537E2E008BC71C /* ViewModel */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		C4197B852450A8E400811F37 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C40AE0C324537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift */,
+				C40AE0C524537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift */,
+				C4197B882450A9EC00811F37 /* ActivitiesViewController.swift */,
+				C4197B912450B16700811F37 /* ActivitiesViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C4197B862450A97700811F37 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				C40AE0CA24537E6E008BC71C /* ActivitiesRowType.swift */,
+				C4197B8F2450AC5700811F37 /* ActivitiesStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		C4197B872450A98300811F37 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B932450B1EE00811F37 /* Activities.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		C4197B8A2450AB4000811F37 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C4197B8B2450ABA400811F37 /* ActivitiesCoordinator.swift */,
+				C4197B8D2450ABF000811F37 /* ActivitiesModuleFactory.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		C4A98277244DFF8C005E98BC /* Configurators */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +368,8 @@
 		C4F81909244B724F00AE73CE /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				C4197B842450A54300811F37 /* Activities */,
+				C4197B7A2450A08700811F37 /* MainTabBar */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -239,6 +387,7 @@
 			children = (
 				C4F81910244B75DE00AE73CE /* Device */,
 				C4F81913244B75F500AE73CE /* String */,
+				C40AE0BD245363B7008BC71C /* UICollectionView */,
 				C4F81917244B761700AE73CE /* UIColor */,
 				C4F8191A244B763F00AE73CE /* UINavigationController */,
 				C4F8191D244B768C00AE73CE /* UIStackView */,
@@ -320,6 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				C4F8192E244B76DC00AE73CE /* UIView+CornerRadius.swift */,
+				C40AE0CC24543A04008BC71C /* UIView+GradientLayer.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -520,15 +670,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4197B942450B1F900811F37 /* Activities.strings in Resources */,
 				C4F818EF244B289400AE73CE /* LaunchScreen.storyboard in Resources */,
 				C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */,
+				C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */,
 				C4F8198A244C55FB00AE73CE /* SFProRounded-Bold.otf in Resources */,
 				C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */,
+				C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */,
 				C4F81986244C55D300AE73CE /* SFProDisplay-Bold.otf in Resources */,
 				C4F81984244C559000AE73CE /* SFProText-Semibold.otf in Resources */,
 				C4F81982244C557100AE73CE /* SFProText-Regular.otf in Resources */,
 				C4F818EC244B289400AE73CE /* Assets.xcassets in Resources */,
 				C4F8198C244C560C00AE73CE /* SFProRounded-Semibold.otf in Resources */,
+				C40AE0BA24535E27008BC71C /* ActivitiesCell.xib in Resources */,
 				C4F81988244C55DF00AE73CE /* SFProDisplay-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,13 +774,21 @@
 				C4F8195A244B890B00AE73CE /* AppDelegateConfiguratorFactory.swift in Sources */,
 				C4F81919244B761700AE73CE /* UIColor+Hex.swift in Sources */,
 				C4F81958244B86EC00AE73CE /* ColorStyles.swift in Sources */,
+				C4197B902450AC5700811F37 /* ActivitiesStore.swift in Sources */,
+				C4197B8C2450ABA400811F37 /* ActivitiesCoordinator.swift in Sources */,
 				C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */,
 				C4F81945244B82BB00AE73CE /* ParentCoordinator.swift in Sources */,
+				C40AE0CD24543A04008BC71C /* UIView+GradientLayer.swift in Sources */,
 				C4F81953244B832A00AE73CE /* Router.swift in Sources */,
+				C40AE0C624537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift in Sources */,
 				C4F8192C244B76CE00AE73CE /* UITextField+Indent.swift in Sources */,
 				C4F81924244B76A500AE73CE /* UITableView+Register.swift in Sources */,
 				C4BD0F2C244DF0020056E8C1 /* SceneDelegate.swift in Sources */,
+				C40AE0C424537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift in Sources */,
 				C4F81952244B832A00AE73CE /* TransitionType.swift in Sources */,
+				C40AE0BC24535E4B008BC71C /* ActivitiesCell.swift in Sources */,
+				C4197B7D2450A24E00811F37 /* TabBarCoordinator.swift in Sources */,
+				C40AE0C924537E44008BC71C /* ActivitiesViewModel.swift in Sources */,
 				C4F81916244B760100AE73CE /* String+Replacing.swift in Sources */,
 				C4F81941244B824200AE73CE /* CoordinatorNavigationController.swift in Sources */,
 				C4F8194E244B830D00AE73CE /* Presentable.swift in Sources */,
@@ -643,8 +805,12 @@
 				C4BD0F2A244DEF3D0056E8C1 /* R.generated.swift in Sources */,
 				C4BD0F33244DF1280056E8C1 /* StartupSceneDelegateConfigurator.swift in Sources */,
 				C4D138DD244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift in Sources */,
+				C40AE0BF245363D3008BC71C /* UICollectionView+Dequeue.swift in Sources */,
+				C4197B802450A28600811F37 /* TabBarController.swift in Sources */,
 				C4F8194A244B82F000AE73CE /* ModuleFactory.swift in Sources */,
 				C4F81928244B76BA00AE73CE /* UITableViewCell+SelectedBackgroundView.swift in Sources */,
+				C4197B8E2450ABF000811F37 /* ActivitiesModuleFactory.swift in Sources */,
+				C40AE0C124536409008BC71C /* UICollectionView+Register.swift in Sources */,
 				C4F8192F244B76DC00AE73CE /* UIView+CornerRadius.swift in Sources */,
 				C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */,
 				C4F818E3244B289200AE73CE /* AppDelegate.swift in Sources */,
@@ -652,6 +818,8 @@
 				C4F81963244B89ED00AE73CE /* CompositeAppDelegateConfigurator.swift in Sources */,
 				C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */,
 				C4F81923244B76A500AE73CE /* UITableView+Dequeue.swift in Sources */,
+				C4197B892450A9EC00811F37 /* ActivitiesViewController.swift in Sources */,
+				C40AE0CB24537E6E008BC71C /* ActivitiesRowType.swift in Sources */,
 				C4F81929244B76BA00AE73CE /* UITableViewCell+DisclosureIndicator.swift in Sources */,
 				C4F8191F244B768C00AE73CE /* UIStackView+Convenience.swift in Sources */,
 			);
@@ -798,8 +966,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GB6ZBLUXG3;
 				INFOPLIST_FILE = Teztez/Resources/Plists/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -816,8 +985,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GB6ZBLUXG3;
 				INFOPLIST_FILE = Teztez/Resources/Plists/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public final class ApplicationCoordinator: ParentCoordinator {
+final class ApplicationCoordinator: ParentCoordinator {
     private let instructor: ApplicationLaunchInstructor
     private let coordinatorFactory: CoordinatorFactory
 
@@ -20,5 +20,13 @@ public final class ApplicationCoordinator: ParentCoordinator {
         super.init(router: router)
     }
 
-    public override func start() {}
+    override func start() {
+        runMainTabBarFlow()
+    }
+
+    private func runMainTabBarFlow() {
+        let coordinator = coordinatorFactory.makeMainTabBarCoordinator(router: router)
+        addDependency(coordinator)
+        coordinator.start()
+    }
 }

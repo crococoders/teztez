@@ -8,8 +8,8 @@
 
 import Foundation
 
-public final class ModuleFactory {
-    public static let shared = ModuleFactory()
+final class ModuleFactory {
+    static let shared = ModuleFactory()
 
     private init() {}
 }
