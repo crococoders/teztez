@@ -10,7 +10,7 @@ import Vapor
 final class GatewayController: RouteCollection {
     func boot(routes: RoutesBuilder) throws {
         routes.get("test", "get", use: handle)
-        routes.post(PathComponent.constant("test/post"), use: handle)
+        routes.post("test", "post", use: handle)
     }
     
     func handle(_ req: Request) throws -> EventLoopFuture<ClientResponse> {
