@@ -1,10 +1,13 @@
+//
+//  routes.swift
+//
+//
+//  Created by Aidar Nugmanov on 4/25/20.
+//
+
 import Vapor
 
-func routes(_ app: Application) throws {
+func configureRoutes(for app: Application) throws {
     let gatewayController = GatewayController()
     try app.register(collection: gatewayController)
-    
-    app.get { req in
-        return "Hello, world!"
-    }
 }
