@@ -7,3 +7,14 @@
 */
 
 "navigationTitle" = "Activities";
+"coachTitle" = "Coach";
+"coachDescription" = "Check your reading speed";
+"blenderTitle" = "Blender";
+"blenderDescription" = "Mix them up";
+"backwardsTitle" = "Sdrawkcab";
+"backwardsDescription" = "Backwards";
+"colorMatchingTitle" = "Color Matching";
+"colorMatchingDescription" = "Pair them";
+"schulteTableTitle" = "Schulte table";
+"schulteTableDescription" = "Famous one";
+"suggestActivityTitle" = "Suggest Activity";

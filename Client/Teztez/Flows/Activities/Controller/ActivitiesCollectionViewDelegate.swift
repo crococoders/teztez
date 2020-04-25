@@ -14,6 +14,8 @@ private enum Constant {
 }
 
 final class ActivitiesCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout {
+    private let rows = ActivitiesRowType.allCases
+
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -27,4 +29,6 @@ final class ActivitiesCollectionViewDelegate: NSObject, UICollectionViewDelegate
             return CGSize(width: collectionViewWidth / 2, height: Constant.collectionViewHeight)
         }
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
 }

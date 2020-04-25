@@ -13,6 +13,9 @@
 		C40AE0C124536409008BC71C /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C024536409008BC71C /* UICollectionView+Register.swift */; };
 		C40AE0C424537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C324537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift */; };
 		C40AE0C624537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C524537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift */; };
+		C40AE0C924537E44008BC71C /* ActivitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C824537E44008BC71C /* ActivitiesViewModel.swift */; };
+		C40AE0CB24537E6E008BC71C /* ActivitiesRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0CA24537E6E008BC71C /* ActivitiesRowType.swift */; };
+		C40AE0CD24543A04008BC71C /* UIView+GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0CC24543A04008BC71C /* UIView+GradientLayer.swift */; };
 		C4197B7D2450A24E00811F37 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B7C2450A24E00811F37 /* TabBarCoordinator.swift */; };
 		C4197B802450A28600811F37 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B7F2450A28600811F37 /* TabBarController.swift */; };
 		C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4197B822450A2D300811F37 /* MainTabBar.strings */; };
@@ -82,6 +85,9 @@
 		C40AE0C024536409008BC71C /* UICollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
 		C40AE0C324537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		C40AE0C524537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		C40AE0C824537E44008BC71C /* ActivitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewModel.swift; sourceTree = "<group>"; };
+		C40AE0CA24537E6E008BC71C /* ActivitiesRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesRowType.swift; sourceTree = "<group>"; };
+		C40AE0CC24543A04008BC71C /* UIView+GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GradientLayer.swift"; sourceTree = "<group>"; };
 		C4197B7C2450A24E00811F37 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
 		C4197B7F2450A28600811F37 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C4197B822450A2D300811F37 /* MainTabBar.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = MainTabBar.strings; sourceTree = "<group>"; };
@@ -160,8 +166,8 @@
 		C40AE0B824535B31008BC71C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C40AE0B924535E27008BC71C /* ActivitiesCell.xib */,
 				C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */,
+				C40AE0B924535E27008BC71C /* ActivitiesCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +179,14 @@
 				C40AE0C024536409008BC71C /* UICollectionView+Register.swift */,
 			);
 			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		C40AE0C724537E2E008BC71C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C40AE0C824537E44008BC71C /* ActivitiesViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C4197B7A2450A08700811F37 /* MainTabBar */ = {
@@ -217,6 +231,7 @@
 				C4197B872450A98300811F37 /* Localization */,
 				C4197B862450A97700811F37 /* Store */,
 				C40AE0B824535B31008BC71C /* View */,
+				C40AE0C724537E2E008BC71C /* ViewModel */,
 			);
 			path = Activities;
 			sourceTree = "<group>";
@@ -235,6 +250,7 @@
 		C4197B862450A97700811F37 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				C40AE0CA24537E6E008BC71C /* ActivitiesRowType.swift */,
 				C4197B8F2450AC5700811F37 /* ActivitiesStore.swift */,
 			);
 			path = Store;
@@ -453,6 +469,7 @@
 			isa = PBXGroup;
 			children = (
 				C4F8192E244B76DC00AE73CE /* UIView+CornerRadius.swift */,
+				C40AE0CC24543A04008BC71C /* UIView+GradientLayer.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -761,6 +778,7 @@
 				C4197B8C2450ABA400811F37 /* ActivitiesCoordinator.swift in Sources */,
 				C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */,
 				C4F81945244B82BB00AE73CE /* ParentCoordinator.swift in Sources */,
+				C40AE0CD24543A04008BC71C /* UIView+GradientLayer.swift in Sources */,
 				C4F81953244B832A00AE73CE /* Router.swift in Sources */,
 				C40AE0C624537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift in Sources */,
 				C4F8192C244B76CE00AE73CE /* UITextField+Indent.swift in Sources */,
@@ -770,6 +788,7 @@
 				C4F81952244B832A00AE73CE /* TransitionType.swift in Sources */,
 				C40AE0BC24535E4B008BC71C /* ActivitiesCell.swift in Sources */,
 				C4197B7D2450A24E00811F37 /* TabBarCoordinator.swift in Sources */,
+				C40AE0C924537E44008BC71C /* ActivitiesViewModel.swift in Sources */,
 				C4F81916244B760100AE73CE /* String+Replacing.swift in Sources */,
 				C4F81941244B824200AE73CE /* CoordinatorNavigationController.swift in Sources */,
 				C4F8194E244B830D00AE73CE /* Presentable.swift in Sources */,
@@ -800,6 +819,7 @@
 				C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */,
 				C4F81923244B76A500AE73CE /* UITableView+Dequeue.swift in Sources */,
 				C4197B892450A9EC00811F37 /* ActivitiesViewController.swift in Sources */,
+				C40AE0CB24537E6E008BC71C /* ActivitiesRowType.swift in Sources */,
 				C4F81929244B76BA00AE73CE /* UITableViewCell+DisclosureIndicator.swift in Sources */,
 				C4F8191F244B768C00AE73CE /* UIStackView+Convenience.swift in Sources */,
 			);
@@ -947,7 +967,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Teztez/Resources/Plists/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -965,7 +985,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Teztez/Resources/Plists/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

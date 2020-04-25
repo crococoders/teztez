@@ -21,7 +21,7 @@ extension UIColor {
     static let sirenLight = UIColor(hex: "#C76FC3")
     static let sirenDark = UIColor(hex: "#B662BD")
     static let coralLight = UIColor(hex: "#E0595D")
-    static let colarDark = UIColor(hex: "#DB4C52")
+    static let coralDark = UIColor(hex: "#DB4C52")
     static let violetLight = UIColor(hex: "#8E6DD3")
     static let violetDark = UIColor(hex: "#815FCA")
     static let greenLight = UIColor(hex: "#66A34C")

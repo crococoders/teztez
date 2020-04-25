@@ -20,6 +20,7 @@ final class ActivitiesViewController: UIViewController, ActivitiesPresentable {
     private let collectionViewDataSource: ActivitiesCollectionViewDataSource
 
     @IBOutlet var collectionView: UICollectionView!
+
     init(store: ActivitiesStore) {
         self.store = store
         collectionViewDataSource = ActivitiesCollectionViewDataSource()
@@ -35,6 +36,7 @@ final class ActivitiesViewController: UIViewController, ActivitiesPresentable {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        store.dispatch(action: .didLoadView)
     }
 
     override func viewWillAppear(_ animated: Bool) {

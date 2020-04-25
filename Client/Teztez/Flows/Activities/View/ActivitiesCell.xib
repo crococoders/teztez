@@ -25,7 +25,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="167" height="115"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mathcing-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Od0-eT-ePw">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coach-icon" translatesAutoresizingMaskIntoConstraints="NO" id="Od0-eT-ePw">
                         <rect key="frame" x="8" y="8" width="25" height="25"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -33,29 +33,30 @@
                             <constraint firstAttribute="height" constant="25" id="yJR-g0-4mo"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pair them" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujD-8K-3YS">
-                        <rect key="frame" x="8" y="92" width="151" height="15"/>
-                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
-                        <color key="textColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Matching" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uux-0T-7Ma">
-                        <rect key="frame" x="8" y="74" width="151" height="18"/>
-                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="5Fl-19-hLL">
+                        <rect key="frame" x="8" y="74.5" width="151" height="32.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Matching" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uux-0T-7Ma">
+                                <rect key="frame" x="0.0" y="0.0" width="151" height="18"/>
+                                <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pair them" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujD-8K-3YS">
+                                <rect key="frame" x="0.0" y="18" width="151" height="14.5"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
+                                <color key="textColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="uux-0T-7Ma" firstAttribute="leading" secondItem="7aM-pL-J9I" secondAttribute="leading" constant="8" id="1er-Aj-Z8W"/>
                     <constraint firstItem="Od0-eT-ePw" firstAttribute="top" secondItem="7aM-pL-J9I" secondAttribute="top" constant="8" id="Jew-J3-TnD"/>
-                    <constraint firstAttribute="trailing" secondItem="ujD-8K-3YS" secondAttribute="trailing" constant="8" id="R4K-la-ODp"/>
-                    <constraint firstItem="ujD-8K-3YS" firstAttribute="top" secondItem="uux-0T-7Ma" secondAttribute="bottom" id="Sbs-F9-WT6"/>
-                    <constraint firstAttribute="trailing" secondItem="uux-0T-7Ma" secondAttribute="trailing" constant="8" id="TRK-Hb-1QF"/>
-                    <constraint firstAttribute="bottom" secondItem="ujD-8K-3YS" secondAttribute="bottom" constant="8" id="jqv-7X-8MV"/>
-                    <constraint firstItem="ujD-8K-3YS" firstAttribute="leading" secondItem="7aM-pL-J9I" secondAttribute="leading" constant="8" id="rkM-jU-pc1"/>
-                    <constraint firstItem="uux-0T-7Ma" firstAttribute="top" secondItem="Od0-eT-ePw" secondAttribute="bottom" constant="41" id="shj-PR-9Ob"/>
+                    <constraint firstAttribute="trailing" secondItem="5Fl-19-hLL" secondAttribute="trailing" constant="8" id="W8r-90-G8w"/>
+                    <constraint firstAttribute="bottom" secondItem="5Fl-19-hLL" secondAttribute="bottom" constant="8" id="bTZ-Vh-lWB"/>
+                    <constraint firstItem="5Fl-19-hLL" firstAttribute="leading" secondItem="7aM-pL-J9I" secondAttribute="leading" constant="8" id="m22-bq-Gbx"/>
                     <constraint firstItem="Od0-eT-ePw" firstAttribute="leading" secondItem="7aM-pL-J9I" secondAttribute="leading" constant="8" id="yzW-Dn-fXJ"/>
                 </constraints>
             </collectionViewCellContentView>
@@ -68,12 +69,15 @@
             <connections>
                 <outlet property="descriptionLabel" destination="ujD-8K-3YS" id="8tY-kB-N8q"/>
                 <outlet property="iconImageView" destination="Od0-eT-ePw" id="GiZ-z5-2O3"/>
+                <outlet property="iconImageViewHeightConstraint" destination="yJR-g0-4mo" id="SAb-Id-mxK"/>
+                <outlet property="iconImageViewWidthConstraint" destination="Hpv-ae-EDp" id="1Xc-if-NYL"/>
+                <outlet property="stackViewBottomConstraint" destination="bTZ-Vh-lWB" id="TAv-bn-n9o"/>
                 <outlet property="titleLabel" destination="uux-0T-7Ma" id="Xrs-tz-6Da"/>
             </connections>
             <point key="canvasLocation" x="-2.1739130434782612" y="85.379464285714278"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="mathcing-icon" width="25" height="25"/>
+        <image name="coach-icon" width="30" height="30"/>
     </resources>
 </document>

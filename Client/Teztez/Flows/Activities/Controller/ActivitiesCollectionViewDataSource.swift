@@ -9,12 +9,15 @@
 import UIKit
 
 final class ActivitiesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
+    private let rows = ActivitiesRowType.allCases
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        rows.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ActivitiesCell = collectionView.dequeueReusableCell(for: indexPath)
+        cell.configure(with: ActivitiesViewModel(type: rows[indexPath.row]))
         return cell
     }
 }
