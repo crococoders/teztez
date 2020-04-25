@@ -7,7 +7,7 @@
 
 import Vapor
 
-final class MicroserviceEntry {
+final class ServiceNode {
     let path: PathComponent
     let host: String?
     
