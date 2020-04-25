@@ -29,6 +29,4 @@ final class ActivitiesCollectionViewDelegate: NSObject, UICollectionViewDelegate
             return CGSize(width: collectionViewWidth / 2, height: Constant.collectionViewHeight)
         }
     }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {}
 }

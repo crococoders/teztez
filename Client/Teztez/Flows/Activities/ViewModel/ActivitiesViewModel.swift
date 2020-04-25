@@ -11,8 +11,6 @@ import UIKit
 private enum Constants {
     static let maximumSize = CGSize(width: 30, height: 30)
     static let defaultSize = CGSize(width: 25, height: 25)
-    static let maximumBottomConstraint: CGFloat = 12
-    static let defaultBottomConstraint: CGFloat = 8
 }
 
 struct ActivitiesViewModel {
@@ -99,15 +97,6 @@ struct ActivitiesViewModel {
             return true
         default:
             return false
-        }
-    }
-
-    var stackViewBottomConstraint: CGFloat {
-        switch type {
-        case .suggestion:
-            return Constants.maximumBottomConstraint
-        default:
-            return Constants.defaultBottomConstraint
         }
     }
 

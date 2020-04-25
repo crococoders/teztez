@@ -9,14 +9,14 @@
 import UIKit
 
 extension UIView {
-    enum Direction {
+    enum GradientDirection {
         case topToBottom
         case bottomToTop
         case leftToRight
         case rightToLeft
     }
 
-    func applyGradient(colors: [Any]?, locations: [NSNumber]? = [0.0, 1.0], direction: Direction = .leftToRight) {
+    func applyGradient(colors: [CGColor]?, locations: [NSNumber]? = [0.0, 1.0], direction: GradientDirection = .leftToRight) {
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
         gradientLayer.colors = colors
