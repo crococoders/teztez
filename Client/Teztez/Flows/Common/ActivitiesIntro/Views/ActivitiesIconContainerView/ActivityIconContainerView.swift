@@ -28,5 +28,8 @@ final class ActivityIconContainerView: UIView, NibOwnerLoadable {
         layer.masksToBounds = true
     }
 
-    func configure(with: ActivitiesIntroViewModel) {}
+    func configure(with data: ActivitiesIntroViewModel) {
+        imageView.image = data.activityImage
+        applyGradient(colors: data.colors)
+    }
 }

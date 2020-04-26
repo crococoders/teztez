@@ -15,16 +15,42 @@ enum ActivityIntroType {
 struct ActivitiesIntroViewModel {
     private var type: ActivityIntroType
 
+    var colors: [CGColor] {
+        switch type {
+        case .blender:
+            return [UIColor.coralLight.cgColor, UIColor.coralDark.cgColor]
+        case .backward:
+            return [UIColor.violetLight.cgColor, UIColor.violetDark.cgColor]
+        case .colorMatch:
+            return [UIColor.greenLight.cgColor, UIColor.greenDark.cgColor]
+        case .schulte:
+            return [UIColor.orangeLigt.cgColor, UIColor.orangeDark.cgColor]
+        }
+    }
+
     var activityTitle: String {
-        return "Title"
+        switch type {
+        case .blender:
+            return R.string.activities.blenderTitle()
+        case .backward:
+            return R.string.activities.backwardsDescription()
+        case .colorMatch:
+            return R.string.activities.colorMatchingTitle()
+        case .schulte:
+            return R.string.activities.schulteTableTitle()
+        }
     }
 
     var activityImage: UIImage? {
         switch type {
+        case .blender:
+            return R.image.blenderIcon()
         case .backward:
-            return R.image.backwardsTitleIcon()
-        default:
-            return nil
+            return R.image.backwardsIcon()
+        case .colorMatch:
+            return R.image.matchingIcon()
+        case .schulte:
+            return R.image.schulteIcon()
         }
     }
 
