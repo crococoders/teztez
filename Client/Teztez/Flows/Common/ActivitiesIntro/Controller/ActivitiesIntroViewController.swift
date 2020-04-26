@@ -53,6 +53,7 @@ private extension ActivitiesIntroViewController {
         activityTitle.text = viewModel.activityTitle
         activityIconContainerView.configure(with: viewModel)
         setupContainerView()
+        configureNavigationBar()
     }
 
     func setupContainerView() {
@@ -70,5 +71,18 @@ private extension ActivitiesIntroViewController {
                 break
             }
         }
+    }
+
+    @objc
+    func closeButtonDidTap() {
+        onCloseButtonDidTap?()
+    }
+
+    func configureNavigationBar() {
+        navigationController?.view.backgroundColor = .systemGray
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.closeIcon(),
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(closeButtonDidTap))
     }
 }

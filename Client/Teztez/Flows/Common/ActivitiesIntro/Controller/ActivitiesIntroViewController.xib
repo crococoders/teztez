@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -24,25 +24,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="4fY-Uo-7e4">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXk-5O-aqN">
-                    <rect key="frame" x="0.0" y="19" width="375" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <color key="barTintColor" red="0.1462543607" green="0.14660534259999999" blue="0.15696233509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <items>
-                        <navigationItem id="9Cz-6Q-NH3">
-                            <barButtonItem key="rightBarButtonItem" image="close-icon" id="fag-05-u8s">
-                                <connections>
-                                    <action selector="onCloseDidTap:" destination="-1" id="9pR-bI-9bq"/>
-                                </connections>
-                            </barButtonItem>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zB1-zx-Dsg" customClass="ActivityIconContainerView" customModule="Teztez" customModuleProvider="target">
-                    <rect key="frame" x="151" y="79" width="73" height="73"/>
+                    <rect key="frame" x="170.5" y="164" width="73" height="73"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="73" id="Knd-pP-7DD"/>
@@ -50,19 +36,19 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Backwards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXU-jZ-IvE">
-                    <rect key="frame" x="108" y="160" width="159.5" height="37.5"/>
+                    <rect key="frame" x="126" y="245" width="162" height="38.5"/>
                     <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="32"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="b6z-rv-lQZ">
-                    <rect key="frame" x="40" y="229.5" width="295" height="262"/>
+                    <rect key="frame" x="40" y="344" width="334" height="262"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="262" id="kIh-Hp-fuK"/>
                     </constraints>
                 </stackView>
                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Plj-eN-Eik" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
-                    <rect key="frame" x="40" y="549.5" width="295" height="48"/>
+                    <rect key="frame" x="40" y="742" width="334" height="48"/>
                     <color key="backgroundColor" red="0.039215686270000001" green="0.51764705879999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="c0w-Uk-PPW"/>
@@ -81,24 +67,22 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.1462543607" green="0.14660534259999999" blue="0.15696233509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Plj-eN-Eik" firstAttribute="leading" secondItem="5XC-bQ-YgW" secondAttribute="leading" constant="40" id="JF4-E4-k3x"/>
-                <constraint firstItem="LXU-jZ-IvE" firstAttribute="centerX" secondItem="5XC-bQ-YgW" secondAttribute="centerX" id="TZD-MT-C3z"/>
+                <constraint firstItem="b6z-rv-lQZ" firstAttribute="centerY" secondItem="4fY-Uo-7e4" secondAttribute="centerY" constant="27" id="Nsz-YR-X74"/>
+                <constraint firstItem="5XC-bQ-YgW" firstAttribute="bottom" secondItem="Plj-eN-Eik" secondAttribute="bottom" constant="72" id="QcK-JN-gqX"/>
                 <constraint firstItem="LXU-jZ-IvE" firstAttribute="top" secondItem="zB1-zx-Dsg" secondAttribute="bottom" constant="8" id="WOy-aJ-lXX"/>
+                <constraint firstItem="zB1-zx-Dsg" firstAttribute="top" secondItem="5XC-bQ-YgW" secondAttribute="top" constant="76" id="WUz-Kp-HlY"/>
                 <constraint firstItem="zB1-zx-Dsg" firstAttribute="centerX" secondItem="4fY-Uo-7e4" secondAttribute="centerX" id="bxF-Sr-j1p"/>
-                <constraint firstItem="b6z-rv-lQZ" firstAttribute="centerY" secondItem="5XC-bQ-YgW" secondAttribute="centerY" constant="27" id="cSj-8g-hAg"/>
                 <constraint firstItem="5XC-bQ-YgW" firstAttribute="trailing" secondItem="Plj-eN-Eik" secondAttribute="trailing" constant="40" id="hvW-HB-Fod"/>
-                <constraint firstItem="b6z-rv-lQZ" firstAttribute="top" secondItem="LXU-jZ-IvE" secondAttribute="bottom" constant="32" id="k3M-eQ-0xg"/>
                 <constraint firstItem="b6z-rv-lQZ" firstAttribute="leading" secondItem="5XC-bQ-YgW" secondAttribute="leading" constant="40" id="mcf-gK-xb4"/>
-                <constraint firstItem="Plj-eN-Eik" firstAttribute="top" secondItem="b6z-rv-lQZ" secondAttribute="bottom" constant="58" id="w5s-tR-dXe"/>
+                <constraint firstItem="LXU-jZ-IvE" firstAttribute="centerX" secondItem="4fY-Uo-7e4" secondAttribute="centerX" id="pjb-MD-VOV"/>
                 <constraint firstItem="5XC-bQ-YgW" firstAttribute="trailing" secondItem="b6z-rv-lQZ" secondAttribute="trailing" constant="40" id="wje-QO-Ech"/>
             </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="5XC-bQ-YgW"/>
             <point key="canvasLocation" x="88.799999999999997" y="78.710644677661179"/>
         </view>
     </objects>
-    <resources>
-        <image name="close-icon" width="28" height="28"/>
-    </resources>
 </document>
