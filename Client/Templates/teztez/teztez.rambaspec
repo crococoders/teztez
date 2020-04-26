@@ -1,0 +1,23 @@
+# Template information section
+name: teztez
+author: Almas Zainoldin
+
+# The declarations for code files
+code_files:
+# Controller
+- {name: Controller/ViewController.swift, path: Code/Controller/viewcontroller.swift.liquid}
+
+# Localization
+- {name: Localization/.strings, path: Code/Localization/localization.strings.liquid}
+
+# Repository
+- {name: Repository/Repository.swift, path: Code/Repository/repository.swift.liquid}
+
+# Store
+- {name: Store/Store.swift, path: Code/Store/store.swift.liquid}
+
+# View
+- {name: View}
+
+# ViewModel
+- {name: ViewModel}
