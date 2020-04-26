@@ -41,10 +41,6 @@ final class ActivitiesIntroViewController: UIViewController, ActivitiesIntroPres
     @IBAction func nextButtonDidTap(_ sender: PrimaryButton) {
         onNextButtonDidTap?()
     }
-
-    @IBAction func onCloseDidTap(_ sender: UIBarButtonItem) {
-        onCloseButtonDidTap?()
-    }
 }
 
 private extension ActivitiesIntroViewController {
