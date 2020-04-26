@@ -8,4 +8,16 @@
 
 import Foundation
 
-public final class CoordinatorFactory {}
+final class CoordinatorFactory {
+    func makeMainTabBarCoordinator(router: Router) -> Coordinator {
+        let tabBarController = TabBarController()
+        let coordinator = TabBarCoordinator(tabBarPresentable: tabBarController, router: router, coordinatorFactory: CoordinatorFactory())
+        return coordinator
+    }
+
+    func makeActivitiesCoordiantor(navigationController: CoordinatorNavigationController) -> Coordinator {
+        let coordinator = ActivitiesCoordinator(moduleFactory: ModuleFactory.shared,
+                                                router: Router(rootController: navigationController))
+        return coordinator
+    }
+}

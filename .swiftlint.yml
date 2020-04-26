@@ -6,9 +6,9 @@ excluded:
   - Client/Teztez/Resources/Generated
   - Templates
   - Tests
+  - Server
 included: 
   - Client/Teztez
-  - Server
 whitelist_rules:
   - closure_spacing
   - closure_parameter_position

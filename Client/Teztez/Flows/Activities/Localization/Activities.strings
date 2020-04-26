@@ -1,0 +1,20 @@
+/* 
+  MainTabBar.strings
+  Teztez
+
+  Created by Almas Zainoldin on 4/22/20.
+  Copyright © 2020 crococoders. All rights reserved.
+*/
+
+"navigationTitle" = "Activities";
+"coachTitle" = "Coach";
+"coachDescription" = "Check your reading speed";
+"blenderTitle" = "Blender";
+"blenderDescription" = "Mix them up";
+"backwardsTitle" = "Sdrawkcab";
+"backwardsDescription" = "Backwards";
+"colorMatchingTitle" = "Color Matching";
+"colorMatchingDescription" = "Pair them";
+"schulteTableTitle" = "Schulte table";
+"schulteTableDescription" = "Famous one";
+"suggestActivityTitle" = "Suggest Activity";

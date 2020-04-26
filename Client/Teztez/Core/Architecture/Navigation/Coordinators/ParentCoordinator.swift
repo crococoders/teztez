@@ -8,35 +8,35 @@
 
 import Foundation
 
-public typealias Flow = (coordinator: Coordinator, module: Presentable?)
+typealias Flow = (coordinator: Coordinator, module: Presentable?)
 
-public class ParentCoordinator: Coordinator {
-    public private(set) var childCoordinators: [Coordinator] = []
-    public var router: Router
+class ParentCoordinator: Coordinator {
+    private(set) var childCoordinators: [Coordinator] = []
+    var router: Router
 
     init(router: Router) {
         self.router = router
     }
 
-    public func start() {}
+    func start() {}
 
-    public func show(_ flow: Flow, with transitionType: TransitionType) {
+    func show(_ flow: Flow, with transitionType: TransitionType) {
         addDependency(flow.coordinator)
         flow.coordinator.start()
         router.show(flow.module, with: transitionType)
     }
 
-    public func dismiss(child coordinator: Coordinator?) {
+    func dismiss(child coordinator: Coordinator?) {
         router.dismissModule()
         removeDependency(coordinator)
     }
 
-    public func addDependency(_ coordinator: Coordinator) {
+    func addDependency(_ coordinator: Coordinator) {
         guard !childCoordinators.contains(where: { $0 === coordinator }) else { return }
         childCoordinators.append(coordinator)
     }
 
-    public func removeDependency(_ coordinator: Coordinator?) {
+    func removeDependency(_ coordinator: Coordinator?) {
         guard !childCoordinators.isEmpty,
             let coordinator = coordinator else { return }
         if let coordinator = coordinator as? ParentCoordinator, !coordinator.childCoordinators.isEmpty {
@@ -47,7 +47,7 @@ public class ParentCoordinator: Coordinator {
         childCoordinators.removeAll { $0 === coordinator }
     }
 
-    public func cleanChildCoordinators() {
+    func cleanChildCoordinators() {
         childCoordinators.forEach { removeDependency($0) }
     }
 }
