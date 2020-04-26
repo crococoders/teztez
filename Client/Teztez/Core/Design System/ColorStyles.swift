@@ -17,7 +17,6 @@ public extension UIColor {
     static let buttonGray = UIColor(hex: "#E8E8E8")
     static let accentBlue = UIColor(hex: "#1C87FC")
     static let accentBlue15 = UIColor(hex: "#1C87FC").withAlphaComponent(0.15)
-    static let mainBlue = UIColor(hex: "#0A84FF")
 
     static let sirenLight = UIColor(hex: "#C76FC3")
     static let sirenDark = UIColor(hex: "#B662BD")

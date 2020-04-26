@@ -1,5 +1,5 @@
 //
-//  CommonButton.swift
+//  PrimaryButton.swift
 //  Teztez
 //
 //  Created by Adlet on 4/22/20.
@@ -8,19 +8,19 @@
 
 import UIKit
 
-final class CommonButton: UIButton {
+final class PrimaryButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
+        setup()
     }
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        commonInit()
+        setup()
     }
 
-    private func commonInit() {
-        backgroundColor = .mainBlue
+    private func setup() {
+        backgroundColor = .accentBlue
         layer.cornerRadius = 10
         titleLabel?.font = .textSemibold17
         setTitleColor(.white, for: .normal)
