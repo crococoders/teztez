@@ -6,8 +6,8 @@ struct ArticleController {
         return Article.query(on: req.db).all()
     }
     
-    func getByID(req: Request) throws -> EventLoopFuture<[Article]> {
-        return Article.find(req.parameters.get("articleID"), on: req.db)
+    func getByID(req: Request) throws -> EventLoopFuture<Article> {
+        return Article.find(req.parameters.get("articleId"), on: req.db)
         .unwrap(or: Abort(.notFound))
     }
 
@@ -17,7 +17,7 @@ struct ArticleController {
     }
 
     func delete(req: Request) throws -> EventLoopFuture<HTTPStatus> {
-        return Article.find(req.parameters.get("articleID"), on: req.db)
+        return Article.find(req.parameters.get("articleId"), on: req.db)
             .unwrap(or: Abort(.notFound))
             .flatMap { $0.delete(on: req.db) }
             .transform(to: .ok)

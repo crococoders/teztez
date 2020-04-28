@@ -1,8 +1,8 @@
 import Fluent
 import Vapor
 
-final class Text: Model, Content {
-    static let schema = "texts"
+final class GameContent: Model, Content {
+    static let schema = "game_contents"
     
     @ID(key: .id)
     var id: UUID?
@@ -12,16 +12,12 @@ final class Text: Model, Content {
     
     @Field(key: "text")
     var text: String
-    
-    @Field(key: "backward_text")
-    var backwardText: String?
 
     init() { }
 
-    init(id: UUID? = nil, title: String, text: String, backwardText: String? = nil) {
+    init(id: UUID? = nil, title: String, text: String) {
         self.id = id
         self.title = title
         self.text = text
-        self.backwardText = backwardText
     }
 }

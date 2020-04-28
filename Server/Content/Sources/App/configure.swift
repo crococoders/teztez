@@ -2,19 +2,16 @@ import Fluent
 import FluentPostgresDriver
 import Vapor
 
-// configures your application
 public func configure(_ app: Application) throws {
-    // uncomment to serve files from /Public folder
-    // app.middleware.use(FileMiddleware(publicDirectory: app.directory.publicDirectory))
 
     app.databases.use(.postgres(
-        hostname: Environment.get("DATABASE_HOST") ?? "localhost",
-        username: Environment.get("DATABASE_USERNAME") ?? "vapor_username",
-        password: Environment.get("DATABASE_PASSWORD") ?? "vapor_password",
-        database: Environment.get("DATABASE_NAME") ?? "vapor_database"
+        hostname: Environment.get("POSTGRES_HOST")!,
+        username: Environment.get("POSTGRES_USERNAME")!,
+        password: Environment.get("POSTGRES_PASSWORD")!,
+        database: Environment.get("POSTGRES_DB")!
     ), as: .psql)
 
-    app.migrations.add(CreateText())
+    app.migrations.add(CreateGameContent())
     app.migrations.add(CreateArticle())
 
     try app.autoMigrate().wait()

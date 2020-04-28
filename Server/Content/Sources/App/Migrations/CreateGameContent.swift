@@ -1,16 +1,15 @@
 import Fluent
 
-struct CreateText: Migration {
+struct CreateGameContent: Migration {
     func prepare(on database: Database) -> EventLoopFuture<Void> {
-        return database.schema("texts")
+        return database.schema("game_contents")
             .id()
             .field("title", .string, .required)
             .field("text", .string, .required)
-            .field("backward_text", .string)
             .create()
     }
 
     func revert(on database: Database) -> EventLoopFuture<Void> {
-        return database.schema("texts").delete()
+        return database.schema("game_contents").delete()
     }
 }
