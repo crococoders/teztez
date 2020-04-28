@@ -1,5 +1,5 @@
 //
-//  ActivityIconContainerView.swift
+//  ActivityIconView.swift
 //  Teztez
 //
 //  Created by Adlet on 4/25/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ActivityIconContainerView: UIView, NibOwnerLoadable {
+final class ActivityIconView: UIView, NibOwnerLoadable {
     @IBOutlet private var imageView: UIImageView!
 
     override init(frame: CGRect) {
@@ -28,8 +28,8 @@ final class ActivityIconContainerView: UIView, NibOwnerLoadable {
         layer.masksToBounds = true
     }
 
-    func configure(with data: ActivitiesIntroViewModel) {
-        imageView.image = data.activityImage
-        applyGradient(colors: data.colors)
+    func configure(with viewModel: ActivitiesIntroViewModel) {
+        imageView.image = viewModel.icon
+        applyGradient(colors: viewModel.gradientColors)
     }
 }

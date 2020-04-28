@@ -19,7 +19,7 @@ final class ActivitiesIntroViewController: UIViewController, ActivitiesIntroPres
 
     private let viewModel: ActivitiesIntroViewModel
 
-    @IBOutlet private var activityIconContainerView: ActivityIconContainerView!
+    @IBOutlet private var activityIconView: ActivityIconView!
     @IBOutlet private var activityTitle: UILabel!
     @IBOutlet private var nextButton: PrimaryButton!
     @IBOutlet private var containerView: UIStackView!
@@ -46,26 +46,19 @@ final class ActivitiesIntroViewController: UIViewController, ActivitiesIntroPres
 private extension ActivitiesIntroViewController {
     func setupUI() {
         nextButton.setTitle(R.string.activitiesIntro.nextButtonTitle(), for: .normal)
-        activityTitle.text = viewModel.activityTitle
-        activityIconContainerView.configure(with: viewModel)
+        activityTitle.text = viewModel.title
+        activityIconView.configure(with: viewModel)
         setupContainerView()
         configureNavigationBar()
     }
 
     func setupContainerView() {
-        let views: [PrimaryActivitiesIntroView] = Array(count: 2, factory: .loadFromNib())
+        let views: [ActivitiesIntroBlockView] = Array(count: 2, factory: .loadFromNib())
         containerView.addArrangedSubviews(views)
 
         for (index, view) in containerView.arrangedSubviews.enumerated() {
-            let activityView = view as? PrimaryActivitiesIntroView
-            switch index {
-            case 0:
-                activityView?.configure(with: viewModel, isUsageView: false)
-            case 1:
-                activityView?.configure(with: viewModel, isUsageView: true)
-            default:
-                break
-            }
+            let activityView = view as? ActivitiesIntroBlockView
+            activityView?.configure(with: viewModel.blocks[index])
         }
     }
 
@@ -76,6 +69,7 @@ private extension ActivitiesIntroViewController {
 
     func configureNavigationBar() {
         navigationController?.view.backgroundColor = .systemGray
+        navigationController?.navigationBar.barTintColor = .systemGray
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.closeIcon(),
                                                             style: .plain,
                                                             target: self,

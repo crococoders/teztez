@@ -13,9 +13,7 @@ enum ActivityIntroType {
 }
 
 struct ActivitiesIntroViewModel {
-    private var type: ActivityIntroType
-
-    var colors: [CGColor] {
+    var gradientColors: [CGColor] {
         switch type {
         case .blender:
             return [UIColor.coralLight.cgColor, UIColor.coralDark.cgColor]
@@ -28,7 +26,7 @@ struct ActivitiesIntroViewModel {
         }
     }
 
-    var activityTitle: String {
+    var title: String {
         switch type {
         case .blender:
             return R.string.activities.blenderTitle()
@@ -41,7 +39,7 @@ struct ActivitiesIntroViewModel {
         }
     }
 
-    var activityImage: UIImage? {
+    var icon: UIImage? {
         switch type {
         case .blender:
             return R.image.blenderIcon()
@@ -54,56 +52,11 @@ struct ActivitiesIntroViewModel {
         }
     }
 
-    var activityInfoTitle: String {
-        switch type {
-        case .backward:
-            return R.string.activitiesIntro.backwardsInfoTitle()
-        case .blender:
-            return R.string.activitiesIntro.blenderInfoTitle()
-        case .schulte:
-            return R.string.activitiesIntro.schulteInfoTitle()
-        case .colorMatch:
-            return R.string.activitiesIntro.matchingInfoTitle()
-        }
+    var blocks: [ActivitiesIntroBlockViewModel] {
+        return ActivitiesIntroBlockViewModelFactory.makeBlocks(for: type)
     }
 
-    var activityInfoDescription: String {
-        switch type {
-        case .backward:
-            return R.string.activitiesIntro.backwardsInfoDescription()
-        case .blender:
-            return R.string.activitiesIntro.blenderInfoDescription()
-        case .schulte:
-            return R.string.activitiesIntro.schulteInfoDescription()
-        case .colorMatch:
-            return R.string.activitiesIntro.matchingInfoDescription()
-        }
-    }
-
-    var activityInfoImage: UIImage? {
-        return R.image.activityInfoIcon()
-    }
-
-    var activityUsageTitle: String {
-        return R.string.activitiesIntro.activityUsageTitle()
-    }
-
-    var activityUsageDescription: String {
-        switch type {
-        case .backward:
-            return R.string.activitiesIntro.backwardsUsageDescription()
-        case .blender:
-            return R.string.activitiesIntro.blenderUsageDescription()
-        case .schulte:
-            return R.string.activitiesIntro.schulteUsageDescription()
-        case .colorMatch:
-            return R.string.activitiesIntro.matchingUsageDescription()
-        }
-    }
-
-    var activityUsageImage: UIImage? {
-        return R.image.activityUsageIcon()
-    }
+    private let type: ActivityIntroType
 
     init(type: ActivityIntroType) {
         self.type = type
