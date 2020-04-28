@@ -7,13 +7,16 @@ final class Game: Model, Content {
     @ID(key: .id)
     var id: UUID?
 
-    @Field(key: "title")
-    var title: String
+    @Field(key: "name")
+    var name: String
+    
+//    @Children(for: \.$game)
+//    var feedbacks: [Feedback]
 
     init() { }
 
-    init(id: UUID? = nil, title: String) {
+    init(id: UUID? = nil, name: String) {
         self.id = id
-        self.title = title
+        self.name = name
     }
 }

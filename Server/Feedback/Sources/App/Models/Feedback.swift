@@ -16,8 +16,8 @@ final class Feedback: Model, Content {
     @Field(key: "rate_score")
     var rateScore: Int
     
-    @Parent(key: "game_id")
-    var game: Game
+    @Field(key: "game_id")
+    var gameId: UUID
 
     init() { }
 
@@ -26,6 +26,6 @@ final class Feedback: Model, Content {
         self.title = title
         self.text = text
         self.rateScore = rateScore
-        self.$game.id = gameId
+        self.gameId = gameId
     }
 }

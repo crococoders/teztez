@@ -4,7 +4,7 @@ struct CreateGame: Migration {
     func prepare(on database: Database) -> EventLoopFuture<Void> {
         return database.schema("games")
             .id()
-            .field("title", .string, .required)
+            .field("name", .string, .required)
             .create()
     }
 
