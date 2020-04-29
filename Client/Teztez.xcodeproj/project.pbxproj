@@ -31,11 +31,12 @@
 		C451B7CA2455E8BB00BB1D2A /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = C451B7C92455E8BB00BB1D2A /* Models */; };
 		C463DC132459D32C00E265FF /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC0A2459D32C00E265FF /* TextInputViewController.xib */; };
 		C463DC142459D32C00E265FF /* TextInputTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */; };
-		C463DC152459D32C00E265FF /* TariffResourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0C2459D32C00E265FF /* TariffResourceCell.swift */; };
 		C463DC162459D32C00E265FF /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0D2459D32C00E265FF /* TextInputViewController.swift */; };
 		C463DC172459D32C00E265FF /* TextInput.strings in Resources */ = {isa = PBXBuildFile; fileRef = C463DC102459D32C00E265FF /* TextInput.strings */; };
 		C463DC182459D32C00E265FF /* TextInputStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC122459D32C00E265FF /* TextInputStore.swift */; };
 		C463DC1B2459D35C00E265FF /* UIImageView+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC1A2459D35C00E265FF /* UIImageView+Color.swift */; };
+		C463DC202459D7B900E265FF /* UIViewController+ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC1F2459D7B900E265FF /* UIViewController+ActionSheet.swift */; };
+		C463DC232459DCAD00E265FF /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC222459DCAD00E265FF /* ActionSheetViewModel.swift */; };
 		C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */; };
 		C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */; };
 		C4B88F5B2450BCA700D1D1BA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */; };
@@ -125,11 +126,12 @@
 		C451B7C82455E8A500BB1D2A /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = ../Shared/Models; sourceTree = "<group>"; };
 		C463DC0A2459D32C00E265FF /* TextInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
 		C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputTextViewDelegate.swift; sourceTree = "<group>"; };
-		C463DC0C2459D32C00E265FF /* TariffResourceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TariffResourceCell.swift; sourceTree = "<group>"; };
 		C463DC0D2459D32C00E265FF /* TextInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
 		C463DC102459D32C00E265FF /* TextInput.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = TextInput.strings; sourceTree = "<group>"; };
 		C463DC122459D32C00E265FF /* TextInputStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputStore.swift; sourceTree = "<group>"; };
 		C463DC1A2459D35C00E265FF /* UIImageView+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Color.swift"; sourceTree = "<group>"; };
+		C463DC1F2459D7B900E265FF /* UIViewController+ActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActionSheet.swift"; sourceTree = "<group>"; };
+		C463DC222459DCAD00E265FF /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
 		C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -321,46 +323,21 @@
 		C463DC062459D32C00E265FF /* TextInput */ = {
 			isa = PBXGroup;
 			children = (
-				C463DC072459D32C00E265FF /* ViewModel */,
-				C463DC082459D32C00E265FF /* Repository */,
 				C463DC092459D32C00E265FF /* Controller */,
-				C463DC0E2459D32C00E265FF /* View */,
 				C463DC0F2459D32C00E265FF /* Localization */,
 				C463DC112459D32C00E265FF /* Store */,
 			);
 			path = TextInput;
 			sourceTree = "<group>";
 		};
-		C463DC072459D32C00E265FF /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		C463DC082459D32C00E265FF /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
 		C463DC092459D32C00E265FF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C463DC0A2459D32C00E265FF /* TextInputViewController.xib */,
 				C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */,
-				C463DC0C2459D32C00E265FF /* TariffResourceCell.swift */,
 				C463DC0D2459D32C00E265FF /* TextInputViewController.swift */,
+				C463DC0A2459D32C00E265FF /* TextInputViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		C463DC0E2459D32C00E265FF /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		C463DC0F2459D32C00E265FF /* Localization */ = {
@@ -395,6 +372,31 @@
 			path = Array;
 			sourceTree = "<group>";
 		};
+		C463DC1D2459D77800E265FF /* ActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC1E2459D78000E265FF /* Controller */,
+				C463DC212459DC9100E265FF /* ViewModel */,
+			);
+			path = ActionSheet;
+			sourceTree = "<group>";
+		};
+		C463DC1E2459D78000E265FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC1F2459D7B900E265FF /* UIViewController+ActionSheet.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C463DC212459DC9100E265FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC222459DCAD00E265FF /* ActionSheetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C4A98277244DFF8C005E98BC /* Configurators */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,8 +420,8 @@
 			isa = PBXGroup;
 			children = (
 				C4B88F5F2450CE9700D1D1BA /* Controller */,
-				C4B88F622450CEDE00D1D1BA /* ViewModel */,
 				C4B88F612450CED200D1D1BA /* Localization */,
+				C4B88F622450CEDE00D1D1BA /* ViewModel */,
 				C4F7AFCB245471FF007D6289 /* Views */,
 			);
 			path = ActivitiesIntro;
@@ -437,6 +439,8 @@
 		C4B88F602450CEC400D1D1BA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C463DC1D2459D77800E265FF /* ActionSheet */,
+				C463DC062459D32C00E265FF /* TextInput */,
 				C4B88F5E2450CE8D00D1D1BA /* ActivitiesIntro */,
 			);
 			path = Common;
@@ -599,7 +603,6 @@
 		C4F81909244B724F00AE73CE /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				C463DC062459D32C00E265FF /* TextInput */,
 				C4B88F602450CEC400D1D1BA /* Common */,
 				C4197B842450A54300811F37 /* Activities */,
 				C4197B7A2450A08700811F37 /* MainTabBar */,
@@ -1016,6 +1019,7 @@
 				C4F8195A244B890B00AE73CE /* AppDelegateConfiguratorFactory.swift in Sources */,
 				C4F81919244B761700AE73CE /* UIColor+Hex.swift in Sources */,
 				C4F81958244B86EC00AE73CE /* ColorStyles.swift in Sources */,
+				C463DC232459DCAD00E265FF /* ActionSheetViewModel.swift in Sources */,
 				C4197B902450AC5700811F37 /* ActivitiesStore.swift in Sources */,
 				C4197B8C2450ABA400811F37 /* ActivitiesCoordinator.swift in Sources */,
 				C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */,
@@ -1030,7 +1034,6 @@
 				C4BD0F2C244DF0020056E8C1 /* SceneDelegate.swift in Sources */,
 				C40AE0C424537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift in Sources */,
 				C4F81952244B832A00AE73CE /* TransitionType.swift in Sources */,
-				C463DC152459D32C00E265FF /* TariffResourceCell.swift in Sources */,
 				C40AE0BC24535E4B008BC71C /* ActivitiesCell.swift in Sources */,
 				C4197B7D2450A24E00811F37 /* TabBarCoordinator.swift in Sources */,
 				C40AE0C924537E44008BC71C /* ActivitiesViewModel.swift in Sources */,
@@ -1054,6 +1057,7 @@
 				C4F81946244B82BB00AE73CE /* Coordinator.swift in Sources */,
 				C4F7AFD224547A8A007D6289 /* NibLoadable.swift in Sources */,
 				C4BD0F2A244DEF3D0056E8C1 /* R.generated.swift in Sources */,
+				C463DC202459D7B900E265FF /* UIViewController+ActionSheet.swift in Sources */,
 				C4BD0F33244DF1280056E8C1 /* StartupSceneDelegateConfigurator.swift in Sources */,
 				C4D138DD244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift in Sources */,
 				C4F7AFCF24547450007D6289 /* ActivityIconView.swift in Sources */,

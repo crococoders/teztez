@@ -17,9 +17,9 @@ class TextInputTextViewDelegate: NSObject, UITextViewDelegate {
 
     func textViewDidChange(_ textView: UITextView) {
         guard !textView.text.isEmpty else {
-            store.dispatch(action: .didTextReset)
+            store.dispatch(action: .didResetText)
             return
         }
-        store.dispatch(action: .didTextChangeStart)
+        store.dispatch(action: .didStartTextChange)
     }
 }

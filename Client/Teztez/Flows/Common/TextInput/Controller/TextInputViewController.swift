@@ -9,13 +9,20 @@
 import Combine
 import UIKit
 
-protocol TextInputPresentable: Presentable {}
+protocol TextInputPresentable: Presentable {
+    var onDoneButtonDidTap: ((_ text: String) -> Void)? { get set }
+    var onCancelButtonDidTap: Callback? { get set }
+}
 
 private enum Constants {
     static let edgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 40)
+    static let animationDuration = 0.5
 }
 
 final class TextInputViewController: ViewController, TextInputPresentable {
+    var onDoneButtonDidTap: ((_ text: String) -> Void)?
+    var onCancelButtonDidTap: Callback?
+
     private let store: TextInputStore
     private let textViewDelegate: TextInputTextViewDelegate
     private var cancellables = Set<AnyCancellable>()
@@ -46,7 +53,7 @@ final class TextInputViewController: ViewController, TextInputPresentable {
 
     @IBAction private func resetButtonDidTap() {
         textView.text = ""
-        store.dispatch(action: .didTextReset)
+        store.dispatch(action: .didResetText)
     }
 
     private func setupObservers() {
@@ -57,8 +64,12 @@ final class TextInputViewController: ViewController, TextInputPresentable {
             switch state {
             case .reset:
                 self.setResetButtonVisibility(false)
+                self.setDoneButtonAvailability(false)
             case .textChanging:
                 self.setResetButtonVisibility(true)
+                self.setDoneButtonAvailability(true)
+            case let .warned(viewModel):
+                self.showActionSheet(with: viewModel)
             }
         }.store(in: &cancellables)
     }
@@ -89,23 +100,46 @@ final class TextInputViewController: ViewController, TextInputPresentable {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: R.string.textInput.cancel(),
                                                            style: .plain,
                                                            target: self,
-                                                           action: #selector(doneButtonDidPress))
+                                                           action: #selector(cancelButtonDidPress))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: R.string.textInput.done(),
                                                             style: .plain,
                                                             target: self,
-                                                            action: #selector(cancelButtonDidPress))
+                                                            action: #selector(doneButtonDidPress))
+        setDoneButtonAvailability(false)
     }
 
     private func setResetButtonVisibility(_ isVisible: Bool) {
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: Constants.animationDuration) {
             self.resetButton.alpha = isVisible ? 1.0 : 0.0
         }
         resetButton.isEnabled = isVisible
     }
 
-    @objc
-    private func doneButtonDidPress() {}
+    private func showActionSheet(with warningViewModel: ActionSheetViewModel) {
+        showActionSheet(with: warningViewModel) { [weak self] in
+            self?.onCancelButtonDidTap?()
+        }
+    }
+
+    private func setDoneButtonAvailability(_ isAvailable: Bool) {
+        navigationItem.rightBarButtonItem?.isEnabled = isAvailable
+        navigationItem.rightBarButtonItem?.tintColor = isAvailable ? .accentBlue : .systemGray3
+    }
 
     @objc
-    private func cancelButtonDidPress() {}
+    private func doneButtonDidPress() {
+        guard
+            let text = textView.text,
+            !text.isEmpty else { return }
+        onDoneButtonDidTap?(text)
+    }
+
+    @objc
+    private func cancelButtonDidPress() {
+        guard !textView.text.isEmpty else {
+            onCancelButtonDidTap?()
+            return
+        }
+        store.dispatch(action: .didTapCancelButton)
+    }
 }
