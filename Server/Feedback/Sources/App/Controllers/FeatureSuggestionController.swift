@@ -2,19 +2,19 @@ import Fluent
 import Vapor
 
 struct FeatureSuggestionController {
-    func all(req: Request) throws -> EventLoopFuture<[FeatureSuggestion]> {
-        return FeatureSuggestion.query(on: req.db).all()
+    func getAll(request: Request) throws -> EventLoopFuture<[FeatureSuggestion]> {
+        return FeatureSuggestion.query(on: request.db).all()
     }
 
-    func create(req: Request) throws -> EventLoopFuture<FeatureSuggestion> {
-        let featureSuggestion = try req.content.decode(FeatureSuggestion.self)
-        return featureSuggestion.save(on: req.db).map { featureSuggestion }
+    func create(request: Request) throws -> EventLoopFuture<FeatureSuggestion> {
+        let featureSuggestion = try request.content.decode(FeatureSuggestion.self)
+        return featureSuggestion.save(on: request.db).map { featureSuggestion }
     }
 
-    func delete(req: Request) throws -> EventLoopFuture<HTTPStatus> {
-        return FeatureSuggestion.find(req.parameters.get("suggestionId"), on: req.db)
+    func delete(request: Request) throws -> EventLoopFuture<HTTPStatus> {
+        return FeatureSuggestion.find(request.parameters.get("suggestionId"), on: request.db)
             .unwrap(or: Abort(.notFound))
-            .flatMap { $0.delete(on: req.db) }
+            .flatMap { $0.delete(on: request.db) }
             .transform(to: .ok)
     }
 }

@@ -2,27 +2,27 @@ import Fluent
 import Vapor
 
 struct FeedbackController {
-    func all(req: Request) throws -> EventLoopFuture<[Feedback]> {
-        return Feedback.query(on: req.db).all()
+    func getAll(request: Request) throws -> EventLoopFuture<[Feedback]> {
+        return Feedback.query(on: request.db).all()
     }
 
-    func getAllFeedbacksByGameId(req: Request) throws -> EventLoopFuture<[Feedback]>{
-        return Game.find(req.parameters.get("gameId"),on: req.db)
+    func getAllFeedbacksByGameId(request: Request) throws -> EventLoopFuture<[Feedback]>{
+        return Game.find(request.parameters.get("gameId"),on: request.db)
             .unwrap(or: Abort(.notFound))
             .flatMap{game in
-                return Feedback.query(on: req.db).filter("game_id", .equal, game.id!).all()
+                return Feedback.query(on: request.db).filter("game_id", .equal, game.id!).all()
         }
     }
     
-    func create(req: Request) throws -> EventLoopFuture<Feedback> {
-        let feedback = try req.content.decode(Feedback.self)
-        return feedback.save(on: req.db).map { feedback }
+    func create(request: Request) throws -> EventLoopFuture<Feedback> {
+        let feedback = try request.content.decode(Feedback.self)
+        return feedback.save(on: request.db).map { feedback }
     }
 
-    func delete(req: Request) throws -> EventLoopFuture<HTTPStatus> {
-        return Feedback.find(req.parameters.get("feedbackId"), on: req.db)
+    func delete(request: Request) throws -> EventLoopFuture<HTTPStatus> {
+        return Feedback.find(request.parameters.get("feedbackId"), on: request.db)
             .unwrap(or: Abort(.notFound))
-            .flatMap { $0.delete(on: req.db) }
+            .flatMap { $0.delete(on: request.db) }
             .transform(to: .ok)
     }
 }

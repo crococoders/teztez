@@ -2,7 +2,7 @@ import Fluent
 
 struct CreateFeatureSuggestion: Migration {
     func prepare(on database: Database) -> EventLoopFuture<Void> {
-        return database.schema("feature_suggestions")
+        return database.schema(FeatureSuggestion.schema)
             .id()
             .field("title", .string, .required)
             .field("text", .string, .required)
@@ -10,6 +10,6 @@ struct CreateFeatureSuggestion: Migration {
     }
 
     func revert(on database: Database) -> EventLoopFuture<Void> {
-        return database.schema("feature_suggestion").delete()
+        return database.schema(FeatureSuggestion.schema).delete()
     }
 }
