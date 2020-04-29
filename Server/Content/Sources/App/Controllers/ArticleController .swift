@@ -2,24 +2,24 @@ import Fluent
 import Vapor
 
 struct ArticleController {
-    func all(req: Request) throws -> EventLoopFuture<[Article]> {
-        return Article.query(on: req.db).all()
+    func getAll(request: Request) throws -> EventLoopFuture<[Article]> {
+        return Article.query(on: request.db).all()
     }
     
-    func getByID(req: Request) throws -> EventLoopFuture<Article> {
-        return Article.find(req.parameters.get("articleId"), on: req.db)
+    func getByID(request: Request) throws -> EventLoopFuture<Article> {
+        return Article.find(request.parameters.get("articleId"), on: request.db)
         .unwrap(or: Abort(.notFound))
     }
 
-    func create(req: Request) throws -> EventLoopFuture<Article> {
-        let article = try req.content.decode(Article.self)
-        return article.save(on: req.db).map { article }
+    func create(request: Request) throws -> EventLoopFuture<Article> {
+        let article = try request.content.decode(Article.self)
+        return article.save(on: request.db).map { article }
     }
 
-    func delete(req: Request) throws -> EventLoopFuture<HTTPStatus> {
-        return Article.find(req.parameters.get("articleId"), on: req.db)
+    func delete(request: Request) throws -> EventLoopFuture<HTTPStatus> {
+        return Article.find(request.parameters.get("articleId"), on: request.db)
             .unwrap(or: Abort(.notFound))
-            .flatMap { $0.delete(on: req.db) }
+            .flatMap { $0.delete(on: request.db) }
             .transform(to: .ok)
     }
 }

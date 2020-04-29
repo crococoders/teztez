@@ -2,14 +2,14 @@ import Fluent
 import Vapor
 
 struct GameContentController {
-    func all(req: Request) throws -> EventLoopFuture<[GameContent]> {
-        return GameContent.query(on: req.db).all()
+    func getAll(request: Request) throws -> EventLoopFuture<[GameContent]> {
+        return GameContent.query(on: request.db).all()
     }
     
-    func nextText(req: Request) throws -> EventLoopFuture<GameContent> {
-        let gameContent = GameContent.query(on: req.db).count().flatMap{
+    func nextText(request: Request) throws -> EventLoopFuture<GameContent> {
+        let gameContent = GameContent.query(on: request.db).count().flatMap{
             count in
-           return GameContent.query(on: req.db)
+           return GameContent.query(on: request.db)
             .offset(Int.random(in: 0..<count))
             .first()
             .unwrap(or: Abort(.notFound))
@@ -18,15 +18,15 @@ struct GameContentController {
         return gameContent
     }
 
-    func create(req: Request) throws -> EventLoopFuture<GameContent> {
-        let text = try req.content.decode(GameContent.self)
-        return text.save(on: req.db).map { text }
+    func create(request: Request) throws -> EventLoopFuture<GameContent> {
+        let text = try request.content.decode(GameContent.self)
+        return text.save(on: request.db).map { text }
     }
 
-    func delete(req: Request) throws -> EventLoopFuture<HTTPStatus> {
-        return GameContent.find(req.parameters.get("contentId"), on: req.db)
+    func delete(request: Request) throws -> EventLoopFuture<HTTPStatus> {
+        return GameContent.find(request.parameters.get("contentId"), on: request.db)
             .unwrap(or: Abort(.notFound))
-            .flatMap { $0.delete(on: req.db) }
+            .flatMap { $0.delete(on: request.db) }
             .transform(to: .ok)
     }
 }
