@@ -1,0 +1,30 @@
+/* 
+  ActivitiesIntro.strings
+  Teztez
+
+  Created by Adlet on 4/23/20.
+  Copyright © 2020 crococoders. All rights reserved.
+*/
+
+"nextButtonTitle" = "Next";
+"activityUsageTitle" = "How to Play?";
+
+//Backwards
+"backwardsInfoTitle" = "What is the Backwards?";
+"backwardsInfoDescription" = "Backward reading letters or words in reverse order. Reading words backwards helps to keep your mind active and improve your reading skills";
+"backwardsUsageDescription" = "In the Backwards, you first need to read the text in its usual form, then TezTez will convert the text. In the converted text, the letters inside the word is changing, the last letter becomes the first and so on.";
+
+//Blender
+"blenderInfoTitle" = "What is the Blender?";
+"blenderInfoDescription" = "A blender is one of the exercises that increases your reading speed and attention. This is an exercise in which the order of letters in a word is incorrect. However, you are able to read words.";
+"blenderUsageDescription" = "You will be given a text in which the letters will be written in the wrong order except the first and last letters. You will have to read all the text in this form";
+
+//Color Matching
+"matchingInfoTitle" = "What is the Color Matching?";
+"matchingInfoDescription" = "Color matching is an exercise in mindfulness. It helps you develop activity and peripheral vision.";
+"matchingUsageDescription" = "First you set the time, after that, during the set time, you need to choose the same colors from the left and right columns";
+
+//Schulte Table
+"schulteInfoTitle" = "What is the Schulte Table";
+"schulteInfoDescription" = "With this exercise you will increase your attention and logic. A very simple game but at the same time very useful.";
+"schulteUsageDescription" = "Find numbers in ascending order from 1 to 25, with maximum speed. It is very important to avoid eye movements from the center and look for numbers only with peripheral vision";
