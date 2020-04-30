@@ -63,7 +63,7 @@ final class FontSizeChangeViewController: UIViewController, FontSizeChangePresen
     private func setupNavigationBar() {
         title = R.string.fontSizeChange.navigationTitle()
         navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
-        // navigationController?.navigationBar.shadowImage = UIImage.imageWithColor(color: .systemGray3)
+        navigationController?.navigationBar.shadowImage = UIImage.imageWithColor(color: .systemGray3)
         navigationController?.navigationBar.tintColor = .accentBlue
         navigationController?.navigationBar.barTintColor = .systemGray
 

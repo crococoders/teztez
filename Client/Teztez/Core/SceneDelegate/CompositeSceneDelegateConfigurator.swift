@@ -8,10 +8,8 @@
 
 import UIKit
 
-@available(iOS 13.0, *)
 typealias SceneDelegateConfigurator = UIResponder & UIWindowSceneDelegate
 
-@available(iOS 13.0, *)
 final class CompositeSceneDelegateConfigurator: SceneDelegateConfigurator {
     private let configurators: [SceneDelegateConfigurator]
 
