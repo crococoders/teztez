@@ -41,11 +41,14 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
 
     private func setupViews() {
         stackView.removeAllArrangedSubviews()
+        stackView.spacing = 32.0
         let headerView = ActivityHeaderView()
         headerView.configure(with: ActivityHeaderViewModel(title: "Backwards",
                                                            description: "Make  your configuration and check your reading speed",
                                                            iconViewModel: ActivitiesIconViewModel(type: .backward)))
         stackView.addArrangedSubview(headerView)
+        stackView.addArrangedSubview(ActivityTextInputView())
+        stackView.addArrangedSubview(ActivityTextInputView())
     }
 
     private func setupNavigationBar() {

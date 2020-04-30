@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SFProText-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActivityTextInputView" customModule="Teztez" customModuleProvider="target">
+            <connections>
+                <outlet property="actionTitleLabel" destination="9YU-P1-gOr" id="CAf-zV-O7L"/>
+                <outlet property="actionView" destination="rGL-nF-1Zb" id="Pon-P9-z0k"/>
+                <outlet property="descriptionLabel" destination="HGb-yB-yYU" id="Mbb-Rl-E1Z"/>
+                <outlet property="titleLabel" destination="Ets-j7-Qkt" id="Ofe-ag-FzC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your text here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ets-j7-Qkt">
+                    <rect key="frame" x="40" y="0.0" width="334" height="21"/>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGL-nF-1Zb">
+                    <rect key="frame" x="40" y="25" width="334" height="48"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YU-P1-gOr">
+                            <rect key="frame" x="16" y="15" width="83" height="18"/>
+                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right-arrow-icon" translatesAutoresizingMaskIntoConstraints="NO" id="pmL-Sq-ws5">
+                            <rect key="frame" x="306" y="18" width="12" height="12"/>
+                            <color key="tintColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="12" id="Pms-YX-lAX"/>
+                                <constraint firstAttribute="height" constant="12" id="YsL-NR-xfO"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="9YU-P1-gOr" firstAttribute="centerY" secondItem="rGL-nF-1Zb" secondAttribute="centerY" id="2qk-oh-gBF"/>
+                        <constraint firstAttribute="trailing" secondItem="pmL-Sq-ws5" secondAttribute="trailing" constant="16" id="D0o-qr-KzB"/>
+                        <constraint firstAttribute="height" constant="48" id="NDT-us-AnG"/>
+                        <constraint firstItem="9YU-P1-gOr" firstAttribute="leading" secondItem="rGL-nF-1Zb" secondAttribute="leading" constant="16" id="hLX-E9-Qvv"/>
+                        <constraint firstItem="pmL-Sq-ws5" firstAttribute="centerY" secondItem="rGL-nF-1Zb" secondAttribute="centerY" id="s2x-hO-G9R"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This text will be used to check your reading speed. If you dont have any text, don’t warry, Spread has its own text for you " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGb-yB-yYU">
+                    <rect key="frame" x="40" y="77" width="334" height="24"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="10"/>
+                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rGL-nF-1Zb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="3VH-in-YGh"/>
+                <constraint firstItem="HGb-yB-yYU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="8CV-sf-EXP"/>
+                <constraint firstItem="Ets-j7-Qkt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="DJP-e6-9DQ"/>
+                <constraint firstAttribute="trailing" secondItem="Ets-j7-Qkt" secondAttribute="trailing" constant="40" id="FoG-R8-4gf"/>
+                <constraint firstItem="Ets-j7-Qkt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="M2q-6e-FfT"/>
+                <constraint firstItem="HGb-yB-yYU" firstAttribute="top" secondItem="rGL-nF-1Zb" secondAttribute="bottom" constant="4" id="VBJ-wl-g1g"/>
+                <constraint firstItem="rGL-nF-1Zb" firstAttribute="top" secondItem="Ets-j7-Qkt" secondAttribute="bottom" constant="4" id="hJZ-cW-UtS"/>
+                <constraint firstAttribute="trailing" secondItem="HGb-yB-yYU" secondAttribute="trailing" constant="40" id="i10-Rw-Wz1"/>
+                <constraint firstAttribute="bottom" secondItem="HGb-yB-yYU" secondAttribute="bottom" id="jz5-qP-P4N"/>
+                <constraint firstAttribute="trailing" secondItem="rGL-nF-1Zb" secondAttribute="trailing" constant="40" id="wFs-Hg-l97"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-182.47767857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="right-arrow-icon" width="12" height="12"/>
+    </resources>
+</document>

@@ -43,6 +43,9 @@
 		C463DC2A245B56D400E265FF /* ActivityHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC29245B56D400E265FF /* ActivityHeaderView.swift */; };
 		C463DC2C245B580B00E265FF /* ActivityHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC2B245B580B00E265FF /* ActivityHeaderViewModel.swift */; };
 		C463DC2E245B593200E265FF /* ActivitiesIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC2D245B593200E265FF /* ActivitiesIconViewModel.swift */; };
+		C463DC33245B6A3D00E265FF /* ActivityTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC32245B6A3D00E265FF /* ActivityTextInputView.swift */; };
+		C463DC38245B6AAA00E265FF /* ActivityTextInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC37245B6AAA00E265FF /* ActivityTextInputView.xib */; };
+		C463DC3A245B720700E265FF /* ActivityTextInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC39245B720700E265FF /* ActivityTextInputViewModel.swift */; };
 		C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */; };
 		C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */; };
 		C4B88F5B2450BCA700D1D1BA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */; };
@@ -147,6 +150,9 @@
 		C463DC29245B56D400E265FF /* ActivityHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHeaderView.swift; sourceTree = "<group>"; };
 		C463DC2B245B580B00E265FF /* ActivityHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHeaderViewModel.swift; sourceTree = "<group>"; };
 		C463DC2D245B593200E265FF /* ActivitiesIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesIconViewModel.swift; sourceTree = "<group>"; };
+		C463DC32245B6A3D00E265FF /* ActivityTextInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTextInputView.swift; sourceTree = "<group>"; };
+		C463DC37245B6AAA00E265FF /* ActivityTextInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityTextInputView.xib; sourceTree = "<group>"; };
+		C463DC39245B720700E265FF /* ActivityTextInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTextInputViewModel.swift; sourceTree = "<group>"; };
 		C46BD1877F60E56AF052BF6C /* PersonalCoach.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = PersonalCoach.strings; sourceTree = "<group>"; };
 		C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
@@ -470,8 +476,8 @@
 		C463DC30245B5B2500E265FF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C463DC27245B552500E265FF /* ActivityHeaderView.xib */,
 				C463DC29245B56D400E265FF /* ActivityHeaderView.swift */,
+				C463DC27245B552500E265FF /* ActivityHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -480,6 +486,32 @@
 			isa = PBXGroup;
 			children = (
 				C463DC2B245B580B00E265FF /* ActivityHeaderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C463DC34245B6A4900E265FF /* ActivityTextInputView */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC35245B6A5A00E265FF /* View */,
+				C463DC36245B6A5F00E265FF /* ViewModel */,
+			);
+			path = ActivityTextInputView;
+			sourceTree = "<group>";
+		};
+		C463DC35245B6A5A00E265FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC32245B6A3D00E265FF /* ActivityTextInputView.swift */,
+				C463DC37245B6AAA00E265FF /* ActivityTextInputView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C463DC36245B6A5F00E265FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC39245B720700E265FF /* ActivityTextInputViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -497,6 +529,7 @@
 		C4B88F5C2450BCC500D1D1BA /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				C463DC34245B6A4900E265FF /* ActivityTextInputView */,
 				C463DC2F245B5AF900E265FF /* ActivityHeaderView */,
 				C4F7AFD024547A68007D6289 /* Protocols */,
 				C4C4BEBA245314B9001244E3 /* PrimaryButton */,
@@ -1035,6 +1068,7 @@
 				C4F818EC244B289400AE73CE /* Assets.xcassets in Resources */,
 				C4F8198C244C560C00AE73CE /* SFProRounded-Semibold.otf in Resources */,
 				C40AE0BA24535E27008BC71C /* ActivitiesCell.xib in Resources */,
+				C463DC38245B6AAA00E265FF /* ActivityTextInputView.xib in Resources */,
 				C463DC172459D32C00E265FF /* TextInput.strings in Resources */,
 				C4F81988244C55DF00AE73CE /* SFProDisplay-Medium.otf in Resources */,
 			);
@@ -1136,6 +1170,7 @@
 				C40AE0CD24543A04008BC71C /* UIView+GradientLayer.swift in Sources */,
 				C4F81953244B832A00AE73CE /* Router.swift in Sources */,
 				C40AE0C624537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift in Sources */,
+				C463DC3A245B720700E265FF /* ActivityTextInputViewModel.swift in Sources */,
 				C463DC2E245B593200E265FF /* ActivitiesIconViewModel.swift in Sources */,
 				C463DC142459D32C00E265FF /* TextInputTextViewDelegate.swift in Sources */,
 				C4F8192C244B76CE00AE73CE /* UITextField+Indent.swift in Sources */,
@@ -1195,6 +1230,7 @@
 				C40AE0CB24537E6E008BC71C /* ActivitiesRowType.swift in Sources */,
 				C4F81929244B76BA00AE73CE /* UITableViewCell+DisclosureIndicator.swift in Sources */,
 				C4F8191F244B768C00AE73CE /* UIStackView+Convenience.swift in Sources */,
+				C463DC33245B6A3D00E265FF /* ActivityTextInputView.swift in Sources */,
 				C40BB4732457498400C236C7 /* ActivitiesIntroBlockViewModelFactory.swift in Sources */,
 				CCFFB9909ED31C68FEE5FCEA /* PersonalCoachViewController.swift in Sources */,
 				DD20C56D2978A109D656D29A /* PersonalCoachRepository.swift in Sources */,
