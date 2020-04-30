@@ -8,7 +8,6 @@
 
 import Foundation
 
-@available(iOS 13.0, *)
 enum SceneDelegateConfiguratorFactory {
     @discardableResult
     static func makeDefault() -> SceneDelegateConfigurator {

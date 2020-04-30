@@ -29,6 +29,14 @@
 		C4197B942450B1F900811F37 /* Activities.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4197B932450B1EE00811F37 /* Activities.strings */; };
 		C41D2C8B2454F30800A56C2F /* Array+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D2C8A2454F30800A56C2F /* Array+Factory.swift */; };
 		C451B7CA2455E8BB00BB1D2A /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = C451B7C92455E8BB00BB1D2A /* Models */; };
+		C463DC132459D32C00E265FF /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC0A2459D32C00E265FF /* TextInputViewController.xib */; };
+		C463DC142459D32C00E265FF /* TextInputTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */; };
+		C463DC162459D32C00E265FF /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0D2459D32C00E265FF /* TextInputViewController.swift */; };
+		C463DC172459D32C00E265FF /* TextInput.strings in Resources */ = {isa = PBXBuildFile; fileRef = C463DC102459D32C00E265FF /* TextInput.strings */; };
+		C463DC182459D32C00E265FF /* TextInputStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC122459D32C00E265FF /* TextInputStore.swift */; };
+		C463DC1B2459D35C00E265FF /* UIImageView+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC1A2459D35C00E265FF /* UIImageView+Color.swift */; };
+		C463DC202459D7B900E265FF /* UIViewController+ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC1F2459D7B900E265FF /* UIViewController+ActionSheet.swift */; };
+		C463DC232459DCAD00E265FF /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC222459DCAD00E265FF /* ActionSheetViewModel.swift */; };
 		C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */; };
 		C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */; };
 		C4B88F5B2450BCA700D1D1BA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */; };
@@ -116,6 +124,14 @@
 		C4197B932450B1EE00811F37 /* Activities.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Activities.strings; sourceTree = "<group>"; };
 		C41D2C8A2454F30800A56C2F /* Array+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Factory.swift"; sourceTree = "<group>"; };
 		C451B7C82455E8A500BB1D2A /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = ../Shared/Models; sourceTree = "<group>"; };
+		C463DC0A2459D32C00E265FF /* TextInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
+		C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputTextViewDelegate.swift; sourceTree = "<group>"; };
+		C463DC0D2459D32C00E265FF /* TextInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
+		C463DC102459D32C00E265FF /* TextInput.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = TextInput.strings; sourceTree = "<group>"; };
+		C463DC122459D32C00E265FF /* TextInputStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputStore.swift; sourceTree = "<group>"; };
+		C463DC1A2459D35C00E265FF /* UIImageView+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Color.swift"; sourceTree = "<group>"; };
+		C463DC1F2459D7B900E265FF /* UIViewController+ActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActionSheet.swift"; sourceTree = "<group>"; };
+		C463DC222459DCAD00E265FF /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
 		C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -304,6 +320,83 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		C463DC062459D32C00E265FF /* TextInput */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC092459D32C00E265FF /* Controller */,
+				C463DC0F2459D32C00E265FF /* Localization */,
+				C463DC112459D32C00E265FF /* Store */,
+			);
+			path = TextInput;
+			sourceTree = "<group>";
+		};
+		C463DC092459D32C00E265FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */,
+				C463DC0D2459D32C00E265FF /* TextInputViewController.swift */,
+				C463DC0A2459D32C00E265FF /* TextInputViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C463DC0F2459D32C00E265FF /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC102459D32C00E265FF /* TextInput.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		C463DC112459D32C00E265FF /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC122459D32C00E265FF /* TextInputStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		C463DC192459D35C00E265FF /* UIImageview */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC1A2459D35C00E265FF /* UIImageView+Color.swift */,
+			);
+			path = UIImageview;
+			sourceTree = "<group>";
+		};
+		C463DC1C2459D36200E265FF /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				C41D2C8A2454F30800A56C2F /* Array+Factory.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		C463DC1D2459D77800E265FF /* ActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC1E2459D78000E265FF /* Controller */,
+				C463DC212459DC9100E265FF /* ViewModel */,
+			);
+			path = ActionSheet;
+			sourceTree = "<group>";
+		};
+		C463DC1E2459D78000E265FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC1F2459D7B900E265FF /* UIViewController+ActionSheet.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C463DC212459DC9100E265FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC222459DCAD00E265FF /* ActionSheetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C4A98277244DFF8C005E98BC /* Configurators */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,8 +420,8 @@
 			isa = PBXGroup;
 			children = (
 				C4B88F5F2450CE9700D1D1BA /* Controller */,
-				C4B88F622450CEDE00D1D1BA /* ViewModel */,
 				C4B88F612450CED200D1D1BA /* Localization */,
+				C4B88F622450CEDE00D1D1BA /* ViewModel */,
 				C4F7AFCB245471FF007D6289 /* Views */,
 			);
 			path = ActivitiesIntro;
@@ -346,6 +439,8 @@
 		C4B88F602450CEC400D1D1BA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C463DC1D2459D77800E265FF /* ActionSheet */,
+				C463DC062459D32C00E265FF /* TextInput */,
 				C4B88F5E2450CE8D00D1D1BA /* ActivitiesIntro */,
 			);
 			path = Common;
@@ -526,17 +621,18 @@
 		C4F8190F244B75BB00AE73CE /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C463DC1C2459D36200E265FF /* Array */,
 				C4F81910244B75DE00AE73CE /* Device */,
 				C4F81913244B75F500AE73CE /* String */,
 				C40AE0BD245363B7008BC71C /* UICollectionView */,
 				C4F81917244B761700AE73CE /* UIColor */,
+				C463DC192459D35C00E265FF /* UIImageview */,
 				C4F8191A244B763F00AE73CE /* UINavigationController */,
 				C4F8191D244B768C00AE73CE /* UIStackView */,
 				C4F81920244B76A500AE73CE /* UITableView */,
 				C4F81925244B76BA00AE73CE /* UITableViewCell */,
 				C4F8192A244B76CE00AE73CE /* UITextField */,
 				C4F8192D244B76DC00AE73CE /* UIView */,
-				C41D2C8A2454F30800A56C2F /* Array+Factory.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -824,12 +920,14 @@
 				C4F81986244C55D300AE73CE /* SFProDisplay-Bold.otf in Resources */,
 				C4F7AFD724547E1A007D6289 /* ActivityIconView.xib in Resources */,
 				C4B88F642450CF4500D1D1BA /* ActivitiesIntro.strings in Resources */,
+				C463DC132459D32C00E265FF /* TextInputViewController.xib in Resources */,
 				C4B88F6A2450CF9700D1D1BA /* ActivitiesIntroViewController.xib in Resources */,
 				C4F81984244C559000AE73CE /* SFProText-Semibold.otf in Resources */,
 				C4F81982244C557100AE73CE /* SFProText-Regular.otf in Resources */,
 				C4F818EC244B289400AE73CE /* Assets.xcassets in Resources */,
 				C4F8198C244C560C00AE73CE /* SFProRounded-Semibold.otf in Resources */,
 				C40AE0BA24535E27008BC71C /* ActivitiesCell.xib in Resources */,
+				C463DC172459D32C00E265FF /* TextInput.strings in Resources */,
 				C4F81988244C55DF00AE73CE /* SFProDisplay-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -921,13 +1019,16 @@
 				C4F8195A244B890B00AE73CE /* AppDelegateConfiguratorFactory.swift in Sources */,
 				C4F81919244B761700AE73CE /* UIColor+Hex.swift in Sources */,
 				C4F81958244B86EC00AE73CE /* ColorStyles.swift in Sources */,
+				C463DC232459DCAD00E265FF /* ActionSheetViewModel.swift in Sources */,
 				C4197B902450AC5700811F37 /* ActivitiesStore.swift in Sources */,
 				C4197B8C2450ABA400811F37 /* ActivitiesCoordinator.swift in Sources */,
 				C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */,
+				C463DC182459D32C00E265FF /* TextInputStore.swift in Sources */,
 				C4F81945244B82BB00AE73CE /* ParentCoordinator.swift in Sources */,
 				C40AE0CD24543A04008BC71C /* UIView+GradientLayer.swift in Sources */,
 				C4F81953244B832A00AE73CE /* Router.swift in Sources */,
 				C40AE0C624537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift in Sources */,
+				C463DC142459D32C00E265FF /* TextInputTextViewDelegate.swift in Sources */,
 				C4F8192C244B76CE00AE73CE /* UITextField+Indent.swift in Sources */,
 				C4F81924244B76A500AE73CE /* UITableView+Register.swift in Sources */,
 				C4BD0F2C244DF0020056E8C1 /* SceneDelegate.swift in Sources */,
@@ -956,12 +1057,14 @@
 				C4F81946244B82BB00AE73CE /* Coordinator.swift in Sources */,
 				C4F7AFD224547A8A007D6289 /* NibLoadable.swift in Sources */,
 				C4BD0F2A244DEF3D0056E8C1 /* R.generated.swift in Sources */,
+				C463DC202459D7B900E265FF /* UIViewController+ActionSheet.swift in Sources */,
 				C4BD0F33244DF1280056E8C1 /* StartupSceneDelegateConfigurator.swift in Sources */,
 				C4D138DD244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift in Sources */,
 				C4F7AFCF24547450007D6289 /* ActivityIconView.swift in Sources */,
 				C4F8194A244B82F000AE73CE /* ModuleFactory.swift in Sources */,
 				C4F81928244B76BA00AE73CE /* UITableViewCell+SelectedBackgroundView.swift in Sources */,
 				C4B88F662450CF7400D1D1BA /* ActivitiesIntroViewModel.swift in Sources */,
+				C463DC162459D32C00E265FF /* TextInputViewController.swift in Sources */,
 				C4B88F5B2450BCA700D1D1BA /* PrimaryButton.swift in Sources */,
 				C40AE0BF245363D3008BC71C /* UICollectionView+Dequeue.swift in Sources */,
 				C4197B802450A28600811F37 /* TabBarController.swift in Sources */,
@@ -970,6 +1073,7 @@
 				C4197B8E2450ABF000811F37 /* ActivitiesModuleFactory.swift in Sources */,
 				C40AE0C124536409008BC71C /* UICollectionView+Register.swift in Sources */,
 				C4F8192F244B76DC00AE73CE /* UIView+CornerRadius.swift in Sources */,
+				C463DC1B2459D35C00E265FF /* UIImageView+Color.swift in Sources */,
 				C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */,
 				C4F818E3244B289200AE73CE /* AppDelegate.swift in Sources */,
 				C4F8191C244B763F00AE73CE /* UINavigationController+StatusBar.swift in Sources */,

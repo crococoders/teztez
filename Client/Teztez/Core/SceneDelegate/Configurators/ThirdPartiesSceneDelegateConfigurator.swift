@@ -9,7 +9,6 @@
 import IQKeyboardManagerSwift
 import UIKit
 
-@available(iOS 13.0, *)
 class ThirdPartiesSceneDelegateConfigurator: SceneDelegateConfigurator {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         setupKeyboardManager()

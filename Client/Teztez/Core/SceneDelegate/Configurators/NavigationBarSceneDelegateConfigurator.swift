@@ -15,7 +15,6 @@ private enum Constants {
                                                                           .foregroundColor: UIColor.white]
 }
 
-@available(iOS 13.0, *)
 class NavigationBarSceneDelegateConfigurator: SceneDelegateConfigurator {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         setupNavigationBar()
