@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13E167FC3E2ED2162216072D /* PersonalCoachStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68FBB5B359E0356B443FFC6 /* PersonalCoachStore.swift */; };
 		C40AE0BA24535E27008BC71C /* ActivitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C40AE0B924535E27008BC71C /* ActivitiesCell.xib */; };
 		C40AE0BC24535E4B008BC71C /* ActivitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */; };
 		C40AE0BF245363D3008BC71C /* UICollectionView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0BE245363D3008BC71C /* UICollectionView+Dequeue.swift */; };
@@ -37,6 +38,11 @@
 		C463DC1B2459D35C00E265FF /* UIImageView+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC1A2459D35C00E265FF /* UIImageView+Color.swift */; };
 		C463DC202459D7B900E265FF /* UIViewController+ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC1F2459D7B900E265FF /* UIViewController+ActionSheet.swift */; };
 		C463DC232459DCAD00E265FF /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC222459DCAD00E265FF /* ActionSheetViewModel.swift */; };
+		C463DC26245B4F2300E265FF /* PersonalCoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC25245B4F2300E265FF /* PersonalCoachViewController.xib */; };
+		C463DC28245B552500E265FF /* ActivityHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC27245B552500E265FF /* ActivityHeaderView.xib */; };
+		C463DC2A245B56D400E265FF /* ActivityHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC29245B56D400E265FF /* ActivityHeaderView.swift */; };
+		C463DC2C245B580B00E265FF /* ActivityHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC2B245B580B00E265FF /* ActivityHeaderViewModel.swift */; };
+		C463DC2E245B593200E265FF /* ActivitiesIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC2D245B593200E265FF /* ActivitiesIconViewModel.swift */; };
 		C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */; };
 		C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */; };
 		C4B88F5B2450BCA700D1D1BA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */; };
@@ -99,9 +105,13 @@
 		C4F8198C244C560C00AE73CE /* SFProRounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4F8198B244C560C00AE73CE /* SFProRounded-Semibold.otf */; };
 		C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4F8198D244C562400AE73CE /* SFProRounded-Regular.otf */; };
 		C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8198F244C582B00AE73CE /* FontStyles.swift */; };
+		CCFFB9909ED31C68FEE5FCEA /* PersonalCoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661612FF100BF77D47DEDC92 /* PersonalCoachViewController.swift */; };
+		DD20C56D2978A109D656D29A /* PersonalCoachRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03353B4B064820F20D09B605 /* PersonalCoachRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03353B4B064820F20D09B605 /* PersonalCoachRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachRepository.swift; sourceTree = "<group>"; };
+		661612FF100BF77D47DEDC92 /* PersonalCoachViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachViewController.swift; sourceTree = "<group>"; };
 		C40AE0B924535E27008BC71C /* ActivitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesCell.xib; sourceTree = "<group>"; };
 		C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCell.swift; sourceTree = "<group>"; };
 		C40AE0BE245363D3008BC71C /* UICollectionView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue.swift"; sourceTree = "<group>"; };
@@ -132,6 +142,12 @@
 		C463DC1A2459D35C00E265FF /* UIImageView+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Color.swift"; sourceTree = "<group>"; };
 		C463DC1F2459D7B900E265FF /* UIViewController+ActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActionSheet.swift"; sourceTree = "<group>"; };
 		C463DC222459DCAD00E265FF /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
+		C463DC25245B4F2300E265FF /* PersonalCoachViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalCoachViewController.xib; sourceTree = "<group>"; };
+		C463DC27245B552500E265FF /* ActivityHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityHeaderView.xib; sourceTree = "<group>"; };
+		C463DC29245B56D400E265FF /* ActivityHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHeaderView.swift; sourceTree = "<group>"; };
+		C463DC2B245B580B00E265FF /* ActivityHeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityHeaderViewModel.swift; sourceTree = "<group>"; };
+		C463DC2D245B593200E265FF /* ActivitiesIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesIconViewModel.swift; sourceTree = "<group>"; };
+		C46BD1877F60E56AF052BF6C /* PersonalCoach.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = PersonalCoach.strings; sourceTree = "<group>"; };
 		C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -192,6 +208,7 @@
 		C4F8198B244C560C00AE73CE /* SFProRounded-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProRounded-Semibold.otf"; sourceTree = "<group>"; };
 		C4F8198D244C562400AE73CE /* SFProRounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProRounded-Regular.otf"; sourceTree = "<group>"; };
 		C4F8198F244C582B00AE73CE /* FontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyles.swift; sourceTree = "<group>"; };
+		E68FBB5B359E0356B443FFC6 /* PersonalCoachStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +227,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		366FA016BD4FD1A523D24CAC /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				E68FBB5B359E0356B443FFC6 /* PersonalCoachStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		635569C155443EF731B16946 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				661612FF100BF77D47DEDC92 /* PersonalCoachViewController.swift */,
+				C463DC25245B4F2300E265FF /* PersonalCoachViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		833C26568E4CCD1AC1E491FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8AF4ACEDFC58B76D419FE280 /* PersonalCoach */ = {
+			isa = PBXGroup;
+			children = (
+				635569C155443EF731B16946 /* Controller */,
+				D0CB13783009577D88109E28 /* Localization */,
+				DDA7FE0465C6DC0A819A808B /* Repository */,
+				366FA016BD4FD1A523D24CAC /* Store */,
+				833C26568E4CCD1AC1E491FE /* View */,
+				C33831D8FB1143BED19BF793 /* ViewModel */,
+			);
+			path = PersonalCoach;
+			sourceTree = "<group>";
+		};
+		C33831D8FB1143BED19BF793 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C40AE0B824535B31008BC71C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +458,32 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C463DC2F245B5AF900E265FF /* ActivityHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC30245B5B2500E265FF /* View */,
+				C463DC31245B5B2C00E265FF /* ViewModel */,
+			);
+			path = ActivityHeaderView;
+			sourceTree = "<group>";
+		};
+		C463DC30245B5B2500E265FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC27245B552500E265FF /* ActivityHeaderView.xib */,
+				C463DC29245B56D400E265FF /* ActivityHeaderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C463DC31245B5B2C00E265FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC2B245B580B00E265FF /* ActivityHeaderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C4A98277244DFF8C005E98BC /* Configurators */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +497,7 @@
 		C4B88F5C2450BCC500D1D1BA /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				C463DC2F245B5AF900E265FF /* ActivityHeaderView */,
 				C4F7AFD024547A68007D6289 /* Protocols */,
 				C4C4BEBA245314B9001244E3 /* PrimaryButton */,
 			);
@@ -440,8 +528,8 @@
 			isa = PBXGroup;
 			children = (
 				C463DC1D2459D77800E265FF /* ActionSheet */,
-				C463DC062459D32C00E265FF /* TextInput */,
 				C4B88F5E2450CE8D00D1D1BA /* ActivitiesIntro */,
+				C463DC062459D32C00E265FF /* TextInput */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -457,9 +545,10 @@
 		C4B88F622450CEDE00D1D1BA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C4B88F652450CF7400D1D1BA /* ActivitiesIntroViewModel.swift */,
+				C463DC2D245B593200E265FF /* ActivitiesIconViewModel.swift */,
 				C40BB4702457494E00C236C7 /* ActivitiesIntroBlockViewModel.swift */,
 				C40BB4722457498400C236C7 /* ActivitiesIntroBlockViewModelFactory.swift */,
+				C4B88F652450CF7400D1D1BA /* ActivitiesIntroViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -603,9 +692,10 @@
 		C4F81909244B724F00AE73CE /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				C4B88F602450CEC400D1D1BA /* Common */,
 				C4197B842450A54300811F37 /* Activities */,
+				C4B88F602450CEC400D1D1BA /* Common */,
 				C4197B7A2450A08700811F37 /* MainTabBar */,
+				8AF4ACEDFC58B76D419FE280 /* PersonalCoach */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -834,6 +924,22 @@
 			path = "Suporting Files";
 			sourceTree = "<group>";
 		};
+		D0CB13783009577D88109E28 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C46BD1877F60E56AF052BF6C /* PersonalCoach.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		DDA7FE0465C6DC0A819A808B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				03353B4B064820F20D09B605 /* PersonalCoachRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -913,6 +1019,7 @@
 				C4197B942450B1F900811F37 /* Activities.strings in Resources */,
 				C4F818EF244B289400AE73CE /* LaunchScreen.storyboard in Resources */,
 				C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */,
+				C463DC26245B4F2300E265FF /* PersonalCoachViewController.xib in Resources */,
 				C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */,
 				C4F8198A244C55FB00AE73CE /* SFProRounded-Bold.otf in Resources */,
 				C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */,
@@ -924,6 +1031,7 @@
 				C4B88F6A2450CF9700D1D1BA /* ActivitiesIntroViewController.xib in Resources */,
 				C4F81984244C559000AE73CE /* SFProText-Semibold.otf in Resources */,
 				C4F81982244C557100AE73CE /* SFProText-Regular.otf in Resources */,
+				C463DC28245B552500E265FF /* ActivityHeaderView.xib in Resources */,
 				C4F818EC244B289400AE73CE /* Assets.xcassets in Resources */,
 				C4F8198C244C560C00AE73CE /* SFProRounded-Semibold.otf in Resources */,
 				C40AE0BA24535E27008BC71C /* ActivitiesCell.xib in Resources */,
@@ -1028,6 +1136,7 @@
 				C40AE0CD24543A04008BC71C /* UIView+GradientLayer.swift in Sources */,
 				C4F81953244B832A00AE73CE /* Router.swift in Sources */,
 				C40AE0C624537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift in Sources */,
+				C463DC2E245B593200E265FF /* ActivitiesIconViewModel.swift in Sources */,
 				C463DC142459D32C00E265FF /* TextInputTextViewDelegate.swift in Sources */,
 				C4F8192C244B76CE00AE73CE /* UITextField+Indent.swift in Sources */,
 				C4F81924244B76A500AE73CE /* UITableView+Register.swift in Sources */,
@@ -1060,6 +1169,7 @@
 				C463DC202459D7B900E265FF /* UIViewController+ActionSheet.swift in Sources */,
 				C4BD0F33244DF1280056E8C1 /* StartupSceneDelegateConfigurator.swift in Sources */,
 				C4D138DD244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift in Sources */,
+				C463DC2C245B580B00E265FF /* ActivityHeaderViewModel.swift in Sources */,
 				C4F7AFCF24547450007D6289 /* ActivityIconView.swift in Sources */,
 				C4F8194A244B82F000AE73CE /* ModuleFactory.swift in Sources */,
 				C4F81928244B76BA00AE73CE /* UITableViewCell+SelectedBackgroundView.swift in Sources */,
@@ -1076,6 +1186,7 @@
 				C463DC1B2459D35C00E265FF /* UIImageView+Color.swift in Sources */,
 				C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */,
 				C4F818E3244B289200AE73CE /* AppDelegate.swift in Sources */,
+				C463DC2A245B56D400E265FF /* ActivityHeaderView.swift in Sources */,
 				C4F8191C244B763F00AE73CE /* UINavigationController+StatusBar.swift in Sources */,
 				C4F81963244B89ED00AE73CE /* CompositeAppDelegateConfigurator.swift in Sources */,
 				C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */,
@@ -1085,6 +1196,9 @@
 				C4F81929244B76BA00AE73CE /* UITableViewCell+DisclosureIndicator.swift in Sources */,
 				C4F8191F244B768C00AE73CE /* UIStackView+Convenience.swift in Sources */,
 				C40BB4732457498400C236C7 /* ActivitiesIntroBlockViewModelFactory.swift in Sources */,
+				CCFFB9909ED31C68FEE5FCEA /* PersonalCoachViewController.swift in Sources */,
+				DD20C56D2978A109D656D29A /* PersonalCoachRepository.swift in Sources */,
+				13E167FC3E2ED2162216072D /* PersonalCoachStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

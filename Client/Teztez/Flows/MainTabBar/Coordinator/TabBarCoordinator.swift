@@ -22,6 +22,9 @@ final class TabBarCoordinator: ParentCoordinator {
         router.setRootModule(tabBarPresentable, hideBar: true)
         tabBarPresentable.onViewDidLoad = runActivitiesFlow()
         tabBarPresentable.onActivitiesTabDidSelect = runActivitiesFlow()
+        let nav = CoordinatorNavigationController()
+        nav.setViewControllers([PersonalCoachViewController(store: PersonalCoachStore())], animated: false)
+        router.show(nav, with: .presentInFullScreen(animated: true))
     }
 
     private func runActivitiesFlow() -> ((CoordinatorNavigationController) -> Void) {

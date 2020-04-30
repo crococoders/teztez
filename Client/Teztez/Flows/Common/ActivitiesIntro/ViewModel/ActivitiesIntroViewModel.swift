@@ -13,19 +13,7 @@ enum ActivityIntroType {
 }
 
 struct ActivitiesIntroViewModel {
-    var gradientColors: [CGColor] {
-        switch type {
-        case .blender:
-            return [UIColor.coralLight.cgColor, UIColor.coralDark.cgColor]
-        case .backward:
-            return [UIColor.violetLight.cgColor, UIColor.violetDark.cgColor]
-        case .colorMatch:
-            return [UIColor.greenLight.cgColor, UIColor.greenDark.cgColor]
-        case .schulte:
-            return [UIColor.orangeLigt.cgColor, UIColor.orangeDark.cgColor]
-        }
-    }
-
+    let iconViewModel: ActivitiesIconViewModel
     var title: String {
         switch type {
         case .blender:
@@ -39,19 +27,6 @@ struct ActivitiesIntroViewModel {
         }
     }
 
-    var icon: UIImage? {
-        switch type {
-        case .blender:
-            return R.image.blenderIcon()
-        case .backward:
-            return R.image.backwardsIcon()
-        case .colorMatch:
-            return R.image.matchingIcon()
-        case .schulte:
-            return R.image.schulteIcon()
-        }
-    }
-
     var blocks: [ActivitiesIntroBlockViewModel] {
         return ActivitiesIntroBlockViewModelFactory.makeBlocks(for: type)
     }
@@ -60,5 +35,6 @@ struct ActivitiesIntroViewModel {
 
     init(type: ActivityIntroType) {
         self.type = type
+        iconViewModel = ActivitiesIconViewModel(type: type)
     }
 }
