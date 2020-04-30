@@ -22,9 +22,6 @@ final class TabBarCoordinator: ParentCoordinator {
         router.setRootModule(tabBarPresentable, hideBar: true)
         tabBarPresentable.onViewDidLoad = runActivitiesFlow()
         tabBarPresentable.onActivitiesTabDidSelect = runActivitiesFlow()
-        let navigationController = CoordinatorNavigationController()
-        navigationController.setViewControllers([TextInputViewController(store: TextInputStore())], animated: true)
-        router.show(navigationController, with: .presentInSheet(dismissable: false))
     }
 
     private func runActivitiesFlow() -> ((CoordinatorNavigationController) -> Void) {

@@ -10,6 +10,3 @@
 "done" = "Done";
 "cancel" = "Cancel";
 "navigationTitle" = "Enter your text";
-"warningTitle" = "If you cancel it your text will be lost and Teztez will use a default text. Are you sure to cancel it?";
-"warningCancelTitle" = "Cancel changes";
-"warningContinueTitle" = "Continue editing";

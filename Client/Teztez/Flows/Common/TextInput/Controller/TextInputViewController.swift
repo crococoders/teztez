@@ -16,7 +16,7 @@ protocol TextInputPresentable: Presentable {
 
 private enum Constants {
     static let edgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 40)
-    static let animationDuration = 0.5
+    static let animationDuration = 0.2
 }
 
 final class TextInputViewController: ViewController, TextInputPresentable {
@@ -100,11 +100,11 @@ final class TextInputViewController: ViewController, TextInputPresentable {
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: R.string.textInput.cancel(),
                                                            style: .plain,
                                                            target: self,
-                                                           action: #selector(cancelButtonDidPress))
+                                                           action: #selector(cancelButtonDidTap))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: R.string.textInput.done(),
                                                             style: .plain,
                                                             target: self,
-                                                            action: #selector(doneButtonDidPress))
+                                                            action: #selector(doneButtonDidTap))
         setDoneButtonAvailability(false)
     }
 
@@ -127,7 +127,7 @@ final class TextInputViewController: ViewController, TextInputPresentable {
     }
 
     @objc
-    private func doneButtonDidPress() {
+    private func doneButtonDidTap() {
         guard
             let text = textView.text,
             !text.isEmpty else { return }
@@ -135,7 +135,7 @@ final class TextInputViewController: ViewController, TextInputPresentable {
     }
 
     @objc
-    private func cancelButtonDidPress() {
+    private func cancelButtonDidTap() {
         guard !textView.text.isEmpty else {
             onCancelButtonDidTap?()
             return

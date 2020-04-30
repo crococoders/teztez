@@ -21,7 +21,13 @@ final class TextInputStore {
         case warned(viewModel: ActionSheetViewModel)
     }
 
+    private let actionSheetViewModel: ActionSheetViewModel
+
     @Published private(set) var state: State?
+
+    init(actionSheetViewModel: ActionSheetViewModel) {
+        self.actionSheetViewModel = actionSheetViewModel
+    }
 
     func dispatch(action: Action) {
         switch action {
@@ -30,13 +36,7 @@ final class TextInputStore {
         case .didResetText:
             state = .reset
         case .didTapCancelButton:
-            state = .warned(viewModel: getActionSheetViewModel())
+            state = .warned(viewModel: actionSheetViewModel)
         }
-    }
-
-    private func getActionSheetViewModel() -> ActionSheetViewModel {
-        return ActionSheetViewModel(title: R.string.textInput.warningTitle(),
-                                    cancelTitle: R.string.textInput.warningCancelTitle(),
-                                    continueTitle: R.string.textInput.warningContinueTitle())
     }
 }
