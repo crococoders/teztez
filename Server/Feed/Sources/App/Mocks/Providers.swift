@@ -85,6 +85,14 @@ final class ColorProvider: RandomStringProvider {
     }
 }
 
+final class TextProvider: RandomStringProvider {
+    init() {
+        super.init(array: [
+            "some"
+        ])
+    }
+}
+
 class RandomElementProvider<E> {
     private let array: [E]
 

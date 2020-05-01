@@ -7,7 +7,11 @@
 
 import Foundation
 
-final class MockAnalyticsService {
+protocol AnalyticsService {
+    func fetchStatistics(count: Int) -> [StatisticsBlock]
+}
+
+final class MockAnalyticsService: AnalyticsService {
     private let factory: StatisticsFactory
 
     init(factory: StatisticsFactory) {
