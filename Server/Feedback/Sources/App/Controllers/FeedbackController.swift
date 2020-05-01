@@ -15,7 +15,7 @@ struct FeedbackController: RouteCollection {
     }
 
     func getAllFeedbacksByGameTitle(request: Request) throws -> EventLoopFuture<[Feedback]>{
-        return Feedback.query(on: request.db).filter("game_title" .equal, request.parameters.get(":gameTitle")).all()
+        return Feedback.query(on: request.db).filter("game_title", .equal, request.parameters.get(":gameTitle")).all()
         
     }
     

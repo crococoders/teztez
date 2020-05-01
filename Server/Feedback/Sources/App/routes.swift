@@ -1,7 +1,7 @@
 import Fluent
 import Vapor
 
-func configureRoutes(_ app: Application) throws {
+func configureRoutes(for app: Application) throws {
     
     let feedbackController = FeedbackController()
      try app.register(collection: feedbackController)
