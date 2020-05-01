@@ -1,12 +1,21 @@
 import Fluent
 import Vapor
 
-struct GameContentController {
+struct GameContentController: RouteCollection {
+    func boot(routes: RoutesBuilder) throws {
+        let gameContentRoutes = routes.grouped("content")
+        gameContentRoutes.get(use: getAll)
+        gameContentRoutes.get("next", use: getNextText)
+        
+        gameContentRoutes.post(use: create)
+        gameContentRoutes.delete(":contentId", use: delete)
+    }
+    
     func getAll(request: Request) throws -> EventLoopFuture<[GameContent]> {
         return GameContent.query(on: request.db).all()
     }
     
-    func nextText(request: Request) throws -> EventLoopFuture<GameContent> {
+    func getNextText(request: Request) throws -> EventLoopFuture<GameContent> {
         let gameContent = GameContent.query(on: request.db).count().flatMap{
             count in
            return GameContent.query(on: request.db)

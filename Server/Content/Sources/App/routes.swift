@@ -1,16 +1,9 @@
 import Vapor
 
-func routes(_ app: Application) throws {
-
+func configureRoutes(for app: Application) throws {
     let gameContentController = GameContentController()
-    app.get("content", use: gameContentController.getAll)
-    app.get("content", "next", use: gameContentController.nextText)
-    app.post("content", use: gameContentController.create)
-    app.delete("content", ":contentId", use: gameContentController.delete)
+    try app.register(collection: gameContentController)
     
     let articleController = ArticleController()
-    app.get("articles", use: articleController.getAll)
-    app.get("articles", ":articleId", use: articleController.getByID)
-    app.post("articles", use: articleController.create)
-    app.delete("articles", ":articleID", use: articleController.delete)
+    try app.register(collection: articleController)
 }
