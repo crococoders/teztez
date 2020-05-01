@@ -31,9 +31,9 @@ struct ActivitiesIntroViewModel {
         return ActivitiesIntroBlockViewModelFactory.makeBlocks(for: type)
     }
 
-    private let type: ActivitiesRowType
+    private let type: ActivitiesItemType
 
-    init(type: ActivitiesRowType) {
+    init(type: ActivitiesItemType) {
         self.type = type
         iconViewModel = ActivitiesIconViewModel(type: type)
     }

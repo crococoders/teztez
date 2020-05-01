@@ -11,5 +11,5 @@ import Foundation
 struct ActivityTextInputViewModel {
     let title: String
     let description: String
-    let actionTitle: String
+    var actionTitle: String
 }

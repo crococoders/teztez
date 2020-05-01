@@ -15,7 +15,7 @@
 		C40AE0C424537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C324537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift */; };
 		C40AE0C624537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C524537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift */; };
 		C40AE0C924537E44008BC71C /* ActivitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C824537E44008BC71C /* ActivitiesViewModel.swift */; };
-		C40AE0CB24537E6E008BC71C /* ActivitiesRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0CA24537E6E008BC71C /* ActivitiesRowType.swift */; };
+		C40AE0CB24537E6E008BC71C /* ActivitiesItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0CA24537E6E008BC71C /* ActivitiesItemType.swift */; };
 		C40AE0CD24543A04008BC71C /* UIView+GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0CC24543A04008BC71C /* UIView+GradientLayer.swift */; };
 		C40BB4712457494E00C236C7 /* ActivitiesIntroBlockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40BB4702457494E00C236C7 /* ActivitiesIntroBlockViewModel.swift */; };
 		C40BB4732457498400C236C7 /* ActivitiesIntroBlockViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40BB4722457498400C236C7 /* ActivitiesIntroBlockViewModelFactory.swift */; };
@@ -29,7 +29,6 @@
 		C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4197B912450B16700811F37 /* ActivitiesViewController.xib */; };
 		C4197B942450B1F900811F37 /* Activities.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4197B932450B1EE00811F37 /* Activities.strings */; };
 		C41D2C8B2454F30800A56C2F /* Array+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D2C8A2454F30800A56C2F /* Array+Factory.swift */; };
-		C451B7CA2455E8BB00BB1D2A /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = C451B7C92455E8BB00BB1D2A /* Models */; };
 		C463DC132459D32C00E265FF /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC0A2459D32C00E265FF /* TextInputViewController.xib */; };
 		C463DC142459D32C00E265FF /* TextInputTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */; };
 		C463DC162459D32C00E265FF /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0D2459D32C00E265FF /* TextInputViewController.swift */; };
@@ -52,6 +51,10 @@
 		C463DC45245C26AE00E265FF /* ActivitySelectValueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC44245C26AE00E265FF /* ActivitySelectValueViewModel.swift */; };
 		C463DC47245C2F7800E265FF /* PersonalCoachPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC46245C2F7800E265FF /* PersonalCoachPickerViewDelegate.swift */; };
 		C463DC49245C2FBE00E265FF /* PersonalCoachPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC48245C2FBE00E265FF /* PersonalCoachPickerViewDataSource.swift */; };
+		C463DC57245C880E00E265FF /* PersonalCoachModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC56245C880E00E265FF /* PersonalCoachModuleFactory.swift */; };
+		C463DC5A245C92B600E265FF /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = C463DC59245C92B600E265FF /* Models */; };
+		C463DC5C245C957400E265FF /* PersonalCoachCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC5B245C957400E265FF /* PersonalCoachCoordinator.swift */; };
+		C463DC5E245CA7B100E265FF /* PersonalCoachConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC5D245CA7B100E265FF /* PersonalCoachConfiguration.swift */; };
 		C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */; };
 		C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */; };
 		C4B88F5B2450BCA700D1D1BA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */; };
@@ -115,11 +118,9 @@
 		C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4F8198D244C562400AE73CE /* SFProRounded-Regular.otf */; };
 		C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8198F244C582B00AE73CE /* FontStyles.swift */; };
 		CCFFB9909ED31C68FEE5FCEA /* PersonalCoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661612FF100BF77D47DEDC92 /* PersonalCoachViewController.swift */; };
-		DD20C56D2978A109D656D29A /* PersonalCoachRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03353B4B064820F20D09B605 /* PersonalCoachRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		03353B4B064820F20D09B605 /* PersonalCoachRepository.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachRepository.swift; sourceTree = "<group>"; };
 		661612FF100BF77D47DEDC92 /* PersonalCoachViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachViewController.swift; sourceTree = "<group>"; };
 		C40AE0B924535E27008BC71C /* ActivitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesCell.xib; sourceTree = "<group>"; };
 		C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCell.swift; sourceTree = "<group>"; };
@@ -128,7 +129,7 @@
 		C40AE0C324537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		C40AE0C524537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		C40AE0C824537E44008BC71C /* ActivitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewModel.swift; sourceTree = "<group>"; };
-		C40AE0CA24537E6E008BC71C /* ActivitiesRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesRowType.swift; sourceTree = "<group>"; };
+		C40AE0CA24537E6E008BC71C /* ActivitiesItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesItemType.swift; sourceTree = "<group>"; };
 		C40AE0CC24543A04008BC71C /* UIView+GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GradientLayer.swift"; sourceTree = "<group>"; };
 		C40BB4702457494E00C236C7 /* ActivitiesIntroBlockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesIntroBlockViewModel.swift; sourceTree = "<group>"; };
 		C40BB4722457498400C236C7 /* ActivitiesIntroBlockViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesIntroBlockViewModelFactory.swift; sourceTree = "<group>"; };
@@ -142,7 +143,6 @@
 		C4197B912450B16700811F37 /* ActivitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesViewController.xib; sourceTree = "<group>"; };
 		C4197B932450B1EE00811F37 /* Activities.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Activities.strings; sourceTree = "<group>"; };
 		C41D2C8A2454F30800A56C2F /* Array+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Factory.swift"; sourceTree = "<group>"; };
-		C451B7C82455E8A500BB1D2A /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = ../Shared/Models; sourceTree = "<group>"; };
 		C463DC0A2459D32C00E265FF /* TextInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
 		C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputTextViewDelegate.swift; sourceTree = "<group>"; };
 		C463DC0D2459D32C00E265FF /* TextInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +164,10 @@
 		C463DC44245C26AE00E265FF /* ActivitySelectValueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelectValueViewModel.swift; sourceTree = "<group>"; };
 		C463DC46245C2F7800E265FF /* PersonalCoachPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCoachPickerViewDelegate.swift; sourceTree = "<group>"; };
 		C463DC48245C2FBE00E265FF /* PersonalCoachPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCoachPickerViewDataSource.swift; sourceTree = "<group>"; };
+		C463DC56245C880E00E265FF /* PersonalCoachModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCoachModuleFactory.swift; sourceTree = "<group>"; };
+		C463DC58245C92AD00E265FF /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = ../Shared/Models; sourceTree = "<group>"; };
+		C463DC5B245C957400E265FF /* PersonalCoachCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCoachCoordinator.swift; sourceTree = "<group>"; };
+		C463DC5D245CA7B100E265FF /* PersonalCoachConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCoachConfiguration.swift; sourceTree = "<group>"; };
 		C46BD1877F60E56AF052BF6C /* PersonalCoach.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = PersonalCoach.strings; sourceTree = "<group>"; };
 		C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
@@ -233,7 +237,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C451B7CA2455E8BB00BB1D2A /* Models in Frameworks */,
+				C463DC5A245C92B600E265FF /* Models in Frameworks */,
 				C4F81974244BA02C00AE73CE /* Rswift in Frameworks */,
 				C4F81977244C4F3200AE73CE /* IQKeyboardManagerSwift in Frameworks */,
 				C4F8197D244C508F00AE73CE /* Hero in Frameworks */,
@@ -247,6 +251,7 @@
 		366FA016BD4FD1A523D24CAC /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				C463DC5D245CA7B100E265FF /* PersonalCoachConfiguration.swift */,
 				E68FBB5B359E0356B443FFC6 /* PersonalCoachStore.swift */,
 			);
 			path = Store;
@@ -263,31 +268,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		833C26568E4CCD1AC1E491FE /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		8AF4ACEDFC58B76D419FE280 /* PersonalCoach */ = {
 			isa = PBXGroup;
 			children = (
-				635569C155443EF731B16946 /* Controller */,
-				D0CB13783009577D88109E28 /* Localization */,
-				DDA7FE0465C6DC0A819A808B /* Repository */,
-				366FA016BD4FD1A523D24CAC /* Store */,
-				833C26568E4CCD1AC1E491FE /* View */,
-				C33831D8FB1143BED19BF793 /* ViewModel */,
+				C463DC55245C87EE00E265FF /* Coordinator */,
+				C463DC53245C87BA00E265FF /* Modules */,
 			);
 			path = PersonalCoach;
-			sourceTree = "<group>";
-		};
-		C33831D8FB1143BED19BF793 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		C40AE0B824535B31008BC71C /* View */ = {
@@ -353,8 +340,8 @@
 		C4197B842450A54300811F37 /* Activities */ = {
 			isa = PBXGroup;
 			children = (
-				C4197B852450A8E400811F37 /* Controller */,
 				C4197B8A2450AB4000811F37 /* Coordinator */,
+				C4197B852450A8E400811F37 /* Controller */,
 				C4197B872450A98300811F37 /* Localization */,
 				C4197B862450A97700811F37 /* Store */,
 				C40AE0B824535B31008BC71C /* View */,
@@ -377,7 +364,7 @@
 		C4197B862450A97700811F37 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				C40AE0CA24537E6E008BC71C /* ActivitiesRowType.swift */,
+				C40AE0CA24537E6E008BC71C /* ActivitiesItemType.swift */,
 				C4197B8F2450AC5700811F37 /* ActivitiesStore.swift */,
 			);
 			path = Store;
@@ -555,6 +542,33 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C463DC53245C87BA00E265FF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC54245C87CB00E265FF /* PersonalConfiguration */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C463DC54245C87CB00E265FF /* PersonalConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				635569C155443EF731B16946 /* Controller */,
+				D0CB13783009577D88109E28 /* Localization */,
+				366FA016BD4FD1A523D24CAC /* Store */,
+			);
+			path = PersonalConfiguration;
+			sourceTree = "<group>";
+		};
+		C463DC55245C87EE00E265FF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC56245C880E00E265FF /* PersonalCoachModuleFactory.swift */,
+				C463DC5B245C957400E265FF /* PersonalCoachCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		C4A98277244DFF8C005E98BC /* Configurators */ = {
 			isa = PBXGroup;
 			children = (
@@ -691,7 +705,7 @@
 		C4F818D6244B289200AE73CE = {
 			isa = PBXGroup;
 			children = (
-				C451B7C82455E8A500BB1D2A /* Models */,
+				C463DC58245C92AD00E265FF /* Models */,
 				C4F818E1244B289200AE73CE /* Teztez */,
 				C4F818E0244B289200AE73CE /* Products */,
 				C4D64A232455DCFF00100993 /* Frameworks */,
@@ -1005,14 +1019,6 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
-		DDA7FE0465C6DC0A819A808B /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				03353B4B064820F20D09B605 /* PersonalCoachRepository.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1038,7 +1044,7 @@
 				C4F81976244C4F3200AE73CE /* IQKeyboardManagerSwift */,
 				C4F81979244C4FCD00AE73CE /* ViewAnimator */,
 				C4F8197C244C508F00AE73CE /* Hero */,
-				C451B7C92455E8BB00BB1D2A /* Models */,
+				C463DC59245C92B600E265FF /* Models */,
 			);
 			productName = Teztez;
 			productReference = C4F818DF244B289200AE73CE /* Teztez.app */;
@@ -1218,7 +1224,9 @@
 				C463DC45245C26AE00E265FF /* ActivitySelectValueViewModel.swift in Sources */,
 				C4F8192C244B76CE00AE73CE /* UITextField+Indent.swift in Sources */,
 				C4F81924244B76A500AE73CE /* UITableView+Register.swift in Sources */,
+				C463DC5E245CA7B100E265FF /* PersonalCoachConfiguration.swift in Sources */,
 				C4BD0F2C244DF0020056E8C1 /* SceneDelegate.swift in Sources */,
+				C463DC5C245C957400E265FF /* PersonalCoachCoordinator.swift in Sources */,
 				C40AE0C424537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift in Sources */,
 				C4F81952244B832A00AE73CE /* TransitionType.swift in Sources */,
 				C40AE0BC24535E4B008BC71C /* ActivitiesCell.swift in Sources */,
@@ -1241,6 +1249,7 @@
 				C463DC47245C2F7800E265FF /* PersonalCoachPickerViewDelegate.swift in Sources */,
 				C4F7AFCD24547229007D6289 /* ActivitiesIntroBlockView.swift in Sources */,
 				C4F81955244B834500AE73CE /* ApplicationCoordinator.swift in Sources */,
+				C463DC57245C880E00E265FF /* PersonalCoachModuleFactory.swift in Sources */,
 				C4F81940244B824200AE73CE /* ViewController.swift in Sources */,
 				C4B88F692450CF9700D1D1BA /* ActivitiesIntroViewController.swift in Sources */,
 				C4F81946244B82BB00AE73CE /* Coordinator.swift in Sources */,
@@ -1273,13 +1282,12 @@
 				C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */,
 				C4F81923244B76A500AE73CE /* UITableView+Dequeue.swift in Sources */,
 				C4197B892450A9EC00811F37 /* ActivitiesViewController.swift in Sources */,
-				C40AE0CB24537E6E008BC71C /* ActivitiesRowType.swift in Sources */,
+				C40AE0CB24537E6E008BC71C /* ActivitiesItemType.swift in Sources */,
 				C4F81929244B76BA00AE73CE /* UITableViewCell+DisclosureIndicator.swift in Sources */,
 				C4F8191F244B768C00AE73CE /* UIStackView+Convenience.swift in Sources */,
 				C463DC33245B6A3D00E265FF /* ActivityTextInputView.swift in Sources */,
 				C40BB4732457498400C236C7 /* ActivitiesIntroBlockViewModelFactory.swift in Sources */,
 				CCFFB9909ED31C68FEE5FCEA /* PersonalCoachViewController.swift in Sources */,
-				DD20C56D2978A109D656D29A /* PersonalCoachRepository.swift in Sources */,
 				13E167FC3E2ED2162216072D /* PersonalCoachStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1517,7 +1525,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C451B7C92455E8BB00BB1D2A /* Models */ = {
+		C463DC59245C92B600E265FF /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Models;
 		};

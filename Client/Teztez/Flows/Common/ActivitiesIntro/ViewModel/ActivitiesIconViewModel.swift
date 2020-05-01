@@ -43,9 +43,9 @@ struct ActivitiesIconViewModel {
         }
     }
 
-    private let type: ActivitiesRowType
+    private let type: ActivitiesItemType
 
-    init(type: ActivitiesRowType) {
+    init(type: ActivitiesItemType) {
         self.type = type
     }
 }

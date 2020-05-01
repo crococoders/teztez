@@ -12,6 +12,9 @@ import UIKit
 protocol PersonalCoachPresentable: Presentable {
     var onCloseButtonDidTap: Callback? { get set }
     var onTextInputDidTap: Callback? { get set }
+    var onStartButtonDidTap: ((_ configuration: PersonalCoachConfiguration) -> Void)? { get set }
+
+    func setUserText(_ text: String)
 }
 
 private enum Constants {
@@ -21,6 +24,7 @@ private enum Constants {
 final class PersonalCoachViewController: ViewController, PersonalCoachPresentable {
     var onCloseButtonDidTap: Callback?
     var onTextInputDidTap: Callback?
+    var onStartButtonDidTap: ((_ configuration: PersonalCoachConfiguration) -> Void)?
 
     private let store: PersonalCoachStore
     private let pickerViewDelegate: PersonalCoachPickerViewDelegate
@@ -32,6 +36,7 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
     private lazy var selectSpeedView = ActivitySelectValueView()
 
     @IBOutlet private var stackView: UIStackView!
+    @IBOutlet private var startButton: PrimaryButton!
 
     init(store: PersonalCoachStore) {
         self.store = store
@@ -51,6 +56,14 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
         store.dispatch(action: .didLoadView)
     }
 
+    @IBAction func startButtonDidTap(_ sender: PrimaryButton) {
+        store.dispatch(action: .didStartDidTap)
+    }
+
+    func setUserText(_ text: String) {
+        store.dispatch(action: .didSetUserText(text: text))
+    }
+
     private func setupObservers() {
         store.$state.sink { [weak self] state in
             guard
@@ -61,6 +74,8 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
                 self.setupViews(from: blocks)
             case let .updated(block):
                 self.updateBlock(block)
+            case let .configured(configuration):
+                self.onStartButtonDidTap?(configuration)
             }
 
         }.store(in: &cancellables)
@@ -104,6 +119,8 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
         switch block {
         case let .selectSpeed(viewModel):
             selectSpeedView.configure(with: viewModel)
+        case let .inputText(viewModel):
+            inputTextView.configure(with: viewModel)
         default:
             break
         }

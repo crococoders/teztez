@@ -8,6 +8,10 @@
 
 import UIKit
 
+private enum Constants {
+    static let numberOfComponents = 1
+}
+
 final class PersonalCoachPickerViewDataSource: NSObject, UIPickerViewDataSource {
     private let store: PersonalCoachStore
 
@@ -16,7 +20,7 @@ final class PersonalCoachPickerViewDataSource: NSObject, UIPickerViewDataSource 
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        1
+        Constants.numberOfComponents
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {

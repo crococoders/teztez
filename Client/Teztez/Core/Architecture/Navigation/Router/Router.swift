@@ -31,7 +31,7 @@ final class Router: Presentable {
             present(controller, animated: true, modalPresentationStyle: .fullScreen)
         case let .presentInSheet(dismissable):
             controller.isModalInPresentation = !dismissable
-            present(controller, animated: true, modalPresentationStyle: .pageSheet)
+            present(controller, animated: true, modalPresentationStyle: .automatic)
         }
     }
 

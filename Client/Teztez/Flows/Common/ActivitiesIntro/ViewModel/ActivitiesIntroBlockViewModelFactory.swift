@@ -9,7 +9,7 @@
 import Foundation
 
 final class ActivitiesIntroBlockViewModelFactory {
-    static func makeBlocks(for type: ActivitiesRowType) -> [ActivitiesIntroBlockViewModel] {
+    static func makeBlocks(for type: ActivitiesItemType) -> [ActivitiesIntroBlockViewModel] {
         switch type {
         case .backwards:
             return makeBlocksForBackward()

@@ -11,23 +11,25 @@ import Combine
 final class ActivitiesStore {
     enum Action {
         case didLoadView
+        case didSelectItem(itemType: ActivitiesItemType)
     }
 
     enum State {
-        case inital(rows: [ActivitiesRowType])
+        case inital(items: [ActivitiesItemType])
+        case itemSelected(itemType: ActivitiesItemType)
     }
 
+    private var items: [ActivitiesItemType] = []
+
     @Published private(set) var state: State?
-
-    private var rows: [ActivitiesRowType] = []
-
-    init() {}
 
     func dispatch(action: Action) {
         switch action {
         case .didLoadView:
-            rows = ActivitiesRowType.allCases
-            state = .inital(rows: rows)
+            items = ActivitiesItemType.allCases
+            state = .inital(items: items)
+        case let .didSelectItem(itemType):
+            state = .itemSelected(itemType: itemType)
         }
     }
 }
