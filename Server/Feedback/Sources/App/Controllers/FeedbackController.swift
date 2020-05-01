@@ -1,17 +1,22 @@
 import Fluent
 import Vapor
 
-struct FeedbackController {
+struct FeedbackController: RouteCollection {
+    func boot(routes: RoutesBuilder) throws {
+        let feedbackRoutes = routes.grouped("feedback")
+        feedbackRoutes.get(use: getAll)
+        feedbackRoutes.get("game",":gameTitle", use: getAllFeedbacksByGameTitle)
+        feedbackRoutes.post(use: create)
+        feedbackRoutes.delete(":feedbackId", use: delete)
+    }
+    
     func getAll(request: Request) throws -> EventLoopFuture<[Feedback]> {
         return Feedback.query(on: request.db).all()
     }
 
-    func getAllFeedbacksByGameId(request: Request) throws -> EventLoopFuture<[Feedback]>{
-        return Game.find(request.parameters.get("gameId"),on: request.db)
-            .unwrap(or: Abort(.notFound))
-            .flatMap{game in
-                return Feedback.query(on: request.db).filter("game_id", .equal, game.id!).all()
-        }
+    func getAllFeedbacksByGameTitle(request: Request) throws -> EventLoopFuture<[Feedback]>{
+        return Feedback.query(on: request.db).filter("game_title" .equal, request.parameters.get(":gameTitle")).all()
+        
     }
     
     func create(request: Request) throws -> EventLoopFuture<Feedback> {

@@ -6,8 +6,8 @@ struct CreateFeedback: Migration {
             .id()
             .field("title", .string, .required)
             .field("text", .string, .required)
-            .field("rate_score", .int, .required)
-            .field("game_id", .uuid, .references("games", "id"))
+            .field("rate_score", .int)
+            .field("game_title", .string)
             .create()
     }
 

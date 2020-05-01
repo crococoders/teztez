@@ -14,18 +14,18 @@ final class Feedback: Model, Content {
     var text: String
     
     @Field(key: "rate_score")
-    var rateScore: Int
+    var rateScore: Int?
     
-    @Field(key: "game_id")
-    var gameId: UUID
+    @Field(key: "game_title")
+    var gameTitle: String?
 
     init() { }
 
-    init(id: UUID? = nil, title: String, text: String,rateScore: Int, gameId: UUID) {
+    init(id: UUID? = nil, title: String, text: String,rateScore: Int? = nil, gameTitle: String? = nil) {
         self.id = id
         self.title = title
         self.text = text
         self.rateScore = rateScore
-        self.gameId = gameId
+        self.gameTitle = gameTitle
     }
 }
