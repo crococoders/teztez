@@ -27,8 +27,7 @@ final class FeedController: RouteCollection {
     private func get(request: Request) -> [Block] {
         let statisticsBlocks = analyticsService.fetchStatistics(count: 10)
         let contentBlocks = contentService.fetchInformation(count: 4)
-        let strategy = LayoutStrategy(blocks: statisticsBlocks)
-        let response = strategy.getBlocks()
-        return response
+        let facade = LayoutFacade(statisticsModels: statisticsBlocks, informationModels: contentBlocks)
+        return facade.getBlocks()
     }
 }
