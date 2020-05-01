@@ -21,14 +21,22 @@ private enum Constants {
 final class PersonalCoachViewController: ViewController, PersonalCoachPresentable {
     var onCloseButtonDidTap: Callback?
     var onTextInputDidTap: Callback?
-    
+
     private let store: PersonalCoachStore
+    private let pickerViewDelegate: PersonalCoachPickerViewDelegate
+    private let pickerViewDataSource: PersonalCoachPickerViewDataSource
     private var cancellables = Set<AnyCancellable>()
+
+    private lazy var headerView = ActivityHeaderView()
+    private lazy var inputTextView = ActivityTextInputView()
+    private lazy var selectSpeedView = ActivitySelectValueView()
 
     @IBOutlet private var stackView: UIStackView!
 
     init(store: PersonalCoachStore) {
         self.store = store
+        pickerViewDelegate = PersonalCoachPickerViewDelegate(store: store)
+        pickerViewDataSource = PersonalCoachPickerViewDataSource(store: store)
         super.init(nibName: String(describing: Self.self), bundle: nil)
     }
 
@@ -51,6 +59,8 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
             switch state {
             case let .initial(blocks):
                 self.setupViews(from: blocks)
+            case let .updated(block):
+                self.updateBlock(block)
             }
 
         }.store(in: &cancellables)
@@ -75,15 +85,27 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
         blocks.forEach { blockType in
             switch blockType {
             case let .header(viewModel):
-                let headerView = ActivityHeaderView()
                 headerView.configure(with: viewModel)
                 stackView.addArrangedSubview(headerView)
             case let .inputText(viewModel):
-                let inputTextView = ActivityTextInputView()
                 inputTextView.delegate = self
                 inputTextView.configure(with: viewModel)
                 stackView.addArrangedSubview(inputTextView)
+            case let .selectSpeed(viewModel):
+                selectSpeedView.configure(with: viewModel)
+                selectSpeedView.pickerView.delegate = pickerViewDelegate
+                selectSpeedView.pickerView.dataSource = pickerViewDataSource
+                stackView.addArrangedSubview(selectSpeedView)
             }
+        }
+    }
+
+    private func updateBlock(_ block: PersonalCoachBlockType) {
+        switch block {
+        case let .selectSpeed(viewModel):
+            selectSpeedView.configure(with: viewModel)
+        default:
+            break
         }
     }
 

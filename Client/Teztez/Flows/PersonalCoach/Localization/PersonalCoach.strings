@@ -12,3 +12,5 @@
 "inputTextDescription" = "This text will be used to check your reading speed. If you dont have any text, don’t warry, Teztez has its own text for you ";
 "inputTextYourText" = "Your text";
 "inputTextDefaultText" = "Default text";
+"selectSpeedTitle" = "Select your speed";
+"selectSpeedDescription" = "You can choose any speed which you want to test. Range from 50wpm to 500wpm";
