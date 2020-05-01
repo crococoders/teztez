@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SliderView" customModule="Teztez" customModuleProvider="target">
+            <connections>
+                <outlet property="slider" destination="q4S-aT-RVm" id="DrJ-Sv-id3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="374" height="72"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtY-mM-m1v">
+                    <rect key="frame" x="16" y="30" width="10" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="10" id="MXA-S2-uZq"/>
+                        <constraint firstAttribute="height" constant="12" id="iTo-as-wGU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="11"/>
+                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYP-s4-4OG">
+                    <rect key="frame" x="342" y="24.5" width="16" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="9rD-ZW-LYo"/>
+                        <constraint firstAttribute="width" constant="16" id="TPG-VL-9ed"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
+                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6k2-A9-bkq">
+                    <rect key="frame" x="41" y="33" width="286" height="7"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hht-ua-ttb">
+                            <rect key="frame" x="0.0" y="0.0" width="2" height="7"/>
+                            <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2" id="wuu-YH-Y4v"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Osv-0H-DRI">
+                            <rect key="frame" x="35.5" y="0.0" width="2" height="7"/>
+                            <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2" id="DQM-ii-6X1"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJj-te-ta9">
+                            <rect key="frame" x="71" y="0.0" width="2" height="7"/>
+                            <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2" id="uQk-th-d0o"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vXt-W1-8kA">
+                            <rect key="frame" x="106.5" y="0.0" width="2" height="7"/>
+                            <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2" id="yXK-ES-f8v"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8QQ-j6-PLg">
+                            <rect key="frame" x="142" y="0.0" width="2" height="7"/>
+                            <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2" id="vTQ-4g-2UY"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrr-eF-uT5">
+                            <rect key="frame" x="177.5" y="0.0" width="2" height="7"/>
+                            <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2" id="p63-f0-6J4"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4WW-il-CiC">
+                            <rect key="frame" x="213" y="0.0" width="2" height="7"/>
+                            <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2" id="bp6-qt-Gnc"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qIE-LX-LEj">
+                            <rect key="frame" x="248.5" y="0.0" width="2" height="7"/>
+                            <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2" id="eKb-vK-RoM"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMo-DS-jDX">
+                            <rect key="frame" x="284" y="0.0" width="2" height="7"/>
+                            <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="2" id="lOh-s0-waB"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="7" id="55P-jd-jfT"/>
+                    </constraints>
+                </stackView>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="11" maxValue="19" translatesAutoresizingMaskIntoConstraints="NO" id="q4S-aT-RVm">
+                    <rect key="frame" x="39" y="35" width="290" height="3"/>
+                    <color key="minimumTrackTintColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="maximumTrackTintColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="changeTextSize:" destination="-1" eventType="valueChanged" id="eCU-9N-wwE"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="q4S-aT-RVm" firstAttribute="leading" secondItem="OtY-mM-m1v" secondAttribute="trailing" constant="15" id="DeX-69-Bck"/>
+                <constraint firstItem="6k2-A9-bkq" firstAttribute="leading" secondItem="OtY-mM-m1v" secondAttribute="trailing" constant="15" id="Gmr-d9-lt1"/>
+                <constraint firstItem="OtY-mM-m1v" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Jnn-d9-nr1"/>
+                <constraint firstItem="mYP-s4-4OG" firstAttribute="leading" secondItem="q4S-aT-RVm" secondAttribute="trailing" constant="15" id="QRs-vh-UJp"/>
+                <constraint firstItem="OtY-mM-m1v" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="WdW-Yn-Xv3"/>
+                <constraint firstItem="q4S-aT-RVm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="35" id="Whi-zI-EHz"/>
+                <constraint firstItem="mYP-s4-4OG" firstAttribute="leading" secondItem="6k2-A9-bkq" secondAttribute="trailing" constant="15" id="YGn-2p-gRx"/>
+                <constraint firstItem="mYP-s4-4OG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="fYX-2t-Epg"/>
+                <constraint firstItem="6k2-A9-bkq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="0.5" id="gzU-c2-57B"/>
+                <constraint firstAttribute="trailing" secondItem="mYP-s4-4OG" secondAttribute="trailing" constant="16" id="qZl-cY-mAk"/>
+                <constraint firstAttribute="bottom" secondItem="q4S-aT-RVm" secondAttribute="bottom" constant="35" id="zlK-dz-T88"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="119.86607142857142"/>
+        </view>
+    </objects>
+</document>
