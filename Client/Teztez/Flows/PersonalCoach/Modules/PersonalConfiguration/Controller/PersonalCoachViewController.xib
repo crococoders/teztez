@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalCoachViewController" customModule="Teztez" customModuleProvider="target">
+            <connections>
+                <outlet property="stackView" destination="VFW-am-7GY" id="pcP-yf-mmx"/>
+                <outlet property="startButton" destination="LfO-nj-NEL" id="fUl-R3-ohW"/>
+                <outlet property="view" destination="iN0-l3-epB" id="bRD-2f-UdD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFH-9C-AxE">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="91I-NA-91D">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VFW-am-7GY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kch-fx-caU" userLabel="TestView" customClass="ActivityHeaderView" customModule="Teztez" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="Nop-fc-xiI"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="VFW-am-7GY" secondAttribute="bottom" id="LGs-PO-Zw9"/>
+                                <constraint firstItem="VFW-am-7GY" firstAttribute="leading" secondItem="91I-NA-91D" secondAttribute="leading" id="UVF-1U-OAs"/>
+                                <constraint firstItem="VFW-am-7GY" firstAttribute="top" secondItem="91I-NA-91D" secondAttribute="top" id="Z6Q-H4-Pa7"/>
+                                <constraint firstAttribute="trailing" secondItem="VFW-am-7GY" secondAttribute="trailing" id="p0h-w1-UxP"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="91I-NA-91D" secondAttribute="trailing" id="DPw-UL-vDq"/>
+                        <constraint firstItem="91I-NA-91D" firstAttribute="leading" secondItem="jFH-9C-AxE" secondAttribute="leading" id="emm-Ob-EzW"/>
+                        <constraint firstItem="VFW-am-7GY" firstAttribute="width" secondItem="jFH-9C-AxE" secondAttribute="width" id="fSU-ON-B1f"/>
+                        <constraint firstAttribute="bottom" secondItem="91I-NA-91D" secondAttribute="bottom" id="lbm-d8-74a"/>
+                        <constraint firstItem="91I-NA-91D" firstAttribute="top" secondItem="jFH-9C-AxE" secondAttribute="top" id="y2N-79-odr"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LfO-nj-NEL" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
+                    <rect key="frame" x="40" y="630" width="295" height="48"/>
+                    <color key="backgroundColor" red="0.10980392156862745" green="0.52941176470588236" blue="0.9882352941176471" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="ayT-Zq-K4D"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                    <state key="normal" title="Start">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="startButtonDidTap:" destination="-1" eventType="touchUpInside" id="zFR-hv-ICf"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LfO-nj-NEL" firstAttribute="top" relation="greaterThanOrEqual" secondItem="91I-NA-91D" secondAttribute="bottom" priority="750" constant="56" id="4ee-UA-DbE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="LfO-nj-NEL" secondAttribute="bottom" priority="250" constant="100" id="6nc-Lc-wmD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jFH-9C-AxE" secondAttribute="trailing" id="7RN-Ch-f4Q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="jFH-9C-AxE" secondAttribute="bottom" id="Hbs-7i-oFd"/>
+                <constraint firstItem="LfO-nj-NEL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="Ung-oh-hQ0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LfO-nj-NEL" secondAttribute="trailing" constant="40" id="W0n-aR-UdJ"/>
+                <constraint firstItem="jFH-9C-AxE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZBm-gJ-UAp"/>
+                <constraint firstItem="jFH-9C-AxE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oPk-Z8-5SZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="LfO-nj-NEL" secondAttribute="bottom" constant="71" id="zDX-di-NAt"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="136.80000000000001" y="96.059113300492612"/>
+        </view>
+    </objects>
+</document>

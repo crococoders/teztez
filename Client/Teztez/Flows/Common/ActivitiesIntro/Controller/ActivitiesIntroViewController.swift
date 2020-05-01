@@ -47,7 +47,7 @@ private extension ActivitiesIntroViewController {
     func setupUI() {
         nextButton.setTitle(R.string.activitiesIntro.nextButtonTitle(), for: .normal)
         activityTitle.text = viewModel.title
-        activityIconView.configure(with: viewModel)
+        activityIconView.configure(with: viewModel.iconViewModel)
         setupContainerView()
         configureNavigationBar()
     }

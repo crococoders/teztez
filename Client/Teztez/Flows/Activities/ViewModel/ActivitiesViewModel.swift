@@ -100,9 +100,9 @@ struct ActivitiesViewModel {
         }
     }
 
-    private var type: ActivitiesRowType
+    private var type: ActivitiesItemType
 
-    init(type: ActivitiesRowType) {
+    init(type: ActivitiesItemType) {
         self.type = type
     }
 }

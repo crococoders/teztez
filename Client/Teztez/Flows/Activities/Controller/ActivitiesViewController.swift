@@ -6,25 +6,27 @@
 //  Copyright © 2020 crococoders. All rights reserved.
 //
 
+import Combine
 import UIKit
 
 protocol ActivitiesPresentable: Presentable {
-    var onItemDidSelect: ((_ indexPath: Int) -> Void)? { get set }
+    var onItemDidSelect: ((_ itemType: ActivitiesItemType) -> Void)? { get set }
 }
 
 final class ActivitiesViewController: UIViewController, ActivitiesPresentable {
-    var onItemDidSelect: ((Int) -> Void)?
+    var onItemDidSelect: ((_ itemType: ActivitiesItemType) -> Void)?
 
     private let store: ActivitiesStore
     private let collectionViewDelegate: ActivitiesCollectionViewDelegate
     private let collectionViewDataSource: ActivitiesCollectionViewDataSource
+    private var cancellables = Set<AnyCancellable>()
 
     @IBOutlet var collectionView: UICollectionView!
 
     init(store: ActivitiesStore) {
         self.store = store
         collectionViewDataSource = ActivitiesCollectionViewDataSource()
-        collectionViewDelegate = ActivitiesCollectionViewDelegate()
+        collectionViewDelegate = ActivitiesCollectionViewDelegate(store: store)
 
         super.init(nibName: String(describing: Self.self), bundle: nil)
     }
@@ -36,12 +38,30 @@ final class ActivitiesViewController: UIViewController, ActivitiesPresentable {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupObservers()
         store.dispatch(action: .didLoadView)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupNavigationBar()
+    }
+
+    private func setupObservers() {
+        store.$state.sink { [weak self] state in
+            guard
+                let self = self,
+                let state = state else { return }
+            switch state {
+            case let .inital(items):
+                self.collectionViewDataSource.items = items
+                self.collectionViewDelegate.items = items
+                self.collectionView.reloadData()
+            case let .itemSelected(itemType):
+                self.onItemDidSelect?(itemType)
+            }
+
+        }.store(in: &cancellables)
     }
 
     private func setupNavigationBar() {

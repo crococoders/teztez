@@ -14,7 +14,6 @@
 		C40AE0C424537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C324537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift */; };
 		C40AE0C624537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C524537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift */; };
 		C40AE0C924537E44008BC71C /* ActivitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0C824537E44008BC71C /* ActivitiesViewModel.swift */; };
-		C40AE0CB24537E6E008BC71C /* ActivitiesRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0CA24537E6E008BC71C /* ActivitiesRowType.swift */; };
 		C40AE0CD24543A04008BC71C /* UIView+GradientLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0CC24543A04008BC71C /* UIView+GradientLayer.swift */; };
 		C40BB4712457494E00C236C7 /* ActivitiesIntroBlockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40BB4702457494E00C236C7 /* ActivitiesIntroBlockViewModel.swift */; };
 		C40BB4732457498400C236C7 /* ActivitiesIntroBlockViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40BB4722457498400C236C7 /* ActivitiesIntroBlockViewModelFactory.swift */; };
@@ -37,6 +36,26 @@
 		C463DC1B2459D35C00E265FF /* UIImageView+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC1A2459D35C00E265FF /* UIImageView+Color.swift */; };
 		C463DC202459D7B900E265FF /* UIViewController+ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC1F2459D7B900E265FF /* UIViewController+ActionSheet.swift */; };
 		C463DC232459DCAD00E265FF /* ActionSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC222459DCAD00E265FF /* ActionSheetViewModel.swift */; };
+		C463DC6F245CAF8500E265FF /* PersonalCoachModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC61245CAF8500E265FF /* PersonalCoachModuleFactory.swift */; };
+		C463DC70245CAF8500E265FF /* PersonalCoachCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC62245CAF8500E265FF /* PersonalCoachCoordinator.swift */; };
+		C463DC71245CAF8500E265FF /* PersonalCoachViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC66245CAF8500E265FF /* PersonalCoachViewController.xib */; };
+		C463DC72245CAF8500E265FF /* PersonalCoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC67245CAF8500E265FF /* PersonalCoachViewController.swift */; };
+		C463DC73245CAF8500E265FF /* PersonalCoachPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC68245CAF8500E265FF /* PersonalCoachPickerViewDelegate.swift */; };
+		C463DC74245CAF8500E265FF /* PersonalCoachPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC69245CAF8500E265FF /* PersonalCoachPickerViewDataSource.swift */; };
+		C463DC75245CAF8500E265FF /* PersonalCoach.strings in Resources */ = {isa = PBXBuildFile; fileRef = C463DC6B245CAF8500E265FF /* PersonalCoach.strings */; };
+		C463DC76245CAF8500E265FF /* PersonalCoachConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC6D245CAF8500E265FF /* PersonalCoachConfiguration.swift */; };
+		C463DC77245CAF8500E265FF /* PersonalCoachStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC6E245CAF8500E265FF /* PersonalCoachStore.swift */; };
+		C463DC8A245CAF9600E265FF /* ActivityTextInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC7A245CAF9500E265FF /* ActivityTextInputViewModel.swift */; };
+		C463DC8B245CAF9600E265FF /* ActivityTextInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC7C245CAF9500E265FF /* ActivityTextInputView.xib */; };
+		C463DC8C245CAF9600E265FF /* ActivityTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC7D245CAF9500E265FF /* ActivityTextInputView.swift */; };
+		C463DC8D245CAF9600E265FF /* ActivityHeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC80245CAF9500E265FF /* ActivityHeaderViewModel.swift */; };
+		C463DC8E245CAF9600E265FF /* ActivityHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC82245CAF9500E265FF /* ActivityHeaderView.swift */; };
+		C463DC8F245CAF9600E265FF /* ActivityHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC83245CAF9500E265FF /* ActivityHeaderView.xib */; };
+		C463DC90245CAF9600E265FF /* ActivitySelectValueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC86245CAF9500E265FF /* ActivitySelectValueViewModel.swift */; };
+		C463DC91245CAF9600E265FF /* ActivitySelectValueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC88245CAF9500E265FF /* ActivitySelectValueView.xib */; };
+		C463DC92245CAF9600E265FF /* ActivitySelectValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC89245CAF9500E265FF /* ActivitySelectValueView.swift */; };
+		C463DC94245CB02A00E265FF /* ActivitiesItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC93245CB02A00E265FF /* ActivitiesItemType.swift */; };
+		C463DC96245CB11700E265FF /* ActivitiesIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC95245CB11700E265FF /* ActivitiesIconViewModel.swift */; };
 		C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */; };
 		C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */; };
 		C4B88F5B2450BCA700D1D1BA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */; };
@@ -115,7 +134,6 @@
 		C40AE0C324537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		C40AE0C524537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		C40AE0C824537E44008BC71C /* ActivitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewModel.swift; sourceTree = "<group>"; };
-		C40AE0CA24537E6E008BC71C /* ActivitiesRowType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesRowType.swift; sourceTree = "<group>"; };
 		C40AE0CC24543A04008BC71C /* UIView+GradientLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+GradientLayer.swift"; sourceTree = "<group>"; };
 		C40BB4702457494E00C236C7 /* ActivitiesIntroBlockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesIntroBlockViewModel.swift; sourceTree = "<group>"; };
 		C40BB4722457498400C236C7 /* ActivitiesIntroBlockViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesIntroBlockViewModelFactory.swift; sourceTree = "<group>"; };
@@ -138,6 +156,26 @@
 		C463DC1A2459D35C00E265FF /* UIImageView+Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Color.swift"; sourceTree = "<group>"; };
 		C463DC1F2459D7B900E265FF /* UIViewController+ActionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActionSheet.swift"; sourceTree = "<group>"; };
 		C463DC222459DCAD00E265FF /* ActionSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewModel.swift; sourceTree = "<group>"; };
+		C463DC61245CAF8500E265FF /* PersonalCoachModuleFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalCoachModuleFactory.swift; sourceTree = "<group>"; };
+		C463DC62245CAF8500E265FF /* PersonalCoachCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalCoachCoordinator.swift; sourceTree = "<group>"; };
+		C463DC66245CAF8500E265FF /* PersonalCoachViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalCoachViewController.xib; sourceTree = "<group>"; };
+		C463DC67245CAF8500E265FF /* PersonalCoachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalCoachViewController.swift; sourceTree = "<group>"; };
+		C463DC68245CAF8500E265FF /* PersonalCoachPickerViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalCoachPickerViewDelegate.swift; sourceTree = "<group>"; };
+		C463DC69245CAF8500E265FF /* PersonalCoachPickerViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalCoachPickerViewDataSource.swift; sourceTree = "<group>"; };
+		C463DC6B245CAF8500E265FF /* PersonalCoach.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = PersonalCoach.strings; sourceTree = "<group>"; };
+		C463DC6D245CAF8500E265FF /* PersonalCoachConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalCoachConfiguration.swift; sourceTree = "<group>"; };
+		C463DC6E245CAF8500E265FF /* PersonalCoachStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalCoachStore.swift; sourceTree = "<group>"; };
+		C463DC7A245CAF9500E265FF /* ActivityTextInputViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTextInputViewModel.swift; sourceTree = "<group>"; };
+		C463DC7C245CAF9500E265FF /* ActivityTextInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityTextInputView.xib; sourceTree = "<group>"; };
+		C463DC7D245CAF9500E265FF /* ActivityTextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityTextInputView.swift; sourceTree = "<group>"; };
+		C463DC80245CAF9500E265FF /* ActivityHeaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityHeaderViewModel.swift; sourceTree = "<group>"; };
+		C463DC82245CAF9500E265FF /* ActivityHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityHeaderView.swift; sourceTree = "<group>"; };
+		C463DC83245CAF9500E265FF /* ActivityHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityHeaderView.xib; sourceTree = "<group>"; };
+		C463DC86245CAF9500E265FF /* ActivitySelectValueViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitySelectValueViewModel.swift; sourceTree = "<group>"; };
+		C463DC88245CAF9500E265FF /* ActivitySelectValueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivitySelectValueView.xib; sourceTree = "<group>"; };
+		C463DC89245CAF9500E265FF /* ActivitySelectValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitySelectValueView.swift; sourceTree = "<group>"; };
+		C463DC93245CB02A00E265FF /* ActivitiesItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesItemType.swift; sourceTree = "<group>"; };
+		C463DC95245CB11700E265FF /* ActivitiesIconViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesIconViewModel.swift; sourceTree = "<group>"; };
 		C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -309,7 +347,7 @@
 		C4197B862450A97700811F37 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				C40AE0CA24537E6E008BC71C /* ActivitiesRowType.swift */,
+				C463DC93245CB02A00E265FF /* ActivitiesItemType.swift */,
 				C4197B8F2450AC5700811F37 /* ActivitiesStore.swift */,
 			);
 			path = Store;
@@ -409,6 +447,148 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C463DC5F245CAF8500E265FF /* PersonalCoach */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC60245CAF8500E265FF /* Coordinator */,
+				C463DC63245CAF8500E265FF /* Modules */,
+			);
+			path = PersonalCoach;
+			sourceTree = "<group>";
+		};
+		C463DC60245CAF8500E265FF /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC61245CAF8500E265FF /* PersonalCoachModuleFactory.swift */,
+				C463DC62245CAF8500E265FF /* PersonalCoachCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C463DC63245CAF8500E265FF /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC64245CAF8500E265FF /* PersonalConfiguration */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C463DC64245CAF8500E265FF /* PersonalConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC65245CAF8500E265FF /* Controller */,
+				C463DC6A245CAF8500E265FF /* Localization */,
+				C463DC6C245CAF8500E265FF /* Store */,
+			);
+			path = PersonalConfiguration;
+			sourceTree = "<group>";
+		};
+		C463DC65245CAF8500E265FF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC66245CAF8500E265FF /* PersonalCoachViewController.xib */,
+				C463DC67245CAF8500E265FF /* PersonalCoachViewController.swift */,
+				C463DC68245CAF8500E265FF /* PersonalCoachPickerViewDelegate.swift */,
+				C463DC69245CAF8500E265FF /* PersonalCoachPickerViewDataSource.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C463DC6A245CAF8500E265FF /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC6B245CAF8500E265FF /* PersonalCoach.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		C463DC6C245CAF8500E265FF /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC6D245CAF8500E265FF /* PersonalCoachConfiguration.swift */,
+				C463DC6E245CAF8500E265FF /* PersonalCoachStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		C463DC78245CAF9500E265FF /* ActivityTextInputView */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC79245CAF9500E265FF /* ViewModel */,
+				C463DC7B245CAF9500E265FF /* View */,
+			);
+			path = ActivityTextInputView;
+			sourceTree = "<group>";
+		};
+		C463DC79245CAF9500E265FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC7A245CAF9500E265FF /* ActivityTextInputViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C463DC7B245CAF9500E265FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC7C245CAF9500E265FF /* ActivityTextInputView.xib */,
+				C463DC7D245CAF9500E265FF /* ActivityTextInputView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C463DC7E245CAF9500E265FF /* ActivityHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC7F245CAF9500E265FF /* ViewModel */,
+				C463DC81245CAF9500E265FF /* View */,
+			);
+			path = ActivityHeaderView;
+			sourceTree = "<group>";
+		};
+		C463DC7F245CAF9500E265FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC80245CAF9500E265FF /* ActivityHeaderViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C463DC81245CAF9500E265FF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC82245CAF9500E265FF /* ActivityHeaderView.swift */,
+				C463DC83245CAF9500E265FF /* ActivityHeaderView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C463DC84245CAF9500E265FF /* ActivitySelectValueView */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC85245CAF9500E265FF /* ViewModel */,
+				C463DC87245CAF9500E265FF /* Views */,
+			);
+			path = ActivitySelectValueView;
+			sourceTree = "<group>";
+		};
+		C463DC85245CAF9500E265FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC86245CAF9500E265FF /* ActivitySelectValueViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C463DC87245CAF9500E265FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C463DC88245CAF9500E265FF /* ActivitySelectValueView.xib */,
+				C463DC89245CAF9500E265FF /* ActivitySelectValueView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		C4A98277244DFF8C005E98BC /* Configurators */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +602,9 @@
 		C4B88F5C2450BCC500D1D1BA /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				C463DC7E245CAF9500E265FF /* ActivityHeaderView */,
+				C463DC84245CAF9500E265FF /* ActivitySelectValueView */,
+				C463DC78245CAF9500E265FF /* ActivityTextInputView */,
 				C4F7AFD024547A68007D6289 /* Protocols */,
 				C4C4BEBA245314B9001244E3 /* PrimaryButton */,
 			);
@@ -434,7 +617,7 @@
 				C4B88F5F2450CE9700D1D1BA /* Controller */,
 				C4B88F612450CED200D1D1BA /* Localization */,
 				C4B88F622450CEDE00D1D1BA /* ViewModel */,
-				C4F7AFCB245471FF007D6289 /* Views */,
+				C4F7AFCB245471FF007D6289 /* View */,
 			);
 			path = ActivitiesIntro;
 			sourceTree = "<group>";
@@ -470,9 +653,10 @@
 		C4B88F622450CEDE00D1D1BA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C4B88F652450CF7400D1D1BA /* ActivitiesIntroViewModel.swift */,
+				C463DC95245CB11700E265FF /* ActivitiesIconViewModel.swift */,
 				C40BB4702457494E00C236C7 /* ActivitiesIntroBlockViewModel.swift */,
 				C40BB4722457498400C236C7 /* ActivitiesIntroBlockViewModelFactory.swift */,
+				C4B88F652450CF7400D1D1BA /* ActivitiesIntroViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -556,13 +740,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C4F7AFCB245471FF007D6289 /* Views */ = {
+		C4F7AFCB245471FF007D6289 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				C4F7AFDA24547FAF007D6289 /* ActivitiesIntroBlockView */,
 				C4F7AFD524547E05007D6289 /* ActivityIconView */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
 		C4F7AFD024547A68007D6289 /* Protocols */ = {
@@ -669,9 +853,10 @@
 		C4F81909244B724F00AE73CE /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				C4B88F602450CEC400D1D1BA /* Common */,
 				C4197B842450A54300811F37 /* Activities */,
+				C4B88F602450CEC400D1D1BA /* Common */,
 				C4197B7A2450A08700811F37 /* MainTabBar */,
+				C463DC5F245CAF8500E265FF /* PersonalCoach */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -976,10 +1161,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4C067082458A24100EF39B8 /* FontSizeChange.strings in Resources */,
+				C463DC91245CAF9600E265FF /* ActivitySelectValueView.xib in Resources */,
+				C463DC71245CAF8500E265FF /* PersonalCoachViewController.xib in Resources */,
 				C4F7AFDC24547FC9007D6289 /* ActivitiesIntroBlockView.xib in Resources */,
 				C4197B942450B1F900811F37 /* Activities.strings in Resources */,
+				C463DC75245CAF8500E265FF /* PersonalCoach.strings in Resources */,
+				C463DC8B245CAF9600E265FF /* ActivityTextInputView.xib in Resources */,
 				C4F818EF244B289400AE73CE /* LaunchScreen.storyboard in Resources */,
 				C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */,
+				C463DC8F245CAF9600E265FF /* ActivityHeaderView.xib in Resources */,
 				C4C0670A2458AD1C00EF39B8 /* SliderView.xib in Resources */,
 				C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */,
 				C4F8198A244C55FB00AE73CE /* SFProRounded-Bold.otf in Resources */,
@@ -1085,13 +1275,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C463DC8D245CAF9600E265FF /* ActivityHeaderViewModel.swift in Sources */,
 				C4F8195A244B890B00AE73CE /* AppDelegateConfiguratorFactory.swift in Sources */,
 				C4F81919244B761700AE73CE /* UIColor+Hex.swift in Sources */,
+				C463DC8A245CAF9600E265FF /* ActivityTextInputViewModel.swift in Sources */,
 				C4F81958244B86EC00AE73CE /* ColorStyles.swift in Sources */,
 				C463DC232459DCAD00E265FF /* ActionSheetViewModel.swift in Sources */,
 				C4197B902450AC5700811F37 /* ActivitiesStore.swift in Sources */,
 				C4197B8C2450ABA400811F37 /* ActivitiesCoordinator.swift in Sources */,
 				C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */,
+				C463DC77245CAF8500E265FF /* PersonalCoachStore.swift in Sources */,
+				C463DC96245CB11700E265FF /* ActivitiesIconViewModel.swift in Sources */,
 				C463DC182459D32C00E265FF /* TextInputStore.swift in Sources */,
 				C4F81945244B82BB00AE73CE /* ParentCoordinator.swift in Sources */,
 				C40AE0CD24543A04008BC71C /* UIView+GradientLayer.swift in Sources */,
@@ -1102,6 +1296,7 @@
 				C4F8192C244B76CE00AE73CE /* UITextField+Indent.swift in Sources */,
 				C4F81924244B76A500AE73CE /* UITableView+Register.swift in Sources */,
 				C4BD0F2C244DF0020056E8C1 /* SceneDelegate.swift in Sources */,
+				C463DC8C245CAF9600E265FF /* ActivityTextInputView.swift in Sources */,
 				C40AE0C424537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift in Sources */,
 				C4F81952244B832A00AE73CE /* TransitionType.swift in Sources */,
 				C40AE0BC24535E4B008BC71C /* ActivitiesCell.swift in Sources */,
@@ -1114,25 +1309,33 @@
 				C40BB4712457494E00C236C7 /* ActivitiesIntroBlockViewModel.swift in Sources */,
 				C4F8190E244B730200AE73CE /* Language.swift in Sources */,
 				C4F81912244B75DE00AE73CE /* Device+Constants.swift in Sources */,
+				C463DC94245CB02A00E265FF /* ActivitiesItemType.swift in Sources */,
 				C4F8195F244B891800AE73CE /* StartupAppDelegateConfigurator.swift in Sources */,
 				C4C62B03245B521700EDFC52 /* FontSizeChangeStore.swift in Sources */,
 				C4F8194B244B82F000AE73CE /* CoordinatorFactory.swift in Sources */,
 				C4F8190C244B72D500AE73CE /* UserDefaultsStorage.swift in Sources */,
+				C463DC92245CAF9600E265FF /* ActivitySelectValueView.swift in Sources */,
 				C4D138DF244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift in Sources */,
 				C4F8193C244B817800AE73CE /* ApplicationLaunchInstructor.swift in Sources */,
+				C463DC90245CAF9600E265FF /* ActivitySelectValueViewModel.swift in Sources */,
 				C41D2C8B2454F30800A56C2F /* Array+Factory.swift in Sources */,
 				C4F7AFCD24547229007D6289 /* ActivitiesIntroBlockView.swift in Sources */,
 				C4F81955244B834500AE73CE /* ApplicationCoordinator.swift in Sources */,
+				C463DC72245CAF8500E265FF /* PersonalCoachViewController.swift in Sources */,
 				C4F81940244B824200AE73CE /* ViewController.swift in Sources */,
 				C4B88F692450CF9700D1D1BA /* ActivitiesIntroViewController.swift in Sources */,
 				C4F81946244B82BB00AE73CE /* Coordinator.swift in Sources */,
 				C4F7AFD224547A8A007D6289 /* NibLoadable.swift in Sources */,
 				C4BD0F2A244DEF3D0056E8C1 /* R.generated.swift in Sources */,
+				C463DC70245CAF8500E265FF /* PersonalCoachCoordinator.swift in Sources */,
 				C463DC202459D7B900E265FF /* UIViewController+ActionSheet.swift in Sources */,
+				C463DC73245CAF8500E265FF /* PersonalCoachPickerViewDelegate.swift in Sources */,
 				C4BD0F33244DF1280056E8C1 /* StartupSceneDelegateConfigurator.swift in Sources */,
 				C4D138DD244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift in Sources */,
 				C4F7AFCF24547450007D6289 /* ActivityIconView.swift in Sources */,
+				C463DC76245CAF8500E265FF /* PersonalCoachConfiguration.swift in Sources */,
 				C4F8194A244B82F000AE73CE /* ModuleFactory.swift in Sources */,
+				C463DC74245CAF8500E265FF /* PersonalCoachPickerViewDataSource.swift in Sources */,
 				C4F81928244B76BA00AE73CE /* UITableViewCell+SelectedBackgroundView.swift in Sources */,
 				C4B88F662450CF7400D1D1BA /* ActivitiesIntroViewModel.swift in Sources */,
 				C463DC162459D32C00E265FF /* TextInputViewController.swift in Sources */,
@@ -1145,6 +1348,7 @@
 				C40AE0C124536409008BC71C /* UICollectionView+Register.swift in Sources */,
 				C4F8192F244B76DC00AE73CE /* UIView+CornerRadius.swift in Sources */,
 				C463DC1B2459D35C00E265FF /* UIImageView+Color.swift in Sources */,
+				C463DC8E245CAF9600E265FF /* ActivityHeaderView.swift in Sources */,
 				C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */,
 				C4F818E3244B289200AE73CE /* AppDelegate.swift in Sources */,
 				C4F8191C244B763F00AE73CE /* UINavigationController+StatusBar.swift in Sources */,
@@ -1152,7 +1356,7 @@
 				C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */,
 				C4F81923244B76A500AE73CE /* UITableView+Dequeue.swift in Sources */,
 				C4197B892450A9EC00811F37 /* ActivitiesViewController.swift in Sources */,
-				C40AE0CB24537E6E008BC71C /* ActivitiesRowType.swift in Sources */,
+				C463DC6F245CAF8500E265FF /* PersonalCoachModuleFactory.swift in Sources */,
 				C4F81929244B76BA00AE73CE /* UITableViewCell+DisclosureIndicator.swift in Sources */,
 				C4F8191F244B768C00AE73CE /* UIStackView+Convenience.swift in Sources */,
 				C40BB4732457498400C236C7 /* ActivitiesIntroBlockViewModelFactory.swift in Sources */,

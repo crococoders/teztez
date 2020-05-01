@@ -1,5 +1,5 @@
 //
-//  ActivitiesRowType.swift
+//  ActivitiesItemType.swift
 //  Teztez
 //
 //  Created by Almas Zainoldin on 4/25/20.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ActivitiesRowType: CaseIterable {
+enum ActivitiesItemType: CaseIterable {
     case coach
     case blender
     case backwards

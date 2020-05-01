@@ -62,6 +62,10 @@ final class TextInputViewController: ViewController, TextInputPresentable {
                 let self = self,
                 let state = state else { return }
             switch state {
+            case let .textSet(text):
+                self.textView.text = text
+                self.setResetButtonVisibility(true)
+                self.setDoneButtonAvailability(true)
             case .reset:
                 self.setResetButtonVisibility(false)
                 self.setDoneButtonAvailability(false)
