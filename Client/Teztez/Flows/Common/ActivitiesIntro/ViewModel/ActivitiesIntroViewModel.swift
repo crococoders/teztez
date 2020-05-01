@@ -8,22 +8,22 @@
 
 import UIKit
 
-enum ActivityIntroType {
-    case backward, blender, schulte, colorMatch
-}
-
 struct ActivitiesIntroViewModel {
     let iconViewModel: ActivitiesIconViewModel
-    var title: String {
+    var title: String? {
         switch type {
         case .blender:
             return R.string.activities.blenderTitle()
-        case .backward:
+        case .backwards:
             return R.string.activities.backwardsDescription()
         case .colorMatch:
             return R.string.activities.colorMatchingTitle()
         case .schulte:
             return R.string.activities.schulteTableTitle()
+        case .coach:
+            return nil
+        case .suggestion:
+            return nil
         }
     }
 
@@ -31,9 +31,9 @@ struct ActivitiesIntroViewModel {
         return ActivitiesIntroBlockViewModelFactory.makeBlocks(for: type)
     }
 
-    private let type: ActivityIntroType
+    private let type: ActivitiesRowType
 
-    init(type: ActivityIntroType) {
+    init(type: ActivitiesRowType) {
         self.type = type
         iconViewModel = ActivitiesIconViewModel(type: type)
     }

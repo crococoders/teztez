@@ -9,9 +9,9 @@
 import Foundation
 
 final class ActivitiesIntroBlockViewModelFactory {
-    static func makeBlocks(for type: ActivityIntroType) -> [ActivitiesIntroBlockViewModel] {
+    static func makeBlocks(for type: ActivitiesRowType) -> [ActivitiesIntroBlockViewModel] {
         switch type {
-        case .backward:
+        case .backwards:
             return makeBlocksForBackward()
         case .blender:
             return makeBlockForBlender()
@@ -19,6 +19,10 @@ final class ActivitiesIntroBlockViewModelFactory {
             return makeBlockForColorMatching()
         case .schulte:
             return makeBlockForSchulte()
+        case .coach:
+            return []
+        case .suggestion:
+            return []
         }
     }
 

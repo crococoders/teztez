@@ -46,6 +46,7 @@
 		C463DC33245B6A3D00E265FF /* ActivityTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC32245B6A3D00E265FF /* ActivityTextInputView.swift */; };
 		C463DC38245B6AAA00E265FF /* ActivityTextInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC37245B6AAA00E265FF /* ActivityTextInputView.xib */; };
 		C463DC3A245B720700E265FF /* ActivityTextInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC39245B720700E265FF /* ActivityTextInputViewModel.swift */; };
+		C463DC3B245C18D100E265FF /* PersonalCoach.strings in Resources */ = {isa = PBXBuildFile; fileRef = C46BD1877F60E56AF052BF6C /* PersonalCoach.strings */; };
 		C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */; };
 		C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */; };
 		C4B88F5B2450BCA700D1D1BA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */; };
@@ -1063,6 +1064,7 @@
 				C463DC132459D32C00E265FF /* TextInputViewController.xib in Resources */,
 				C4B88F6A2450CF9700D1D1BA /* ActivitiesIntroViewController.xib in Resources */,
 				C4F81984244C559000AE73CE /* SFProText-Semibold.otf in Resources */,
+				C463DC3B245C18D100E265FF /* PersonalCoach.strings in Resources */,
 				C4F81982244C557100AE73CE /* SFProText-Regular.otf in Resources */,
 				C463DC28245B552500E265FF /* ActivityHeaderView.xib in Resources */,
 				C4F818EC244B289400AE73CE /* Assets.xcassets in Resources */,

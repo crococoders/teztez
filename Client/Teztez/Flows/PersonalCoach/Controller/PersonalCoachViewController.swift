@@ -9,9 +9,19 @@
 import Combine
 import UIKit
 
-protocol PersonalCoachPresentable: Presentable {}
+protocol PersonalCoachPresentable: Presentable {
+    var onCloseButtonDidTap: Callback? { get set }
+    var onTextInputDidTap: Callback? { get set }
+}
+
+private enum Constants {
+    static let spacing: CGFloat = 32.0
+}
 
 final class PersonalCoachViewController: ViewController, PersonalCoachPresentable {
+    var onCloseButtonDidTap: Callback?
+    var onTextInputDidTap: Callback?
+    
     private let store: PersonalCoachStore
     private var cancellables = Set<AnyCancellable>()
 
@@ -29,26 +39,26 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObservers()
-        setupViews()
-        setupNavigationBar()
+        setupUI()
+        store.dispatch(action: .didLoadView)
     }
 
     private func setupObservers() {
-        store.$state.sink { [weak self] _ in
-            guard let self = self else { return }
+        store.$state.sink { [weak self] state in
+            guard
+                let self = self,
+                let state = state else { return }
+            switch state {
+            case let .initial(blocks):
+                self.setupViews(from: blocks)
+            }
+
         }.store(in: &cancellables)
     }
 
-    private func setupViews() {
-        stackView.removeAllArrangedSubviews()
-        stackView.spacing = 32.0
-        let headerView = ActivityHeaderView()
-        headerView.configure(with: ActivityHeaderViewModel(title: "Backwards",
-                                                           description: "Make  your configuration and check your reading speed",
-                                                           iconViewModel: ActivitiesIconViewModel(type: .backward)))
-        stackView.addArrangedSubview(headerView)
-        stackView.addArrangedSubview(ActivityTextInputView())
-        stackView.addArrangedSubview(ActivityTextInputView())
+    private func setupUI() {
+        stackView.spacing = Constants.spacing
+        setupNavigationBar()
     }
 
     private func setupNavigationBar() {
@@ -60,6 +70,31 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
                                                             action: #selector(closeButtonDidTap))
     }
 
+    private func setupViews(from blocks: [PersonalCoachBlockType]) {
+        stackView.removeAllArrangedSubviews()
+        blocks.forEach { blockType in
+            switch blockType {
+            case let .header(viewModel):
+                let headerView = ActivityHeaderView()
+                headerView.configure(with: viewModel)
+                stackView.addArrangedSubview(headerView)
+            case let .inputText(viewModel):
+                let inputTextView = ActivityTextInputView()
+                inputTextView.delegate = self
+                inputTextView.configure(with: viewModel)
+                stackView.addArrangedSubview(inputTextView)
+            }
+        }
+    }
+
     @objc
-    private func closeButtonDidTap() {}
+    private func closeButtonDidTap() {
+        onCloseButtonDidTap?()
+    }
+}
+
+extension PersonalCoachViewController: ActivityTextInputViewDelegate {
+    func activityTextInputView(_ activityTextInputView: ActivityTextInputView, didTapActionView actionView: UIView) {
+        onTextInputDidTap?()
+    }
 }
