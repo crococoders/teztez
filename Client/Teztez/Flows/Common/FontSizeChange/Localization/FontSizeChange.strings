@@ -1,0 +1,10 @@
+/* 
+  TextSizeChange.strings
+  Teztez
+
+  Created by Adlet on 4/28/20.
+  Copyright © 2020 crococoders. All rights reserved.
+*/
+"navigationTitle" = "Font Size";
+"cancel" = "Cancel";
+"done" = "Done";
