@@ -77,19 +77,3 @@ extension Block: Codable {
         }
     }
 }
-
-struct StatisticsBlock: Codable {
-    
-}
-
-struct ActionBlock: Codable {
-    
-}
-
-struct SystemBlock: Codable {
-    
-}
-
-struct InformationBlock: Codable {
-    
-}
