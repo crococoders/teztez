@@ -1,8 +1,9 @@
 import Fluent
 import Vapor
 
-func routes(_ app: Application) throws {
+func configureRoutes(_ app: Application) throws {
     let gameController = GameController()
+    // try app.register(collection: gameController)
     app.get("games", use: gameController.all)
     app.post("games", use: gameController.create)
     app.delete("games", ":gameId", use: gameController.delete)
