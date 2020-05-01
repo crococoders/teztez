@@ -12,9 +12,9 @@ protocol AnalyticsService {
 }
 
 final class MockAnalyticsService: AnalyticsService {
-    private let factory: StatisticsFactory
+    private let factory: StatisticsBlockFactory
 
-    init(factory: StatisticsFactory) {
+    init(factory: StatisticsBlockFactory = .init()) {
         self.factory = factory
     }
 
@@ -27,13 +27,13 @@ final class MockAnalyticsService: AnalyticsService {
     }
 }
 
-final class StatisticsFactory {
+final class StatisticsBlockFactory {
     private let titleProvider: RandomStringProvider
     private let subtitleProvider: RandomStringProvider
     private let colorProvider: RandomStringProvider
 
-    init(titleProvider: RandomStringProvider = TitleProvider(),
-         subtitleProvider: RandomStringProvider = SubtitleProvider(),
+    init(titleProvider: RandomStringProvider = StatisticsTitleProvider(),
+         subtitleProvider: RandomStringProvider = StatisticsSubtitleProvider(),
          colorProvider: RandomStringProvider = ColorProvider()) {
         self.titleProvider = titleProvider
         self.subtitleProvider = subtitleProvider

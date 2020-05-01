@@ -11,9 +11,12 @@ extension Block: Content {}
 
 final class FeedController: RouteCollection {
     private let analyticsService: AnalyticsService
+    private let contentService: ContentService
 
-    init(analyticsService: AnalyticsService = MockAnalyticsService(factory: .init())) {
+    init(analyticsService: AnalyticsService = MockAnalyticsService(),
+         contentService: ContentService = MockContentService()) {
         self.analyticsService = analyticsService
+        self.contentService = contentService
     }
 
     func boot(routes: RoutesBuilder) throws {
@@ -23,6 +26,7 @@ final class FeedController: RouteCollection {
 
     private func get(request: Request) -> [Block] {
         let statisticsBlocks = analyticsService.fetchStatistics(count: 10)
+        let contentBlocks = contentService.fetchInformation(count: 4)
         let strategy = LayoutStrategy(blocks: statisticsBlocks)
         let response = strategy.getBlocks()
         return response

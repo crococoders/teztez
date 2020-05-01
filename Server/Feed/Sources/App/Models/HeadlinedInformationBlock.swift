@@ -8,6 +8,7 @@
 import Foundation
 
 struct HeadlinedInformationBlock: Codable {
+    let coverImage: String
     let metaTitle: String
     let title: String
 }
