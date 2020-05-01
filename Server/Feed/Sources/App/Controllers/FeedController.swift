@@ -6,6 +6,7 @@
 //
 
 import Vapor
+import Models
 
 extension Block: Content {}
 

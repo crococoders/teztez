@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum BlockType: String, Codable {
+public enum BlockType: String, Codable {
     case statistics
     case action
     case system

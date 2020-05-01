@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LayoutType: String, Codable {
+public enum LayoutType: String, Codable {
     case huge
     case big
     case long

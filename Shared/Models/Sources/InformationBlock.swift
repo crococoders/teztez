@@ -7,17 +7,17 @@
 
 import Foundation
 
-enum InformationBlockType: String, Codable {
+public enum InformationBlockType: String, Codable {
     case headlined
     case detailed
 }
 
-enum InformationBlock {
+public enum InformationBlock {
     case headlined(date: Date, model: HeadlinedInformationBlock)
     case detailed(date: Date, model: DetailedInformationBlock)
 }
 
-extension InformationBlock {
+public extension InformationBlock {
     var type: InformationBlockType {
         switch self {
         case .headlined:
@@ -35,7 +35,7 @@ extension InformationBlock: Codable {
         case model
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let type = try container.decode(InformationBlockType.self, forKey: .type)
         let date = try container.decode(Date.self, forKey: .date)
@@ -50,7 +50,7 @@ extension InformationBlock: Codable {
         }
     }
     
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(self.type, forKey: .type)
         

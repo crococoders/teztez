@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Models
 
 protocol ContentService {
     func fetchInformation(count: Int) -> [InformationBlock]

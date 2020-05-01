@@ -7,14 +7,14 @@
 
 import Foundation
 
-enum Block {
+public enum Block {
     case statistics(layoutType: LayoutType, model: StatisticsBlock)
     case action(layoutType: LayoutType, model: ActionBlock)
     case system(layoutType: LayoutType, model: SystemBlock)
     case information(layoutType: LayoutType, model: InformationBlock)
 }
 
-extension Block {
+public extension Block {
     var type: BlockType {
         switch self {
         case .action:
@@ -36,7 +36,7 @@ extension Block: Codable {
         case model
     }
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let layoutType = try container.decode(LayoutType.self, forKey: .layoutType)
         let blockType = try container.decode(BlockType.self, forKey: .blockType)
@@ -57,7 +57,7 @@ extension Block: Codable {
         }
     }
     
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encode(self.type, forKey: .blockType)
         

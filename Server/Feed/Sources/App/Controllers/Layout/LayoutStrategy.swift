@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Models
 
 final class LayoutStrategy {
     private let steps: [LayoutStrategyStep]
