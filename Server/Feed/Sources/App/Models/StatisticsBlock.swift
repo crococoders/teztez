@@ -11,6 +11,6 @@ struct StatisticsBlock: Codable {
     let icon: String?
     let title: String
     let subtitle: String
-    let number: Double
+    let number: Int
     let color: String
 }
