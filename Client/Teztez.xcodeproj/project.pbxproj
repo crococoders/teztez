@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48B246AB6A2B550320B3067B /* PersonalCoachTrainingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0CC5886C0EDB96C1B81B77 /* PersonalCoachTrainingStore.swift */; };
+		A4C99ABF8799D15B4E0AEB49 /* PersonalCoachTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D54E55B2D05740B15B068A /* PersonalCoachTrainingViewController.swift */; };
 		C40AE0BA24535E27008BC71C /* ActivitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C40AE0B924535E27008BC71C /* ActivitiesCell.xib */; };
 		C40AE0BC24535E4B008BC71C /* ActivitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */; };
 		C40AE0BF245363D3008BC71C /* UICollectionView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0BE245363D3008BC71C /* UICollectionView+Dequeue.swift */; };
@@ -27,7 +29,7 @@
 		C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4197B912450B16700811F37 /* ActivitiesViewController.xib */; };
 		C4197B942450B1F900811F37 /* Activities.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4197B932450B1EE00811F37 /* Activities.strings */; };
 		C41D2C8B2454F30800A56C2F /* Array+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D2C8A2454F30800A56C2F /* Array+Factory.swift */; };
-		C451B7CA2455E8BB00BB1D2A /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = C451B7C92455E8BB00BB1D2A /* Models */; };
+		C41FA7CF245D8AA800E515EC /* String+WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7CE245D8AA800E515EC /* String+WordList.swift */; };
 		C463DC132459D32C00E265FF /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC0A2459D32C00E265FF /* TextInputViewController.xib */; };
 		C463DC142459D32C00E265FF /* TextInputTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */; };
 		C463DC162459D32C00E265FF /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0D2459D32C00E265FF /* TextInputViewController.swift */; };
@@ -56,6 +58,8 @@
 		C463DC92245CAF9600E265FF /* ActivitySelectValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC89245CAF9500E265FF /* ActivitySelectValueView.swift */; };
 		C463DC94245CB02A00E265FF /* ActivitiesItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC93245CB02A00E265FF /* ActivitiesItemType.swift */; };
 		C463DC96245CB11700E265FF /* ActivitiesIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC95245CB11700E265FF /* ActivitiesIconViewModel.swift */; };
+		C463DC98245D5F2700E265FF /* PersonalCoachTrainingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC97245D5F2700E265FF /* PersonalCoachTrainingViewController.xib */; };
+		C463DC9B245D668100E265FF /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = C463DC9A245D668100E265FF /* Models */; };
 		C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */; };
 		C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */; };
 		C4B88F5B2450BCA700D1D1BA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */; };
@@ -127,6 +131,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02BAA87140157A28219EEFF4 /* PersonalCoachTraining.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = PersonalCoachTraining.strings; sourceTree = "<group>"; };
+		33D54E55B2D05740B15B068A /* PersonalCoachTrainingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachTrainingViewController.swift; sourceTree = "<group>"; };
 		C40AE0B924535E27008BC71C /* ActivitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesCell.xib; sourceTree = "<group>"; };
 		C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCell.swift; sourceTree = "<group>"; };
 		C40AE0BE245363D3008BC71C /* UICollectionView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue.swift"; sourceTree = "<group>"; };
@@ -147,7 +153,7 @@
 		C4197B912450B16700811F37 /* ActivitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesViewController.xib; sourceTree = "<group>"; };
 		C4197B932450B1EE00811F37 /* Activities.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Activities.strings; sourceTree = "<group>"; };
 		C41D2C8A2454F30800A56C2F /* Array+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Factory.swift"; sourceTree = "<group>"; };
-		C451B7C82455E8A500BB1D2A /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = ../Shared/Models; sourceTree = "<group>"; };
+		C41FA7CE245D8AA800E515EC /* String+WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+WordList.swift"; sourceTree = "<group>"; };
 		C463DC0A2459D32C00E265FF /* TextInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
 		C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputTextViewDelegate.swift; sourceTree = "<group>"; };
 		C463DC0D2459D32C00E265FF /* TextInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +182,8 @@
 		C463DC89245CAF9500E265FF /* ActivitySelectValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitySelectValueView.swift; sourceTree = "<group>"; };
 		C463DC93245CB02A00E265FF /* ActivitiesItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesItemType.swift; sourceTree = "<group>"; };
 		C463DC95245CB11700E265FF /* ActivitiesIconViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesIconViewModel.swift; sourceTree = "<group>"; };
+		C463DC97245D5F2700E265FF /* PersonalCoachTrainingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalCoachTrainingViewController.xib; sourceTree = "<group>"; };
+		C463DC99245D667700E265FF /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = ../Shared/Models; sourceTree = "<group>"; };
 		C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -242,6 +250,7 @@
 		C4F8198B244C560C00AE73CE /* SFProRounded-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProRounded-Semibold.otf"; sourceTree = "<group>"; };
 		C4F8198D244C562400AE73CE /* SFProRounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProRounded-Regular.otf"; sourceTree = "<group>"; };
 		C4F8198F244C582B00AE73CE /* FontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyles.swift; sourceTree = "<group>"; };
+		CF0CC5886C0EDB96C1B81B77 /* PersonalCoachTrainingStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachTrainingStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,7 +258,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C451B7CA2455E8BB00BB1D2A /* Models in Frameworks */,
+				C463DC9B245D668100E265FF /* Models in Frameworks */,
 				C4F81974244BA02C00AE73CE /* Rswift in Frameworks */,
 				C4F81977244C4F3200AE73CE /* IQKeyboardManagerSwift in Frameworks */,
 				C4F8197D244C508F00AE73CE /* Hero in Frameworks */,
@@ -260,6 +269,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040396BF19A9473BDF33E07F /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				02BAA87140157A28219EEFF4 /* PersonalCoachTraining.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		0E6B1A8A000BDAE4A5FA7673 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				CF0CC5886C0EDB96C1B81B77 /* PersonalCoachTrainingStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		C40AE0B824535B31008BC71C /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,6 +493,7 @@
 		C463DC63245CAF8500E265FF /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				CB77789D5A93E54725227523 /* PersonalCoachTraining */,
 				C463DC64245CAF8500E265FF /* PersonalConfiguration */,
 			);
 			path = Modules;
@@ -486,10 +512,10 @@
 		C463DC65245CAF8500E265FF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C463DC66245CAF8500E265FF /* PersonalCoachViewController.xib */,
-				C463DC67245CAF8500E265FF /* PersonalCoachViewController.swift */,
-				C463DC68245CAF8500E265FF /* PersonalCoachPickerViewDelegate.swift */,
 				C463DC69245CAF8500E265FF /* PersonalCoachPickerViewDataSource.swift */,
+				C463DC68245CAF8500E265FF /* PersonalCoachPickerViewDelegate.swift */,
+				C463DC67245CAF8500E265FF /* PersonalCoachViewController.swift */,
+				C463DC66245CAF8500E265FF /* PersonalCoachViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -779,7 +805,7 @@
 		C4F818D6244B289200AE73CE = {
 			isa = PBXGroup;
 			children = (
-				C451B7C82455E8A500BB1D2A /* Models */,
+				C463DC99245D667700E265FF /* Models */,
 				C4F818E1244B289200AE73CE /* Teztez */,
 				C4F818E0244B289200AE73CE /* Products */,
 				C4D64A232455DCFF00100993 /* Frameworks */,
@@ -900,6 +926,7 @@
 			isa = PBXGroup;
 			children = (
 				C4F81915244B760100AE73CE /* String+Replacing.swift */,
+				C41FA7CE245D8AA800E515EC /* String+WordList.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -1085,6 +1112,25 @@
 			path = "Suporting Files";
 			sourceTree = "<group>";
 		};
+		CB77789D5A93E54725227523 /* PersonalCoachTraining */ = {
+			isa = PBXGroup;
+			children = (
+				D33E6D45133C1B041D940C82 /* Controller */,
+				040396BF19A9473BDF33E07F /* Localization */,
+				0E6B1A8A000BDAE4A5FA7673 /* Store */,
+			);
+			path = PersonalCoachTraining;
+			sourceTree = "<group>";
+		};
+		D33E6D45133C1B041D940C82 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				33D54E55B2D05740B15B068A /* PersonalCoachTrainingViewController.swift */,
+				C463DC97245D5F2700E265FF /* PersonalCoachTrainingViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1110,7 +1156,7 @@
 				C4F81976244C4F3200AE73CE /* IQKeyboardManagerSwift */,
 				C4F81979244C4FCD00AE73CE /* ViewAnimator */,
 				C4F8197C244C508F00AE73CE /* Hero */,
-				C451B7C92455E8BB00BB1D2A /* Models */,
+				C463DC9A245D668100E265FF /* Models */,
 			);
 			productName = Teztez;
 			productReference = C4F818DF244B289200AE73CE /* Teztez.app */;
@@ -1174,6 +1220,7 @@
 				C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */,
 				C4F8198A244C55FB00AE73CE /* SFProRounded-Bold.otf in Resources */,
 				C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */,
+				C463DC98245D5F2700E265FF /* PersonalCoachTrainingViewController.xib in Resources */,
 				C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */,
 				C4F81986244C55D300AE73CE /* SFProDisplay-Bold.otf in Resources */,
 				C4F7AFD724547E1A007D6289 /* ActivityIconView.xib in Resources */,
@@ -1307,6 +1354,7 @@
 				C4F8194E244B830D00AE73CE /* Presentable.swift in Sources */,
 				C4F7AFD424547D75007D6289 /* NibOwnerLoadable.swift in Sources */,
 				C40BB4712457494E00C236C7 /* ActivitiesIntroBlockViewModel.swift in Sources */,
+				C41FA7CF245D8AA800E515EC /* String+WordList.swift in Sources */,
 				C4F8190E244B730200AE73CE /* Language.swift in Sources */,
 				C4F81912244B75DE00AE73CE /* Device+Constants.swift in Sources */,
 				C463DC94245CB02A00E265FF /* ActivitiesItemType.swift in Sources */,
@@ -1361,6 +1409,8 @@
 				C4F8191F244B768C00AE73CE /* UIStackView+Convenience.swift in Sources */,
 				C40BB4732457498400C236C7 /* ActivitiesIntroBlockViewModelFactory.swift in Sources */,
 				C4C0670C2458AD2B00EF39B8 /* SliderView.swift in Sources */,
+				A4C99ABF8799D15B4E0AEB49 /* PersonalCoachTrainingViewController.swift in Sources */,
+				48B246AB6A2B550320B3067B /* PersonalCoachTrainingStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1597,7 +1647,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C451B7C92455E8BB00BB1D2A /* Models */ = {
+		C463DC9A245D668100E265FF /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Models;
 		};

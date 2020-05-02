@@ -18,6 +18,7 @@ final class PersonalCoachCoordinator: Coordinator, PersonalCoachCoordinatorOutpu
     private let moduleFactory: PersonalCoachModuleFactory
     private let router: Router
     private var configuration: PersonalCoachPresentable?
+    private var currentWordIndex: Int?
 
     init(moduleFactory: PersonalCoachModuleFactory, router: Router) {
         self.moduleFactory = moduleFactory
@@ -36,6 +37,9 @@ final class PersonalCoachCoordinator: Coordinator, PersonalCoachCoordinatorOutpu
         configuration?.onCloseButtonDidTap = { [weak self] in
             self?.onFlowDidFinish?()
         }
+        configuration?.onStartButtonDidTap = { [weak self] configuration in
+            self?.showTraining(configuration: configuration)
+        }
         router.setRootModule(configuration)
     }
 
@@ -49,5 +53,15 @@ final class PersonalCoachCoordinator: Coordinator, PersonalCoachCoordinatorOutpu
             self?.router.dismissModule()
         }
         router.show(container, with: .presentInSheet(dismissable: false))
+    }
+
+    private func showTraining(configuration: PersonalCoachConfiguration) {
+        var training = moduleFactory.makePersonalCoachTraining(configuration: configuration)
+        training.onBackButtonDidTap = { [weak self] currentWordIndex in
+            guard let self = self else { return }
+            self.currentWordIndex = currentWordIndex
+            self.router.popModule()
+        }
+        router.show(training, with: .push)
     }
 }
