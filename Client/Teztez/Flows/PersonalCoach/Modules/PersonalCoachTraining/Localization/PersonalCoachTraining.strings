@@ -6,3 +6,5 @@
   Copyright © 2020 Crococoders. All rights reserved.
 */
 
+"trainingWillStart" = "The training will be started after:";
+"trainingWillContinue" = "The training will be continued after:";

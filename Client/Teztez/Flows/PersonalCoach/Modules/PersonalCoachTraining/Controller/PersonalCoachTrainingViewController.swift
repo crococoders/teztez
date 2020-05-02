@@ -36,6 +36,7 @@ final class PersonalCoachTrainingViewController: ViewController, PersonalCoachTr
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObservers()
+        setupLocalization()
         store.dispatch(action: .didLoadView)
     }
 
@@ -58,6 +59,10 @@ final class PersonalCoachTrainingViewController: ViewController, PersonalCoachTr
                 self.onBackButtonDidTap?(currentWordIndex)
             }
         }.store(in: &cancellables)
+    }
+
+    private func setupLocalization() {
+        messageLabel.text = R.string.personalCoachTraining.trainingWillStart()
     }
 
     override func customBackButtonDidTap() {

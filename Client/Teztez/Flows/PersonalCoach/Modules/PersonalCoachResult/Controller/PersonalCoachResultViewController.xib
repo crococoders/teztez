@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SFProText-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PersonalCoachResultViewController" customModule="Teztez" customModuleProvider="target">
+            <connections>
+                <outlet property="homeButton" destination="bZR-C3-tRf" id="78h-mG-rBG"/>
+                <outlet property="messageLabel" destination="5PD-Sf-wqw" id="mBF-iQ-PLQ"/>
+                <outlet property="restartButton" destination="XFX-wx-mIb" id="BuF-8N-ox1"/>
+                <outlet property="resultLabel" destination="yPu-wQ-Sdx" id="Hd9-Mt-Znx"/>
+                <outlet property="view" destination="D3r-NS-iOu" id="K5e-xZ-ovb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="D3r-NS-iOu">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You achieved " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPu-wQ-Sdx">
+                    <rect key="frame" x="20" y="104" width="374" height="21"/>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Job!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-Sf-wqw">
+                    <rect key="frame" x="94" y="446" width="226.5" height="58"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="48"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZR-C3-tRf" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
+                    <rect key="frame" x="40" y="695" width="334" height="48"/>
+                    <color key="backgroundColor" red="0.10980392160000001" green="0.52941176469999995" blue="0.98823529409999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="m8m-wc-hxa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                    <state key="normal" title="Home">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="homeButtonDidTap:" destination="-1" eventType="touchUpInside" id="DWh-FT-Dsf"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XFX-wx-mIb" customClass="SecondaryButton" customModule="Teztez" customModuleProvider="target">
+                    <rect key="frame" x="40" y="751" width="334" height="48"/>
+                    <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Syx-t4-0lt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                    <state key="normal" title="Restart">
+                        <color key="titleColor" red="0.10980392160000001" green="0.52941176469999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="restartButtonDidTap:" destination="-1" eventType="touchUpInside" id="Tj6-h6-ytv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CUu-T0-ska" firstAttribute="trailing" secondItem="yPu-wQ-Sdx" secondAttribute="trailing" constant="20" id="0Eh-9N-4un"/>
+                <constraint firstItem="5PD-Sf-wqw" firstAttribute="centerX" secondItem="CUu-T0-ska" secondAttribute="centerX" id="4BW-iG-sbo"/>
+                <constraint firstItem="5PD-Sf-wqw" firstAttribute="centerY" secondItem="CUu-T0-ska" secondAttribute="centerY" id="4aR-dp-3Xt"/>
+                <constraint firstItem="yPu-wQ-Sdx" firstAttribute="top" secondItem="CUu-T0-ska" secondAttribute="top" constant="16" id="5dt-Em-hkD"/>
+                <constraint firstItem="CUu-T0-ska" firstAttribute="bottom" secondItem="XFX-wx-mIb" secondAttribute="bottom" constant="63" id="NEq-Ja-1ZG"/>
+                <constraint firstItem="XFX-wx-mIb" firstAttribute="leading" secondItem="CUu-T0-ska" secondAttribute="leading" constant="40" id="PnL-QY-Iwx"/>
+                <constraint firstItem="XFX-wx-mIb" firstAttribute="top" secondItem="bZR-C3-tRf" secondAttribute="bottom" constant="8" id="QM9-ef-ha2"/>
+                <constraint firstItem="CUu-T0-ska" firstAttribute="trailing" secondItem="bZR-C3-tRf" secondAttribute="trailing" constant="40" id="eWy-ZI-V6L"/>
+                <constraint firstItem="bZR-C3-tRf" firstAttribute="top" secondItem="5PD-Sf-wqw" secondAttribute="bottom" constant="191" id="kq1-3D-KgM"/>
+                <constraint firstItem="bZR-C3-tRf" firstAttribute="leading" secondItem="CUu-T0-ska" secondAttribute="leading" constant="40" id="l9D-Yf-lwM"/>
+                <constraint firstItem="yPu-wQ-Sdx" firstAttribute="leading" secondItem="CUu-T0-ska" secondAttribute="leading" constant="20" id="otM-oq-bec"/>
+                <constraint firstItem="CUu-T0-ska" firstAttribute="trailing" secondItem="XFX-wx-mIb" secondAttribute="trailing" constant="40" id="qXj-lM-Iq9"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="CUu-T0-ska"/>
+            <point key="canvasLocation" x="139" y="85"/>
+        </view>
+    </objects>
+</document>

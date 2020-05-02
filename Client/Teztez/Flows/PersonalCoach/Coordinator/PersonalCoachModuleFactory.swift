@@ -13,6 +13,7 @@ protocol PersonalCoachModuleFactory {
     // TODO: Create Coordinator for InputTextViewController and delete this func
     func makePersonalCoachTextInput(text: String?) -> (container: CoordinatorNavigationController, module: TextInputPresentable)
     func makePersonalCoachTraining(configuration: PersonalCoachConfiguration) -> PersonalCoachTrainingPresentable
+    func makePersonalCoachResult(speed: Int) -> PersonalCoachResultPresentable
 }
 
 extension ModuleFactory: PersonalCoachModuleFactory {
@@ -31,6 +32,12 @@ extension ModuleFactory: PersonalCoachModuleFactory {
     func makePersonalCoachTraining(configuration: PersonalCoachConfiguration) -> PersonalCoachTrainingPresentable {
         let store = PersonalCoachTrainingStore(configuration: configuration)
         let viewController = PersonalCoachTrainingViewController(store: store)
+        return viewController
+    }
+
+    func makePersonalCoachResult(speed: Int) -> PersonalCoachResultPresentable {
+        let store = PersonalCoachResultStore(speed: speed)
+        let viewController = PersonalCoachResultViewController(store: store)
         return viewController
     }
 }

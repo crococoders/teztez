@@ -81,7 +81,7 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
 
     func enablePauseMode() {
         restartButton.isHidden = false
-        startButton.setTitle("Continue", for: .normal)
+        startButton.setTitle(R.string.personalCoach.continue(), for: .normal)
         startButton.tag = 1
     }
 
@@ -105,6 +105,7 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
     private func setupUI() {
         stackView.spacing = Constants.spacing
         setupNavigationBar()
+        setupLocalization()
     }
 
     private func setupNavigationBar() {
@@ -114,6 +115,11 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(closeButtonDidTap))
+    }
+
+    private func setupLocalization() {
+        startButton.setTitle(R.string.personalCoach.start(), for: .normal)
+        restartButton.setTitle(R.string.personalCoach.restart(), for: .normal)
     }
 
     private func setupViews(from blocks: [PersonalCoachBlockType]) {

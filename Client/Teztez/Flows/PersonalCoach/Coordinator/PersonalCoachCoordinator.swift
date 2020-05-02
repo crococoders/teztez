@@ -11,7 +11,8 @@ import Foundation
 protocol PersonalCoachCoordinatorOutput: class {
     var onFlowDidFinish: Callback? { get set }
 }
-//TODO: Rename all presentable variables
+
+// TODO: Rename all presentable variables
 final class PersonalCoachCoordinator: Coordinator, PersonalCoachCoordinatorOutput {
     var onFlowDidFinish: Callback?
 
@@ -71,6 +72,20 @@ final class PersonalCoachCoordinator: Coordinator, PersonalCoachCoordinatorOutpu
             self.configurationPresentable?.enablePauseMode()
             self.router.popModule()
         }
+        training.onTrainingDidFinish = { [weak self] speed in
+            self?.showResult(speed: speed)
+        }
         router.show(training, with: .push)
+    }
+
+    private func showResult(speed: Int) {
+        var result = moduleFactory.makePersonalCoachResult(speed: speed)
+        result.onHomeButtonDidTap = { [weak self] in
+            self?.onFlowDidFinish?()
+        }
+        result.onRestartButtonDidTap = { [weak self] in
+            self?.showConfiguration()
+        }
+        router.setRootModule(result)
     }
 }
