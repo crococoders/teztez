@@ -6,9 +6,10 @@ struct GameContentController: RouteCollection {
         let gameContentRoutes = routes.grouped("content")
         gameContentRoutes.get(use: getAll)
         gameContentRoutes.get("next", use: getNextText)
-        
         gameContentRoutes.post(use: create)
         gameContentRoutes.delete(":contentId", use: delete)
+        gameContentRoutes.get("next","backwards", use: getNextBackwardsText)
+        gameContentRoutes.get("next","shuffled", use: getNextShuffledText)
     }
     
     func getAll(request: Request) throws -> EventLoopFuture<[GameContent]> {
@@ -24,6 +25,22 @@ struct GameContentController: RouteCollection {
             .unwrap(or: Abort(.notFound))
         }
         
+        return gameContent
+    }
+    
+    func getNextBackwardsText(request: Request) throws -> EventLoopFuture<GameContent> {
+        let gameContent = try getNextText(request: request).map{content in
+            return content.makeBackwards()
+        }
+        
+        return gameContent
+    }
+    
+    func getNextShuffledText(request: Request) throws -> EventLoopFuture<GameContent> {
+        let gameContent = try getNextText(request: request).map{ content in
+            return content.makeShuffle()
+        }
+
         return gameContent
     }
 

@@ -5,19 +5,13 @@ struct ArticleController: RouteCollection {
     func boot(routes: RoutesBuilder) throws {
         let articleRoutes = routes.grouped("articles")
         articleRoutes.get(use: getAll)
-        articleRoutes.get(":articleId", use: getById)
         articleRoutes.post(use: create)
         articleRoutes.delete(":articleID", use: delete)
     }
     
     
     func getAll(request: Request) throws -> EventLoopFuture<[Article]> {
-        return Article.query(on: request.db).all()
-    }
-    
-    func getById(request: Request) throws -> EventLoopFuture<Article> {
-        return Article.find(request.parameters.get("articleId"), on: request.db)
-        .unwrap(or: Abort(.notFound))
+        return Article.query(on: request.db).sort(\.$createdAt,.descending).all()
     }
 
     func create(request: Request) throws -> EventLoopFuture<Article> {

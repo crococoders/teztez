@@ -6,6 +6,9 @@ struct CreateArticle: Migration {
             .id()
             .field("title", .string, .required)
             .field("text", .string, .required)
+            .field("type", .string, .required)
+            .field("short_description", .string)
+            .field("created_at", .datetime)
             .field("image_url", .string)
             .create()
     }
