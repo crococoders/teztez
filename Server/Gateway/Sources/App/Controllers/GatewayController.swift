@@ -14,7 +14,7 @@ final class GatewayController: RouteCollection {
     
     func boot(routes: RoutesBuilder) throws {
         for entry in services {
-            routes.grouped(entry.path).use(handler: handle)
+            routes.grouped(entry.path).use(handler: redirect)
         }
     }
     
@@ -22,14 +22,18 @@ final class GatewayController: RouteCollection {
         return "Welcome to \(request.url.path)!"
     }
     
-    func redirect(_ request: Request, to service: ServiceNode) throws -> EventLoopFuture<ClientResponse> {
-        guard let serviceHost = service.host else {
-            throw Abort(.badRequest)
-        }
-        return try redirect(request, host: serviceHost)
-    }
+//    func redirect(_ request: Request, to service: ServiceNode) throws -> EventLoopFuture<ClientResponse> {
+//        guard let serviceHost = service.host else {
+//            throw Abort(.badRequest)
+//        }
+//        return try redirect(request, host: serviceHost)
+//    }
 
-    func redirect(_ request: Request, host: String) throws -> EventLoopFuture<ClientResponse> {
+    func redirect(_ request: Request) throws -> EventLoopFuture<ClientResponse> {
+        guard let host = Environment.get("FEEDBACK_HOST") else {
+            throw Abort(.internalServerError)
+        }
+        
         let client = request.client
         let uri = URI(string: host + request.url.string)
         var headers = request.headers

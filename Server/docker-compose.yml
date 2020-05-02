@@ -57,17 +57,13 @@ services:
     command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "81"]
   content_db:
     image: postgres:12.1-alpine
-    environment:
-      POSTGRES_USER: ${CONTENT_POSTGRES_USER}
-      POSTGRES_PASSWORD: ${CONTENT_POSTGRES_PASSWORD}
-      POSTGRES_DB: ${CONTENT_POSTGRES_DB}
+    env_file:
+      - content.env
     ports:
       - '5432:5432'
   feedback_db:
     image: postgres:12.1-alpine
-    environment:
-      POSTGRES_USER: ${FEEDBACK_POSTGRES_USER}
-      POSTGRES_PASSWORD: ${FEEDBACK_POSTGRES_PASSWORD}
-      POSTGRES_DB: ${FEEDBACK_POSTGRES_DB}
+    env_file:
+      - feedback.env
     ports:
       - '5432:5432'
