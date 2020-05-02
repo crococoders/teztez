@@ -13,8 +13,10 @@ protocol PersonalCoachPresentable: Presentable {
     var onCloseButtonDidTap: Callback? { get set }
     var onTextInputDidTap: Callback? { get set }
     var onStartButtonDidTap: ((_ configuration: PersonalCoachConfiguration) -> Void)? { get set }
+    var onContinueButtonDidTap: Callback? { get set }
 
     func setUserText(_ text: String)
+    func enablePauseMode()
 }
 
 private enum Constants {
@@ -25,6 +27,7 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
     var onCloseButtonDidTap: Callback?
     var onTextInputDidTap: Callback?
     var onStartButtonDidTap: ((_ configuration: PersonalCoachConfiguration) -> Void)?
+    var onContinueButtonDidTap: Callback?
 
     private let store: PersonalCoachStore
     private let pickerViewDelegate: PersonalCoachPickerViewDelegate
@@ -37,6 +40,7 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
 
     @IBOutlet private var stackView: UIStackView!
     @IBOutlet private var startButton: PrimaryButton!
+    @IBOutlet private var restartButton: SecondaryButton!
 
     init(store: PersonalCoachStore) {
         self.store = store
@@ -57,11 +61,28 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
     }
 
     @IBAction func startButtonDidTap(_ sender: PrimaryButton) {
+        switch sender.tag {
+        case 0:
+            store.dispatch(action: .didStartDidTap)
+        case 1:
+            onContinueButtonDidTap?()
+        default:
+            break
+        }
+    }
+
+    @IBAction func restartButtonDidTap(_ sender: SecondaryButton) {
         store.dispatch(action: .didStartDidTap)
     }
 
     func setUserText(_ text: String) {
         store.dispatch(action: .didSetUserText(text: text))
+    }
+
+    func enablePauseMode() {
+        restartButton.isHidden = false
+        startButton.setTitle("Continue", for: .normal)
+        startButton.tag = 1
     }
 
     private func setupObservers() {

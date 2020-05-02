@@ -63,4 +63,8 @@ final class PersonalCoachTrainingViewController: ViewController, PersonalCoachTr
     override func customBackButtonDidTap() {
         store.dispatch(action: .didTapBackButton)
     }
+
+    override func transitionBackDidFinish() {
+        // TODO: add logic to save currentWordIndex
+    }
 }

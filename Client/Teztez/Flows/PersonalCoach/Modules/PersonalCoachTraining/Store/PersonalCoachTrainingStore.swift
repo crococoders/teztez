@@ -20,7 +20,6 @@ final class PersonalCoachTrainingStore {
     enum Action {
         case didLoadView
         case didTapBackButton
-        case didSetLastWordIndex(index: Int)
     }
 
     enum State {
@@ -33,8 +32,8 @@ final class PersonalCoachTrainingStore {
 
     private let configuration: PersonalCoachConfiguration
     private var timer: Timer?
+    private var currentWordIndex: Int
     private var attemptingPreparationSeconds = Constants.preparationSeconds
-    private var currentWordIndex = Constants.startIndex
     private var textWordList: [String] {
         configuration.text.wordList
     }
@@ -43,6 +42,7 @@ final class PersonalCoachTrainingStore {
 
     init(configuration: PersonalCoachConfiguration) {
         self.configuration = configuration
+        currentWordIndex = configuration.startWordIndex
     }
 
     func dispatch(action: Action) {
@@ -54,17 +54,11 @@ final class PersonalCoachTrainingStore {
         case .didTapBackButton:
             timer?.invalidate()
             state = .paused(currentWordIndex: currentWordIndex)
-        case let .didSetLastWordIndex(currentWordIndex):
-            self.currentWordIndex = currentWordIndex
         }
     }
 
-    deinit {
-        timer?.invalidate()
-    }
-
     private func startTimer() {
-        guard attemptingPreparationSeconds != 0 else {
+        guard attemptingPreparationSeconds != 1 else {
             timer?.invalidate()
             state = .trainingStarted(speed: "\(configuration.speed) " + Constants.speedMeasure)
             prepareTraining()
@@ -92,5 +86,9 @@ final class PersonalCoachTrainingStore {
         }
         currentWordIndex += 1
         state = .wordUpdated(word: textWordList[currentWordIndex])
+    }
+
+    deinit {
+        timer?.invalidate()
     }
 }

@@ -72,7 +72,7 @@ final class PersonalCoachStore {
             selectValueViewModel.value = "\(speed) " + Constants.speedMeasure
             state = .updated(block: .selectSpeed(viewModel: selectValueViewModel))
         case .didStartDidTap:
-            let configuration = PersonalCoachConfiguration(text: userText, speed: selectedSpeed)
+            let configuration = PersonalCoachConfiguration(text: userText, speed: selectedSpeed, startWordIndex: 0)
             state = .configured(configuration: configuration)
         }
     }
