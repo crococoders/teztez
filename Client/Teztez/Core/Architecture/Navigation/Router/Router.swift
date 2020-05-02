@@ -30,10 +30,8 @@ final class Router: Presentable {
         case .presentInFullScreen:
             present(controller, animated: true, modalPresentationStyle: .fullScreen)
         case let .presentInSheet(dismissable):
-            if #available(iOS 13.0, *) {
-                controller.isModalInPresentation = !dismissable
-            }
-            present(controller, animated: true, modalPresentationStyle: .pageSheet)
+            controller.isModalInPresentation = !dismissable
+            present(controller, animated: true, modalPresentationStyle: .automatic)
         }
     }
 

@@ -1,0 +1,15 @@
+/*
+  TextInput.strings
+  Teztez
+
+  Created by Almas Zainoldin on 27/04/2020.
+  Copyright © 2020 Crococoders. All rights reserved.
+*/
+
+"placeholderText" = "Enter your text here";
+"done" = "Done";
+"cancel" = "Cancel";
+"navigationTitle" = "Enter your text";
+"alertTitle" = "If you cancel it your text will be lost and Teztez will use a default text. Are you sure to cancel it?";
+"cancelTitle" = "Cancel changes";
+"continueTitle" = "Continue editing";
