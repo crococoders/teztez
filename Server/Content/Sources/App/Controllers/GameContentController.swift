@@ -8,8 +8,8 @@ struct GameContentController: RouteCollection {
         gameContentRoutes.get("next", use: getNextText)
         gameContentRoutes.post(use: create)
         gameContentRoutes.delete(":contentId", use: delete)
-        gameContentRoutes.get("next","backwards", use: getNextBackwardsText)
-        gameContentRoutes.get("next","shuffled", use: getNextShuffledText)
+//        gameContentRoutes.get("next","backwards", use: getNextBackwardsText)
+//        gameContentRoutes.get("next","shuffled", use: getNextShuffledText)
     }
     
     func getAll(request: Request) throws -> EventLoopFuture<[GameContent]> {
@@ -24,25 +24,25 @@ struct GameContentController: RouteCollection {
             .first()
             .unwrap(or: Abort(.notFound))
         }
-        
-        return gameContent
-    }
-    
-    func getNextBackwardsText(request: Request) throws -> EventLoopFuture<GameContent> {
-        let gameContent = try getNextText(request: request).map{content in
-            return content.makeBackwards()
-        }
-        
-        return gameContent
-    }
-    
-    func getNextShuffledText(request: Request) throws -> EventLoopFuture<GameContent> {
-        let gameContent = try getNextText(request: request).map{ content in
-            return content.makeShuffle()
-        }
 
         return gameContent
     }
+
+//    func getNextBackwardsText(request: Request) throws -> EventLoopFuture<GameContent> {
+//        let gameContent = try getNextText(request: request).map{content in
+//            return content.makeBackwards()
+//        }
+//
+//        return gameContent
+//    }
+    
+//    func getNextShuffledText(request: Request) throws -> EventLoopFuture<GameContent> {
+//        let gameContent = try getNextText(request: request).map{ content in
+//            return content.makeShuffle()
+//        }
+//
+//        return gameContent
+//    }
 
     func create(request: Request) throws -> EventLoopFuture<GameContent> {
         let text = try request.content.decode(GameContent.self)

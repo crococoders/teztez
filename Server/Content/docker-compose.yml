@@ -21,21 +21,28 @@ volumes:
 
 x-shared_environment: &shared_environment
   LOG_LEVEL: ${LOG_LEVEL:-debug}
+  CONTENT_POSTGRES_HOST: content_db_1
+  CONTENT_POSTGRES_PORT: 5432
+  CONTENT_POSTGRES_USERNAME: postgres
+  CONTENT_POSTGRES_PASSWORD: postgres
+  CONTENT_POSTGRES_DB: postgres
 
 services:
   app:
-    image: Content:latest
     build:
       context: .
+      dockerfile: Dockerfile
     environment:
       <<: *shared_environment
+#    env_file:
+#    - ../../.env
     depends_on:
       - db
     ports:
       - '8080:80'
     command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
   migrate:
-    image: Content:latest
+    image: content:latest
     build:
       context: .
     environment:
@@ -43,10 +50,8 @@ services:
     depends_on:
       - db
     command: ["migrate", "--yes"]
-    deploy:
-      replicas: 0
   revert:
-    image: Content:latest
+    image: content:latest
     build:
       context: .
     environment:
@@ -54,11 +59,11 @@ services:
     depends_on:
       - db
     command: ["migrate", "--revert", "--yes"]
-    deploy:
-      replicas: 0
   db:
     image: postgres:12.1-alpine
-    env_file:
-    - ../../.env
+    environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+        POSTGRES_DB: postgres
     ports:
       - '5432:5432'
