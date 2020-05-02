@@ -1,0 +1,73 @@
+version: '3.7'
+
+volumes:
+  db_data:
+
+x-shared_environment: &shared_environment
+  LOG_LEVEL: ${LOG_LEVEL:-debug}
+
+services:
+  gateway:
+    image: gateway:latest
+    build: 
+      context: Gateway/
+    environment:
+      <<: *shared_environment
+    env_file:
+      - .env
+    depends_on:
+      - feedback
+    ports:
+      - '8080:80'
+    command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
+  feed:
+    image: feed:latest
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      <<: *shared_environment
+    env_file:
+      - .env
+    command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
+  content:
+    image: content:latest
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      <<: *shared_environment
+    env_file:
+      - .env
+    depends_on:
+      - content_db 
+    command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
+  feedback:
+    image: feedback:latest
+    build: 
+      context: Feedback/
+    environment:
+      <<: *shared_environment
+    env_file:
+      - .env
+    depends_on:
+      - feedback_db 
+    ports:
+      - '8081:81'
+    command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "81"]
+  content_db:
+    image: postgres:12.1-alpine
+    environment:
+      POSTGRES_USER: ${CONTENT_POSTGRES_USER}
+      POSTGRES_PASSWORD: ${CONTENT_POSTGRES_PASSWORD}
+      POSTGRES_DB: ${CONTENT_POSTGRES_DB}
+    ports:
+      - '5432:5432'
+  feedback_db:
+    image: postgres:12.1-alpine
+    environment:
+      POSTGRES_USER: ${FEEDBACK_POSTGRES_USER}
+      POSTGRES_PASSWORD: ${FEEDBACK_POSTGRES_PASSWORD}
+      POSTGRES_DB: ${FEEDBACK_POSTGRES_DB}
+    ports:
+      - '5432:5432'

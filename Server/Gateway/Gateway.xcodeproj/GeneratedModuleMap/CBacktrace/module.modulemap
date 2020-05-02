@@ -1,0 +1,4 @@
+module CBacktrace {
+    umbrella "/Users/Aidar/workspace/croco/teztez/Server/Gateway/.build/checkouts/swift-backtrace/Sources/CBacktrace/include"
+    export *
+}
