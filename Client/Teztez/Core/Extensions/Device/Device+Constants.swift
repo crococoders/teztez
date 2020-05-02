@@ -106,6 +106,17 @@ extension Device {
         }
     }
 
+    var isSESecondGeneration: Bool {
+        switch self {
+        case let .simulator(device):
+            return device.isOneOf(allSESecondGenerationSizePhones)
+        case .unknown:
+            return false
+        default:
+            return isOneOf(allSESecondGenerationSizePhones)
+        }
+    }
+
     private static var identifier: String = {
         var systemInfo = utsname()
         uname(&systemInfo)
@@ -124,6 +135,10 @@ extension Device {
 
     private var allSmallPhones: [Device] {
         return [.iPhone5, .iPhone5c, .iPhone5s, .iPhoneSE]
+    }
+
+    private var allSESecondGenerationSizePhones: [Device] {
+        return [.iPhone6, .iPhone6s, .iPhone7, .iPhone8]
     }
 
     private var allDevicesWithSensorHousing: [Device] {

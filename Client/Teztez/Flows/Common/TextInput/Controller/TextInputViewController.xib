@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextInputViewController" customModule="Teztez" customModuleProvider="target">
+            <connections>
+                <outlet property="resetButton" destination="FyM-vU-tnX" id="JCL-KW-x2m"/>
+                <outlet property="textView" destination="AdW-6t-QBf" id="NKl-0c-UB3"/>
+                <outlet property="view" destination="iN0-l3-epB" id="YTl-6L-yuk"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AdW-6t-QBf">
+                    <rect key="frame" x="16" y="60" width="382" height="786"/>
+                    <color key="backgroundColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.1803921568627451" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </textView>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyM-vU-tnX">
+                    <rect key="frame" x="366" y="76" width="16" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="KdQ-xg-FtB"/>
+                        <constraint firstAttribute="height" constant="16" id="aDz-4f-XFy"/>
+                    </constraints>
+                    <state key="normal" image="close-text-icon"/>
+                    <connections>
+                        <action selector="resetButtonDidTap" destination="-1" eventType="touchUpInside" id="rPE-fs-no5"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="FyM-vU-tnX" firstAttribute="trailing" secondItem="AdW-6t-QBf" secondAttribute="trailing" constant="-16" id="0eW-kA-le9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="AdW-6t-QBf" secondAttribute="bottom" constant="16" id="3cA-Z1-Hs9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AdW-6t-QBf" secondAttribute="trailing" constant="16" id="Net-nQ-mBD"/>
+                <constraint firstItem="AdW-6t-QBf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Vf8-V5-ILg"/>
+                <constraint firstItem="AdW-6t-QBf" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="sMn-Bv-ArR"/>
+                <constraint firstItem="FyM-vU-tnX" firstAttribute="top" secondItem="AdW-6t-QBf" secondAttribute="top" constant="16" id="tO7-Kt-WfZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-339.13043478260875" y="89.732142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close-text-icon" width="13" height="13"/>
+    </resources>
+</document>
