@@ -47,8 +47,6 @@ services:
     depends_on:
       - db
     command: ["migrate", "--yes"]
-    deploy:
-      replicas: 0
   revert:
     image: Feedback:latest
     build:
@@ -58,8 +56,6 @@ services:
     depends_on:
       - db
     command: ["migrate", "--revert", "--yes"]
-    deploy:
-      replicas: 0
   db:
     image: postgres:12.1-alpine
     env_file:

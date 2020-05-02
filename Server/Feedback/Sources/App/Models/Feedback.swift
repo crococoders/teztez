@@ -21,7 +21,7 @@ final class Feedback: Model, Content {
 
     init() { }
 
-    init(id: UUID? = nil, title: String, text: String,rateScore: Int? = nil, gameTitle: String? = nil) {
+    init(id: UUID? = nil, title: String, text: String, rateScore: Int? = nil, gameTitle: String? = nil) {
         self.id = id
         self.title = title
         self.text = text
