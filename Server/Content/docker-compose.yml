@@ -34,8 +34,6 @@ services:
       dockerfile: Dockerfile
     environment:
       <<: *shared_environment
-#    env_file:
-#    - ../../.env
     depends_on:
       - db
     ports:

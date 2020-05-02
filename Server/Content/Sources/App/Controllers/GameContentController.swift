@@ -2,47 +2,37 @@ import Fluent
 import Vapor
 
 struct GameContentController: RouteCollection {
+    private enum Parameter: String {
+        case contentId
+
+        var queryParameter: PathComponent {
+            return .init(stringLiteral: ":\(rawValue)")
+        }
+    }
+    
     func boot(routes: RoutesBuilder) throws {
         let gameContentRoutes = routes.grouped("content")
         gameContentRoutes.get(use: getAll)
         gameContentRoutes.get("next", use: getNextText)
         gameContentRoutes.post(use: create)
-        gameContentRoutes.delete(":contentId", use: delete)
-//        gameContentRoutes.get("next","backwards", use: getNextBackwardsText)
-//        gameContentRoutes.get("next","shuffled", use: getNextShuffledText)
+        gameContentRoutes.delete(Parameter.contentId.queryParameter, use: delete)
     }
-    
+
     func getAll(request: Request) throws -> EventLoopFuture<[GameContent]> {
         return GameContent.query(on: request.db).all()
     }
-    
+
     func getNextText(request: Request) throws -> EventLoopFuture<GameContent> {
-        let gameContent = GameContent.query(on: request.db).count().flatMap{
+        let gameContent = GameContent.query(on: request.db).count().flatMap {
             count in
-           return GameContent.query(on: request.db)
-            .offset(Int.random(in: 0..<count))
-            .first()
-            .unwrap(or: Abort(.notFound))
+            GameContent.query(on: request.db)
+                .offset(Int.random(in: 0 ..< count))
+                .first()
+                .unwrap(or: Abort(.notFound))
         }
 
         return gameContent
     }
-
-//    func getNextBackwardsText(request: Request) throws -> EventLoopFuture<GameContent> {
-//        let gameContent = try getNextText(request: request).map{content in
-//            return content.makeBackwards()
-//        }
-//
-//        return gameContent
-//    }
-    
-//    func getNextShuffledText(request: Request) throws -> EventLoopFuture<GameContent> {
-//        let gameContent = try getNextText(request: request).map{ content in
-//            return content.makeShuffle()
-//        }
-//
-//        return gameContent
-//    }
 
     func create(request: Request) throws -> EventLoopFuture<GameContent> {
         let text = try request.content.decode(GameContent.self)
@@ -50,7 +40,7 @@ struct GameContentController: RouteCollection {
     }
 
     func delete(request: Request) throws -> EventLoopFuture<HTTPStatus> {
-        return GameContent.find(request.parameters.get("contentId"), on: request.db)
+        return GameContent.find(request.parameters.get(Parameter.contentId.rawValue), on: request.db)
             .unwrap(or: Abort(.notFound))
             .flatMap { $0.delete(on: request.db) }
             .transform(to: .ok)
