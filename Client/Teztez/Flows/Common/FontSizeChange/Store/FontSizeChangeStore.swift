@@ -14,23 +14,31 @@ private enum Constants {
 
 final class FontSizeChangeStore {
     enum Action {
+        case didLoadView
         case didChangeFontSize(value: CGFloat)
         case didTapDoneButton
         case didTapCancelButton
     }
 
     enum State {
+        case initial(value: Float)
         case changingFontSize(fontSize: CGFloat)
         case changeFontSizeFinished(fontSize: CGFloat)
         case cancelled
     }
 
-    private var fontSize: CGFloat = Constants.selectedFontSize
+    private var fontSize: CGFloat
 
     @Published private(set) var state: State?
 
+    init(fontSize: CGFloat) {
+        self.fontSize = fontSize
+    }
+
     func dispatch(action: Action) {
         switch action {
+        case .didLoadView:
+            state = .initial(value: Float(fontSize))
         case let .didChangeFontSize(value):
             state = .changingFontSize(fontSize: value)
             fontSize = value
