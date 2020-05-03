@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlenderConvertViewController" customModule="Teztez" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomView" destination="Hdv-wv-9qx" id="OxQ-Kb-aej"/>
+                <outlet property="primaryButton" destination="XGz-px-Lgg" id="YEF-mZ-lno"/>
+                <outlet property="textView" destination="Udd-8f-0QA" id="HPk-AW-zfW"/>
+                <outlet property="titleLabel" destination="hVh-18-KPV" id="LUW-4C-ll0"/>
+                <outlet property="view" destination="VEL-bc-mst" id="NEl-61-GbH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="VEL-bc-mst">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read then convert" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVh-18-KPV">
+                    <rect key="frame" x="20" y="121" width="173" height="24"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udd-8f-0QA">
+                    <rect key="frame" x="17" y="165" width="377" height="697"/>
+                    <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdv-wv-9qx">
+                    <rect key="frame" x="0.0" y="722" width="414" height="140"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="140" id="tKb-gN-dcb"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGz-px-Lgg" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
+                    <rect key="frame" x="40" y="795" width="334" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="0p8-U6-m8x"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="primaryButtonDidTap:" destination="-1" eventType="touchUpInside" id="cDk-9R-rN2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tO5-Pa-cdA" firstAttribute="bottom" secondItem="XGz-px-Lgg" secondAttribute="bottom" constant="19" id="3If-CF-PZx"/>
+                <constraint firstItem="tO5-Pa-cdA" firstAttribute="trailing" secondItem="XGz-px-Lgg" secondAttribute="trailing" constant="40" id="FMG-Dh-PTB"/>
+                <constraint firstItem="XGz-px-Lgg" firstAttribute="leading" secondItem="tO5-Pa-cdA" secondAttribute="leading" constant="40" id="HOB-Pq-6We"/>
+                <constraint firstItem="tO5-Pa-cdA" firstAttribute="trailing" secondItem="Udd-8f-0QA" secondAttribute="trailing" constant="20" id="IQX-TW-weu"/>
+                <constraint firstItem="hVh-18-KPV" firstAttribute="top" secondItem="tO5-Pa-cdA" secondAttribute="top" constant="33" id="Qhs-NR-pTB"/>
+                <constraint firstItem="Udd-8f-0QA" firstAttribute="leading" secondItem="tO5-Pa-cdA" secondAttribute="leading" constant="17" id="TVo-Y0-C1V"/>
+                <constraint firstItem="Hdv-wv-9qx" firstAttribute="leading" secondItem="tO5-Pa-cdA" secondAttribute="leading" id="W0i-hd-hJa"/>
+                <constraint firstItem="Udd-8f-0QA" firstAttribute="top" secondItem="hVh-18-KPV" secondAttribute="bottom" constant="20" id="bMw-VO-jDK"/>
+                <constraint firstItem="Hdv-wv-9qx" firstAttribute="bottom" secondItem="tO5-Pa-cdA" secondAttribute="bottom" id="bOV-3c-DlP"/>
+                <constraint firstItem="hVh-18-KPV" firstAttribute="leading" secondItem="tO5-Pa-cdA" secondAttribute="leading" constant="20" id="p1u-KA-bgY"/>
+                <constraint firstItem="tO5-Pa-cdA" firstAttribute="trailing" secondItem="Hdv-wv-9qx" secondAttribute="trailing" id="w2R-ht-COl"/>
+                <constraint firstItem="tO5-Pa-cdA" firstAttribute="bottom" secondItem="Udd-8f-0QA" secondAttribute="bottom" id="wdV-Vn-V6b"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="tO5-Pa-cdA"/>
+            <point key="canvasLocation" x="139" y="125"/>
+        </view>
+    </objects>
+</document>
