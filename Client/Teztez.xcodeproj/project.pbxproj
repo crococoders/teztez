@@ -42,6 +42,8 @@
 		C41FA7D6245DEB0300E515EC /* PersonalCoachTraining.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02BAA87140157A28219EEFF4 /* PersonalCoachTraining.strings */; };
 		C42B54E5245EE46200E3C61D /* BlenderConfiguration.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F52AA754D5CC7AE1B05C8D2 /* BlenderConfiguration.strings */; };
 		C42B54E7245EE6DE00E3C61D /* BlenderConfigurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42B54E6245EE6DE00E3C61D /* BlenderConfigurationViewController.xib */; };
+		C42B54E9245EE9C600E3C61D /* BlenderModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B54E8245EE9C600E3C61D /* BlenderModuleFactory.swift */; };
+		C42B54EB245EE9D300E3C61D /* BlenderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B54EA245EE9D300E3C61D /* BlenderCoordinator.swift */; };
 		C4584B64245E1BCF00E7F9BB /* CGFloat+Clean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4584B63245E1BCF00E7F9BB /* CGFloat+Clean.swift */; };
 		C4584B6A245EDF0800E7F9BB /* BlenderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4584B69245EDF0800E7F9BB /* BlenderConfiguration.swift */; };
 		C463DC132459D32C00E265FF /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC0A2459D32C00E265FF /* TextInputViewController.xib */; };
@@ -190,6 +192,8 @@
 		C41FA7D1245D99C300E515EC /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		C41FA7D3245DE2AA00E515EC /* PersonalCoachResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalCoachResultViewController.xib; sourceTree = "<group>"; };
 		C42B54E6245EE6DE00E3C61D /* BlenderConfigurationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlenderConfigurationViewController.xib; sourceTree = "<group>"; };
+		C42B54E8245EE9C600E3C61D /* BlenderModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderModuleFactory.swift; sourceTree = "<group>"; };
+		C42B54EA245EE9D300E3C61D /* BlenderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderCoordinator.swift; sourceTree = "<group>"; };
 		C4584B63245E1BCF00E7F9BB /* CGFloat+Clean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Clean.swift"; sourceTree = "<group>"; };
 		C4584B69245EDF0800E7F9BB /* BlenderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderConfiguration.swift; sourceTree = "<group>"; };
 		C463DC0A2459D32C00E265FF /* TextInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
@@ -506,6 +510,15 @@
 			path = SecondaryButton;
 			sourceTree = "<group>";
 		};
+		C42B54ED245EE9E200E3C61D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C42B54E8245EE9C600E3C61D /* BlenderModuleFactory.swift */,
+				C42B54EA245EE9D300E3C61D /* BlenderCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		C4584B65245E1BD400E7F9BB /* CGFloat */ = {
 			isa = PBXGroup;
 			children = (
@@ -525,6 +538,7 @@
 		C4584B68245EDE3700E7F9BB /* Blender */ = {
 			isa = PBXGroup;
 			children = (
+				C42B54ED245EE9E200E3C61D /* Coordinator */,
 				C4584B67245EDE3000E7F9BB /* Modules */,
 			);
 			path = Blender;
@@ -1582,6 +1596,7 @@
 				C463DC8D245CAF9600E265FF /* ActivityHeaderViewModel.swift in Sources */,
 				C4968908245CC9E500CA540E /* BackwardsModuleFactory.swift in Sources */,
 				C4F8195A244B890B00AE73CE /* AppDelegateConfiguratorFactory.swift in Sources */,
+				C42B54EB245EE9D300E3C61D /* BlenderCoordinator.swift in Sources */,
 				C4F81919244B761700AE73CE /* UIColor+Hex.swift in Sources */,
 				C463DC8A245CAF9600E265FF /* ActivityTextInputViewModel.swift in Sources */,
 				C4F81958244B86EC00AE73CE /* ColorStyles.swift in Sources */,
@@ -1601,6 +1616,7 @@
 				C4F8192C244B76CE00AE73CE /* UITextField+Indent.swift in Sources */,
 				C4F81924244B76A500AE73CE /* UITableView+Register.swift in Sources */,
 				C4BD0F2C244DF0020056E8C1 /* SceneDelegate.swift in Sources */,
+				C42B54E9245EE9C600E3C61D /* BlenderModuleFactory.swift in Sources */,
 				C463DC8C245CAF9600E265FF /* ActivityTextInputView.swift in Sources */,
 				C40AE0C424537A2F008BC71C /* ActivitiesCollectionViewDataSource.swift in Sources */,
 				C4F81952244B832A00AE73CE /* TransitionType.swift in Sources */,

@@ -37,4 +37,11 @@ final class CoordinatorFactory {
                                                router: Router(rootController: rootCoontroller))
         return (coordinator, rootCoontroller)
     }
+
+    func makeBlenderCoordinator() -> (coordinator: Coordinator & BlenderCoordinatorOutput, module: Presentable) {
+        let rootCoontroller = CoordinatorNavigationController()
+        let coordinator = BlenderCoordinator(moduleFactory: ModuleFactory.shared,
+                                             router: Router(rootController: rootCoontroller))
+        return (coordinator, rootCoontroller)
+    }
 }
