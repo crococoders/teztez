@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -30,10 +30,10 @@
                     <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2I-22-sK4">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="607.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="639.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Sn-oH-ULE" customClass="ActivityIconView" customModule="Teztez" customModuleProvider="target">
-                                    <rect key="frame" x="151" y="16" width="73" height="73"/>
+                                    <rect key="frame" x="151" y="32" width="73" height="73"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="73" id="EgM-D0-Yfl"/>
@@ -41,35 +41,38 @@
                                     </constraints>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Backward" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALx-ZX-Q4o">
-                                    <rect key="frame" x="115" y="97" width="145.5" height="38.5"/>
+                                    <rect key="frame" x="115" y="121" width="145.5" height="38.5"/>
                                     <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="32"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="262" axis="vertical" distribution="equalSpacing" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="9gB-OU-0jd">
-                                    <rect key="frame" x="40" y="167.5" width="295" height="262"/>
+                                    <rect key="frame" x="40" y="199.5" width="295" height="262"/>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohQ-OX-2LK" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
-                                    <rect key="frame" x="40" y="487.5" width="295" height="48"/>
+                                    <rect key="frame" x="40" y="519.5" width="295" height="48"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="48" id="ggq-j3-0L6"/>
                                     </constraints>
                                     <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="nextButtonDidTap:" destination="-1" eventType="touchUpInside" id="YZv-5c-VX9"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="9gB-OU-0jd" secondAttribute="trailing" constant="40" id="7ks-Pl-fUT"/>
                                 <constraint firstItem="ohQ-OX-2LK" firstAttribute="top" secondItem="9gB-OU-0jd" secondAttribute="bottom" constant="58" id="ACj-ni-MjB"/>
-                                <constraint firstItem="9gB-OU-0jd" firstAttribute="top" secondItem="ALx-ZX-Q4o" secondAttribute="bottom" constant="32" id="HQU-JB-xOA"/>
+                                <constraint firstItem="9gB-OU-0jd" firstAttribute="top" secondItem="ALx-ZX-Q4o" secondAttribute="bottom" constant="40" id="HQU-JB-xOA"/>
                                 <constraint firstItem="ALx-ZX-Q4o" firstAttribute="centerX" secondItem="Q2I-22-sK4" secondAttribute="centerX" id="PE1-sG-kLE"/>
                                 <constraint firstItem="9gB-OU-0jd" firstAttribute="leading" secondItem="Q2I-22-sK4" secondAttribute="leading" constant="40" id="RPs-Xo-S06"/>
                                 <constraint firstItem="ohQ-OX-2LK" firstAttribute="leading" secondItem="Q2I-22-sK4" secondAttribute="leading" constant="40" id="W0b-F5-WGt"/>
                                 <constraint firstAttribute="trailing" secondItem="ohQ-OX-2LK" secondAttribute="trailing" constant="40" id="fyP-rA-j8E"/>
                                 <constraint firstItem="7Sn-oH-ULE" firstAttribute="centerX" secondItem="Q2I-22-sK4" secondAttribute="centerX" id="iKa-An-lTa"/>
                                 <constraint firstAttribute="bottom" secondItem="ohQ-OX-2LK" secondAttribute="bottom" constant="72" id="pSv-y3-oiG"/>
-                                <constraint firstItem="7Sn-oH-ULE" firstAttribute="top" secondItem="Q2I-22-sK4" secondAttribute="top" constant="16" id="q8y-Al-0Gn"/>
-                                <constraint firstItem="ALx-ZX-Q4o" firstAttribute="top" secondItem="7Sn-oH-ULE" secondAttribute="bottom" constant="8" id="t1S-h3-KHf"/>
+                                <constraint firstItem="7Sn-oH-ULE" firstAttribute="top" secondItem="Q2I-22-sK4" secondAttribute="top" constant="32" id="q8y-Al-0Gn"/>
+                                <constraint firstItem="ALx-ZX-Q4o" firstAttribute="top" secondItem="7Sn-oH-ULE" secondAttribute="bottom" constant="16" id="t1S-h3-KHf"/>
                             </constraints>
                         </view>
                     </subviews>

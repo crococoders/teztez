@@ -42,6 +42,8 @@
 		C41FA7E8245EBFA500E515EC /* ActivitySwitchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7E7245EBFA500E515EC /* ActivitySwitchViewModel.swift */; };
 		C41FA7E9245ECA2400E515EC /* SchulteConfiguration.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8184668006C1E6C14C87C6B4 /* SchulteConfiguration.strings */; };
 		C41FA7EB245ECDB300E515EC /* SchulteConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7EA245ECDB300E515EC /* SchulteConfiguration.swift */; };
+		C41FA7ED245ED3D200E515EC /* SchulteModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7EC245ED3D200E515EC /* SchulteModuleFactory.swift */; };
+		C41FA7EF245ED45900E515EC /* SchulteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7EE245ED45900E515EC /* SchulteCoordinator.swift */; };
 		C463DC132459D32C00E265FF /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC0A2459D32C00E265FF /* TextInputViewController.xib */; };
 		C463DC142459D32C00E265FF /* TextInputTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */; };
 		C463DC162459D32C00E265FF /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0D2459D32C00E265FF /* TextInputViewController.swift */; };
@@ -180,6 +182,8 @@
 		C41FA7E4245EBB7500E515EC /* ActivitySwitchView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitySwitchView.xib; sourceTree = "<group>"; };
 		C41FA7E7245EBFA500E515EC /* ActivitySwitchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySwitchViewModel.swift; sourceTree = "<group>"; };
 		C41FA7EA245ECDB300E515EC /* SchulteConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchulteConfiguration.swift; sourceTree = "<group>"; };
+		C41FA7EC245ED3D200E515EC /* SchulteModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchulteModuleFactory.swift; sourceTree = "<group>"; };
+		C41FA7EE245ED45900E515EC /* SchulteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchulteCoordinator.swift; sourceTree = "<group>"; };
 		C463DC0A2459D32C00E265FF /* TextInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
 		C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputTextViewDelegate.swift; sourceTree = "<group>"; };
 		C463DC0D2459D32C00E265FF /* TextInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
@@ -492,6 +496,8 @@
 		C41FA7DB245EB71100E515EC /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				C41FA7EC245ED3D200E515EC /* SchulteModuleFactory.swift */,
+				C41FA7EE245ED45900E515EC /* SchulteCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -1499,6 +1505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C41FA7EF245ED45900E515EC /* SchulteCoordinator.swift in Sources */,
 				C41FA7D2245D99C300E515EC /* SecondaryButton.swift in Sources */,
 				C463DC8D245CAF9600E265FF /* ActivityHeaderViewModel.swift in Sources */,
 				C4F8195A244B890B00AE73CE /* AppDelegateConfiguratorFactory.swift in Sources */,
@@ -1512,6 +1519,7 @@
 				C463DC77245CAF8500E265FF /* PersonalCoachStore.swift in Sources */,
 				C463DC96245CB11700E265FF /* ActivitiesIconViewModel.swift in Sources */,
 				C463DC182459D32C00E265FF /* TextInputStore.swift in Sources */,
+				C41FA7ED245ED3D200E515EC /* SchulteModuleFactory.swift in Sources */,
 				C4F81945244B82BB00AE73CE /* ParentCoordinator.swift in Sources */,
 				C40AE0CD24543A04008BC71C /* UIView+GradientLayer.swift in Sources */,
 				C4F81953244B832A00AE73CE /* Router.swift in Sources */,

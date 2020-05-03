@@ -30,4 +30,11 @@ final class CoordinatorFactory {
                                                    router: Router(rootController: rootController))
         return (coordinator, rootController)
     }
+
+    func makeSchulteCoordinator() -> (coordinator: Coordinator & SchulteCoordinatorOutput, module: Presentable) {
+        let rootController = CoordinatorNavigationController()
+        let coordinator = SchulteCoordinator(moduleFactory: ModuleFactory.shared,
+                                             router: Router(rootController: rootController))
+        return (coordinator, rootController)
+    }
 }
