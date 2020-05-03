@@ -13,4 +13,7 @@
 "inputTextYourText" = "Your text";
 "inputTextDefaultText" = "Default text";
 "selectSpeedTitle" = "Select your speed";
-"selectSpeedDescription" = "You can choose any speed which you want to test. Range from 50wpm to 500wpm";
+"selectSpeedDescription" = "You can choose any speed which you want to test. Range from 100 wpm to 350 wpm";
+"start" = "Start";
+"continue" = "Continue";
+"restart" = "Restart";

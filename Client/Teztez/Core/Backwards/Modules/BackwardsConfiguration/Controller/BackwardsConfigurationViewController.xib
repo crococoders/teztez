@@ -76,7 +76,7 @@
                         <action selector="startButtonDidTap:" destination="-1" eventType="touchUpInside" id="Zls-AI-Yn5"/>
                     </connections>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpQ-BQ-VhD" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YpQ-BQ-VhD" customClass="SecondaryButton" customModule="Teztez" customModuleProvider="target">
                     <rect key="frame" x="40" y="778" width="334" height="48"/>
                     <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>

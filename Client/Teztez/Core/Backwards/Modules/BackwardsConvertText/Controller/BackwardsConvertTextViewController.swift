@@ -72,7 +72,7 @@ final class BackwardsConvertTextViewController: ViewController, BackwardsConvert
 
     private func setupUI() {
         store.dispatch(action: .didLoadView)
-        bottomView.applyGradient(colors: [UIColor.systemGray.withAlphaComponent(0.6).cgColor,
+        bottomView.applyGradient(colors: [UIColor.systemGray.withAlphaComponent(0.8).cgColor,
                                           UIColor.systemGray.cgColor],
                                  locations: [0, 1],
                                  direction: .topToBottom)

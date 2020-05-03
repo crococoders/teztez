@@ -41,7 +41,7 @@ final class BackwardsConfigurationViewController: ViewController, BackwardsConfi
 
     @IBOutlet private var stackView: UIStackView!
     @IBOutlet private var startButton: PrimaryButton!
-    @IBOutlet private var restartButton: PrimaryButton!
+    @IBOutlet private var restartButton: SecondaryButton!
 
     init(store: BackwardsConfigurationStore) {
         self.store = store
@@ -69,7 +69,7 @@ final class BackwardsConfigurationViewController: ViewController, BackwardsConfi
         }
     }
 
-    @IBAction func restartButtonDidTap(_ sender: PrimaryButton) {
+    @IBAction func restartButtonDidTap(_ sender: SecondaryButton) {
         store.dispatch(action: .didStartDidTap)
     }
 

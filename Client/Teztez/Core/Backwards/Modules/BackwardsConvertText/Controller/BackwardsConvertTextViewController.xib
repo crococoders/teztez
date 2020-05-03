@@ -40,13 +40,13 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Z5-jE-1Dx">
-                    <rect key="frame" x="0.0" y="717" width="414" height="145"/>
+                    <rect key="frame" x="0.0" y="722" width="414" height="140"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="145" id="4m5-45-yJY"/>
+                        <constraint firstAttribute="height" constant="140" id="4m5-45-yJY"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUM-ws-Eev" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
-                    <rect key="frame" x="40" y="762" width="334" height="48"/>
+                    <rect key="frame" x="40" y="795" width="334" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="HgJ-aH-6s5"/>
                     </constraints>
@@ -59,7 +59,7 @@
             <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4Z5-jE-1Dx" secondAttribute="trailing" id="8b5-VY-Fyv"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="jUM-ws-Eev" secondAttribute="bottom" constant="52" id="9Jx-eq-FpI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="jUM-ws-Eev" secondAttribute="bottom" constant="19" id="9Jx-eq-FpI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="BTf-3L-yae" secondAttribute="bottom" id="B5r-PW-X0i"/>
                 <constraint firstItem="4Z5-jE-1Dx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Pwj-ya-EbP"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="jUM-ws-Eev" secondAttribute="trailing" constant="40" id="RUB-jm-kT2"/>

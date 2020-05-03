@@ -12,12 +12,14 @@ protocol PersonalCoachCoordinatorOutput: class {
     var onFlowDidFinish: Callback? { get set }
 }
 
+// TODO: Rename all presentable variables
 final class PersonalCoachCoordinator: Coordinator, PersonalCoachCoordinatorOutput {
     var onFlowDidFinish: Callback?
 
     private let moduleFactory: PersonalCoachModuleFactory
     private let router: Router
-    private var configuration: PersonalCoachPresentable?
+    private var configurationPresentable: PersonalCoachPresentable?
+    private var configuration: PersonalCoachConfiguration?
 
     init(moduleFactory: PersonalCoachModuleFactory, router: Router) {
         self.moduleFactory = moduleFactory
@@ -29,14 +31,25 @@ final class PersonalCoachCoordinator: Coordinator, PersonalCoachCoordinatorOutpu
     }
 
     private func showConfiguration() {
-        configuration = moduleFactory.makePersonalCoachConfiguration()
-        configuration?.onTextInputDidTap = { [weak self] in
+        configurationPresentable = moduleFactory.makePersonalCoachConfiguration()
+        configurationPresentable?.onTextInputDidTap = { [weak self] in
             self?.showInpuText(text: nil)
         }
-        configuration?.onCloseButtonDidTap = { [weak self] in
+        configurationPresentable?.onCloseButtonDidTap = { [weak self] in
             self?.onFlowDidFinish?()
         }
-        router.setRootModule(configuration)
+        configurationPresentable?.onStartButtonDidTap = { [weak self] configuration in
+            guard let self = self else { return }
+            self.configuration = configuration
+            self.showTraining(configuration: configuration)
+        }
+        configurationPresentable?.onContinueButtonDidTap = { [weak self] in
+            guard
+                let self = self,
+                let configuration = self.configuration else { return }
+            self.showTraining(configuration: configuration)
+        }
+        router.setRootModule(configurationPresentable)
     }
 
     private func showInpuText(text: String?) {
@@ -45,9 +58,34 @@ final class PersonalCoachCoordinator: Coordinator, PersonalCoachCoordinatorOutpu
             self?.router.dismissModule()
         }
         inputText.onDoneButtonDidTap = { [weak self] text in
-            self?.configuration?.setUserText(text)
+            self?.configurationPresentable?.setUserText(text)
             self?.router.dismissModule()
         }
         router.show(container, with: .presentInSheet(dismissable: false))
+    }
+
+    private func showTraining(configuration: PersonalCoachConfiguration) {
+        var training = moduleFactory.makePersonalCoachTraining(configuration: configuration)
+        training.onBackButtonDidTap = { [weak self] currentWordIndex in
+            guard let self = self else { return }
+            self.configuration?.startWordIndex = currentWordIndex
+            self.configurationPresentable?.enablePauseMode()
+            self.router.popModule()
+        }
+        training.onTrainingDidFinish = { [weak self] speed in
+            self?.showResult(speed: speed)
+        }
+        router.show(training, with: .push)
+    }
+
+    private func showResult(speed: Int) {
+        var result = moduleFactory.makePersonalCoachResult(speed: speed)
+        result.onHomeButtonDidTap = { [weak self] in
+            self?.onFlowDidFinish?()
+        }
+        result.onRestartButtonDidTap = { [weak self] in
+            self?.showConfiguration()
+        }
+        router.setRootModule(result)
     }
 }

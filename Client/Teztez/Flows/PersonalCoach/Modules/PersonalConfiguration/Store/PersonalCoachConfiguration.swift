@@ -11,4 +11,5 @@ import Foundation
 struct PersonalCoachConfiguration {
     let text: String
     let speed: Int
+    var startWordIndex: Int
 }
