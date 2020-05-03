@@ -10,7 +10,7 @@ import UIKit
 
 protocol BackwardsModuleFactory {
     func makeBackwardsActivityIntro() -> ActivitiesIntroPresentable
-    func makeBackwardsConvertText(configuration: Configuration) -> BackwardsConvertTextPresentable
+    func makeBackwardsConvertText(configuration: BackwardsConfiguration) -> BackwardsConvertTextPresentable
     func makeBackwardsConfiguration() -> BackwardsConfigurationPresentable
     func makeBackwardsTextInput(text: String?) -> (container: CoordinatorNavigationController, module: TextInputPresentable)
     func makeBackwardsFontSizeChange(fontSize: CGFloat) -> (container: CoordinatorNavigationController, module: FontSizeChangePresentable)
@@ -35,7 +35,7 @@ extension ModuleFactory: BackwardsModuleFactory {
         return (navigaitonController, viewController)
     }
 
-    func makeBackwardsConvertText(configuration: Configuration) -> BackwardsConvertTextPresentable {
+    func makeBackwardsConvertText(configuration: BackwardsConfiguration) -> BackwardsConvertTextPresentable {
         let store = BackwardsConvertTextStore(configuration: configuration)
         let viewController = BackwardsConvertTextViewController(store: store)
         return viewController

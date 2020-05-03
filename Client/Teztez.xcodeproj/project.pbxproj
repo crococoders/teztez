@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5591451CBFCF68860AAB37A8 /* BackwardsConvertTextStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B78DCD355FF23007B6E35 /* BackwardsConvertTextStore.swift */; };
-		9EE7A3D8BD72294269681BB5 /* BackwardsConvertTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71331ABBB051174193E4C4F4 /* BackwardsConvertTextViewController.swift */; };
 		22E2FABB4D0F6C38AADBF488 /* PersonalCoachResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90105D2C8C675D469C5508CF /* PersonalCoachResultViewController.swift */; };
 		48B246AB6A2B550320B3067B /* PersonalCoachTrainingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0CC5886C0EDB96C1B81B77 /* PersonalCoachTrainingStore.swift */; };
+		5591451CBFCF68860AAB37A8 /* BackwardsConvertTextStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B78DCD355FF23007B6E35 /* BackwardsConvertTextStore.swift */; };
+		9EE7A3D8BD72294269681BB5 /* BackwardsConvertTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71331ABBB051174193E4C4F4 /* BackwardsConvertTextViewController.swift */; };
 		A4C99ABF8799D15B4E0AEB49 /* PersonalCoachTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D54E55B2D05740B15B068A /* PersonalCoachTrainingViewController.swift */; };
 		C40AE0BA24535E27008BC71C /* ActivitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C40AE0B924535E27008BC71C /* ActivitiesCell.xib */; };
 		C40AE0BC24535E4B008BC71C /* ActivitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */; };
@@ -34,13 +34,12 @@
 		C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4197B912450B16700811F37 /* ActivitiesViewController.xib */; };
 		C4197B942450B1F900811F37 /* Activities.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4197B932450B1EE00811F37 /* Activities.strings */; };
 		C41D2C8B2454F30800A56C2F /* Array+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D2C8A2454F30800A56C2F /* Array+Factory.swift */; };
-		C451B7CA2455E8BB00BB1D2A /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = C451B7C92455E8BB00BB1D2A /* Models */; };
-		C4584B64245E1BCF00E7F9BB /* CGFloat+Clean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4584B63245E1BCF00E7F9BB /* CGFloat+Clean.swift */; };
 		C41FA7CF245D8AA800E515EC /* String+WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7CE245D8AA800E515EC /* String+WordList.swift */; };
 		C41FA7D2245D99C300E515EC /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7D1245D99C300E515EC /* SecondaryButton.swift */; };
 		C41FA7D4245DE2AA00E515EC /* PersonalCoachResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41FA7D3245DE2AA00E515EC /* PersonalCoachResultViewController.xib */; };
 		C41FA7D5245DE4A300E515EC /* PersonalCoachResult.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF942F0B986FA5ADA639D9E9 /* PersonalCoachResult.strings */; };
 		C41FA7D6245DEB0300E515EC /* PersonalCoachTraining.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02BAA87140157A28219EEFF4 /* PersonalCoachTraining.strings */; };
+		C4584B64245E1BCF00E7F9BB /* CGFloat+Clean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4584B63245E1BCF00E7F9BB /* CGFloat+Clean.swift */; };
 		C463DC132459D32C00E265FF /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC0A2459D32C00E265FF /* TextInputViewController.xib */; };
 		C463DC142459D32C00E265FF /* TextInputTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */; };
 		C463DC162459D32C00E265FF /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0D2459D32C00E265FF /* TextInputViewController.swift */; };
@@ -69,15 +68,13 @@
 		C463DC92245CAF9600E265FF /* ActivitySelectValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC89245CAF9500E265FF /* ActivitySelectValueView.swift */; };
 		C463DC94245CB02A00E265FF /* ActivitiesItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC93245CB02A00E265FF /* ActivitiesItemType.swift */; };
 		C463DC96245CB11700E265FF /* ActivitiesIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC95245CB11700E265FF /* ActivitiesIconViewModel.swift */; };
+		C463DC98245D5F2700E265FF /* PersonalCoachTrainingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC97245D5F2700E265FF /* PersonalCoachTrainingViewController.xib */; };
 		C48CF1C5245CC6BF001D577A /* BackwardsConvertTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48CF1C4245CC6BF001D577A /* BackwardsConvertTextViewController.xib */; };
 		C4968908245CC9E500CA540E /* BackwardsModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4968907245CC9E500CA540E /* BackwardsModuleFactory.swift */; };
 		C496890A245CCAC400CA540E /* BackwardsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4968909245CCAC400CA540E /* BackwardsCoordinator.swift */; };
-		C4969589245DC0FD00A024D1 /* ActivitySelectSizeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4969588245DC0FD00A024D1 /* ActivitySelectSizeView.xib */; };
-		C496958B245DC10E00A024D1 /* ActivitySelectSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496958A245DC10E00A024D1 /* ActivitySelectSizeView.swift */; };
 		C499E930245D7B190065FC28 /* BackwardsConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C499E92E245D7B190065FC28 /* BackwardsConfigurationViewController.swift */; };
 		C499E931245D7B190065FC28 /* BackwardsConfigurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C499E92F245D7B190065FC28 /* BackwardsConfigurationViewController.xib */; };
 		C499E935245D7B6C0065FC28 /* BackwardsConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C499E934245D7B6C0065FC28 /* BackwardsConfigurationStore.swift */; };
-		C463DC98245D5F2700E265FF /* PersonalCoachTrainingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC97245D5F2700E265FF /* PersonalCoachTrainingViewController.xib */; };
 		C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */; };
 		C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */; };
 		C4B88F5B2450BCA700D1D1BA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */; };
@@ -151,12 +148,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		356B830EFE866BDD920275CB /* BackwardsConvertText.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = BackwardsConvertText.strings; sourceTree = "<group>"; };
-		3C2B78DCD355FF23007B6E35 /* BackwardsConvertTextStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackwardsConvertTextStore.swift; sourceTree = "<group>"; };
-		71331ABBB051174193E4C4F4 /* BackwardsConvertTextViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackwardsConvertTextViewController.swift; sourceTree = "<group>"; };
 		02BAA87140157A28219EEFF4 /* PersonalCoachTraining.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = PersonalCoachTraining.strings; sourceTree = "<group>"; };
 		09754A01CF6ECA71035E6AC9 /* PersonalCoachResultStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachResultStore.swift; sourceTree = "<group>"; };
 		33D54E55B2D05740B15B068A /* PersonalCoachTrainingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachTrainingViewController.swift; sourceTree = "<group>"; };
+		356B830EFE866BDD920275CB /* BackwardsConvertText.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = BackwardsConvertText.strings; sourceTree = "<group>"; };
+		3C2B78DCD355FF23007B6E35 /* BackwardsConvertTextStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackwardsConvertTextStore.swift; sourceTree = "<group>"; };
+		71331ABBB051174193E4C4F4 /* BackwardsConvertTextViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackwardsConvertTextViewController.swift; sourceTree = "<group>"; };
 		90105D2C8C675D469C5508CF /* PersonalCoachResultViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachResultViewController.swift; sourceTree = "<group>"; };
 		AF942F0B986FA5ADA639D9E9 /* PersonalCoachResult.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = PersonalCoachResult.strings; sourceTree = "<group>"; };
 		C40AE0B924535E27008BC71C /* ActivitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesCell.xib; sourceTree = "<group>"; };
@@ -181,11 +178,10 @@
 		C4197B912450B16700811F37 /* ActivitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesViewController.xib; sourceTree = "<group>"; };
 		C4197B932450B1EE00811F37 /* Activities.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Activities.strings; sourceTree = "<group>"; };
 		C41D2C8A2454F30800A56C2F /* Array+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Factory.swift"; sourceTree = "<group>"; };
-		C451B7C82455E8A500BB1D2A /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = ../Shared/Models; sourceTree = "<group>"; };
-		C4584B63245E1BCF00E7F9BB /* CGFloat+Clean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Clean.swift"; sourceTree = "<group>"; };
 		C41FA7CE245D8AA800E515EC /* String+WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+WordList.swift"; sourceTree = "<group>"; };
 		C41FA7D1245D99C300E515EC /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		C41FA7D3245DE2AA00E515EC /* PersonalCoachResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalCoachResultViewController.xib; sourceTree = "<group>"; };
+		C4584B63245E1BCF00E7F9BB /* CGFloat+Clean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Clean.swift"; sourceTree = "<group>"; };
 		C463DC0A2459D32C00E265FF /* TextInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
 		C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputTextViewDelegate.swift; sourceTree = "<group>"; };
 		C463DC0D2459D32C00E265FF /* TextInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
@@ -214,15 +210,13 @@
 		C463DC89245CAF9500E265FF /* ActivitySelectValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitySelectValueView.swift; sourceTree = "<group>"; };
 		C463DC93245CB02A00E265FF /* ActivitiesItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesItemType.swift; sourceTree = "<group>"; };
 		C463DC95245CB11700E265FF /* ActivitiesIconViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesIconViewModel.swift; sourceTree = "<group>"; };
+		C463DC97245D5F2700E265FF /* PersonalCoachTrainingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalCoachTrainingViewController.xib; sourceTree = "<group>"; };
 		C48CF1C4245CC6BF001D577A /* BackwardsConvertTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackwardsConvertTextViewController.xib; sourceTree = "<group>"; };
 		C4968907245CC9E500CA540E /* BackwardsModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsModuleFactory.swift; sourceTree = "<group>"; };
 		C4968909245CCAC400CA540E /* BackwardsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsCoordinator.swift; sourceTree = "<group>"; };
-		C4969588245DC0FD00A024D1 /* ActivitySelectSizeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitySelectSizeView.xib; sourceTree = "<group>"; };
-		C496958A245DC10E00A024D1 /* ActivitySelectSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitySelectSizeView.swift; sourceTree = "<group>"; };
 		C499E92E245D7B190065FC28 /* BackwardsConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsConfigurationViewController.swift; sourceTree = "<group>"; };
 		C499E92F245D7B190065FC28 /* BackwardsConfigurationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackwardsConfigurationViewController.xib; sourceTree = "<group>"; };
 		C499E934245D7B6C0065FC28 /* BackwardsConfigurationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsConfigurationStore.swift; sourceTree = "<group>"; };
-		C463DC97245D5F2700E265FF /* PersonalCoachTrainingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalCoachTrainingViewController.xib; sourceTree = "<group>"; };
 		C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -307,14 +301,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10F41ACEC7B03B4771CE24B3 /* Localization */ = {
-			isa = PBXGroup;
-			children = (
-				356B830EFE866BDD920275CB /* BackwardsConvertText.strings */,
-            );
-            path = Localization;
-            sourceTree = "<group>";
-        };
 		040396BF19A9473BDF33E07F /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,15 +309,6 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
-		6EE51CCAE907BEF45FBF826B /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				71331ABBB051174193E4C4F4 /* BackwardsConvertTextViewController.swift */,
-				C48CF1C4245CC6BF001D577A /* BackwardsConvertTextViewController.xib */,
-            );
-            path = Controller;
-            sourceTree = "<group>";
-        };
 		0E6B1A8A000BDAE4A5FA7673 /* Store */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,11 +317,28 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		10F41ACEC7B03B4771CE24B3 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				356B830EFE866BDD920275CB /* BackwardsConvertText.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		5ACAD48B1294DB250A37BC85 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				90105D2C8C675D469C5508CF /* PersonalCoachResultViewController.swift */,
 				C41FA7D3245DE2AA00E515EC /* PersonalCoachResultViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6EE51CCAE907BEF45FBF826B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				71331ABBB051174193E4C4F4 /* BackwardsConvertTextViewController.swift */,
+				C48CF1C4245CC6BF001D577A /* BackwardsConvertTextViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -475,20 +469,20 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		C4584B65245E1BD400E7F9BB /* CGFloat */ = {
-			isa = PBXGroup;
-			children = (
-				C4584B63245E1BCF00E7F9BB /* CGFloat+Clean.swift */,
-			);
-			path = CGFloat;
-            sourceTree = "<group>";
-        };
 		C41FA7D0245D99A900E515EC /* SecondaryButton */ = {
 			isa = PBXGroup;
 			children = (
 				C41FA7D1245D99C300E515EC /* SecondaryButton.swift */,
 			);
 			path = SecondaryButton;
+			sourceTree = "<group>";
+		};
+		C4584B65245E1BD400E7F9BB /* CGFloat */ = {
+			isa = PBXGroup;
+			children = (
+				C4584B63245E1BCF00E7F9BB /* CGFloat+Clean.swift */,
+			);
+			path = CGFloat;
 			sourceTree = "<group>";
 		};
 		C463DC062459D32C00E265FF /* TextInput */ = {
@@ -740,23 +734,6 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		C496958D245DC25500A024D1 /* ActivitySelectSizeView */ = {
-			isa = PBXGroup;
-			children = (
-				C496958E245DC27600A024D1 /* View */,
-			);
-			path = ActivitySelectSizeView;
-			sourceTree = "<group>";
-		};
-		C496958E245DC27600A024D1 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C4969588245DC0FD00A024D1 /* ActivitySelectSizeView.xib */,
-				C496958A245DC10E00A024D1 /* ActivitySelectSizeView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		C499E932245D7B1F0065FC28 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -801,7 +778,6 @@
 				C463DC7E245CAF9500E265FF /* ActivityHeaderView */,
 				C463DC84245CAF9500E265FF /* ActivitySelectValueView */,
 				C463DC78245CAF9500E265FF /* ActivityTextInputView */,
-				C496958D245DC25500A024D1 /* ActivitySelectSizeView */,
 				C4F7AFD024547A68007D6289 /* Protocols */,
 				C41FA7D0245D99A900E515EC /* SecondaryButton */,
 				C4C4BEBA245314B9001244E3 /* PrimaryButton */,
@@ -1285,24 +1261,6 @@
 			path = "Suporting Files";
 			sourceTree = "<group>";
 		};
-		CFB5824EC5F70476B8625769 /* BackwardsConvertText */ = {
-			isa = PBXGroup;
-			children = (
-				6EE51CCAE907BEF45FBF826B /* Controller */,
-				10F41ACEC7B03B4771CE24B3 /* Localization */,
-				D01F408D161E24CC418888BF /* Store */,
-			);
-			path = BackwardsConvertText;
-			sourceTree = "<group>";
-		};
-		D01F408D161E24CC418888BF /* Store */ = {
-			isa = PBXGroup;
-			children = (
-				3C2B78DCD355FF23007B6E35 /* BackwardsConvertTextStore.swift */,
-			);
-			path = Store;
-            sourceTree = "<group>";
-        };
 		C68DC8541D66AA2C98976705 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -1329,6 +1287,24 @@
 				87C553DC0539439D33438FE8 /* Store */,
 			);
 			path = PersonalCoachResult;
+			sourceTree = "<group>";
+		};
+		CFB5824EC5F70476B8625769 /* BackwardsConvertText */ = {
+			isa = PBXGroup;
+			children = (
+				6EE51CCAE907BEF45FBF826B /* Controller */,
+				10F41ACEC7B03B4771CE24B3 /* Localization */,
+				D01F408D161E24CC418888BF /* Store */,
+			);
+			path = BackwardsConvertText;
+			sourceTree = "<group>";
+		};
+		D01F408D161E24CC418888BF /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				3C2B78DCD355FF23007B6E35 /* BackwardsConvertTextStore.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		D33E6D45133C1B041D940C82 /* Controller */ = {
@@ -1424,7 +1400,6 @@
 				C463DC8B245CAF9600E265FF /* ActivityTextInputView.xib in Resources */,
 				C4CFD594245CC491009B902F /* BackwardsConvertText.strings in Resources */,
 				C499E931245D7B190065FC28 /* BackwardsConfigurationViewController.xib in Resources */,
-				C4969589245DC0FD00A024D1 /* ActivitySelectSizeView.xib in Resources */,
 				C4F818EF244B289400AE73CE /* LaunchScreen.storyboard in Resources */,
 				C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */,
 				C463DC8F245CAF9600E265FF /* ActivityHeaderView.xib in Resources */,
@@ -1553,7 +1528,6 @@
 				C463DC96245CB11700E265FF /* ActivitiesIconViewModel.swift in Sources */,
 				C463DC182459D32C00E265FF /* TextInputStore.swift in Sources */,
 				C4F81945244B82BB00AE73CE /* ParentCoordinator.swift in Sources */,
-				C496958B245DC10E00A024D1 /* ActivitySelectSizeView.swift in Sources */,
 				C40AE0CD24543A04008BC71C /* UIView+GradientLayer.swift in Sources */,
 				C4F81953244B832A00AE73CE /* Router.swift in Sources */,
 				C40AE0C624537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift in Sources */,

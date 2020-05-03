@@ -13,7 +13,7 @@ protocol BackwardsCoordinatorOutput: class {
 }
 
 private enum Constants {
-    static let defaultSliderValue: CGFloat = 15
+    static let defaultFontSize: CGFloat = 15
 }
 
 final class BackwardsCoordinator: Coordinator, BackwardsCoordinatorOutput {
@@ -22,8 +22,8 @@ final class BackwardsCoordinator: Coordinator, BackwardsCoordinatorOutput {
     private let moduleFactory: BackwardsModuleFactory
     private let router: Router
     private var backwardsConfiguration: BackwardsConfigurationPresentable?
-    private var configuration: Configuration?
-    private var sliderValue: CGFloat?
+    private var configuration: BackwardsConfiguration?
+    private var fonSize: CGFloat?
 
     init(moduleFactory: BackwardsModuleFactory, router: Router) {
         self.moduleFactory = moduleFactory
@@ -48,14 +48,13 @@ final class BackwardsCoordinator: Coordinator, BackwardsCoordinatorOutput {
 
     private func showBackwardsConfiguration() {
         backwardsConfiguration = moduleFactory.makeBackwardsConfiguration()
-        backwardsConfiguration?.onCloseButtonDidTap = {
-            self.onFlowDidFinish?()
+        backwardsConfiguration?.onCloseButtonDidTap = { [weak self] in
+            self?.onFlowDidFinish?()
         }
 
         backwardsConfiguration?.onFontSizeChangeDidTap = { [weak self] in
-            guard
-                let self = self else { return }
-            let fontSize = self.sliderValue ?? Constants.defaultSliderValue
+            guard let self = self else { return }
+            let fontSize = self.fonSize ?? Constants.defaultFontSize
 
             self.showFontSizeChange(fontSize: fontSize)
         }
@@ -65,12 +64,14 @@ final class BackwardsCoordinator: Coordinator, BackwardsCoordinatorOutput {
         }
 
         backwardsConfiguration?.onStartButtonDidTap = { [weak self] configuration in
-            self?.configuration = configuration
-            self?.showBackwardsConvert(configuration: configuration)
+            guard let self = self else { return }
+            self.configuration = configuration
+            self.showBackwardsConvert(configuration: configuration)
         }
 
         backwardsConfiguration?.onContinueButtonDidTap = { [weak self] in
-            guard let self = self,
+            guard
+                let self = self,
                 let configuration = self.configuration else { return }
             self.showBackwardsConvert(configuration: configuration)
         }
@@ -83,9 +84,11 @@ final class BackwardsCoordinator: Coordinator, BackwardsCoordinatorOutput {
         inputText.onCancelButtonDidTap = { [weak self] in
             self?.router.dismissModule()
         }
+
         inputText.onDoneButtonDidTap = { [weak self] text in
-            self?.backwardsConfiguration?.setUserText(text)
-            self?.router.dismissModule()
+            guard let self = self else { return }
+            self.backwardsConfiguration?.setUserText(text)
+            self.router.dismissModule()
         }
         router.show(container, with: .presentInSheet(dismissable: false))
     }
@@ -97,16 +100,18 @@ final class BackwardsCoordinator: Coordinator, BackwardsCoordinatorOutput {
         }
 
         fontSizeChange.onFontSizeDidSelect = { [weak self] fontSize in
-            self?.sliderValue = fontSize
-            self?.backwardsConfiguration?.setUserFontSize(fontSize)
-            self?.router.dismissModule()
+            guard let self = self else { return }
+            self.fonSize = fontSize
+            self.backwardsConfiguration?.setUserFontSize(fontSize)
+            self.router.dismissModule()
         }
         router.show(container, with: .presentInSheet(dismissable: false))
     }
 
-    private func showBackwardsConvert(configuration: Configuration) {
+    private func showBackwardsConvert(configuration: BackwardsConfiguration) {
         var backwardConvert = moduleFactory.makeBackwardsConvertText(configuration: configuration)
-        backwardConvert.onBackButtonDidTap = {
+        backwardConvert.onBackButtonDidTap = { [weak self] in
+            guard let self = self else { return }
             self.backwardsConfiguration?.setupBackwardsPause()
             self.router.popModule()
         }

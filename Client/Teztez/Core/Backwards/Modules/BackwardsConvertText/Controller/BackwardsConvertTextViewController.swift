@@ -42,15 +42,13 @@ final class BackwardsConvertTextViewController: ViewController, BackwardsConvert
         super.viewDidLoad()
         setupObservers()
         setupUI()
+        store.dispatch(action: .didLoadView)
     }
 
     @IBAction func primaryButtonDidTap(_ sender: PrimaryButton) {
-        switch isConverted {
-        case .some(true):
-            store.dispatch(action: .didLoadView)
-        default:
-            store.dispatch(action: .didConverText)
-        }
+        guard let isConverted = isConverted else { return }
+        isConverted ? store.dispatch(action: .didLoadView)
+            : store.dispatch(action: .didConverText)
     }
 
     private func setupObservers() {
@@ -71,10 +69,8 @@ final class BackwardsConvertTextViewController: ViewController, BackwardsConvert
     }
 
     private func setupUI() {
-        store.dispatch(action: .didLoadView)
         bottomView.applyGradient(colors: [UIColor.systemGray.withAlphaComponent(0.8).cgColor,
                                           UIColor.systemGray.cgColor],
-                                 locations: [0, 1],
                                  direction: .topToBottom)
         setupNavigationBar()
         setupLocalization()

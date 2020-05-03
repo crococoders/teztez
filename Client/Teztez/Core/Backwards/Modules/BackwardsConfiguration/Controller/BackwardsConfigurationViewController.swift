@@ -13,7 +13,7 @@ protocol BackwardsConfigurationPresentable: Presentable {
     var onCloseButtonDidTap: Callback? { get set }
     var onTextInputDidTap: Callback? { get set }
     var onFontSizeChangeDidTap: Callback? { get set }
-    var onStartButtonDidTap: ((_ configuration: Configuration) -> Void)? { get set }
+    var onStartButtonDidTap: ((_ configuration: BackwardsConfiguration) -> Void)? { get set }
     var onContinueButtonDidTap: Callback? { get set }
 
     func setUserText(_ text: String)
@@ -29,7 +29,7 @@ final class BackwardsConfigurationViewController: ViewController, BackwardsConfi
     var onCloseButtonDidTap: Callback?
     var onTextInputDidTap: Callback?
     var onFontSizeChangeDidTap: Callback?
-    var onStartButtonDidTap: ((Configuration) -> Void)?
+    var onStartButtonDidTap: ((BackwardsConfiguration) -> Void)?
     var onContinueButtonDidTap: Callback?
 
     private let store: BackwardsConfigurationStore
@@ -37,7 +37,7 @@ final class BackwardsConfigurationViewController: ViewController, BackwardsConfi
 
     private lazy var headerView = ActivityHeaderView()
     private lazy var inputTextView = ActivityTextInputView()
-    private lazy var selectFontSizeView = ActivitySelectSizeView()
+    private lazy var selectFontSizeView = ActivityTextInputView()
 
     @IBOutlet private var stackView: UIStackView!
     @IBOutlet private var startButton: PrimaryButton!
@@ -56,6 +56,7 @@ final class BackwardsConfigurationViewController: ViewController, BackwardsConfi
         super.viewDidLoad()
         setupObservers()
         setupUI()
+        store.dispatch(action: .didLoadView)
     }
 
     @IBAction func startButtonDidTap(_ sender: PrimaryButton) {
@@ -102,13 +103,11 @@ final class BackwardsConfigurationViewController: ViewController, BackwardsConfi
     }
 
     private func setupUI() {
-        store.dispatch(action: .didLoadView)
         stackView.spacing = Constants.spacing
         setupNavigationBar()
     }
 
     private func setupNavigationBar() {
-        navigationController?.view.backgroundColor = .systemGray
         navigationController?.navigationBar.barTintColor = .systemGray
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.closeIcon(),
                                                             style: .plain,
@@ -154,12 +153,13 @@ final class BackwardsConfigurationViewController: ViewController, BackwardsConfi
 
 extension BackwardsConfigurationViewController: ActivityTextInputViewDelegate {
     func activityTextInputView(_ activityTextInputView: ActivityTextInputView, didTapActionView actionView: UIView) {
-        onTextInputDidTap?()
-    }
-}
-
-extension BackwardsConfigurationViewController: ActivitySelectSizeViewDelegate {
-    func activitySelectSizeView(_ activitySelectSizeView: ActivitySelectSizeView, didTapActionView actionView: UIView) {
-        onFontSizeChangeDidTap?()
+        switch activityTextInputView {
+        case inputTextView:
+            onTextInputDidTap?()
+        case selectFontSizeView:
+            onFontSizeChangeDidTap?()
+        default:
+            break
+        }
     }
 }

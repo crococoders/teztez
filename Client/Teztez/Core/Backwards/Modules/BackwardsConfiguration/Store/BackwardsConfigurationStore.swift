@@ -11,7 +11,7 @@ import UIKit
 enum BackwardsBlockType {
     case header(viewModel: ActivityHeaderViewModel)
     case inputText(viewModel: ActivityTextInputViewModel)
-    case selectFont(viewModel: ActivitySelectValueViewModel)
+    case selectFont(viewModel: ActivityTextInputViewModel)
 }
 
 private enum Constants {
@@ -31,7 +31,7 @@ final class BackwardsConfigurationStore {
     enum State {
         case initial(blocks: [BackwardsBlockType])
         case updated(block: BackwardsBlockType)
-        case configured(configuration: Configuration)
+        case configured(configuration: BackwardsConfiguration)
     }
 
     @Published private(set) var state: State?
@@ -39,7 +39,7 @@ final class BackwardsConfigurationStore {
     private var blocks: [BackwardsBlockType] = []
     private var headerViewModel: ActivityHeaderViewModel
     private var inputTextViewModel: ActivityTextInputViewModel
-    private var selectValueViewModel: ActivitySelectValueViewModel
+    private var selectFontSizeViewModel: ActivityTextInputViewModel
 
     private var userText = Constants.defaultText
     private var selectedFontSize = Constants.defaultFontSize
@@ -53,9 +53,9 @@ final class BackwardsConfigurationStore {
                                                         description: R.string.backwardsConfiguration.inputTextDescription(),
                                                         actionTitle: R.string.backwardsConfiguration.inputTextDefaultText())
 
-        selectValueViewModel = ActivitySelectValueViewModel(title: R.string.backwardsConfiguration.selectFontSizeTitle(),
-                                                            description: R.string.backwardsConfiguration.selectFontSizeDescription(),
-                                                            value: "\(Constants.defaultFontSize.clean)" + Constants.fontSizeMeasure)
+        selectFontSizeViewModel = ActivityTextInputViewModel(title: R.string.backwardsConfiguration.selectFontSizeTitle(),
+                                                             description: R.string.backwardsConfiguration.selectFontSizeDescription(),
+                                                             actionTitle: "\(Constants.defaultFontSize.clean)" + Constants.fontSizeMeasure)
     }
 
     func dispatch(action: Action) {
@@ -69,10 +69,10 @@ final class BackwardsConfigurationStore {
             state = .updated(block: .inputText(viewModel: inputTextViewModel))
         case let .didSelectFontSize(fontSize):
             selectedFontSize = fontSize
-            selectValueViewModel.value = "\(fontSize.clean)" + Constants.fontSizeMeasure
-            state = .updated(block: .selectFont(viewModel: selectValueViewModel))
+            selectFontSizeViewModel.actionTitle = "\(fontSize.clean)" + Constants.fontSizeMeasure
+            state = .updated(block: .selectFont(viewModel: selectFontSizeViewModel))
         case .didStartDidTap:
-            let configuration = Configuration(text: userText, fontSize: selectedFontSize)
+            let configuration = BackwardsConfiguration(text: userText, fontSize: selectedFontSize)
             state = .configured(configuration: configuration)
         }
     }
@@ -80,6 +80,6 @@ final class BackwardsConfigurationStore {
     private func getBlocks() -> [BackwardsBlockType] {
         return [.header(viewModel: headerViewModel),
                 .inputText(viewModel: inputTextViewModel),
-                .selectFont(viewModel: selectValueViewModel)]
+                .selectFont(viewModel: selectFontSizeViewModel)]
     }
 }

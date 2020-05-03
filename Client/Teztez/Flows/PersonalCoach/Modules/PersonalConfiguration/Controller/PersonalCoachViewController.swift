@@ -109,7 +109,6 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
     }
 
     private func setupNavigationBar() {
-        navigationController?.view.backgroundColor = .systemGray
         navigationController?.navigationBar.barTintColor = .systemGray
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.closeIcon(),
                                                             style: .plain,

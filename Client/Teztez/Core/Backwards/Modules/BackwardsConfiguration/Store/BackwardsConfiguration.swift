@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Configuration {
+struct BackwardsConfiguration {
     let text: String
     let fontSize: CGFloat
 }

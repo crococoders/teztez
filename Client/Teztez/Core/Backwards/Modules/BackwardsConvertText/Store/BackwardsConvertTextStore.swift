@@ -21,9 +21,9 @@ final class BackwardsConvertTextStore {
 
     @Published private(set) var state: State?
 
-    private var configuration: Configuration
+    private var configuration: BackwardsConfiguration
 
-    init(configuration: Configuration) {
+    init(configuration: BackwardsConfiguration) {
         self.configuration = configuration
     }
 
