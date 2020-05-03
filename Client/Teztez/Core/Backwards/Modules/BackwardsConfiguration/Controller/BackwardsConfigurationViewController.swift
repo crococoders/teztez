@@ -1,51 +1,50 @@
 //
-//  PersonalCoachViewController.swift
+//  BackwardsConfigurationViewController.swift
 //  Teztez
 //
-//  Created by Almas Zainoldin on 01/05/2020.
-//  Copyright © 2020 Crococoders. All rights reserved.
+//  Created by Adlet on 5/2/20.
+//  Copyright © 2020 crococoders. All rights reserved.
 //
 
 import Combine
 import UIKit
 
-protocol PersonalCoachPresentable: Presentable {
+protocol BackwardsConfigurationPresentable: Presentable {
     var onCloseButtonDidTap: Callback? { get set }
     var onTextInputDidTap: Callback? { get set }
-    var onStartButtonDidTap: ((_ configuration: PersonalCoachConfiguration) -> Void)? { get set }
+    var onFontSizeChangeDidTap: Callback? { get set }
+    var onStartButtonDidTap: ((_ configuration: BackwardsConfiguration) -> Void)? { get set }
     var onContinueButtonDidTap: Callback? { get set }
 
     func setUserText(_ text: String)
-    func enablePauseMode()
+    func setUserFontSize(_ fontSize: CGFloat)
+    func setupBackwardsPause()
 }
 
 private enum Constants {
     static let spacing: CGFloat = 32.0
 }
 
-final class PersonalCoachViewController: ViewController, PersonalCoachPresentable {
+final class BackwardsConfigurationViewController: ViewController, BackwardsConfigurationPresentable {
     var onCloseButtonDidTap: Callback?
     var onTextInputDidTap: Callback?
-    var onStartButtonDidTap: ((_ configuration: PersonalCoachConfiguration) -> Void)?
+    var onFontSizeChangeDidTap: Callback?
+    var onStartButtonDidTap: ((BackwardsConfiguration) -> Void)?
     var onContinueButtonDidTap: Callback?
 
-    private let store: PersonalCoachStore
-    private let pickerViewDelegate: PersonalCoachPickerViewDelegate
-    private let pickerViewDataSource: PersonalCoachPickerViewDataSource
+    private let store: BackwardsConfigurationStore
     private var cancellables = Set<AnyCancellable>()
 
     private lazy var headerView = ActivityHeaderView()
     private lazy var inputTextView = ActivityTextInputView()
-    private lazy var selectSpeedView = ActivitySelectValueView()
+    private lazy var selectFontSizeView = ActivityTextInputView()
 
     @IBOutlet private var stackView: UIStackView!
     @IBOutlet private var startButton: PrimaryButton!
     @IBOutlet private var restartButton: SecondaryButton!
 
-    init(store: PersonalCoachStore) {
+    init(store: BackwardsConfigurationStore) {
         self.store = store
-        pickerViewDelegate = PersonalCoachPickerViewDelegate(store: store)
-        pickerViewDataSource = PersonalCoachPickerViewDataSource(store: store)
         super.init(nibName: String(describing: Self.self), bundle: nil)
     }
 
@@ -79,33 +78,33 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
         store.dispatch(action: .didSetUserText(text: text))
     }
 
-    func enablePauseMode() {
-        restartButton.isHidden = false
-        startButton.setTitle(R.string.personalCoach.continue(), for: .normal)
+    func setUserFontSize(_ fontSize: CGFloat) {
+        store.dispatch(action: .didSelectFontSize(fontSize: fontSize))
+    }
+
+    func setupBackwardsPause() {
+        startButton.setTitle(R.string.backwardsConvertText.continueTitle(), for: .normal)
         startButton.tag = 1
+        restartButton.isHidden = false
     }
 
     private func setupObservers() {
         store.$state.sink { [weak self] state in
-            guard
-                let self = self,
-                let state = state else { return }
+            guard let self = self, let state = state else { return }
             switch state {
             case let .initial(blocks):
                 self.setupViews(from: blocks)
-            case let .updated(block):
+            case let .updated(block: block):
                 self.updateBlock(block)
-            case let .configured(configuration):
+            case let .configured(configuration: configuration):
                 self.onStartButtonDidTap?(configuration)
             }
-
         }.store(in: &cancellables)
     }
 
     private func setupUI() {
         stackView.spacing = Constants.spacing
         setupNavigationBar()
-        setupLocalization()
     }
 
     private func setupNavigationBar() {
@@ -116,12 +115,12 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
                                                             action: #selector(closeButtonDidTap))
     }
 
-    private func setupLocalization() {
-        startButton.setTitle(R.string.personalCoach.start(), for: .normal)
-        restartButton.setTitle(R.string.personalCoach.restart(), for: .normal)
+    @objc
+    private func closeButtonDidTap() {
+        onCloseButtonDidTap?()
     }
 
-    private func setupViews(from blocks: [PersonalCoachBlockType]) {
+    private func setupViews(from blocks: [BackwardsBlockType]) {
         stackView.removeAllArrangedSubviews()
         blocks.forEach { blockType in
             switch blockType {
@@ -132,34 +131,35 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
                 inputTextView.delegate = self
                 inputTextView.configure(with: viewModel)
                 stackView.addArrangedSubview(inputTextView)
-            case let .selectSpeed(viewModel):
-                selectSpeedView.configure(with: viewModel)
-                selectSpeedView.pickerView.delegate = pickerViewDelegate
-                selectSpeedView.pickerView.dataSource = pickerViewDataSource
-                stackView.addArrangedSubview(selectSpeedView)
+            case let .selectFont(viewModel):
+                selectFontSizeView.delegate = self
+                selectFontSizeView.configure(with: viewModel)
+                stackView.addArrangedSubview(selectFontSizeView)
             }
         }
     }
 
-    private func updateBlock(_ block: PersonalCoachBlockType) {
+    private func updateBlock(_ block: BackwardsBlockType) {
         switch block {
-        case let .selectSpeed(viewModel):
-            selectSpeedView.configure(with: viewModel)
+        case let .selectFont(viewModel):
+            selectFontSizeView.configure(with: viewModel)
         case let .inputText(viewModel):
             inputTextView.configure(with: viewModel)
         default:
             break
         }
     }
-
-    @objc
-    private func closeButtonDidTap() {
-        onCloseButtonDidTap?()
-    }
 }
 
-extension PersonalCoachViewController: ActivityTextInputViewDelegate {
+extension BackwardsConfigurationViewController: ActivityTextInputViewDelegate {
     func activityTextInputView(_ activityTextInputView: ActivityTextInputView, didTapActionView actionView: UIView) {
-        onTextInputDidTap?()
+        switch activityTextInputView {
+        case inputTextView:
+            onTextInputDidTap?()
+        case selectFontSizeView:
+            onFontSizeChangeDidTap?()
+        default:
+            break
+        }
     }
 }

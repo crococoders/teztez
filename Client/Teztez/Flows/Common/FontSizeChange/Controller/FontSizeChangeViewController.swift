@@ -45,6 +45,8 @@ final class FontSizeChangeViewController: UIViewController, FontSizeChangePresen
                 let self = self,
                 let state = state else { return }
             switch state {
+            case let .initial(value):
+                self.sliderView.configure(with: value)
             case let .changingFontSize(fontSize):
                 self.titleLabel.font = R.font.sfProTextRegular(size: fontSize)
             case let .changeFontSizeFinished(fontSize):
@@ -56,6 +58,7 @@ final class FontSizeChangeViewController: UIViewController, FontSizeChangePresen
     }
 
     private func setup() {
+        store.dispatch(action: .didLoadView)
         sliderView.delegate = self
         setupNavigationBar()
     }

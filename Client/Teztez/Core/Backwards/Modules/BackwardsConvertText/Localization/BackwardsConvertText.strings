@@ -1,0 +1,12 @@
+/*
+  BackwardsConvertText.strings
+  Teztez
+
+  Created by Adlet on 01/05/2020.
+  Copyright © 2020 Crococoders. All rights reserved.
+*/
+
+"mainTitle" = "Read then convert";
+"convertTitle" = "Convert";
+"returnTitle" = "Return";
+"continueTitle" = "Continue";
