@@ -29,16 +29,15 @@ final class GatewayController: RouteCollection {
 //        return try redirect(request, host: serviceHost)
 //    }
 
-    func redirect(_ request: Request) throws -> EventLoopFuture<ClientResponse> {
-        guard let host = Environment.get("FEEDBACK_HOST") else {
+    func redirect(_ request: Request) throws -> EventLoopFuture<ClientResponse> {let client = request.client
+        guard let host = Environment.get("FEEDBACK_HOST"), let port = Environment.get("FEEDBACK_PORT") else {
             throw Abort(.internalServerError)
         }
-        
-        let client = request.client
-        let uri = URI(string: host + request.url.string)
+        let url = URI(string: "http://\(host):\(port)\(request.url.string)")
+        request.logger.info("uri is \(url.description)")
         var headers = request.headers
         headers.replaceOrAdd(name: .host, value: host)
-        let request = ClientRequest(method: request.method, url: uri, headers: headers, body: request.body.data)
+        let request = ClientRequest(method: request.method, url: url, headers: headers, body: request.body.data)
         return client.send(request)
     }
 }
