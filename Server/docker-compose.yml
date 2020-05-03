@@ -17,13 +17,14 @@ services:
       - .env
     depends_on:
       - feedback
+      - content
     ports:
       - '8080:80'
     command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
   feed:
     image: feed:latest
     build: 
-      context: .
+      context: Feed/
       dockerfile: Dockerfile
     environment:
       <<: *shared_environment
@@ -33,7 +34,7 @@ services:
   content:
     image: content:latest
     build: 
-      context: .
+      context: Content/
       dockerfile: Dockerfile
     environment:
       <<: *shared_environment
@@ -52,18 +53,20 @@ services:
       - .env
     depends_on:
       - feedback_db 
-    ports:
-      - '8081:81'
-    command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "81"]
+    command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
   content_db:
     image: postgres:12.1-alpine
-    env_file:
-      - content.env
+    environment:
+      POSTGRES_USER: ${CONTENT_POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${CONTENT_POSTGRES_PASSWORD}
+      POSTGRES_DB: ${CONTENT_POSTGRES_DB}
     ports:
       - '5432:5432'
   feedback_db:
     image: postgres:12.1-alpine
-    env_file:
-      - feedback.env
+    environment:
+      POSTGRES_USERNAME: ${FEEDBACK_POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${FEEDBACK_POSTGRES_PASSWORD}
+      POSTGRES_DB: ${FEEDBACK_POSTGRES_DB}
     ports:
-      - '5432:5432'
+      - '5433:5432'
