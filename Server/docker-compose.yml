@@ -10,7 +10,10 @@ services:
   gateway:
     image: gateway:latest
     build: 
-      context: Gateway/
+      context: ../.
+      args:
+        service_folder: Server/Gateway
+      dockerfile: Dockerfile
     environment:
       <<: *shared_environment
     env_file:
@@ -18,13 +21,16 @@ services:
     depends_on:
       - feedback
       - content
+      - feed
     ports:
       - '8080:80'
     command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
   feed:
     image: feed:latest
     build: 
-      context: Feed/
+      context: ../.
+      args:
+        service_folder: Server/Feed
       dockerfile: Dockerfile
     environment:
       <<: *shared_environment
@@ -34,7 +40,9 @@ services:
   content:
     image: content:latest
     build: 
-      context: Content/
+      context: ../.
+      args:
+        service_folder: Server/Content
       dockerfile: Dockerfile
     environment:
       <<: *shared_environment
@@ -46,7 +54,10 @@ services:
   feedback:
     image: feedback:latest
     build: 
-      context: Feedback/
+      context: ../.
+      args:
+        service_folder: Server/Feedback
+      dockerfile: Dockerfile
     environment:
       <<: *shared_environment
     env_file:

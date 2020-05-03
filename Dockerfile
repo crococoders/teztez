@@ -2,20 +2,27 @@
 # Build image
 # ================================
 FROM vapor/swift:5.2 as build
-WORKDIR /build
+ARG service_folder
 
+WORKDIR /build
+COPY Shared ./Shared
 # First just resolve dependencies.
 # This creates a cached layer that can be reused 
 # as long as your Package.swift/Package.resolved
 # files do not change.
-COPY ./Package.* ./
+
+WORKDIR ${service_folder}
+
+COPY ${service_folder}/Package.* ./
+
 RUN swift package resolve
 
 # Copy entire repo into container
-COPY . .
+COPY ${service_folder} ./
 
 # Compile with optimizations
 RUN swift build \
+	--build-path /build/.build \
 	--enable-test-discovery \
 	-c release \
 	-Xswiftc -g
