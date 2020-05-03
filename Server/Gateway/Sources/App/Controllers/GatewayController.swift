@@ -16,7 +16,7 @@ final class GatewayController: RouteCollection {
 
     func redirect(_ request: Request, to service: Service) throws -> EventLoopFuture<ClientResponse> {
         guard let host = service.host, let port = service.port else {
-            throw Abort(.internalServerError)
+            throw Abort(.internalServerError, reason: "Could not retrieve destination service host & port")
         }
         let client = request.client
         let url = URI(string: "http://\(host):\(port)\(request.url.string)")
