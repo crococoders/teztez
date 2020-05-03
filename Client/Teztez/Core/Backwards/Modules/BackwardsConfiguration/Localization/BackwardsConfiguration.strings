@@ -1,0 +1,16 @@
+/* 
+  BackwardsConfiguration.strings
+  Teztez
+
+  Created by Adlet on 5/2/20.
+  Copyright © 2020 crococoders. All rights reserved.
+*/
+
+"title" = "Backwards";
+"description" = "Make your configuration and start training";
+"inputTextTitle" = "Enter your text here";
+"inputTextDescription" = "This text will be used to train method backwards. If you don’t have any text, don’t worry, TezTez has its own text for you";
+"inputTextYourText" = "Your text";
+"inputTextDefaultText" = "Default text";
+"selectFontSizeTitle" = "Change size of text";
+"selectFontSizeDescription" = "You can manage the size of text. If font size of text is small or big then change it in this section";
