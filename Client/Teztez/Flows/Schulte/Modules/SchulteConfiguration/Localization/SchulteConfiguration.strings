@@ -1,0 +1,16 @@
+/*
+  SchulteConfiguration.strings
+  Teztez
+
+  Created by Almas Zainoldin on 03/05/2020.
+  Copyright © 2020 Crococoders. All rights reserved.
+*/
+
+"title" = "Schulte Table";
+"description" = "Make your configuration and start training";
+"inverseTitle" = "Inverse count";
+"inverseDescription" = "Inverse count means that you should tap on numbers in reverse order (from 25 to 1)";
+"iverseSwitchTitle" = "Inverse count";
+"start" = "Start";
+"continue" = "Continue";
+"restart" = "Restart";

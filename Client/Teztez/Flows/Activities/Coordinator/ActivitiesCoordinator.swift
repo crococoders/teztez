@@ -28,6 +28,10 @@ final class ActivitiesCoordinator: ParentCoordinator {
             self?.runFlow(by: itemType)
         }
         router.setRootModule(activities)
+        let vc = SchulteConfigurationViewController(store: SchulteConfigurationStore())
+        let coordinatorNavigationController = CoordinatorNavigationController()
+        coordinatorNavigationController.setViewControllers([vc], animated: true)
+        router.show(coordinatorNavigationController, with: .presentInFullScreen(animated: true))
     }
 
     private func runFlow(by itemType: ActivitiesItemType) {
