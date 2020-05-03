@@ -11,6 +11,7 @@ import Foundation
 protocol SchulteModuleFactory {
     func makeSchulteIntro() -> ActivitiesIntroPresentable
     func makeSchulteConfiguration() -> SchulteConfigurationPresentable
+    func makeSchulteGame(configuration: SchulteConfiguration) -> SchulteGamePresentable
 }
 
 extension ModuleFactory: SchulteModuleFactory {
@@ -22,6 +23,12 @@ extension ModuleFactory: SchulteModuleFactory {
 
     func makeSchulteConfiguration() -> SchulteConfigurationPresentable {
         let viewController = SchulteConfigurationViewController(store: SchulteConfigurationStore())
+        return viewController
+    }
+
+    func makeSchulteGame(configuration: SchulteConfiguration) -> SchulteGamePresentable {
+        let store = SchulteGameStore(configuration: configuration)
+        let viewController = SchulteGameViewController(store: store)
         return viewController
     }
 }

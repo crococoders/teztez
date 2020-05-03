@@ -16,15 +16,19 @@ enum SchulteBlockType {
 final class SchulteConfigurationStore {
     enum Action {
         case didLoadView
+        case didChangeSwitchValue(value: Bool)
+        case didTapStartButton
     }
 
     enum State {
         case initial(blocks: [SchulteBlockType])
+        case configured(configuration: SchulteConfiguration)
     }
 
     private var blocks: [SchulteBlockType] = []
     private var headerViewModel: ActivityHeaderViewModel
     private var inverseViewModel: ActivitySwitchViewModel
+    private var isInversed = false
 
     @Published private(set) var state: State?
     init() {
@@ -41,6 +45,11 @@ final class SchulteConfigurationStore {
         case .didLoadView:
             blocks = getInitialBlocks()
             state = .initial(blocks: blocks)
+        case let .didChangeSwitchValue(value):
+            isInversed = value
+        case .didTapStartButton:
+            let configuration = SchulteConfiguration(isInversed: isInversed)
+            state = .configured(configuration: configuration)
         }
     }
 

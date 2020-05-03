@@ -1,5 +1,5 @@
 //
-//  SchulteConfiguration.swift
+//  SchulteGameViewModel.swift
 //  Teztez
 //
 //  Created by Almas Zainoldin on 5/3/20.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct SchulteConfiguration {
-    let isInversed: Bool
+struct SchulteGameViewModel {
+    let number: String
 }

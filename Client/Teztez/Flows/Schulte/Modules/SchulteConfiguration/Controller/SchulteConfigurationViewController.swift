@@ -44,7 +44,15 @@ final class SchulteConfigurationViewController: ViewController, SchulteConfigura
         store.dispatch(action: .didLoadView)
     }
 
-    @IBAction func startButtonDidTap(_ sender: UIButton) {}
+    @IBAction func startButtonDidTap(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            store.dispatch(action: .didTapStartButton)
+        default:
+            break
+        }
+    }
+
     @IBAction func restartButtonDidTap(_ sender: UIButton) {}
 
     private func setupObservers() {
@@ -55,6 +63,8 @@ final class SchulteConfigurationViewController: ViewController, SchulteConfigura
             switch state {
             case let .initial(blocks):
                 self.setupViews(from: blocks)
+            case let .configured(configuration):
+                self.onNextButtonDidTap?(configuration)
             }
         }.store(in: &cancellables)
     }
@@ -89,5 +99,7 @@ final class SchulteConfigurationViewController: ViewController, SchulteConfigura
 }
 
 extension SchulteConfigurationViewController: ActivitySwitchViewDelegate {
-    func activitySwitchView(_ activitySwitchView: ActivitySwitchView, didChangeSwitchValue: UISwitch) {}
+    func activitySwitchView(_ activitySwitchView: ActivitySwitchView, didChangeSwitchValue switchView: UISwitch) {
+        store.dispatch(action: .didChangeSwitchValue(value: switchView.isOn))
+    }
 }

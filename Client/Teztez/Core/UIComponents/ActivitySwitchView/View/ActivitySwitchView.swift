@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ActivitySwitchViewDelegate: class {
-    func activitySwitchView(_ activitySwitchView: ActivitySwitchView, didChangeSwitchValue: UISwitch)
+    func activitySwitchView(_ activitySwitchView: ActivitySwitchView, didChangeSwitchValue switchView: UISwitch)
 }
 
 final class ActivitySwitchView: UIView, NibOwnerLoadable {

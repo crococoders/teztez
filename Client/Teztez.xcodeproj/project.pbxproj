@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		22E2FABB4D0F6C38AADBF488 /* PersonalCoachResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90105D2C8C675D469C5508CF /* PersonalCoachResultViewController.swift */; };
+		2D43470E4BC93BA9ACD8BB20 /* SchulteGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1EA627E7B961CCBECBECF5 /* SchulteGameViewController.swift */; };
 		48B246AB6A2B550320B3067B /* PersonalCoachTrainingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0CC5886C0EDB96C1B81B77 /* PersonalCoachTrainingStore.swift */; };
 		6D5DC425D49928B87A8072B1 /* SchulteConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE223B91DB6B9720AAC116F7 /* SchulteConfigurationViewController.swift */; };
 		A4C99ABF8799D15B4E0AEB49 /* PersonalCoachTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D54E55B2D05740B15B068A /* PersonalCoachTrainingViewController.swift */; };
@@ -44,6 +45,12 @@
 		C41FA7EB245ECDB300E515EC /* SchulteConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7EA245ECDB300E515EC /* SchulteConfiguration.swift */; };
 		C41FA7ED245ED3D200E515EC /* SchulteModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7EC245ED3D200E515EC /* SchulteModuleFactory.swift */; };
 		C41FA7EF245ED45900E515EC /* SchulteCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7EE245ED45900E515EC /* SchulteCoordinator.swift */; };
+		C41FA7F1245ED87000E515EC /* SchulteGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41FA7F0245ED87000E515EC /* SchulteGameViewController.xib */; };
+		C41FA7F3245EDA7E00E515EC /* SchulteGameCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7F2245EDA7E00E515EC /* SchulteGameCollectionViewDelegate.swift */; };
+		C41FA7F5245EDA9200E515EC /* SchulteGameCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7F4245EDA9200E515EC /* SchulteGameCollectionViewDataSource.swift */; };
+		C41FA7F7245EDD5500E515EC /* SchulteGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7F6245EDD5500E515EC /* SchulteGameCell.swift */; };
+		C41FA7F9245EDD8100E515EC /* SchulteGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41FA7F8245EDD8100E515EC /* SchulteGameCell.xib */; };
+		C41FA7FB245EDEC900E515EC /* SchulteGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7FA245EDEC900E515EC /* SchulteGameViewModel.swift */; };
 		C463DC132459D32C00E265FF /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC0A2459D32C00E265FF /* TextInputViewController.xib */; };
 		C463DC142459D32C00E265FF /* TextInputTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */; };
 		C463DC162459D32C00E265FF /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0D2459D32C00E265FF /* TextInputViewController.swift */; };
@@ -143,6 +150,7 @@
 		C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8198F244C582B00AE73CE /* FontStyles.swift */; };
 		D2A119A5F8166CAD5364FCA0 /* PersonalCoachResultStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09754A01CF6ECA71035E6AC9 /* PersonalCoachResultStore.swift */; };
 		D2F3AAD5EB66FBF82245F101 /* SchulteConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2C1102F3C0FFB9FD8C31E3 /* SchulteConfigurationStore.swift */; };
+		DEE42C6F72F4D897B935FCCB /* SchulteGameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A567D43ED359CD67D05E563 /* SchulteGameStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -150,9 +158,12 @@
 		09754A01CF6ECA71035E6AC9 /* PersonalCoachResultStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachResultStore.swift; sourceTree = "<group>"; };
 		33D54E55B2D05740B15B068A /* PersonalCoachTrainingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachTrainingViewController.swift; sourceTree = "<group>"; };
 		4C2C1102F3C0FFB9FD8C31E3 /* SchulteConfigurationStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SchulteConfigurationStore.swift; sourceTree = "<group>"; };
+		5A567D43ED359CD67D05E563 /* SchulteGameStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SchulteGameStore.swift; sourceTree = "<group>"; };
 		8184668006C1E6C14C87C6B4 /* SchulteConfiguration.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = SchulteConfiguration.strings; sourceTree = "<group>"; };
 		90105D2C8C675D469C5508CF /* PersonalCoachResultViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachResultViewController.swift; sourceTree = "<group>"; };
+		9F1EA627E7B961CCBECBECF5 /* SchulteGameViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SchulteGameViewController.swift; sourceTree = "<group>"; };
 		AF942F0B986FA5ADA639D9E9 /* PersonalCoachResult.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = PersonalCoachResult.strings; sourceTree = "<group>"; };
+		B47B6398526D3642787520F9 /* SchulteGame.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = SchulteGame.strings; sourceTree = "<group>"; };
 		BE223B91DB6B9720AAC116F7 /* SchulteConfigurationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SchulteConfigurationViewController.swift; sourceTree = "<group>"; };
 		C40AE0B924535E27008BC71C /* ActivitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesCell.xib; sourceTree = "<group>"; };
 		C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCell.swift; sourceTree = "<group>"; };
@@ -184,6 +195,12 @@
 		C41FA7EA245ECDB300E515EC /* SchulteConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchulteConfiguration.swift; sourceTree = "<group>"; };
 		C41FA7EC245ED3D200E515EC /* SchulteModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchulteModuleFactory.swift; sourceTree = "<group>"; };
 		C41FA7EE245ED45900E515EC /* SchulteCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchulteCoordinator.swift; sourceTree = "<group>"; };
+		C41FA7F0245ED87000E515EC /* SchulteGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchulteGameViewController.xib; sourceTree = "<group>"; };
+		C41FA7F2245EDA7E00E515EC /* SchulteGameCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchulteGameCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		C41FA7F4245EDA9200E515EC /* SchulteGameCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchulteGameCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		C41FA7F6245EDD5500E515EC /* SchulteGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchulteGameCell.swift; sourceTree = "<group>"; };
+		C41FA7F8245EDD8100E515EC /* SchulteGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchulteGameCell.xib; sourceTree = "<group>"; };
+		C41FA7FA245EDEC900E515EC /* SchulteGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchulteGameViewModel.swift; sourceTree = "<group>"; };
 		C463DC0A2459D32C00E265FF /* TextInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputViewController.xib; sourceTree = "<group>"; };
 		C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputTextViewDelegate.swift; sourceTree = "<group>"; };
 		C463DC0D2459D32C00E265FF /* TextInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputViewController.swift; sourceTree = "<group>"; };
@@ -297,6 +314,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02E4F0D1F436966AC2491B99 /* SchulteGame */ = {
+			isa = PBXGroup;
+			children = (
+				6A4544E06D855A5218C1D973 /* Controller */,
+				55474D0E41388B8188DC6CF3 /* Localization */,
+				6092FE3255B65CEF70BDA1A7 /* Store */,
+				3CA735ABAC33D2DB28E700C5 /* View */,
+				717D394DF7D7F4F60C4495D0 /* ViewModel */,
+			);
+			path = SchulteGame;
+			sourceTree = "<group>";
+		};
 		040396BF19A9473BDF33E07F /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,17 +345,27 @@
 		21E3B86183F24CA0FF6765DC /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				4C2C1102F3C0FFB9FD8C31E3 /* SchulteConfigurationStore.swift */,
 				C41FA7EA245ECDB300E515EC /* SchulteConfiguration.swift */,
+				4C2C1102F3C0FFB9FD8C31E3 /* SchulteConfigurationStore.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
 		};
-		29BCF1D8CE8F12D98848AA34 /* ViewModel */ = {
+		3CA735ABAC33D2DB28E700C5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C41FA7F6245EDD5500E515EC /* SchulteGameCell.swift */,
+				C41FA7F8245EDD8100E515EC /* SchulteGameCell.xib */,
 			);
-			path = ViewModel;
+			path = View;
+			sourceTree = "<group>";
+		};
+		55474D0E41388B8188DC6CF3 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				B47B6398526D3642787520F9 /* SchulteGame.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		5ACAD48B1294DB250A37BC85 /* Controller */ = {
@@ -338,14 +377,39 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		6092FE3255B65CEF70BDA1A7 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				5A567D43ED359CD67D05E563 /* SchulteGameStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		6A4544E06D855A5218C1D973 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C41FA7F4245EDA9200E515EC /* SchulteGameCollectionViewDataSource.swift */,
+				C41FA7F2245EDA7E00E515EC /* SchulteGameCollectionViewDelegate.swift */,
+				9F1EA627E7B961CCBECBECF5 /* SchulteGameViewController.swift */,
+				C41FA7F0245ED87000E515EC /* SchulteGameViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		717D394DF7D7F4F60C4495D0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C41FA7FA245EDEC900E515EC /* SchulteGameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		75B7424C680BB1E1439EB9E8 /* SchulteConfiguration */ = {
 			isa = PBXGroup;
 			children = (
 				D2E77EF10D7283B8C5E1ADB0 /* Controller */,
 				857D99BD4BFF9596A2FF3DBE /* Localization */,
 				21E3B86183F24CA0FF6765DC /* Store */,
-				D1FBBCAB8A8232E0115997E6 /* View */,
-				29BCF1D8CE8F12D98848AA34 /* ViewModel */,
 			);
 			path = SchulteConfiguration;
 			sourceTree = "<group>";
@@ -506,6 +570,7 @@
 			isa = PBXGroup;
 			children = (
 				75B7424C680BB1E1439EB9E8 /* SchulteConfiguration */,
+				02E4F0D1F436966AC2491B99 /* SchulteGame */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1284,13 +1349,6 @@
 			path = PersonalCoachResult;
 			sourceTree = "<group>";
 		};
-		D1FBBCAB8A8232E0115997E6 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		D2E77EF10D7283B8C5E1ADB0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -1398,6 +1456,7 @@
 				C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */,
 				C41FA7E5245EBB7500E515EC /* ActivitySwitchView.xib in Resources */,
 				C41FA7D4245DE2AA00E515EC /* PersonalCoachResultViewController.xib in Resources */,
+				C41FA7F1245ED87000E515EC /* SchulteGameViewController.xib in Resources */,
 				C4F8198A244C55FB00AE73CE /* SFProRounded-Bold.otf in Resources */,
 				C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */,
 				C463DC98245D5F2700E265FF /* PersonalCoachTrainingViewController.xib in Resources */,
@@ -1413,6 +1472,7 @@
 				C4F81984244C559000AE73CE /* SFProText-Semibold.otf in Resources */,
 				C4F81982244C557100AE73CE /* SFProText-Regular.otf in Resources */,
 				C4F818EC244B289400AE73CE /* Assets.xcassets in Resources */,
+				C41FA7F9245EDD8100E515EC /* SchulteGameCell.xib in Resources */,
 				C4F8198C244C560C00AE73CE /* SFProRounded-Semibold.otf in Resources */,
 				C40AE0BA24535E27008BC71C /* ActivitiesCell.xib in Resources */,
 				C4C06701245898CA00EF39B8 /* FontSizeChangeViewController.xib in Resources */,
@@ -1559,21 +1619,25 @@
 				C4F7AFCD24547229007D6289 /* ActivitiesIntroBlockView.swift in Sources */,
 				C4F81955244B834500AE73CE /* ApplicationCoordinator.swift in Sources */,
 				C463DC72245CAF8500E265FF /* PersonalCoachViewController.swift in Sources */,
+				C41FA7FB245EDEC900E515EC /* SchulteGameViewModel.swift in Sources */,
 				C4F81940244B824200AE73CE /* ViewController.swift in Sources */,
 				C4B88F692450CF9700D1D1BA /* ActivitiesIntroViewController.swift in Sources */,
 				C4F81946244B82BB00AE73CE /* Coordinator.swift in Sources */,
 				C4F7AFD224547A8A007D6289 /* NibLoadable.swift in Sources */,
+				C41FA7F7245EDD5500E515EC /* SchulteGameCell.swift in Sources */,
 				C4BD0F2A244DEF3D0056E8C1 /* R.generated.swift in Sources */,
 				C463DC70245CAF8500E265FF /* PersonalCoachCoordinator.swift in Sources */,
 				C463DC202459D7B900E265FF /* UIViewController+ActionSheet.swift in Sources */,
 				C463DC73245CAF8500E265FF /* PersonalCoachPickerViewDelegate.swift in Sources */,
 				C4BD0F33244DF1280056E8C1 /* StartupSceneDelegateConfigurator.swift in Sources */,
 				C4D138DD244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift in Sources */,
+				C41FA7F5245EDA9200E515EC /* SchulteGameCollectionViewDataSource.swift in Sources */,
 				C4F7AFCF24547450007D6289 /* ActivityIconView.swift in Sources */,
 				C463DC76245CAF8500E265FF /* PersonalCoachConfiguration.swift in Sources */,
 				C4F8194A244B82F000AE73CE /* ModuleFactory.swift in Sources */,
 				C463DC74245CAF8500E265FF /* PersonalCoachPickerViewDataSource.swift in Sources */,
 				C4F81928244B76BA00AE73CE /* UITableViewCell+SelectedBackgroundView.swift in Sources */,
+				C41FA7F3245EDA7E00E515EC /* SchulteGameCollectionViewDelegate.swift in Sources */,
 				C4B88F662450CF7400D1D1BA /* ActivitiesIntroViewModel.swift in Sources */,
 				C463DC162459D32C00E265FF /* TextInputViewController.swift in Sources */,
 				C4B88F5B2450BCA700D1D1BA /* PrimaryButton.swift in Sources */,
@@ -1604,6 +1668,8 @@
 				D2A119A5F8166CAD5364FCA0 /* PersonalCoachResultStore.swift in Sources */,
 				6D5DC425D49928B87A8072B1 /* SchulteConfigurationViewController.swift in Sources */,
 				D2F3AAD5EB66FBF82245F101 /* SchulteConfigurationStore.swift in Sources */,
+				2D43470E4BC93BA9ACD8BB20 /* SchulteGameViewController.swift in Sources */,
+				DEE42C6F72F4D897B935FCCB /* SchulteGameStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
