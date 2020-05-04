@@ -162,15 +162,10 @@ extension Date {
         
         return Date.random(between: earliest, and: today)
     }
-
-    static func random() -> Date {
-        let randomTime = TimeInterval(arc4random_uniform(UInt32.max))
-        return Date(timeIntervalSince1970: randomTime)
-    }
     
     static func random(between initial: Date, and final:Date) -> Date {
         let interval = final.timeIntervalSince(initial)
-        let randomInterval = TimeInterval(arc4random_uniform(UInt32(interval)))
+        let randomInterval = TimeInterval(Double.random(in: 0..<interval))
         return initial.addingTimeInterval(randomInterval)
     }
 }

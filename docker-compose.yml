@@ -1,0 +1,91 @@
+version: '3.7'
+
+volumes:
+  content_db_data:
+  feedback_db_data:
+
+x-shared_environment: &shared_environment
+  LOG_LEVEL: ${LOG_LEVEL:-debug}
+
+services:
+  gateway:
+    image: gateway:latest
+    build:
+      context: .
+      args:
+        service_folder: Server/Gateway
+    environment:
+      <<: *shared_environment
+    env_file:
+      - .env
+    depends_on:
+      - feedback
+      - content
+      - feed
+    ports:
+      - '8080:80'
+    command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
+
+  feed:
+    image: feed:latest
+    build: 
+      context: .
+      args:
+        service_folder: Server/Feed
+    environment:
+      <<: *shared_environment
+    env_file:
+      - .env
+    command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
+
+  content:
+    image: content:latest
+    build: 
+      context: .
+      args:
+        service_folder: Server/Content
+    environment:
+      <<: *shared_environment
+    env_file:
+      - .env
+    depends_on:
+      - content_db 
+    command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
+  
+  feedback:
+    image: feedback:latest
+    build: 
+      context: .
+      args:
+        service_folder: Server/Feedback
+    environment:
+      <<: *shared_environment
+    env_file:
+      - .env
+    depends_on:
+      - feedback_db 
+    command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
+  
+  content_db:
+    image: postgres:12.1-alpine
+    environment:
+      POSTGRES_USER: ${CONTENT_POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${CONTENT_POSTGRES_PASSWORD}
+      POSTGRES_DB: ${CONTENT_POSTGRES_DB}
+      PGDATA: /var/lib/postgresql/data/content_db
+    volumes:
+      - content_db_data:/var/lib/postgresql/data/content_db
+    ports:
+      - '5432:5432'
+  
+  feedback_db:
+    image: postgres:12.1-alpine
+    environment:
+      POSTGRES_USERNAME: ${FEEDBACK_POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${FEEDBACK_POSTGRES_PASSWORD}
+      POSTGRES_DB: ${FEEDBACK_POSTGRES_DB}
+      PGDATA: /var/lib/postgresql/data/feedback_db
+    volumes:
+      - feedback_db_data:/var/lib/postgresql/data/feedback_db
+    ports:
+      - '5433:5432'
