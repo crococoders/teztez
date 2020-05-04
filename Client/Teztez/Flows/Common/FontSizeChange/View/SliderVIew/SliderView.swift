@@ -38,4 +38,8 @@ final class SliderView: UIView, NibOwnerLoadable {
     private func setup() {
         backgroundColor = .systemGray2
     }
+
+    func configure(with value: Float) {
+        slider.value = value
+    }
 }

@@ -113,7 +113,7 @@
                         <constraint firstAttribute="height" constant="7" id="55P-jd-jfT"/>
                     </constraints>
                 </stackView>
-                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="11" maxValue="19" translatesAutoresizingMaskIntoConstraints="NO" id="q4S-aT-RVm">
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="11" minValue="11" maxValue="19" translatesAutoresizingMaskIntoConstraints="NO" id="q4S-aT-RVm">
                     <rect key="frame" x="39" y="35" width="290" height="3"/>
                     <color key="minimumTrackTintColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <color key="maximumTrackTintColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

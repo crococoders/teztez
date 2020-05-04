@@ -1,0 +1,16 @@
+/*
+  BlenderConfiguration.strings
+  Teztez
+
+  Created by Adlet on 03/05/2020.
+  Copyright © 2020 Crococoders. All rights reserved.
+*/
+
+"title" = "Blender";
+"description" = "Make your configuration and start training";
+"inputTextTitle" = "Enter your text here";
+"inputTextDescription" = "This text will be used to train method blender. If you don’t have any text, don’t worry, TezTez has its own text for you";
+"inputTextYourText" = "Your text";
+"inputTextDefaultText" = "Default text";
+"selectFontSizeTitle" = "Change size of text";
+"selectFontSizeDescription" = "You can manage the size of text. If font size of text is small or big then change it in this section";

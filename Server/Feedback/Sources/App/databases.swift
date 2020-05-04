@@ -10,11 +10,11 @@ import FluentPostgresDriver
 import Vapor
 
 func configureDatabase(for app: Application) throws {
-    guard let databaseHostname = Environment.get("POSTGRES_HOST"),
-        let databasePort = Environment.get("POSTGRES_PORT"),
-        let databaseUsername = Environment.get("POSTGRES_USERNAME"),
-        let databasePassword = Environment.get("POSTGRES_PASSWORD"),
-        let databaseName = Environment.get("POSTGRES_DB") else {
+    guard let databaseHostname = Environment.get("FEEDBACK_POSTGRES_HOST"),
+        let databasePort = Environment.get("FEEDBACK_POSTGRES_PORT"),
+        let databaseUsername = Environment.get("FEEDBACK_POSTGRES_USERNAME"),
+        let databasePassword = Environment.get("FEEDBACK_POSTGRES_PASSWORD"),
+        let databaseName = Environment.get("FEEDBACK_POSTGRES_DB") else {
         throw Abort(.internalServerError)
     }
     app.databases.use(.postgres(hostname: databaseHostname,
