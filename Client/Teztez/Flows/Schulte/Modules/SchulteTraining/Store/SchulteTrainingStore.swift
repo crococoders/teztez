@@ -1,5 +1,5 @@
 //
-//  SchulteGameStore.swift
+//  SchulteTrainingStore.swift
 //  Teztez
 //
 //  Created by Almas Zainoldin on 03/05/2020.
@@ -15,7 +15,7 @@ private enum Constants {
 }
 
 // TODO: Refactor whole module
-final class SchulteGameStore {
+final class SchulteTrainingStore {
     enum Action {
         case didLoadView
         case didSelectItemAt(index: Int)
@@ -23,9 +23,9 @@ final class SchulteGameStore {
     }
 
     enum State {
-        case initial(viewModels: [SchulteGameViewModel], isInversed: Bool)
+        case initial(viewModels: [SchulteTrainingViewModel], isInversed: Bool)
         case nextNumberUpdated(number: Int)
-        case updated(index: Int, viewModels: [SchulteGameViewModel])
+        case updated(index: Int, viewModels: [SchulteTrainingViewModel])
         case timerUpdated(formattedTime: String)
         case configured(configuration: SchulteConfiguration)
         case finished(formattedTime: String)
@@ -35,7 +35,7 @@ final class SchulteGameStore {
     private var timer: Timer?
     private var totalTimeInSeconds: Int
     private var nextNumber: Int
-    private var viewModels: [SchulteGameViewModel] = []
+    private var viewModels: [SchulteTrainingViewModel] = []
 
     @Published private(set) var state: State?
 
@@ -67,7 +67,7 @@ final class SchulteGameStore {
 
     private func generateInitialViewModels() {
         for number in 1 ... 25 {
-            viewModels.append(SchulteGameViewModel(number: "\(number)", state: .none))
+            viewModels.append(SchulteTrainingViewModel(number: "\(number)", state: .none))
         }
         viewModels.shuffle()
     }

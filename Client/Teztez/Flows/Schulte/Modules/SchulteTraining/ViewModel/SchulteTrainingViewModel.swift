@@ -1,5 +1,5 @@
 //
-//  SchulteGameViewModel.swift
+//  SchulteTrainingViewModel.swift
 //  Teztez
 //
 //  Created by Almas Zainoldin on 5/3/20.
@@ -15,7 +15,7 @@ enum SchulteNumberState {
     case underlined
 }
 
-struct SchulteGameViewModel {
+struct SchulteTrainingViewModel {
     let number: String
     var state: SchulteNumberState
 }

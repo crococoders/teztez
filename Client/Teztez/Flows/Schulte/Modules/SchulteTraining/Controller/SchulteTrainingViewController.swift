@@ -1,5 +1,5 @@
 //
-//  SchulteGameViewController.swift
+//  SchulteTrainingViewController.swift
 //  Teztez
 //
 //  Created by Almas Zainoldin on 03/05/2020.
@@ -9,18 +9,18 @@
 import Combine
 import UIKit
 
-protocol SchulteGamePresentable: Presentable {
+protocol SchulteTrainingPresentable: Presentable {
     var onBackButtonDidTap: ((_ configuration: SchulteConfiguration) -> Void)? { get set }
     var onTrainingDidFinish: ((_ time: String) -> Void)? { get set }
 }
 
-final class SchulteGameViewController: ViewController, SchulteGamePresentable {
+final class SchulteTrainingViewController: ViewController, SchulteTrainingPresentable {
     var onBackButtonDidTap: ((_ configuration: SchulteConfiguration) -> Void)?
     var onTrainingDidFinish: ((_ time: String) -> Void)?
 
-    private let store: SchulteGameStore
-    private var collectionViewDataSource: SchulteGameCollectionViewDataSource
-    private var collectionViewDelegate: SchulteGameCollectionViewDelegate
+    private let store: SchulteTrainingStore
+    private var collectionViewDataSource: SchulteTrainingCollectionViewDataSource
+    private var collectionViewDelegate: SchulteTrainingCollectionViewDelegate
     private var cancellables = Set<AnyCancellable>()
 
     @IBOutlet var timerLabel: UILabel!
@@ -28,10 +28,10 @@ final class SchulteGameViewController: ViewController, SchulteGamePresentable {
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var messageLabel: UILabel!
 
-    init(store: SchulteGameStore) {
+    init(store: SchulteTrainingStore) {
         self.store = store
-        collectionViewDataSource = SchulteGameCollectionViewDataSource()
-        collectionViewDelegate = SchulteGameCollectionViewDelegate(store: store)
+        collectionViewDataSource = SchulteTrainingCollectionViewDataSource()
+        collectionViewDelegate = SchulteTrainingCollectionViewDelegate(store: store)
         super.init(nibName: String(describing: Self.self), bundle: nil)
     }
 
@@ -59,8 +59,8 @@ final class SchulteGameViewController: ViewController, SchulteGamePresentable {
             case let .initial(viewModels, isInversed):
                 self.collectionViewDataSource.viewModels = viewModels
                 self.collectionView.reloadData()
-                self.messageLabel.text = isInversed ? R.string.schulteGame.concentrateInverseMessage() :
-                    R.string.schulteGame.concentrateMessage()
+                self.messageLabel.text = isInversed ? R.string.schulteTraining.concentrateInverseMessage() :
+                    R.string.schulteTraining.concentrateMessage()
             case let .nextNumberUpdated(number):
                 self.nextElementLabel.text = "Next \(number)"
             case let .updated(index, viewModels):
@@ -81,6 +81,6 @@ final class SchulteGameViewController: ViewController, SchulteGamePresentable {
     private func setupUI() {
         collectionView.delegate = collectionViewDelegate
         collectionView.dataSource = collectionViewDataSource
-        collectionView.register(cellClass: SchulteGameCell.self)
+        collectionView.register(cellClass: SchulteTrainingCell.self)
     }
 }

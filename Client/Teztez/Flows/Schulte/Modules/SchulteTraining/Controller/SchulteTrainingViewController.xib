@@ -18,7 +18,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SchulteGameViewController" customModule="Teztez" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SchulteTrainingViewController" customModule="Teztez" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="VgA-fx-7tM" id="vjx-Ya-s84"/>
                 <outlet property="messageLabel" destination="qHb-fX-mqg" id="KLD-WN-VdE"/>

@@ -1,5 +1,5 @@
 //
-//  SchulteGameCell.swift
+//  SchulteTrainingCell.swift
 //  Teztez
 //
 //  Created by Almas Zainoldin on 5/3/20.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-final class SchulteGameCell: UICollectionViewCell {
+final class SchulteTrainingCell: UICollectionViewCell {
     @IBOutlet private var numberLabel: UILabel!
 
-    func configure(with viewModel: SchulteGameViewModel) {
+    func configure(with viewModel: SchulteTrainingViewModel) {
         numberLabel.text = viewModel.number
         setupViews(by: viewModel.state)
     }

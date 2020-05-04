@@ -1,5 +1,5 @@
 //
-//  SchulteGameCollectionViewDelegate.swift
+//  SchulteTrainingCollectionViewDelegate.swift
 //  Teztez
 //
 //  Created by Almas Zainoldin on 5/3/20.
@@ -12,10 +12,10 @@ private enum Constants {
     static let size = CGSize(width: 63, height: 63)
 }
 
-final class SchulteGameCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout {
-    private let store: SchulteGameStore
+final class SchulteTrainingCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout {
+    private let store: SchulteTrainingStore
 
-    init(store: SchulteGameStore) {
+    init(store: SchulteTrainingStore) {
         self.store = store
     }
 

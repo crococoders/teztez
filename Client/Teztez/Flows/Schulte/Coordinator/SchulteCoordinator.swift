@@ -46,27 +46,27 @@ final class SchulteCoordinator: Coordinator, SchulteCoordinatorOutput {
             self?.onFlowDidFinish?()
         }
         configurationPresentable?.onNextButtonDidTap = { [weak self] configuration in
-            self?.showGame(configuration: configuration)
+            self?.showTraining(configuration: configuration)
         }
         configurationPresentable?.onContinueButtonDidTap = { [weak self] in
             guard let configuration = self?.configuration else { return }
-            self?.showGame(configuration: configuration)
+            self?.showTraining(configuration: configuration)
         }
         router.setRootModule(configurationPresentable)
     }
 
-    private func showGame(configuration: SchulteConfiguration) {
-        var gamePresentable = moduleFactory.makeSchulteGame(configuration: configuration)
-        gamePresentable.onBackButtonDidTap = { [weak self] configuration in
+    private func showTraining(configuration: SchulteConfiguration) {
+        var trainingPresentable = moduleFactory.makeSchulteTraining(configuration: configuration)
+        trainingPresentable.onBackButtonDidTap = { [weak self] configuration in
             guard let self = self else { return }
             self.configuration = configuration
             self.configurationPresentable?.enablePauseMode()
             self.router.popModule()
         }
-        gamePresentable.onTrainingDidFinish = { [weak self] totalTime in
+        trainingPresentable.onTrainingDidFinish = { [weak self] totalTime in
             self?.showResult(totalTime: totalTime)
         }
-        router.show(gamePresentable, with: .push)
+        router.show(trainingPresentable, with: .push)
     }
 
     private func showResult(totalTime: String) {
