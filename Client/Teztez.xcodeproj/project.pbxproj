@@ -905,9 +905,9 @@
 			isa = PBXGroup;
 			children = (
 				C463DC1D2459D77800E265FF /* ActionSheet */,
-				C463DC062459D32C00E265FF /* TextInput */,
 				C4B88F5E2450CE8D00D1D1BA /* ActivitiesIntro */,
 				C4C067032458A1A900EF39B8 /* FontSizeChange */,
+				C463DC062459D32C00E265FF /* TextInput */,
 			);
 			path = Common;
 			sourceTree = "<group>";
