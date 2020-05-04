@@ -1,4 +1,0 @@
-module CURLParser {
-    umbrella "/Users/Aidar/workspace/croco/teztez/Server/Gateway/.build/checkouts/vapor/Sources/CURLParser/include"
-    export *
-}
