@@ -12,7 +12,6 @@ enum SchulteNumberState {
     case correct
     case incorrect
     case none
-    case underlined
 }
 
 struct SchulteTrainingViewModel {

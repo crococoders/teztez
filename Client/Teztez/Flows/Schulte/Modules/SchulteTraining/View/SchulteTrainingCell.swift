@@ -31,9 +31,6 @@ final class SchulteTrainingCell: UICollectionViewCell {
         case .none:
             guard contentView.layer.sublayers?.first is CAGradientLayer else { return }
             contentView.layer.sublayers?.remove(at: 0)
-        case .underlined:
-            layer.borderWidth = 1.0
-            layer.borderColor = UIColor.white.cgColor
         }
     }
 }

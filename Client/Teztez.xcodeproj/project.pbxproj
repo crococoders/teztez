@@ -651,10 +651,10 @@
 		C41FA81B24608CD800E515EC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C41FA81F24608CD800E515EC /* SchulteTrainingCollectionViewDataSource.swift */,
 				C41FA81C24608CD800E515EC /* SchulteTrainingCollectionViewDelegate.swift */,
 				C41FA81D24608CD800E515EC /* SchulteTrainingViewController.swift */,
 				C41FA81E24608CD800E515EC /* SchulteTrainingViewController.xib */,
-				C41FA81F24608CD800E515EC /* SchulteTrainingCollectionViewDataSource.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

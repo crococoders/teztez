@@ -108,15 +108,9 @@ final class SchulteTrainingStore {
     }
 
     private func updateViewModelStateAt(index: Int, isCorrect: Bool) {
-        if isCorrect {
-            viewModels[index].state = .correct
-            state = .updated(index: index, viewModels: viewModels)
-            viewModels[index].state = .none
-        } else {
-            viewModels[index].state = .incorrect
-            state = .updated(index: index, viewModels: viewModels)
-            viewModels[index].state = .none
-        }
+        viewModels[index].state = isCorrect ? .correct : .incorrect
+        state = .updated(index: index, viewModels: viewModels)
+        viewModels[index].state = .none
     }
 
     private func finishTraining() {

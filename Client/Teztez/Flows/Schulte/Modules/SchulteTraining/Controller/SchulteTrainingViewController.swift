@@ -62,7 +62,7 @@ final class SchulteTrainingViewController: ViewController, SchulteTrainingPresen
                 self.messageLabel.text = isInversed ? R.string.schulteTraining.concentrateInverseMessage() :
                     R.string.schulteTraining.concentrateMessage()
             case let .nextNumberUpdated(number):
-                self.nextElementLabel.text = "Next \(number)"
+                self.nextElementLabel.text = R.string.schulteTraining.next() + "\(number)"
             case let .updated(index, viewModels):
                 self.collectionViewDataSource.viewModels = viewModels
                 self.collectionView.performUsingPresentationValues {
