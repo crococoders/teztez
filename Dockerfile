@@ -4,7 +4,7 @@
 FROM vapor/swift:5.2 as build
 ARG service_folder
 
-WORKDIR /build
+WORKDIR /service
 COPY Shared ./Shared
 # First just resolve dependencies.
 # This creates a cached layer that can be reused 
