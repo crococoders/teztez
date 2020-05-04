@@ -48,11 +48,21 @@ final class SchulteCoordinator: Coordinator, SchulteCoordinatorOutput {
         configurationPresentable?.onNextButtonDidTap = { [weak self] configuration in
             self?.showGame(configuration: configuration)
         }
+        configurationPresentable?.onContinueButtonDidTap = { [weak self] in
+            guard let configuration = self?.configuration else { return }
+            self?.showGame(configuration: configuration)
+        }
         router.setRootModule(configurationPresentable)
     }
 
     private func showGame(configuration: SchulteConfiguration) {
         var gamePresentable = moduleFactory.makeSchulteGame(configuration: configuration)
+        gamePresentable.onBackButtonDidTap = { [weak self] configuration in
+            guard let self = self else { return }
+            self.configuration = configuration
+            self.configurationPresentable?.enablePauseMode()
+            self.router.popModule()
+        }
         router.show(gamePresentable, with: .push)
     }
 }

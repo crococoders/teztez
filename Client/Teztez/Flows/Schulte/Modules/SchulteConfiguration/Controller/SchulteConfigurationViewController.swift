@@ -12,11 +12,15 @@ import UIKit
 protocol SchulteConfigurationPresentable: Presentable {
     var onCloseButtonDidTap: Callback? { get set }
     var onNextButtonDidTap: ((_ configuration: SchulteConfiguration) -> Void)? { get set }
+    var onContinueButtonDidTap: Callback? { get set }
+
+    func enablePauseMode()
 }
 
 final class SchulteConfigurationViewController: ViewController, SchulteConfigurationPresentable {
     var onCloseButtonDidTap: Callback?
     var onNextButtonDidTap: ((_ configuration: SchulteConfiguration) -> Void)?
+    var onContinueButtonDidTap: Callback?
 
     private let store: SchulteConfigurationStore
     private var cancellables = Set<AnyCancellable>()
@@ -48,12 +52,22 @@ final class SchulteConfigurationViewController: ViewController, SchulteConfigura
         switch sender.tag {
         case 0:
             store.dispatch(action: .didTapStartButton)
+        case 1:
+            onContinueButtonDidTap?()
         default:
             break
         }
     }
 
-    @IBAction func restartButtonDidTap(_ sender: UIButton) {}
+    @IBAction func restartButtonDidTap(_ sender: UIButton) {
+        store.dispatch(action: .didTapStartButton)
+    }
+
+    func enablePauseMode() {
+        restartButton.isHidden = false
+        startButton.setTitle(R.string.schulteConfiguration.continue(), for: .normal)
+        startButton.tag = 1
+    }
 
     private func setupObservers() {
         store.$state.sink { [weak self] state in

@@ -9,15 +9,15 @@
 import UIKit
 
 final class SchulteGameCollectionViewDataSource: NSObject, UICollectionViewDataSource {
-    var numbers: [Int] = []
+    var viewModels: [SchulteGameViewModel] = []
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        numbers.count
+        viewModels.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: SchulteGameCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.configure(with: SchulteGameViewModel(number: "\(numbers[indexPath.row])"))
+        cell.configure(with: viewModels[indexPath.row])
         return cell
     }
 }

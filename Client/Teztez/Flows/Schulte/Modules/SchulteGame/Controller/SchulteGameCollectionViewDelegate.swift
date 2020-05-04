@@ -13,8 +13,6 @@ private enum Constants {
 }
 
 final class SchulteGameCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout {
-    var numbers: [Int] = []
-
     private let store: SchulteGameStore
 
     init(store: SchulteGameStore) {

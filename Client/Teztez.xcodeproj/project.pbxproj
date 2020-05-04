@@ -51,6 +51,7 @@
 		C41FA7F7245EDD5500E515EC /* SchulteGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7F6245EDD5500E515EC /* SchulteGameCell.swift */; };
 		C41FA7F9245EDD8100E515EC /* SchulteGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41FA7F8245EDD8100E515EC /* SchulteGameCell.xib */; };
 		C41FA7FB245EDEC900E515EC /* SchulteGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7FA245EDEC900E515EC /* SchulteGameViewModel.swift */; };
+		C41FA7FC245F319D00E515EC /* SchulteGame.strings in Resources */ = {isa = PBXBuildFile; fileRef = B47B6398526D3642787520F9 /* SchulteGame.strings */; };
 		C463DC132459D32C00E265FF /* TextInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC0A2459D32C00E265FF /* TextInputViewController.xib */; };
 		C463DC142459D32C00E265FF /* TextInputTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0B2459D32C00E265FF /* TextInputTextViewDelegate.swift */; };
 		C463DC162459D32C00E265FF /* TextInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463DC0D2459D32C00E265FF /* TextInputViewController.swift */; };
@@ -1448,6 +1449,7 @@
 				C4197B942450B1F900811F37 /* Activities.strings in Resources */,
 				C463DC75245CAF8500E265FF /* PersonalCoach.strings in Resources */,
 				C463DC8B245CAF9600E265FF /* ActivityTextInputView.xib in Resources */,
+				C41FA7FC245F319D00E515EC /* SchulteGame.strings in Resources */,
 				C4F818EF244B289400AE73CE /* LaunchScreen.storyboard in Resources */,
 				C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */,
 				C41FA7DE245EB94D00E515EC /* SchulteConfigurationViewController.xib in Resources */,

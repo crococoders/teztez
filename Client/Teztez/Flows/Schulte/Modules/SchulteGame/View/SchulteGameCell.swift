@@ -11,11 +11,29 @@ import UIKit
 final class SchulteGameCell: UICollectionViewCell {
     @IBOutlet private var numberLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
     func configure(with viewModel: SchulteGameViewModel) {
         numberLabel.text = viewModel.number
+        setupViews(by: viewModel.state)
+    }
+
+    private func setupViews(by state: SchulteNumberState) {
+        switch state {
+        case .correct:
+            contentView.applyGradient(colors: [UIColor.stGreenLight.cgColor, UIColor.systemGreen.cgColor])
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
+                self?.contentView.layer.sublayers?.remove(at: 0)
+            }
+        case .incorrect:
+            contentView.applyGradient(colors: [UIColor.stPinkLight.cgColor, UIColor.stPinkDark.cgColor])
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
+                self?.contentView.layer.sublayers?.remove(at: 0)
+            }
+        case .none:
+            guard contentView.layer.sublayers?.first is CAGradientLayer else { return }
+            contentView.layer.sublayers?.remove(at: 0)
+        case .underlined:
+            layer.borderWidth = 1.0
+            layer.borderColor = UIColor.white.cgColor
+        }
     }
 }

@@ -8,6 +8,14 @@
 
 import Foundation
 
+enum SchulteNumberState {
+    case correct
+    case incorrect
+    case none
+    case underlined
+}
+
 struct SchulteGameViewModel {
     let number: String
+    var state: SchulteNumberState
 }
