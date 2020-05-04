@@ -12,6 +12,7 @@ protocol SchulteModuleFactory {
     func makeSchulteIntro() -> ActivitiesIntroPresentable
     func makeSchulteConfiguration() -> SchulteConfigurationPresentable
     func makeSchulteGame(configuration: SchulteConfiguration) -> SchulteGamePresentable
+    func makeSchulteResult(totalTime: String) -> SchulteResultPresentable
 }
 
 extension ModuleFactory: SchulteModuleFactory {
@@ -29,6 +30,12 @@ extension ModuleFactory: SchulteModuleFactory {
     func makeSchulteGame(configuration: SchulteConfiguration) -> SchulteGamePresentable {
         let store = SchulteGameStore(configuration: configuration)
         let viewController = SchulteGameViewController(store: store)
+        return viewController
+    }
+
+    func makeSchulteResult(totalTime: String) -> SchulteResultPresentable {
+        let store = SchulteResultStore(totalTime: totalTime)
+        let viewController = SchulteResultViewController(store: store)
         return viewController
     }
 }

@@ -63,6 +63,20 @@ final class SchulteCoordinator: Coordinator, SchulteCoordinatorOutput {
             self.configurationPresentable?.enablePauseMode()
             self.router.popModule()
         }
+        gamePresentable.onTrainingDidFinish = { [weak self] totalTime in
+            self?.showResult(totalTime: totalTime)
+        }
         router.show(gamePresentable, with: .push)
+    }
+
+    private func showResult(totalTime: String) {
+        var result = moduleFactory.makeSchulteResult(totalTime: totalTime)
+        result.onHomeButtonDidTap = { [weak self] in
+            self?.onFlowDidFinish?()
+        }
+        result.onRestartButtonDidTap = { [weak self] in
+            self?.showConfiguration()
+        }
+        router.setRootModule(result)
     }
 }
