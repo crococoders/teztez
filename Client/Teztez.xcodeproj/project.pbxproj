@@ -11,8 +11,10 @@
 		48B246AB6A2B550320B3067B /* PersonalCoachTrainingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0CC5886C0EDB96C1B81B77 /* PersonalCoachTrainingStore.swift */; };
 		5591451CBFCF68860AAB37A8 /* BackwardsConvertTextStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B78DCD355FF23007B6E35 /* BackwardsConvertTextStore.swift */; };
 		9EE7A3D8BD72294269681BB5 /* BackwardsConvertTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71331ABBB051174193E4C4F4 /* BackwardsConvertTextViewController.swift */; };
+		9F86AA6BFF581E551F799928 /* SuggestActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F0EB04B0F36237A24EC5E6 /* SuggestActivityViewController.swift */; };
 		A4C99ABF8799D15B4E0AEB49 /* PersonalCoachTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D54E55B2D05740B15B068A /* PersonalCoachTrainingViewController.swift */; };
 		AAD9220CE61DB7867CEDD9B4 /* BlenderConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4CEAED3F3A171DE2A1861C /* BlenderConfigurationViewController.swift */; };
+		B5A5E2E623CAC65921821EDD /* SuggestActivityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A4B5A77A3E1899CD64FA19 /* SuggestActivityStore.swift */; };
 		C40AE0BA24535E27008BC71C /* ActivitiesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C40AE0B924535E27008BC71C /* ActivitiesCell.xib */; };
 		C40AE0BC24535E4B008BC71C /* ActivitiesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */; };
 		C40AE0BF245363D3008BC71C /* UICollectionView+Dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40AE0BE245363D3008BC71C /* UICollectionView+Dequeue.swift */; };
@@ -65,6 +67,10 @@
 		C41FA85924608EBC00E515EC /* ActivitySwitchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA85524608EBC00E515EC /* ActivitySwitchViewModel.swift */; };
 		C41FA85A24608EBC00E515EC /* ActivitySwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA85724608EBC00E515EC /* ActivitySwitchView.swift */; };
 		C41FA85B24608EBC00E515EC /* ActivitySwitchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41FA85824608EBC00E515EC /* ActivitySwitchView.xib */; };
+		C41FA85D2460939900E515EC /* SuggestActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C41FA85C2460939900E515EC /* SuggestActivityViewController.xib */; };
+		C41FA85E246096A800E515EC /* SuggestActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4D02F34FE0C7F72B181357D /* SuggestActivity.strings */; };
+		C41FA860246099AE00E515EC /* SuggestActivityTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA85F246099AE00E515EC /* SuggestActivityTextViewDelegate.swift */; };
+		C41FA86324609FFF00E515EC /* SuggestActivityCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA86224609FFF00E515EC /* SuggestActivityCoordinator.swift */; };
 		C42B54E5245EE46200E3C61D /* BlenderConfiguration.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F52AA754D5CC7AE1B05C8D2 /* BlenderConfiguration.strings */; };
 		C42B54E7245EE6DE00E3C61D /* BlenderConfigurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42B54E6245EE6DE00E3C61D /* BlenderConfigurationViewController.xib */; };
 		C42B54E9245EE9C600E3C61D /* BlenderModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B54E8245EE9C600E3C61D /* BlenderModuleFactory.swift */; };
@@ -123,6 +129,7 @@
 		C4C0670A2458AD1C00EF39B8 /* SliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4C067092458AD1C00EF39B8 /* SliderView.xib */; };
 		C4C0670C2458AD2B00EF39B8 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0670B2458AD2B00EF39B8 /* SliderView.swift */; };
 		C4C62B03245B521700EDFC52 /* FontSizeChangeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C62B02245B521700EDFC52 /* FontSizeChangeStore.swift */; };
+		C4C8FBE82461BA2F006388FA /* SuggestActivityModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8FBE72461BA2F006388FA /* SuggestActivityModuleFactory.swift */; };
 		C4CFD594245CC491009B902F /* BackwardsConvertText.strings in Resources */ = {isa = PBXBuildFile; fileRef = 356B830EFE866BDD920275CB /* BackwardsConvertText.strings */; };
 		C4D138DD244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D138DC244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift */; };
 		C4D138DF244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D138DE244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift */; };
@@ -186,6 +193,7 @@
 		09754A01CF6ECA71035E6AC9 /* PersonalCoachResultStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachResultStore.swift; sourceTree = "<group>"; };
 		167E23CE4015B5F7A68EB06E /* BlenderConvertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConvertViewController.swift; sourceTree = "<group>"; };
 		1E4CEAED3F3A171DE2A1861C /* BlenderConfigurationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConfigurationViewController.swift; sourceTree = "<group>"; };
+		22A4B5A77A3E1899CD64FA19 /* SuggestActivityStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SuggestActivityStore.swift; sourceTree = "<group>"; };
 		33D54E55B2D05740B15B068A /* PersonalCoachTrainingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachTrainingViewController.swift; sourceTree = "<group>"; };
 		356B830EFE866BDD920275CB /* BackwardsConvertText.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = BackwardsConvertText.strings; sourceTree = "<group>"; };
 		3C2B78DCD355FF23007B6E35 /* BackwardsConvertTextStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackwardsConvertTextStore.swift; sourceTree = "<group>"; };
@@ -195,6 +203,7 @@
 		90105D2C8C675D469C5508CF /* PersonalCoachResultViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachResultViewController.swift; sourceTree = "<group>"; };
 		AF942F0B986FA5ADA639D9E9 /* PersonalCoachResult.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = PersonalCoachResult.strings; sourceTree = "<group>"; };
 		AFF93C44BBE95AAD0CD0D76B /* BlenderConvertStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConvertStore.swift; sourceTree = "<group>"; };
+		B4D02F34FE0C7F72B181357D /* SuggestActivity.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = SuggestActivity.strings; sourceTree = "<group>"; };
 		C40AE0B924535E27008BC71C /* ActivitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesCell.xib; sourceTree = "<group>"; };
 		C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCell.swift; sourceTree = "<group>"; };
 		C40AE0BE245363D3008BC71C /* UICollectionView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue.swift"; sourceTree = "<group>"; };
@@ -245,6 +254,9 @@
 		C41FA85524608EBC00E515EC /* ActivitySwitchViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitySwitchViewModel.swift; sourceTree = "<group>"; };
 		C41FA85724608EBC00E515EC /* ActivitySwitchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitySwitchView.swift; sourceTree = "<group>"; };
 		C41FA85824608EBC00E515EC /* ActivitySwitchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivitySwitchView.xib; sourceTree = "<group>"; };
+		C41FA85C2460939900E515EC /* SuggestActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestActivityViewController.xib; sourceTree = "<group>"; };
+		C41FA85F246099AE00E515EC /* SuggestActivityTextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestActivityTextViewDelegate.swift; sourceTree = "<group>"; };
+		C41FA86224609FFF00E515EC /* SuggestActivityCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestActivityCoordinator.swift; sourceTree = "<group>"; };
 		C42B54E6245EE6DE00E3C61D /* BlenderConfigurationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlenderConfigurationViewController.xib; sourceTree = "<group>"; };
 		C42B54E8245EE9C600E3C61D /* BlenderModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderModuleFactory.swift; sourceTree = "<group>"; };
 		C42B54EA245EE9D300E3C61D /* BlenderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderCoordinator.swift; sourceTree = "<group>"; };
@@ -300,6 +312,7 @@
 		C4C067092458AD1C00EF39B8 /* SliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderView.xib; sourceTree = "<group>"; };
 		C4C0670B2458AD2B00EF39B8 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		C4C62B02245B521700EDFC52 /* FontSizeChangeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeChangeStore.swift; sourceTree = "<group>"; };
+		C4C8FBE72461BA2F006388FA /* SuggestActivityModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestActivityModuleFactory.swift; sourceTree = "<group>"; };
 		C4D138DC244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4D138DE244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateConfiguratorFactory.swift; sourceTree = "<group>"; };
 		C4F7AFCC24547229007D6289 /* ActivitiesIntroBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesIntroBlockView.swift; sourceTree = "<group>"; };
@@ -351,6 +364,7 @@
 		C4F8198D244C562400AE73CE /* SFProRounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProRounded-Regular.otf"; sourceTree = "<group>"; };
 		C4F8198F244C582B00AE73CE /* FontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyles.swift; sourceTree = "<group>"; };
 		CF0CC5886C0EDB96C1B81B77 /* PersonalCoachTrainingStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachTrainingStore.swift; sourceTree = "<group>"; };
+		D4F0EB04B0F36237A24EC5E6 /* SuggestActivityViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SuggestActivityViewController.swift; sourceTree = "<group>"; };
 		FDED4963B01E0294FEDC2B2C /* BlenderConvert.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = BlenderConvert.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -440,6 +454,14 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		5C669DAF8C66010474DFA2D4 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				22A4B5A77A3E1899CD64FA19 /* SuggestActivityStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		653F2A3CA0C3BF3D6C2A2569 /* Store */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +487,16 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		87F4B5427345974FFFF8C098 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C41FA85F246099AE00E515EC /* SuggestActivityTextViewDelegate.swift */,
+				D4F0EB04B0F36237A24EC5E6 /* SuggestActivityViewController.swift */,
+				C41FA85C2460939900E515EC /* SuggestActivityViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		B02B518864ACD50FE3B2BDD6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -472,6 +504,17 @@
 				C4521BDC245F050100EF2CB7 /* BlenderConvertViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B652D0DBB592FE284CB793C0 /* SuggestActivity */ = {
+			isa = PBXGroup;
+			children = (
+				C41FA86124609FE800E515EC /* Coordinator */,
+				87F4B5427345974FFFF8C098 /* Controller */,
+				E4C0E6A002B10DC5DA57ED3E /* Localization */,
+				5C669DAF8C66010474DFA2D4 /* Store */,
+			);
+			path = SuggestActivity;
 			sourceTree = "<group>";
 		};
 		C40AE0B824535B31008BC71C /* View */ = {
@@ -788,6 +831,15 @@
 				C41FA85824608EBC00E515EC /* ActivitySwitchView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C41FA86124609FE800E515EC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C41FA86224609FFF00E515EC /* SuggestActivityCoordinator.swift */,
+				C4C8FBE72461BA2F006388FA /* SuggestActivityModuleFactory.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		C42B54ED245EE9E200E3C61D /* Coordinator */ = {
@@ -1365,6 +1417,7 @@
 				C4197B7A2450A08700811F37 /* MainTabBar */,
 				C463DC5F245CAF8500E265FF /* PersonalCoach */,
 				C41FA81324608CD800E515EC /* Schulte */,
+				B652D0DBB592FE284CB793C0 /* SuggestActivity */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -1658,6 +1711,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E4C0E6A002B10DC5DA57ED3E /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				B4D02F34FE0C7F72B181357D /* SuggestActivity.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		FA7536925925EB41120D481E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -1761,11 +1822,13 @@
 				C4F8198A244C55FB00AE73CE /* SFProRounded-Bold.otf in Resources */,
 				C42B54E5245EE46200E3C61D /* BlenderConfiguration.strings in Resources */,
 				C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */,
+				C41FA85E246096A800E515EC /* SuggestActivity.strings in Resources */,
 				C463DC98245D5F2700E265FF /* PersonalCoachTrainingViewController.xib in Resources */,
 				C41FA84C24608CD800E515EC /* SchulteResult.strings in Resources */,
 				C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */,
 				C4F81986244C55D300AE73CE /* SFProDisplay-Bold.otf in Resources */,
 				C41FA84724608CD800E515EC /* SchulteConfiguration.strings in Resources */,
+				C41FA85D2460939900E515EC /* SuggestActivityViewController.xib in Resources */,
 				C4F7AFD724547E1A007D6289 /* ActivityIconView.xib in Resources */,
 				C41FA84B24608CD800E515EC /* SchulteResultViewController.xib in Resources */,
 				C41FA7D6245DEB0300E515EC /* PersonalCoachTraining.strings in Resources */,
@@ -1882,6 +1945,7 @@
 				C4968908245CC9E500CA540E /* BackwardsModuleFactory.swift in Sources */,
 				C4F8195A244B890B00AE73CE /* AppDelegateConfiguratorFactory.swift in Sources */,
 				C42B54EB245EE9D300E3C61D /* BlenderCoordinator.swift in Sources */,
+				C41FA86324609FFF00E515EC /* SuggestActivityCoordinator.swift in Sources */,
 				C4F81919244B761700AE73CE /* UIColor+Hex.swift in Sources */,
 				C463DC8A245CAF9600E265FF /* ActivityTextInputViewModel.swift in Sources */,
 				C41FA84924608CD800E515EC /* SchulteConfigurationStore.swift in Sources */,
@@ -1906,6 +1970,7 @@
 				C4F8192C244B76CE00AE73CE /* UITextField+Indent.swift in Sources */,
 				C41FA83C24608CD800E515EC /* SchulteTrainingCollectionViewDelegate.swift in Sources */,
 				C4F81924244B76A500AE73CE /* UITableView+Register.swift in Sources */,
+				C41FA860246099AE00E515EC /* SuggestActivityTextViewDelegate.swift in Sources */,
 				C41FA85924608EBC00E515EC /* ActivitySwitchViewModel.swift in Sources */,
 				C4BD0F2C244DF0020056E8C1 /* SceneDelegate.swift in Sources */,
 				C42B54E9245EE9C600E3C61D /* BlenderModuleFactory.swift in Sources */,
@@ -1935,6 +2000,7 @@
 				C4D138DF244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift in Sources */,
 				C4F8193C244B817800AE73CE /* ApplicationLaunchInstructor.swift in Sources */,
 				C463DC90245CAF9600E265FF /* ActivitySelectValueViewModel.swift in Sources */,
+				C4C8FBE82461BA2F006388FA /* SuggestActivityModuleFactory.swift in Sources */,
 				C41D2C8B2454F30800A56C2F /* Array+Factory.swift in Sources */,
 				C4F7AFCD24547229007D6289 /* ActivitiesIntroBlockView.swift in Sources */,
 				C4F81955244B834500AE73CE /* ApplicationCoordinator.swift in Sources */,
@@ -1998,6 +2064,8 @@
 				AAD9220CE61DB7867CEDD9B4 /* BlenderConfigurationViewController.swift in Sources */,
 				DFAD0788A88395F146855A73 /* BlenderConfigurationStore.swift in Sources */,
 				D9F4E2B42243C49E92A285BD /* BlenderConvertViewController.swift in Sources */,
+				9F86AA6BFF581E551F799928 /* SuggestActivityViewController.swift in Sources */,
+				B5A5E2E623CAC65921821EDD /* SuggestActivityStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

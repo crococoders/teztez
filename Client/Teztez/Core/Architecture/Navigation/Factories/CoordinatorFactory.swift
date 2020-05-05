@@ -51,4 +51,11 @@ final class CoordinatorFactory {
                                              router: Router(rootController: rootCoontroller))
         return (coordinator, rootCoontroller)
     }
+
+    func makeSuggestActivityCoordinator() -> (coordinator: Coordinator & SuggestActivityCoordinatorOutput, module: Presentable) {
+        let rootCoontroller = CoordinatorNavigationController()
+        let coordinator = SuggestActivityCoordinator(moduleFactory: ModuleFactory.shared,
+                                                     router: Router(rootController: rootCoontroller))
+        return (coordinator, rootCoontroller)
+    }
 }
