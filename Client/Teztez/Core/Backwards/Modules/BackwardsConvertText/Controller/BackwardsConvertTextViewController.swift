@@ -69,7 +69,7 @@ final class BackwardsConvertTextViewController: ViewController, BackwardsConvert
     }
 
     private func setupUI() {
-        bottomView.applyGradient(colors: [UIColor.systemGray.withAlphaComponent(0.8).cgColor,
+        bottomView.applyGradient(colors: [UIColor.clear.cgColor,
                                           UIColor.systemGray.cgColor],
                                  direction: .topToBottom)
         setupNavigationBar()

@@ -40,9 +40,9 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdv-wv-9qx">
-                    <rect key="frame" x="0.0" y="722" width="414" height="140"/>
+                    <rect key="frame" x="0.0" y="611" width="414" height="251"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="140" id="tKb-gN-dcb"/>
+                        <constraint firstAttribute="height" constant="251" id="Yj6-2b-PJf"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGz-px-Lgg" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
@@ -73,7 +73,7 @@
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <viewLayoutGuide key="safeArea" id="tO5-Pa-cdA"/>
-            <point key="canvasLocation" x="139" y="125"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
         </view>
     </objects>
 </document>

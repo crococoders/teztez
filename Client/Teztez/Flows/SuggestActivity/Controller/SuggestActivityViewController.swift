@@ -1,38 +1,41 @@
 //
-//  TextInputViewController.swift
+//  SuggestActivityViewController.swift
 //  Teztez
 //
-//  Created by Almas Zainoldin on 27/04/2020.
+//  Created by Almas Zainoldin on 05/05/2020.
 //  Copyright © 2020 Crococoders. All rights reserved.
 //
 
 import Combine
 import UIKit
 
-protocol TextInputPresentable: Presentable {
-    var onDoneButtonDidTap: ((_ text: String) -> Void)? { get set }
+protocol SuggestActivityPresentable: Presentable {
+    var onSendButtonDidTap: Callback? { get set }
     var onCancelButtonDidTap: Callback? { get set }
 }
 
 private enum Constants {
     static let edgeInsets = UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 40)
     static let animationDuration = 0.2
+    static let placeholderAttributedString = NSAttributedString(string: R.string.suggestActivity.title(),
+                                                                attributes: [NSAttributedString.Key.foregroundColor: UIColor.systemGray4])
 }
 
-final class TextInputViewController: ViewController, TextInputPresentable {
-    var onDoneButtonDidTap: ((_ text: String) -> Void)?
+final class SuggestActivityViewController: ViewController, SuggestActivityPresentable {
+    var onSendButtonDidTap: Callback?
     var onCancelButtonDidTap: Callback?
 
-    private let store: TextInputStore
-    private let textViewDelegate: TextInputTextViewDelegate
+    private let store: SuggestActivityStore
+    private let textViewDelegate: SuggestActivtityTextViewDelegate
     private var cancellables = Set<AnyCancellable>()
 
-    @IBOutlet private var textView: UITextView!
+    @IBOutlet private var titleTextField: UITextField!
+    @IBOutlet private var feedBackTextView: UITextView!
     @IBOutlet private var resetButton: UIButton!
 
-    init(store: TextInputStore) {
+    init(store: SuggestActivityStore) {
         self.store = store
-        textViewDelegate = TextInputTextViewDelegate(store: self.store)
+        textViewDelegate = SuggestActivtityTextViewDelegate(store: store)
         super.init(nibName: String(describing: Self.self), bundle: nil)
     }
 
@@ -51,8 +54,8 @@ final class TextInputViewController: ViewController, TextInputPresentable {
         setupNavigationBar()
     }
 
-    @IBAction private func resetButtonDidTap() {
-        textView.text = ""
+    @IBAction func resetButtonDidTap(_ sender: UIButton) {
+        feedBackTextView.text = ""
         store.dispatch(action: .didResetText)
     }
 
@@ -62,31 +65,34 @@ final class TextInputViewController: ViewController, TextInputPresentable {
                 let self = self,
                 let state = state else { return }
             switch state {
-            case let .textSet(text):
-                self.textView.text = text
-                self.setResetButtonVisibility(true)
-                self.setDoneButtonAvailability(true)
             case .reset:
                 self.setResetButtonVisibility(false)
                 self.setDoneButtonAvailability(false)
             case .textChanging:
                 self.setResetButtonVisibility(true)
                 self.setDoneButtonAvailability(true)
-            case let .warned(viewModel):
-                self.showActionSheet(with: viewModel)
+            case .sended:
+                self.onSendButtonDidTap?()
             }
         }.store(in: &cancellables)
     }
 
     private func setupUI() {
+        setupTextField()
         setupTextView()
         setupResetButton()
     }
 
+    private func setupTextField() {
+        titleTextField.addLeftIndent(width: 16)
+        titleTextField.addRightIndent(width: 16)
+        titleTextField.attributedPlaceholder = Constants.placeholderAttributedString
+    }
+
     private func setupTextView() {
-        textView.textContainerInset = Constants.edgeInsets
-        textView.becomeFirstResponder()
-        textView.delegate = textViewDelegate
+        feedBackTextView.textContainerInset = Constants.edgeInsets
+        feedBackTextView.becomeFirstResponder()
+        feedBackTextView.delegate = textViewDelegate
     }
 
     private func setupResetButton() {
@@ -96,19 +102,19 @@ final class TextInputViewController: ViewController, TextInputPresentable {
     }
 
     private func setupNavigationBar() {
-        title = R.string.textInput.navigationTitle()
+        title = R.string.suggestActivity.navigationTitle()
         navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
         navigationController?.navigationBar.shadowImage = UIImage.imageWithColor(color: .systemGray3)
         navigationController?.navigationBar.tintColor = .accentBlue
         navigationController?.navigationBar.barTintColor = .systemGray
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: R.string.textInput.cancel(),
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: R.string.suggestActivity.cancel(),
                                                            style: .plain,
                                                            target: self,
                                                            action: #selector(cancelButtonDidTap))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: R.string.textInput.done(),
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: R.string.suggestActivity.send(),
                                                             style: .plain,
                                                             target: self,
-                                                            action: #selector(doneButtonDidTap))
+                                                            action: #selector(sendButtonDidTap))
         setDoneButtonAvailability(false)
     }
 
@@ -119,31 +125,23 @@ final class TextInputViewController: ViewController, TextInputPresentable {
         resetButton.isEnabled = isVisible
     }
 
-    private func showActionSheet(with warningViewModel: ActionSheetViewModel) {
-        showActionSheet(with: warningViewModel) { [weak self] in
-            self?.onCancelButtonDidTap?()
-        }
-    }
-
     private func setDoneButtonAvailability(_ isAvailable: Bool) {
         navigationItem.rightBarButtonItem?.isEnabled = isAvailable
         navigationItem.rightBarButtonItem?.tintColor = isAvailable ? .accentBlue : .systemGray3
     }
 
     @objc
-    private func doneButtonDidTap() {
+    private func sendButtonDidTap() {
         guard
-            let text = textView.text,
-            !text.isEmpty else { return }
-        onDoneButtonDidTap?(text)
+            let title = titleTextField.text,
+            !title.isEmpty,
+            let feedback = feedBackTextView.text,
+            !feedback.isEmpty else { return }
+        store.dispatch(action: .didSendFeedback(title: title, feedback: feedback))
     }
 
     @objc
     private func cancelButtonDidTap() {
-        guard !textView.text.isEmpty else {
-            onCancelButtonDidTap?()
-            return
-        }
-        store.dispatch(action: .didTapCancelButton)
+        onCancelButtonDidTap?()
     }
 }
