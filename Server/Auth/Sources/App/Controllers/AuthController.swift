@@ -35,9 +35,21 @@ struct AuthController: RouteCollection {
     
     func login(request: Request) throws -> EventLoopFuture<UserToken> {
         let user = try request.auth.require(User.self)
-        let token = try user.generateToken()
-        return token.save(on: request.db)
-            .map { token }
+        let tokenExistsFuture = UserToken.query(on: request.db).filter(\.$user.$id, .equal, user.id!).first()
+        return tokenExistsFuture.flatMap { (tokenExists) -> EventLoopFuture<UserToken> in
+            do {
+                let token = try user.generateToken()
+                if let tokenExists = tokenExists {
+                    tokenExists.value = token.value
+                    tokenExists.createdAt = token.createdAt
+                    return tokenExists.update(on: request.db).map { tokenExists }
+                } else {
+                    return token.save(on: request.db).map { token }
+                }
+            } catch {
+                return request.eventLoop.makeFailedFuture(error)
+            }
+        }
     }
     
     func profile(request: Request) throws -> User {

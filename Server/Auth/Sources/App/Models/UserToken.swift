@@ -19,6 +19,9 @@ final class UserToken: Model, Content {
 
     @Parent(key: "user_id")
     var user: User
+    
+    @Timestamp(key: "created_at", on: .create)
+    var createdAt: Date?
 
     init() { }
 
@@ -38,6 +41,7 @@ extension UserToken {
                 .id()
                 .field("value", .string, .required)
                 .field("user_id", .uuid, .required, .references("users", "id"))
+                .field("created_at", .datetime)
                 .unique(on: "value")
                 .create()
         }
