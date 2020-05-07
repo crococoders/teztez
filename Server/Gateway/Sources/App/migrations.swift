@@ -1,9 +1,10 @@
 //
 //  File.swift
+//  
 //
+//  Created by Aidar Nugmanov on 5/7/20.
 //
-//  Created by Temirkhan Sailau on 4/30/20.
-//
+
 import Vapor
 
 func configureMigrations(for app: Application) throws {
