@@ -61,6 +61,13 @@ final class FeedsStore {
                 case .huge:
                     break
                 }
+            case let .information(_, type):
+                switch type {
+                case let .headlined(date, model):
+                    items.append(.informationHeadlined(viewModel: InformationHeadlinedViewModel(date: date, model: model)))
+                default:
+                    break
+                }
             default:
                 break
             }

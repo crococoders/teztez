@@ -8,10 +8,10 @@
 import Foundation
 
 public struct DetailedInformationBlock: Codable {
-    let coverImage: String
-    let metaTitle: String
-    let title: String
-    let subtitle: String
+    public let coverImage: String
+    public let metaTitle: String
+    public let title: String
+    public let subtitle: String
     
     public init(coverImage: String, metaTitle: String, title: String, subtitle: String) {
         self.coverImage = coverImage

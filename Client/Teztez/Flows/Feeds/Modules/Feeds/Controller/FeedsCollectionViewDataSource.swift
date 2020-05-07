@@ -29,6 +29,10 @@ final class FeedsCollectionViewDataSource: NSObject, UICollectionViewDataSource 
             let cell: StatisticsSmallCell = collectionView.dequeueReusableCell(for: indexPath)
             cell.configure(with: viewModel)
             return cell
+        case let .informationHeadlined(viewModel):
+            let cell: InformationHeadlinedCell = collectionView.dequeueReusableCell(for: indexPath)
+            cell.configure(with: viewModel)
+            return cell
         }
     }
 }

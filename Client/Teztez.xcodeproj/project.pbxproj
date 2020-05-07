@@ -116,6 +116,10 @@
 		C490F10624646CF400623DF7 /* StatisticsSmallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F10524646CF400623DF7 /* StatisticsSmallCell.swift */; };
 		C490F10824646D3000623DF7 /* StatisticsSmallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C490F10724646D3000623DF7 /* StatisticsSmallCell.xib */; };
 		C490F10C246475EC00623DF7 /* StatisticsSmallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F10B246475EC00623DF7 /* StatisticsSmallViewModel.swift */; };
+		C490F10F2464818C00623DF7 /* InformationHeadlinedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C490F10E2464818C00623DF7 /* InformationHeadlinedCell.xib */; };
+		C490F1122464840A00623DF7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C490F1112464840A00623DF7 /* Kingfisher */; };
+		C490F1142464842500623DF7 /* InformationHeadlinedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F1132464842500623DF7 /* InformationHeadlinedCell.swift */; };
+		C490F1172464878500623DF7 /* InformationHeadlinedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F1162464878500623DF7 /* InformationHeadlinedViewModel.swift */; };
 		C4968908245CC9E500CA540E /* BackwardsModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4968907245CC9E500CA540E /* BackwardsModuleFactory.swift */; };
 		C496890A245CCAC400CA540E /* BackwardsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4968909245CCAC400CA540E /* BackwardsCoordinator.swift */; };
 		C499E930245D7B190065FC28 /* BackwardsConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C499E92E245D7B190065FC28 /* BackwardsConfigurationViewController.swift */; };
@@ -317,6 +321,9 @@
 		C490F10524646CF400623DF7 /* StatisticsSmallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsSmallCell.swift; sourceTree = "<group>"; };
 		C490F10724646D3000623DF7 /* StatisticsSmallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsSmallCell.xib; sourceTree = "<group>"; };
 		C490F10B246475EC00623DF7 /* StatisticsSmallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsSmallViewModel.swift; sourceTree = "<group>"; };
+		C490F10E2464818C00623DF7 /* InformationHeadlinedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationHeadlinedCell.xib; sourceTree = "<group>"; };
+		C490F1132464842500623DF7 /* InformationHeadlinedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationHeadlinedCell.swift; sourceTree = "<group>"; };
+		C490F1162464878500623DF7 /* InformationHeadlinedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationHeadlinedViewModel.swift; sourceTree = "<group>"; };
 		C4968907245CC9E500CA540E /* BackwardsModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsModuleFactory.swift; sourceTree = "<group>"; };
 		C4968909245CCAC400CA540E /* BackwardsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsCoordinator.swift; sourceTree = "<group>"; };
 		C499E92E245D7B190065FC28 /* BackwardsConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsConfigurationViewController.swift; sourceTree = "<group>"; };
@@ -408,6 +415,7 @@
 			files = (
 				1C56E07C24644A2E00303141 /* Models in Frameworks */,
 				C4F81974244BA02C00AE73CE /* Rswift in Frameworks */,
+				C490F1122464840A00623DF7 /* Kingfisher in Frameworks */,
 				C4F81977244C4F3200AE73CE /* IQKeyboardManagerSwift in Frameworks */,
 				C41A56852464231A00969F67 /* Alamofire in Frameworks */,
 				C4F8197D244C508F00AE73CE /* Hero in Frameworks */,
@@ -468,6 +476,7 @@
 			children = (
 				C490F1012464688000623DF7 /* StatisticsLongViewModel.swift */,
 				C490F10B246475EC00623DF7 /* StatisticsSmallViewModel.swift */,
+				C490F1162464878500623DF7 /* InformationHeadlinedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -536,6 +545,7 @@
 		7EEB923FBE74F6B8DEF0C318 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C490F10D2464813300623DF7 /* InfomationHeadlined */,
 				C490F10424646CC400623DF7 /* StatisticsSmall */,
 				C490F10324646CB700623DF7 /* StatisticsLong */,
 			);
@@ -1187,6 +1197,15 @@
 				C490F10724646D3000623DF7 /* StatisticsSmallCell.xib */,
 			);
 			path = StatisticsSmall;
+			sourceTree = "<group>";
+		};
+		C490F10D2464813300623DF7 /* InfomationHeadlined */ = {
+			isa = PBXGroup;
+			children = (
+				C490F1132464842500623DF7 /* InformationHeadlinedCell.swift */,
+				C490F10E2464818C00623DF7 /* InformationHeadlinedCell.xib */,
+			);
+			path = InfomationHeadlined;
 			sourceTree = "<group>";
 		};
 		C4968904245CC99600CA540E /* Backwards */ = {
@@ -1902,6 +1921,7 @@
 				C4F8197C244C508F00AE73CE /* Hero */,
 				C41A56842464231A00969F67 /* Alamofire */,
 				1C56E07B24644A2E00303141 /* Models */,
+				C490F1112464840A00623DF7 /* Kingfisher */,
 			);
 			productName = Teztez;
 			productReference = C4F818DF244B289200AE73CE /* Teztez.app */;
@@ -1937,6 +1957,7 @@
 				C4F81978244C4FCD00AE73CE /* XCRemoteSwiftPackageReference "ViewAnimator" */,
 				C4F8197B244C508F00AE73CE /* XCRemoteSwiftPackageReference "Hero" */,
 				C41A56832464231A00969F67 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C490F1102464840A00623DF7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = C4F818E0244B289200AE73CE /* Products */;
 			projectDirPath = "";
@@ -1985,6 +2006,7 @@
 				C41FA84B24608CD800E515EC /* SchulteResultViewController.xib in Resources */,
 				C41FA7D6245DEB0300E515EC /* PersonalCoachTraining.strings in Resources */,
 				C4B88F642450CF4500D1D1BA /* ActivitiesIntro.strings in Resources */,
+				C490F10F2464818C00623DF7 /* InformationHeadlinedCell.xib in Resources */,
 				C463DC132459D32C00E265FF /* TextInputViewController.xib in Resources */,
 				C41FA7D5245DE4A300E515EC /* PersonalCoachResult.strings in Resources */,
 				C4B88F6A2450CF9700D1D1BA /* ActivitiesIntroViewController.xib in Resources */,
@@ -2213,6 +2235,7 @@
 				C4F81929244B76BA00AE73CE /* UITableViewCell+DisclosureIndicator.swift in Sources */,
 				C4F8191F244B768C00AE73CE /* UIStackView+Convenience.swift in Sources */,
 				C40BB4732457498400C236C7 /* ActivitiesIntroBlockViewModelFactory.swift in Sources */,
+				C490F1142464842500623DF7 /* InformationHeadlinedCell.swift in Sources */,
 				C41FA84824608CD800E515EC /* SchulteConfiguration.swift in Sources */,
 				C4C0670C2458AD2B00EF39B8 /* SliderView.swift in Sources */,
 				9EE7A3D8BD72294269681BB5 /* BackwardsConvertTextViewController.swift in Sources */,
@@ -2227,6 +2250,7 @@
 				DFAD0788A88395F146855A73 /* BlenderConfigurationStore.swift in Sources */,
 				D9F4E2B42243C49E92A285BD /* BlenderConvertViewController.swift in Sources */,
 				9F86AA6BFF581E551F799928 /* SuggestActivityViewController.swift in Sources */,
+				C490F1172464878500623DF7 /* InformationHeadlinedViewModel.swift in Sources */,
 				B5A5E2E623CAC65921821EDD /* SuggestActivityStore.swift in Sources */,
 				D90BC9956DACD5DD4B793A8F /* FeedsViewController.swift in Sources */,
 				C4C8FBF62461CD86006388FA /* FeedsCollectionViewDataSource.swift in Sources */,
@@ -2444,6 +2468,14 @@
 				version = 5.1.0;
 			};
 		};
+		C490F1102464840A00623DF7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.13.4;
+			};
+		};
 		C4F81972244BA02C00AE73CE /* XCRemoteSwiftPackageReference "R.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
@@ -2487,6 +2519,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C41A56832464231A00969F67 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		C490F1112464840A00623DF7 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C490F1102464840A00623DF7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		C4F81973244BA02C00AE73CE /* Rswift */ = {
 			isa = XCSwiftPackageProductDependency;

@@ -35,6 +35,8 @@ final class FeedsCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowL
             return CGSize(width: collectionViewWidth, height: 56)
         case .statisticsBig:
             return CGSize(width: collectionViewWidth, height: 101)
+        case .informationHeadlined:
+            return CGSize(width: collectionViewWidth, height: 442)
         }
     }
 

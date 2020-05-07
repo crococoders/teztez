@@ -12,4 +12,5 @@ enum FeedsItemType {
     case statisticsSmall(viewModel: StatisticsSmallViewModel)
     case statisticsLong(vieWModel: StatisticsLongViewModel)
     case statisticsBig(viewModel: StatisticsSmallViewModel)
+    case informationHeadlined(viewModel: InformationHeadlinedViewModel)
 }

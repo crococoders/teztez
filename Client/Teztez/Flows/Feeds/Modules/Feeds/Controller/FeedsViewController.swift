@@ -65,6 +65,7 @@ final class FeedsViewController: ViewController, FeedsPresentable {
         collectionView.delegate = collectionViewDelegate
         collectionView.dataSource = collectionViewDataSource
         [StatisticsSmallCell.self,
-         StatisticsLongCell.self].forEach { collectionView.register(cellClass: $0) }
+         StatisticsLongCell.self,
+         InformationHeadlinedCell.self].forEach { collectionView.register(cellClass: $0) }
     }
 }
