@@ -36,6 +36,7 @@
 		C4197B902450AC5700811F37 /* ActivitiesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4197B8F2450AC5700811F37 /* ActivitiesStore.swift */; };
 		C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4197B912450B16700811F37 /* ActivitiesViewController.xib */; };
 		C4197B942450B1F900811F37 /* Activities.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4197B932450B1EE00811F37 /* Activities.strings */; };
+		C41A56852464231A00969F67 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C41A56842464231A00969F67 /* Alamofire */; };
 		C41D2C8B2454F30800A56C2F /* Array+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D2C8A2454F30800A56C2F /* Array+Factory.swift */; };
 		C41FA7CF245D8AA800E515EC /* String+WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7CE245D8AA800E515EC /* String+WordList.swift */; };
 		C41FA7D2245D99C300E515EC /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7D1245D99C300E515EC /* SecondaryButton.swift */; };
@@ -395,6 +396,7 @@
 				C4C8FBFC2461CE41006388FA /* Models in Frameworks */,
 				C4F81974244BA02C00AE73CE /* Rswift in Frameworks */,
 				C4F81977244C4F3200AE73CE /* IQKeyboardManagerSwift in Frameworks */,
+				C41A56852464231A00969F67 /* Alamofire in Frameworks */,
 				C4F8197D244C508F00AE73CE /* Hero in Frameworks */,
 				C4F8197A244C4FCD00AE73CE /* ViewAnimator in Frameworks */,
 			);
@@ -1856,6 +1858,7 @@
 				C4F81979244C4FCD00AE73CE /* ViewAnimator */,
 				C4F8197C244C508F00AE73CE /* Hero */,
 				C4C8FBFB2461CE41006388FA /* Models */,
+				C41A56842464231A00969F67 /* Alamofire */,
 			);
 			productName = Teztez;
 			productReference = C4F818DF244B289200AE73CE /* Teztez.app */;
@@ -1890,6 +1893,7 @@
 				C4F81975244C4F3200AE73CE /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				C4F81978244C4FCD00AE73CE /* XCRemoteSwiftPackageReference "ViewAnimator" */,
 				C4F8197B244C508F00AE73CE /* XCRemoteSwiftPackageReference "Hero" */,
+				C41A56832464231A00969F67 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = C4F818E0244B289200AE73CE /* Products */;
 			projectDirPath = "";
@@ -2378,6 +2382,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C41A56832464231A00969F67 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = exactVersion;
+				version = 5.1.0;
+			};
+		};
 		C4F81972244BA02C00AE73CE /* XCRemoteSwiftPackageReference "R.swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mac-cain13/R.swift.Library";
@@ -2413,6 +2425,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C41A56842464231A00969F67 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C41A56832464231A00969F67 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		C4C8FBFB2461CE41006388FA /* Models */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Models;
