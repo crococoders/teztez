@@ -64,7 +64,7 @@ struct EventController: RouteCollection {
     }
 
     func boot(routes: RoutesBuilder) throws {
-        let eventRoutes = routes.grouped("events")
+        let eventRoutes = routes.grouped("analytics")
         eventRoutes.get(Parameter.userId.queryParameter, use: getAllUserStats)
         eventRoutes.post(use: create)
         eventRoutes.delete(Parameter.eventId.queryParameter,use: delete)
