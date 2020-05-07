@@ -38,6 +38,8 @@ final class ActivitiesCoordinator: ParentCoordinator {
             runBackwardsFlow()
         case .blender:
             runBlenderFlow()
+        case .colorMatch:
+            runMatchingFlow()
         default:
             break
         }
@@ -63,6 +65,15 @@ final class ActivitiesCoordinator: ParentCoordinator {
 
     private func runBlenderFlow() {
         let (coordinator, module) = coordinatorFactory.makeBlenderCoordinator()
+        coordinator.onFlowDidFinish = { [weak self, weak coordinator] in
+            guard let coordinator = coordinator else { return }
+            self?.dismiss(child: coordinator)
+        }
+        show((coordinator, module), with: .presentInFullScreen(animated: true))
+    }
+
+    private func runMatchingFlow() {
+        let (coordinator, module) = coordinatorFactory.makeMatchingCoordinator()
         coordinator.onFlowDidFinish = { [weak self, weak coordinator] in
             guard let coordinator = coordinator else { return }
             self?.dismiss(child: coordinator)

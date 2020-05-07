@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProRounded-Semibold.otf">
+            <string>SFProRounded-Semibold</string>
+        </array>
+        <array key="SFProText-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorMatchingTrainingViewController" customModule="Teztez" customModuleProvider="target">
+            <connections>
+                <outlet property="circleView" destination="uuJ-V9-fZD" id="zqa-zN-yDx"/>
+                <outlet property="collectionView" destination="Lww-00-Qvg" id="Jox-0p-aYQ"/>
+                <outlet property="pointsLabel" destination="Ie6-sv-WjK" id="G4S-Oo-gXU"/>
+                <outlet property="progressView" destination="Z40-Zt-czn" id="9QY-hS-v02"/>
+                <outlet property="timerLabel" destination="X9j-BA-N3v" id="Yv3-V0-5l8"/>
+                <outlet property="titleLabel" destination="Lex-BY-CiF" id="B6K-JB-k5f"/>
+                <outlet property="view" destination="iN0-l3-epB" id="z5Z-EZ-HND"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find the same color blocks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lex-BY-CiF">
+                    <rect key="frame" x="20" y="120" width="215" height="20"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120pt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie6-sv-WjK">
+                    <rect key="frame" x="21" y="140" width="63" height="29"/>
+                    <fontDescription key="fontDescription" name="SFProRounded-Semibold" family="SF Pro Rounded" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:17" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X9j-BA-N3v">
+                    <rect key="frame" x="181" y="185" width="52" height="24"/>
+                    <fontDescription key="fontDescription" name="SFProRounded-Semibold" family="SF Pro Rounded" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Z40-Zt-czn">
+                    <rect key="frame" x="20" y="218" width="374" height="3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="ECY-Js-S8x"/>
+                    </constraints>
+                </progressView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ARf-nZ-6Oo" customClass="ProgressView" customModule="Teztez" customModuleProvider="target">
+                    <rect key="frame" x="20" y="218" width="374" height="3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="3" id="DuW-CL-BmK"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Lww-00-Qvg">
+                    <rect key="frame" x="20" y="245" width="374" height="546"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rhG-uK-9i0">
+                        <size key="itemSize" width="80" height="80"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uuJ-V9-fZD">
+                    <rect key="frame" x="200" y="441" width="14" height="14"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="14" id="hae-Av-MHA"/>
+                        <constraint firstAttribute="width" secondItem="uuJ-V9-fZD" secondAttribute="height" multiplier="1:1" id="mUy-ZU-fRX"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Lww-00-Qvg" secondAttribute="trailing" constant="20" id="0Cb-xh-c4y"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ARf-nZ-6Oo" secondAttribute="trailing" constant="20" id="3E3-BS-Ljh"/>
+                <constraint firstItem="Ie6-sv-WjK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="21" id="3J0-2M-aCB"/>
+                <constraint firstItem="Lww-00-Qvg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="AjA-IZ-0St"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Lww-00-Qvg" secondAttribute="bottom" constant="71" id="Giq-Ol-Fkm"/>
+                <constraint firstItem="X9j-BA-N3v" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="MkK-rl-Drr"/>
+                <constraint firstItem="Lex-BY-CiF" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="Olh-dg-9MK"/>
+                <constraint firstItem="Lex-BY-CiF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Ouh-3w-uUl"/>
+                <constraint firstItem="Z40-Zt-czn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="POx-q3-1H5"/>
+                <constraint firstItem="Ie6-sv-WjK" firstAttribute="top" secondItem="Lex-BY-CiF" secondAttribute="bottom" id="RgF-uO-NwG"/>
+                <constraint firstItem="X9j-BA-N3v" firstAttribute="top" secondItem="Ie6-sv-WjK" secondAttribute="bottom" constant="16" id="Z1A-Hz-2Bx"/>
+                <constraint firstItem="Z40-Zt-czn" firstAttribute="top" secondItem="X9j-BA-N3v" secondAttribute="bottom" constant="9" id="bie-Dm-t6y"/>
+                <constraint firstItem="ARf-nZ-6Oo" firstAttribute="top" secondItem="X9j-BA-N3v" secondAttribute="bottom" constant="9" id="cb9-JX-ee7"/>
+                <constraint firstAttribute="trailing" secondItem="Z40-Zt-czn" secondAttribute="trailing" constant="20" id="dub-M9-5NZ"/>
+                <constraint firstItem="uuJ-V9-fZD" firstAttribute="centerX" secondItem="Lww-00-Qvg" secondAttribute="centerX" id="g0H-lK-kFP"/>
+                <constraint firstItem="ARf-nZ-6Oo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="gfI-uj-mMF"/>
+                <constraint firstItem="Lww-00-Qvg" firstAttribute="top" secondItem="Z40-Zt-czn" secondAttribute="bottom" constant="24" id="j2s-lP-vfD"/>
+                <constraint firstItem="uuJ-V9-fZD" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="mdB-YT-fOr"/>
+                <constraint firstItem="Lww-00-Qvg" firstAttribute="top" secondItem="ARf-nZ-6Oo" secondAttribute="bottom" constant="24" id="nyb-HR-0Bw"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="ARf-nZ-6Oo"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="39" y="118"/>
+        </view>
+    </objects>
+</document>

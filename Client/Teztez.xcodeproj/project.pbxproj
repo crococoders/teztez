@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B560F3B144C688828421C5D /* ColorMatchingTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E2D38B76C6061F54C3204AF /* ColorMatchingTrainingViewController.swift */; };
+		2056E07BD39DF594FFD4B8EA /* ColorMatchingResultStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5B8CE989FED00777323AF2 /* ColorMatchingResultStore.swift */; };
+		21BAE1F05F8117F832F3033B /* ColorMatchingConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015CAD2D8D03E78FC32842FF /* ColorMatchingConfigurationViewController.swift */; };
 		22E2FABB4D0F6C38AADBF488 /* PersonalCoachResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90105D2C8C675D469C5508CF /* PersonalCoachResultViewController.swift */; };
+		34CDB22E4B3D903B4C9833F5 /* ColorMatchingConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405AC0F5C922B8E6157AD951 /* ColorMatchingConfigurationStore.swift */; };
 		48B246AB6A2B550320B3067B /* PersonalCoachTrainingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0CC5886C0EDB96C1B81B77 /* PersonalCoachTrainingStore.swift */; };
 		5591451CBFCF68860AAB37A8 /* BackwardsConvertTextStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B78DCD355FF23007B6E35 /* BackwardsConvertTextStore.swift */; };
 		9EE7A3D8BD72294269681BB5 /* BackwardsConvertTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71331ABBB051174193E4C4F4 /* BackwardsConvertTextViewController.swift */; };
@@ -44,6 +48,10 @@
 		C42B54E7245EE6DE00E3C61D /* BlenderConfigurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42B54E6245EE6DE00E3C61D /* BlenderConfigurationViewController.xib */; };
 		C42B54E9245EE9C600E3C61D /* BlenderModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B54E8245EE9C600E3C61D /* BlenderModuleFactory.swift */; };
 		C42B54EB245EE9D300E3C61D /* BlenderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B54EA245EE9D300E3C61D /* BlenderCoordinator.swift */; };
+		C4366881245F2F040018D914 /* ColorMatchingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4366880245F2F040018D914 /* ColorMatchingCoordinator.swift */; };
+		C4366883245F34710018D914 /* ColorMatchingPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4366882245F34710018D914 /* ColorMatchingPickerViewDelegate.swift */; };
+		C4366885245F348B0018D914 /* ColorMatchingPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4366884245F348B0018D914 /* ColorMatchingPickerViewDataSource.swift */; };
+		C4366886245F474E0018D914 /* ColorMatchingTraining.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B72AC2D0E57A2C018ACE4D1 /* ColorMatchingTraining.strings */; };
 		C4521BDD245F050100EF2CB7 /* BlenderConvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4521BDC245F050100EF2CB7 /* BlenderConvertViewController.xib */; };
 		C4584B64245E1BCF00E7F9BB /* CGFloat+Clean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4584B63245E1BCF00E7F9BB /* CGFloat+Clean.swift */; };
 		C4584B6A245EDF0800E7F9BB /* BlenderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4584B69245EDF0800E7F9BB /* BlenderConfiguration.swift */; };
@@ -78,12 +86,24 @@
 		C463DC98245D5F2700E265FF /* PersonalCoachTrainingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463DC97245D5F2700E265FF /* PersonalCoachTrainingViewController.xib */; };
 		C471CE81245F14CC00668E98 /* BlenderConvert.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDED4963B01E0294FEDC2B2C /* BlenderConvert.strings */; };
 		C471CE82245F15A000668E98 /* BlenderConvertStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF93C44BBE95AAD0CD0D76B /* BlenderConvertStore.swift */; };
+		C471CE86245F1E8200668E98 /* ColorMatchingConfigurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C471CE85245F1E8200668E98 /* ColorMatchingConfigurationViewController.xib */; };
+		C471CE87245F228500668E98 /* Matching.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43EDC680105BC7874C7EE838 /* Matching.strings */; };
+		C471CE89245F243D00668E98 /* ColorMatchingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C471CE88245F243D00668E98 /* ColorMatchingConfiguration.swift */; };
+		C471CE8B245F2D8D00668E98 /* ColorMatchingModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C471CE8A245F2D8D00668E98 /* ColorMatchingModuleFactory.swift */; };
+		C474A4C824603E2A000780BE /* BlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474A4C624603E2A000780BE /* BlockCell.swift */; };
+		C474A4C924603E2A000780BE /* BlockCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C474A4C724603E2A000780BE /* BlockCell.xib */; };
+		C47F1A37245F4D62007AFA65 /* ColorMatchingTrainingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C47F1A36245F4D62007AFA65 /* ColorMatchingTrainingViewController.xib */; };
+		C483E4F52462E287001004C3 /* ColorMatchingResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C483E4F42462E287001004C3 /* ColorMatchingResultViewController.xib */; };
+		C483E4F62462E29A001004C3 /* ColorMatchingResult.strings in Resources */ = {isa = PBXBuildFile; fileRef = F4E601C964628C4826517282 /* ColorMatchingResult.strings */; };
 		C48CF1C5245CC6BF001D577A /* BackwardsConvertTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48CF1C4245CC6BF001D577A /* BackwardsConvertTextViewController.xib */; };
 		C4968908245CC9E500CA540E /* BackwardsModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4968907245CC9E500CA540E /* BackwardsModuleFactory.swift */; };
 		C496890A245CCAC400CA540E /* BackwardsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4968909245CCAC400CA540E /* BackwardsCoordinator.swift */; };
 		C499E930245D7B190065FC28 /* BackwardsConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C499E92E245D7B190065FC28 /* BackwardsConfigurationViewController.swift */; };
 		C499E931245D7B190065FC28 /* BackwardsConfigurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C499E92F245D7B190065FC28 /* BackwardsConfigurationViewController.xib */; };
 		C499E935245D7B6C0065FC28 /* BackwardsConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C499E934245D7B6C0065FC28 /* BackwardsConfigurationStore.swift */; };
+		C49A3906246428E00072C7CB /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49A3905246428E00072C7CB /* ProgressView.swift */; };
+		C49C87CC24602FEB0094A918 /* ColorMatchingCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49C87CB24602FEB0094A918 /* ColorMatchingCollectionViewDelegate.swift */; };
+		C49C87CE246030080094A918 /* ColorMatchingCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49C87CD246030080094A918 /* ColorMatchingCollectionViewDataSource.swift */; };
 		C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */; };
 		C4A9827B244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */; };
 		C4B88F5B2450BCA700D1D1BA /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */; };
@@ -154,22 +174,31 @@
 		C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4F8198D244C562400AE73CE /* SFProRounded-Regular.otf */; };
 		C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8198F244C582B00AE73CE /* FontStyles.swift */; };
 		D2A119A5F8166CAD5364FCA0 /* PersonalCoachResultStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09754A01CF6ECA71035E6AC9 /* PersonalCoachResultStore.swift */; };
+		D8D01B5C08DBA20F1CA18E38 /* ColorMatchingTrainingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3022CD18BE8B9E501DF2C104 /* ColorMatchingTrainingStore.swift */; };
 		D9F4E2B42243C49E92A285BD /* BlenderConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167E23CE4015B5F7A68EB06E /* BlenderConvertViewController.swift */; };
 		DFAD0788A88395F146855A73 /* BlenderConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2ED7191D7E497772177623 /* BlenderConfigurationStore.swift */; };
+		F50284FFFEBCE2C48F98A626 /* ColorMatchingResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3F606C666CE764F1D3B6AB /* ColorMatchingResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		015CAD2D8D03E78FC32842FF /* ColorMatchingConfigurationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorMatchingConfigurationViewController.swift; sourceTree = "<group>"; };
 		02BAA87140157A28219EEFF4 /* PersonalCoachTraining.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = PersonalCoachTraining.strings; sourceTree = "<group>"; };
 		09754A01CF6ECA71035E6AC9 /* PersonalCoachResultStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachResultStore.swift; sourceTree = "<group>"; };
 		167E23CE4015B5F7A68EB06E /* BlenderConvertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConvertViewController.swift; sourceTree = "<group>"; };
 		1E4CEAED3F3A171DE2A1861C /* BlenderConfigurationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConfigurationViewController.swift; sourceTree = "<group>"; };
+		3022CD18BE8B9E501DF2C104 /* ColorMatchingTrainingStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorMatchingTrainingStore.swift; sourceTree = "<group>"; };
 		33D54E55B2D05740B15B068A /* PersonalCoachTrainingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachTrainingViewController.swift; sourceTree = "<group>"; };
 		356B830EFE866BDD920275CB /* BackwardsConvertText.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = BackwardsConvertText.strings; sourceTree = "<group>"; };
 		3C2B78DCD355FF23007B6E35 /* BackwardsConvertTextStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackwardsConvertTextStore.swift; sourceTree = "<group>"; };
+		405AC0F5C922B8E6157AD951 /* ColorMatchingConfigurationStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorMatchingConfigurationStore.swift; sourceTree = "<group>"; };
+		43EDC680105BC7874C7EE838 /* Matching.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = Matching.strings; sourceTree = "<group>"; };
+		4B72AC2D0E57A2C018ACE4D1 /* ColorMatchingTraining.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = ColorMatchingTraining.strings; sourceTree = "<group>"; };
 		71331ABBB051174193E4C4F4 /* BackwardsConvertTextViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackwardsConvertTextViewController.swift; sourceTree = "<group>"; };
 		7F52AA754D5CC7AE1B05C8D2 /* BlenderConfiguration.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = BlenderConfiguration.strings; sourceTree = "<group>"; };
 		8D2ED7191D7E497772177623 /* BlenderConfigurationStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConfigurationStore.swift; sourceTree = "<group>"; };
+		8E2D38B76C6061F54C3204AF /* ColorMatchingTrainingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorMatchingTrainingViewController.swift; sourceTree = "<group>"; };
 		90105D2C8C675D469C5508CF /* PersonalCoachResultViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachResultViewController.swift; sourceTree = "<group>"; };
+		AB3F606C666CE764F1D3B6AB /* ColorMatchingResultViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorMatchingResultViewController.swift; sourceTree = "<group>"; };
 		AF942F0B986FA5ADA639D9E9 /* PersonalCoachResult.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = PersonalCoachResult.strings; sourceTree = "<group>"; };
 		AFF93C44BBE95AAD0CD0D76B /* BlenderConvertStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConvertStore.swift; sourceTree = "<group>"; };
 		C40AE0B924535E27008BC71C /* ActivitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesCell.xib; sourceTree = "<group>"; };
@@ -200,6 +229,9 @@
 		C42B54E6245EE6DE00E3C61D /* BlenderConfigurationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlenderConfigurationViewController.xib; sourceTree = "<group>"; };
 		C42B54E8245EE9C600E3C61D /* BlenderModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderModuleFactory.swift; sourceTree = "<group>"; };
 		C42B54EA245EE9D300E3C61D /* BlenderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderCoordinator.swift; sourceTree = "<group>"; };
+		C4366880245F2F040018D914 /* ColorMatchingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatchingCoordinator.swift; sourceTree = "<group>"; };
+		C4366882245F34710018D914 /* ColorMatchingPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatchingPickerViewDelegate.swift; sourceTree = "<group>"; };
+		C4366884245F348B0018D914 /* ColorMatchingPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatchingPickerViewDataSource.swift; sourceTree = "<group>"; };
 		C4521BDC245F050100EF2CB7 /* BlenderConvertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlenderConvertViewController.xib; sourceTree = "<group>"; };
 		C4584B63245E1BCF00E7F9BB /* CGFloat+Clean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Clean.swift"; sourceTree = "<group>"; };
 		C4584B69245EDF0800E7F9BB /* BlenderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderConfiguration.swift; sourceTree = "<group>"; };
@@ -232,12 +264,22 @@
 		C463DC93245CB02A00E265FF /* ActivitiesItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesItemType.swift; sourceTree = "<group>"; };
 		C463DC95245CB11700E265FF /* ActivitiesIconViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesIconViewModel.swift; sourceTree = "<group>"; };
 		C463DC97245D5F2700E265FF /* PersonalCoachTrainingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalCoachTrainingViewController.xib; sourceTree = "<group>"; };
+		C471CE85245F1E8200668E98 /* ColorMatchingConfigurationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorMatchingConfigurationViewController.xib; sourceTree = "<group>"; };
+		C471CE88245F243D00668E98 /* ColorMatchingConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatchingConfiguration.swift; sourceTree = "<group>"; };
+		C471CE8A245F2D8D00668E98 /* ColorMatchingModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatchingModuleFactory.swift; sourceTree = "<group>"; };
+		C474A4C624603E2A000780BE /* BlockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockCell.swift; sourceTree = "<group>"; };
+		C474A4C724603E2A000780BE /* BlockCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlockCell.xib; sourceTree = "<group>"; };
+		C47F1A36245F4D62007AFA65 /* ColorMatchingTrainingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorMatchingTrainingViewController.xib; sourceTree = "<group>"; };
+		C483E4F42462E287001004C3 /* ColorMatchingResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorMatchingResultViewController.xib; sourceTree = "<group>"; };
 		C48CF1C4245CC6BF001D577A /* BackwardsConvertTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackwardsConvertTextViewController.xib; sourceTree = "<group>"; };
 		C4968907245CC9E500CA540E /* BackwardsModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsModuleFactory.swift; sourceTree = "<group>"; };
 		C4968909245CCAC400CA540E /* BackwardsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsCoordinator.swift; sourceTree = "<group>"; };
 		C499E92E245D7B190065FC28 /* BackwardsConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsConfigurationViewController.swift; sourceTree = "<group>"; };
 		C499E92F245D7B190065FC28 /* BackwardsConfigurationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackwardsConfigurationViewController.xib; sourceTree = "<group>"; };
 		C499E934245D7B6C0065FC28 /* BackwardsConfigurationStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsConfigurationStore.swift; sourceTree = "<group>"; };
+		C49A3905246428E00072C7CB /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		C49C87CB24602FEB0094A918 /* ColorMatchingCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatchingCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		C49C87CD246030080094A918 /* ColorMatchingCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatchingCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		C4A98278244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPartiesSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4A9827A244E017F005E98BC /* NavigationBarSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4B88F5A2450BCA700D1D1BA /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
@@ -305,6 +347,8 @@
 		C4F8198D244C562400AE73CE /* SFProRounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProRounded-Regular.otf"; sourceTree = "<group>"; };
 		C4F8198F244C582B00AE73CE /* FontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyles.swift; sourceTree = "<group>"; };
 		CF0CC5886C0EDB96C1B81B77 /* PersonalCoachTrainingStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachTrainingStore.swift; sourceTree = "<group>"; };
+		DD5B8CE989FED00777323AF2 /* ColorMatchingResultStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorMatchingResultStore.swift; sourceTree = "<group>"; };
+		F4E601C964628C4826517282 /* ColorMatchingResult.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = ColorMatchingResult.strings; sourceTree = "<group>"; };
 		FDED4963B01E0294FEDC2B2C /* BlenderConvert.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = BlenderConvert.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -358,6 +402,44 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		1B0B9E8F697A1BE5CFFF9BA2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AB3F606C666CE764F1D3B6AB /* ColorMatchingResultViewController.swift */,
+				C483E4F42462E287001004C3 /* ColorMatchingResultViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		32F40DFC3C97A725576D4EA1 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				DD5B8CE989FED00777323AF2 /* ColorMatchingResultStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		358CAE736027B8833F5DA4A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C47F1A36245F4D62007AFA65 /* ColorMatchingTrainingViewController.xib */,
+				8E2D38B76C6061F54C3204AF /* ColorMatchingTrainingViewController.swift */,
+				C49C87CB24602FEB0094A918 /* ColorMatchingCollectionViewDelegate.swift */,
+				C49C87CD246030080094A918 /* ColorMatchingCollectionViewDataSource.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4A129D419A94302AE18AD7B0 /* ColorMatchingResult */ = {
+			isa = PBXGroup;
+			children = (
+				1B0B9E8F697A1BE5CFFF9BA2 /* Controller */,
+				7FFFB05B6719406199EDA614 /* Localization */,
+				32F40DFC3C97A725576D4EA1 /* Store */,
+			);
+			path = ColorMatchingResult;
+			sourceTree = "<group>";
+		};
 		4B917543DA3909D398836576 /* BlenderConfiguration */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,10 +476,30 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		5F41A703BFDFA335CEA8FFC5 /* ColorMatchingTraining */ = {
+			isa = PBXGroup;
+			children = (
+				358CAE736027B8833F5DA4A1 /* Controller */,
+				9B8801847AA0A3BBCF966525 /* Localization */,
+				7DE018E31CF6723A15C8362B /* Store */,
+				C474A4CA24603E33000780BE /* View */,
+			);
+			path = ColorMatchingTraining;
+			sourceTree = "<group>";
+		};
 		653F2A3CA0C3BF3D6C2A2569 /* Store */ = {
 			isa = PBXGroup;
 			children = (
 				AFF93C44BBE95AAD0CD0D76B /* BlenderConvertStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		65C5CECF057708FF30F5720C /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				C471CE88245F243D00668E98 /* ColorMatchingConfiguration.swift */,
+				405AC0F5C922B8E6157AD951 /* ColorMatchingConfigurationStore.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -411,12 +513,55 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		7DE018E31CF6723A15C8362B /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				3022CD18BE8B9E501DF2C104 /* ColorMatchingTrainingStore.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
+		7FFFB05B6719406199EDA614 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				F4E601C964628C4826517282 /* ColorMatchingResult.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		87C553DC0539439D33438FE8 /* Store */ = {
 			isa = PBXGroup;
 			children = (
 				09754A01CF6ECA71035E6AC9 /* PersonalCoachResultStore.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		8977A60EAAC8CB0080862845 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C471CE85245F1E8200668E98 /* ColorMatchingConfigurationViewController.xib */,
+				015CAD2D8D03E78FC32842FF /* ColorMatchingConfigurationViewController.swift */,
+				C4366882245F34710018D914 /* ColorMatchingPickerViewDelegate.swift */,
+				C4366884245F348B0018D914 /* ColorMatchingPickerViewDataSource.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9619B5C6C29895E5E196A7C4 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				43EDC680105BC7874C7EE838 /* Matching.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		9B8801847AA0A3BBCF966525 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				4B72AC2D0E57A2C018ACE4D1 /* ColorMatchingTraining.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		B02B518864ACD50FE3B2BDD6 /* Controller */ = {
@@ -810,6 +955,44 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		C471CE83245F1E1F00668E98 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C5F26F279B7A5C370B993319 /* ColorMatchingConfiguration */,
+				5F41A703BFDFA335CEA8FFC5 /* ColorMatchingTraining */,
+				4A129D419A94302AE18AD7B0 /* ColorMatchingResult */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C471CE84245F1E3300668E98 /* ColorMatching */ = {
+			isa = PBXGroup;
+			children = (
+				C471CE8C245F2E0F00668E98 /* Coordinator */,
+				C471CE83245F1E1F00668E98 /* Modules */,
+			);
+			path = ColorMatching;
+			sourceTree = "<group>";
+		};
+		C471CE8C245F2E0F00668E98 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C471CE8A245F2D8D00668E98 /* ColorMatchingModuleFactory.swift */,
+				C4366880245F2F040018D914 /* ColorMatchingCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C474A4CA24603E33000780BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C474A4C624603E2A000780BE /* BlockCell.swift */,
+				C474A4C724603E2A000780BE /* BlockCell.xib */,
+				C49A3905246428E00072C7CB /* ProgressView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C4968904245CC99600CA540E /* Backwards */ = {
 			isa = PBXGroup;
 			children = (
@@ -1136,6 +1319,7 @@
 				C463DC5F245CAF8500E265FF /* PersonalCoach */,
 				C4968904245CC99600CA540E /* Backwards */,
 				C4584B68245EDE3700E7F9BB /* Blender */,
+				C471CE84245F1E3300668E98 /* ColorMatching */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -1366,6 +1550,16 @@
 			path = "Suporting Files";
 			sourceTree = "<group>";
 		};
+		C5F26F279B7A5C370B993319 /* ColorMatchingConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				8977A60EAAC8CB0080862845 /* Controller */,
+				9619B5C6C29895E5E196A7C4 /* Localization */,
+				65C5CECF057708FF30F5720C /* Store */,
+			);
+			path = ColorMatchingConfiguration;
+			sourceTree = "<group>";
+		};
 		C68DC8541D66AA2C98976705 /* Localization */ = {
 			isa = PBXGroup;
 			children = (
@@ -1517,16 +1711,20 @@
 				C463DC91245CAF9600E265FF /* ActivitySelectValueView.xib in Resources */,
 				C463DC71245CAF8500E265FF /* PersonalCoachViewController.xib in Resources */,
 				C4F7AFDC24547FC9007D6289 /* ActivitiesIntroBlockView.xib in Resources */,
+				C4366886245F474E0018D914 /* ColorMatchingTraining.strings in Resources */,
 				C4197B942450B1F900811F37 /* Activities.strings in Resources */,
 				C463DC75245CAF8500E265FF /* PersonalCoach.strings in Resources */,
 				C463DC8B245CAF9600E265FF /* ActivityTextInputView.xib in Resources */,
 				C4CFD594245CC491009B902F /* BackwardsConvertText.strings in Resources */,
 				C499E931245D7B190065FC28 /* BackwardsConfigurationViewController.xib in Resources */,
+				C471CE87245F228500668E98 /* Matching.strings in Resources */,
 				C4521BDD245F050100EF2CB7 /* BlenderConvertViewController.xib in Resources */,
 				C4F818EF244B289400AE73CE /* LaunchScreen.storyboard in Resources */,
 				C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */,
 				C463DC8F245CAF9600E265FF /* ActivityHeaderView.xib in Resources */,
+				C483E4F62462E29A001004C3 /* ColorMatchingResult.strings in Resources */,
 				C4C0670A2458AD1C00EF39B8 /* SliderView.xib in Resources */,
+				C47F1A37245F4D62007AFA65 /* ColorMatchingTrainingViewController.xib in Resources */,
 				C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */,
 				C41FA7D4245DE2AA00E515EC /* PersonalCoachResultViewController.xib in Resources */,
 				C4F8198A244C55FB00AE73CE /* SFProRounded-Bold.otf in Resources */,
@@ -1534,10 +1732,13 @@
 				C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */,
 				C463DC98245D5F2700E265FF /* PersonalCoachTrainingViewController.xib in Resources */,
 				C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */,
+				C471CE86245F1E8200668E98 /* ColorMatchingConfigurationViewController.xib in Resources */,
 				C4F81986244C55D300AE73CE /* SFProDisplay-Bold.otf in Resources */,
 				C4F7AFD724547E1A007D6289 /* ActivityIconView.xib in Resources */,
+				C483E4F52462E287001004C3 /* ColorMatchingResultViewController.xib in Resources */,
 				C41FA7D6245DEB0300E515EC /* PersonalCoachTraining.strings in Resources */,
 				C4B88F642450CF4500D1D1BA /* ActivitiesIntro.strings in Resources */,
+				C474A4C924603E2A000780BE /* BlockCell.xib in Resources */,
 				C463DC132459D32C00E265FF /* TextInputViewController.xib in Resources */,
 				C41FA7D5245DE4A300E515EC /* PersonalCoachResult.strings in Resources */,
 				C4B88F6A2450CF9700D1D1BA /* ActivitiesIntroViewController.xib in Resources */,
@@ -1641,8 +1842,10 @@
 			files = (
 				C41FA7D2245D99C300E515EC /* SecondaryButton.swift in Sources */,
 				C463DC8D245CAF9600E265FF /* ActivityHeaderViewModel.swift in Sources */,
+				C474A4C824603E2A000780BE /* BlockCell.swift in Sources */,
 				C4968908245CC9E500CA540E /* BackwardsModuleFactory.swift in Sources */,
 				C4F8195A244B890B00AE73CE /* AppDelegateConfiguratorFactory.swift in Sources */,
+				C471CE89245F243D00668E98 /* ColorMatchingConfiguration.swift in Sources */,
 				C42B54EB245EE9D300E3C61D /* BlenderCoordinator.swift in Sources */,
 				C4F81919244B761700AE73CE /* UIColor+Hex.swift in Sources */,
 				C463DC8A245CAF9600E265FF /* ActivityTextInputViewModel.swift in Sources */,
@@ -1698,6 +1901,7 @@
 				C4B88F692450CF9700D1D1BA /* ActivitiesIntroViewController.swift in Sources */,
 				C4F81946244B82BB00AE73CE /* Coordinator.swift in Sources */,
 				C4584B64245E1BCF00E7F9BB /* CGFloat+Clean.swift in Sources */,
+				C49C87CE246030080094A918 /* ColorMatchingCollectionViewDataSource.swift in Sources */,
 				C4F7AFD224547A8A007D6289 /* NibLoadable.swift in Sources */,
 				C499E935245D7B6C0065FC28 /* BackwardsConfigurationStore.swift in Sources */,
 				C4BD0F2A244DEF3D0056E8C1 /* R.generated.swift in Sources */,
@@ -1708,6 +1912,7 @@
 				C4BD0F33244DF1280056E8C1 /* StartupSceneDelegateConfigurator.swift in Sources */,
 				C4D138DD244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift in Sources */,
 				C4F7AFCF24547450007D6289 /* ActivityIconView.swift in Sources */,
+				C471CE8B245F2D8D00668E98 /* ColorMatchingModuleFactory.swift in Sources */,
 				C463DC76245CAF8500E265FF /* PersonalCoachConfiguration.swift in Sources */,
 				C4F8194A244B82F000AE73CE /* ModuleFactory.swift in Sources */,
 				C463DC74245CAF8500E265FF /* PersonalCoachPickerViewDataSource.swift in Sources */,
@@ -1715,10 +1920,13 @@
 				C4B88F662450CF7400D1D1BA /* ActivitiesIntroViewModel.swift in Sources */,
 				C463DC162459D32C00E265FF /* TextInputViewController.swift in Sources */,
 				C4B88F5B2450BCA700D1D1BA /* PrimaryButton.swift in Sources */,
+				C4366885245F348B0018D914 /* ColorMatchingPickerViewDataSource.swift in Sources */,
 				C40AE0BF245363D3008BC71C /* UICollectionView+Dequeue.swift in Sources */,
+				C49C87CC24602FEB0094A918 /* ColorMatchingCollectionViewDelegate.swift in Sources */,
 				C4197B802450A28600811F37 /* TabBarController.swift in Sources */,
 				C4F8194A244B82F000AE73CE /* ModuleFactory.swift in Sources */,
 				C4F81928244B76BA00AE73CE /* UITableViewCell+SelectedBackgroundView.swift in Sources */,
+				C4366883245F34710018D914 /* ColorMatchingPickerViewDelegate.swift in Sources */,
 				C4197B8E2450ABF000811F37 /* ActivitiesModuleFactory.swift in Sources */,
 				C40AE0C124536409008BC71C /* UICollectionView+Register.swift in Sources */,
 				C4F8192F244B76DC00AE73CE /* UIView+CornerRadius.swift in Sources */,
@@ -1740,12 +1948,20 @@
 				5591451CBFCF68860AAB37A8 /* BackwardsConvertTextStore.swift in Sources */,
 				C499E930245D7B190065FC28 /* BackwardsConfigurationViewController.swift in Sources */,
 				A4C99ABF8799D15B4E0AEB49 /* PersonalCoachTrainingViewController.swift in Sources */,
+				C4366881245F2F040018D914 /* ColorMatchingCoordinator.swift in Sources */,
 				48B246AB6A2B550320B3067B /* PersonalCoachTrainingStore.swift in Sources */,
 				22E2FABB4D0F6C38AADBF488 /* PersonalCoachResultViewController.swift in Sources */,
+				C49A3906246428E00072C7CB /* ProgressView.swift in Sources */,
 				D2A119A5F8166CAD5364FCA0 /* PersonalCoachResultStore.swift in Sources */,
 				AAD9220CE61DB7867CEDD9B4 /* BlenderConfigurationViewController.swift in Sources */,
 				DFAD0788A88395F146855A73 /* BlenderConfigurationStore.swift in Sources */,
 				D9F4E2B42243C49E92A285BD /* BlenderConvertViewController.swift in Sources */,
+				21BAE1F05F8117F832F3033B /* ColorMatchingConfigurationViewController.swift in Sources */,
+				34CDB22E4B3D903B4C9833F5 /* ColorMatchingConfigurationStore.swift in Sources */,
+				1B560F3B144C688828421C5D /* ColorMatchingTrainingViewController.swift in Sources */,
+				D8D01B5C08DBA20F1CA18E38 /* ColorMatchingTrainingStore.swift in Sources */,
+				F50284FFFEBCE2C48F98A626 /* ColorMatchingResultViewController.swift in Sources */,
+				2056E07BD39DF594FFD4B8EA /* ColorMatchingResultStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

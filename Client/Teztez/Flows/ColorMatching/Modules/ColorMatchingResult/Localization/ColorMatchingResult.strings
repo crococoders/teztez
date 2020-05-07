@@ -1,0 +1,12 @@
+/*
+  ColorMatchingResult.strings
+  Teztez
+
+  Created by Adlet on 06/05/2020.
+  Copyright © 2020 Crococoders. All rights reserved.
+*/
+
+"home" = "Home";
+"restart" = "Restart";
+"goodJob" = "Good Job!";
+"resultMessage" = "You achieved ";

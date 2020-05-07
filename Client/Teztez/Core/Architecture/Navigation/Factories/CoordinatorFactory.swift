@@ -44,4 +44,11 @@ final class CoordinatorFactory {
                                              router: Router(rootController: rootCoontroller))
         return (coordinator, rootCoontroller)
     }
+
+    func makeMatchingCoordinator() -> (coordinator: Coordinator & ColorMatchingCoordinatorOutput, module: Presentable) {
+        let rootCoontroller = CoordinatorNavigationController()
+        let coordinator = ColorMatchingCoordinator(moduleFactory: ModuleFactory.shared,
+                                                   router: Router(rootController: rootCoontroller))
+        return (coordinator, rootCoontroller)
+    }
 }

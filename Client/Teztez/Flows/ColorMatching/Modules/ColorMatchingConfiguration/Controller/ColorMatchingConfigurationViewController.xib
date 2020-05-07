@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorMatchingConfigurationViewController" customModule="Teztez" customModuleProvider="target">
+            <connections>
+                <outlet property="restartButton" destination="Ya5-Me-QEL" id="f55-gJ-ZqB"/>
+                <outlet property="stackView" destination="ahY-2B-3iI" id="QCY-tj-SQe"/>
+                <outlet property="startButton" destination="y1q-jE-eU0" id="xsQ-SY-QJE"/>
+                <outlet property="view" destination="yID-PR-0VI" id="ylJ-mn-f1T"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="yID-PR-0VI">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6O-SW-mYu">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5j-C6-NND">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ahY-2B-3iI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3rV-Wd-qYL" userLabel="TestView" customClass="ActivityHeaderView" customModule="Teztez" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="dsh-pA-yF9"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="ahY-2B-3iI" secondAttribute="bottom" id="7Tj-FO-Ph9"/>
+                                <constraint firstAttribute="trailing" secondItem="ahY-2B-3iI" secondAttribute="trailing" id="M3O-4A-vr1"/>
+                                <constraint firstItem="ahY-2B-3iI" firstAttribute="leading" secondItem="t5j-C6-NND" secondAttribute="leading" id="deN-lf-squ"/>
+                                <constraint firstItem="ahY-2B-3iI" firstAttribute="top" secondItem="t5j-C6-NND" secondAttribute="top" id="lHZ-wK-SBS"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="ahY-2B-3iI" firstAttribute="width" secondItem="o6O-SW-mYu" secondAttribute="width" id="59o-k9-XgA"/>
+                        <constraint firstAttribute="bottom" secondItem="t5j-C6-NND" secondAttribute="bottom" id="DMK-Pz-p98"/>
+                        <constraint firstAttribute="trailing" secondItem="t5j-C6-NND" secondAttribute="trailing" id="FAc-2I-fMq"/>
+                        <constraint firstItem="t5j-C6-NND" firstAttribute="leading" secondItem="o6O-SW-mYu" secondAttribute="leading" id="FLB-Uq-hlf"/>
+                        <constraint firstItem="t5j-C6-NND" firstAttribute="top" secondItem="o6O-SW-mYu" secondAttribute="top" id="fIg-jb-kBA"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1q-jE-eU0" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
+                    <rect key="frame" x="40" y="714" width="334" height="48"/>
+                    <color key="backgroundColor" red="0.10980392160000001" green="0.52941176469999995" blue="0.98823529409999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="0jH-vf-nUe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                    <state key="normal" title="Start">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="startButtonDidTap:" destination="-1" eventType="touchUpInside" id="qME-3s-TG4"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ya5-Me-QEL" customClass="SecondaryButton" customModule="Teztez" customModuleProvider="target">
+                    <rect key="frame" x="40" y="778" width="334" height="48"/>
+                    <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="oyF-3M-Cvf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                    <state key="normal" title="Restart">
+                        <color key="titleColor" red="0.10980392160000001" green="0.52941176469999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="restartButtonDidTap:" destination="-1" eventType="touchUpInside" id="Tb3-xh-1KF"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="QnY-wO-ypQ" firstAttribute="trailing" secondItem="Ya5-Me-QEL" secondAttribute="trailing" constant="40" id="G4m-fm-Axu"/>
+                <constraint firstItem="QnY-wO-ypQ" firstAttribute="bottom" secondItem="o6O-SW-mYu" secondAttribute="bottom" id="LEt-Sw-bFH"/>
+                <constraint firstItem="QnY-wO-ypQ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="y1q-jE-eU0" secondAttribute="bottom" constant="71" id="Osc-3C-eab"/>
+                <constraint firstItem="Ya5-Me-QEL" firstAttribute="top" secondItem="y1q-jE-eU0" secondAttribute="bottom" constant="16" id="Tmz-ml-6ww"/>
+                <constraint firstItem="o6O-SW-mYu" firstAttribute="leading" secondItem="QnY-wO-ypQ" secondAttribute="leading" id="V6a-IS-OaM"/>
+                <constraint firstItem="QnY-wO-ypQ" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ya5-Me-QEL" secondAttribute="bottom" constant="16" id="bHm-pT-KlV"/>
+                <constraint firstItem="QnY-wO-ypQ" firstAttribute="trailing" secondItem="y1q-jE-eU0" secondAttribute="trailing" constant="40" id="eua-57-6Vz"/>
+                <constraint firstItem="Ya5-Me-QEL" firstAttribute="leading" secondItem="QnY-wO-ypQ" secondAttribute="leading" constant="40" id="fhb-c1-EcL"/>
+                <constraint firstItem="y1q-jE-eU0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="t5j-C6-NND" secondAttribute="bottom" priority="750" constant="56" id="n9z-ra-z78"/>
+                <constraint firstItem="QnY-wO-ypQ" firstAttribute="bottom" secondItem="y1q-jE-eU0" secondAttribute="bottom" priority="250" constant="100" id="p2a-GI-G2Z"/>
+                <constraint firstItem="o6O-SW-mYu" firstAttribute="top" secondItem="yID-PR-0VI" secondAttribute="top" id="pc8-Bx-i89"/>
+                <constraint firstItem="QnY-wO-ypQ" firstAttribute="trailing" secondItem="o6O-SW-mYu" secondAttribute="trailing" id="tO4-8y-sLA"/>
+                <constraint firstItem="y1q-jE-eU0" firstAttribute="leading" secondItem="QnY-wO-ypQ" secondAttribute="leading" constant="40" id="yQl-Cu-6i6"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="QnY-wO-ypQ"/>
+            <point key="canvasLocation" x="136.80000000000001" y="96.059113300492612"/>
+        </view>
+    </objects>
+</document>
