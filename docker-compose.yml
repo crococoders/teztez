@@ -3,6 +3,7 @@ version: '3.7'
 volumes:
   content_db_data:
   feedback_db_data:
+  analytics_db_data:
 
 x-shared_environment: &shared_environment
   LOG_LEVEL: ${LOG_LEVEL:-debug}
@@ -22,6 +23,7 @@ services:
       - feedback
       - content
       - feed
+      - analytics
     ports:
       - '8080:80'
     command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
@@ -65,6 +67,20 @@ services:
     depends_on:
       - feedback_db 
     command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
+
+  analytics:
+    image: analytics:latest
+    build: 
+      context: .
+      args:
+        service_folder: Server/Analytics
+    environment:
+      <<: *shared_environment
+    env_file:
+      - .env
+    depends_on:
+      - analytics_db 
+    command: ["serve", "--env", "production", "--hostname", "0.0.0.0", "--port", "80"]
   
   content_db:
     image: postgres:12.1-alpine
@@ -89,3 +105,15 @@ services:
       - feedback_db_data:/var/lib/postgresql/data/feedback_db
     ports:
       - '5433:5432'
+
+  analytics_db:
+    image: postgres:12.1-alpine
+    environment:
+      POSTGRES_USERNAME: ${ANALYTICS_POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${ANALYTICS_POSTGRES_PASSWORD}
+      POSTGRES_DB: ${ANALYTICS_POSTGRES_DB}
+      PGDATA: /var/lib/postgresql/data/analytics_db
+    volumes:
+      - analytics_db_data:/var/lib/postgresql/data/analytics_db
+    ports:
+      - '5434:5432'
