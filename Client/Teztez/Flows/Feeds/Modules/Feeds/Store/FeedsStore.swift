@@ -9,10 +9,33 @@
 import Foundation
 
 final class FeedsStore {
-    enum Action {}
-    enum State {}
+    enum Action {
+        case didLoadView
+    }
+
+    enum State {
+        case initial(blocks: [Block])
+    }
 
     @Published private(set) var state: State?
+    let provider: FeedsProvider
 
-    func dispatch(action: Action) {}
+    init() {
+        provider = FeedsProvider()
+    }
+
+    func dispatch(action: Action) {
+        switch action {
+        case .didLoadView:
+            provider.fetchFeeds { [weak self] result in
+                guard let self = self else { return }
+                switch result {
+                case let .success(blocks):
+                    self.state = .initial(blocks: blocks)
+                case .failure:
+                    break
+                }
+            }
+        }
+    }
 }

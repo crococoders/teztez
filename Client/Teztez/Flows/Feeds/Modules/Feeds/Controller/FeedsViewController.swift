@@ -29,11 +29,18 @@ final class FeedsViewController: ViewController, FeedsPresentable {
         super.viewDidLoad()
         setupObservers()
         setupNavigationBar()
+        store.dispatch(action: .didLoadView)
     }
 
     private func setupObservers() {
-        store.$state.sink { [weak self] _ in
-            guard let self = self else { return }
+        store.$state.sink { [weak self] state in
+            guard
+                let self = self,
+                let state = state else { return }
+            switch state {
+            case let .initial(blocks):
+                print(blocks)
+            }
         }.store(in: &cancellables)
     }
 
