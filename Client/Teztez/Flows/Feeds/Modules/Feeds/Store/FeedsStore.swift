@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Models
 
 final class FeedsStore {
     enum Action {

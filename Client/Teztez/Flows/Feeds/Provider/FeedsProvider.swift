@@ -8,21 +8,16 @@
 
 import Alamofire
 import Foundation
+import Models
 
 final class FeedsProvider {
     func fetchFeeds(callback: @escaping (Result<[Block], Error>) -> Void) {
-        AF.request("http://localhost:8080/feed").responseJSON { reponse in
-            switch reponse.result {
-            case .success:
-                guard let data = reponse.data else { return }
-                do {
-                    let decoder = JSONDecoder()
-                    decoder.dateDecodingStrategy = .millisecondsSince1970
-                    let blocks = try decoder.decode([Block].self, from: data)
-                    callback(.success(blocks))
-                } catch {
-                    callback(.failure(error))
-                }
+        let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .iso8601
+        AF.request("http://localhost:8080/feed").responseDecodable(of: [Block].self, decoder: decoder) { response in
+            switch response.result {
+            case let .success(blocks):
+                callback(.success(blocks))
             case let .failure(error):
                 print(error.localizedDescription)
                 callback(.failure(error))
