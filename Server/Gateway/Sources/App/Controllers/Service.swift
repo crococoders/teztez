@@ -11,6 +11,7 @@ enum Service: CaseIterable {
     case content
     case feed
     case feedback
+    case analytics
 }
 
 extension Service {
@@ -23,6 +24,9 @@ extension Service {
         case .feedback:
             return PathComponent.constant("feedback")
         }
+        case .analytics:
+            return PathComponent.constant("analytics")
+        }
     }
     
     var host: String? {
@@ -34,6 +38,9 @@ extension Service {
         case .feedback:
             return Environment.get("FEEDBACK_HOST")
         }
+        case .analytics:
+            return Environment.get("ANALYTICS_HOST")
+        }
     }
 
     var port: String? {
@@ -44,6 +51,9 @@ extension Service {
             return Environment.get("FEED_PORT")
         case .feedback:
             return Environment.get("FEEDBACK_PORT")
+        }
+        case .analytics:
+            return Environment.get("ANALYTICS_PORT")
         }
     }
 }
