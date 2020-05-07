@@ -5,10 +5,9 @@
 //  Created by Aidar Nugmanov on 5/7/20.
 //
 
-import Foundation
-
 import Fluent
 import Vapor
+import Models
 
 final class User: Model, Content {
     static let schema = "users"
@@ -32,6 +31,20 @@ final class User: Model, Content {
         self.name = name
         self.username = username
         self.passwordHash = passwordHash
+    }
+}
+
+extension UserResponse: Content {}
+
+extension User {
+    func encodeResponse(for request: Request) -> EventLoopFuture<Response> {
+        let response = Response()
+        do {
+            try response.content.encode(UserResponse(id: id!.uuidString, name: name, username: username))
+        } catch {
+            return request.eventLoop.makeFailedFuture(error)
+        }
+        return request.eventLoop.makeSucceededFuture(response)
     }
 }
 

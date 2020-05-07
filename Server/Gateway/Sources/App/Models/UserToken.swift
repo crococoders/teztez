@@ -7,6 +7,7 @@
 
 import Fluent
 import Vapor
+import Models
 
 final class UserToken: Model, Content {
     static let schema = "user_tokens"
@@ -29,6 +30,20 @@ final class UserToken: Model, Content {
         self.id = id
         self.value = value
         self.$user.id = userID
+    }
+}
+
+extension TokenResponse: Content {}
+
+extension UserToken {
+    func encodeResponse(for request: Request) -> EventLoopFuture<Response> {
+        let response = Response()
+        do {
+            try response.content.encode(TokenResponse(token: self.value))
+        } catch {
+            return request.eventLoop.makeFailedFuture(error)
+        }
+        return request.eventLoop.makeSucceededFuture(response)
     }
 }
 
