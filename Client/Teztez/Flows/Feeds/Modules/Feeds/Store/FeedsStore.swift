@@ -15,11 +15,12 @@ final class FeedsStore {
     }
 
     enum State {
-        case initial(blocks: [Block])
+        case initial(items: [FeedsItemType])
     }
 
     @Published private(set) var state: State?
-    let provider: FeedsProvider
+    private let provider: FeedsProvider
+    private var items: [FeedsItemType] = []
 
     init() {
         provider = FeedsProvider()
@@ -28,14 +29,40 @@ final class FeedsStore {
     func dispatch(action: Action) {
         switch action {
         case .didLoadView:
-            provider.fetchFeeds { [weak self] result in
-                guard let self = self else { return }
-                switch result {
-                case let .success(blocks):
-                    self.state = .initial(blocks: blocks)
-                case .failure:
+            fetchBlocks()
+        }
+    }
+
+    private func fetchBlocks() {
+        provider.fetchFeeds { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case let .success(blocks):
+                self.compileItems(from: blocks)
+                self.state = .initial(items: self.items)
+            case .failure:
+                break
+            }
+        }
+    }
+
+    private func compileItems(from blocks: [Block]) {
+        items.removeAll()
+        blocks.forEach { block in
+            switch block {
+            case let .statistics(layoutType, model):
+                switch layoutType {
+                case .big:
+                    items.append(.statisticsBig(viewModel: StatisticsSmallViewModel(block: model)))
+                case .small:
+                    items.append(.statisticsSmall(viewModel: StatisticsSmallViewModel(block: model)))
+                case .long:
+                    items.append(.statisticsLong(vieWModel: StatisticsLongViewModel(block: model)))
+                case .huge:
                     break
                 }
+            default:
+                break
             }
         }
     }

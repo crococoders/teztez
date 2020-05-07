@@ -10,14 +10,15 @@ import UIKit
 
 private enum Constant {
     static let collectionViewHeight: CGFloat = 115
-    static let padding: CGFloat = 8
+    static let padding: CGFloat = 12
 }
 
 final class FeedsCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout {
-    var items: [ActivitiesItemType] = []
-    private let store: ActivitiesStore
+    var items: [FeedsItemType] = []
 
-    init(store: ActivitiesStore) {
+    private let store: FeedsStore
+
+    init(store: FeedsStore) {
         self.store = store
     }
 
@@ -26,16 +27,18 @@ final class FeedsCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowL
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         var collectionViewWidth = collectionView.frame.size.width
 
-        switch indexPath.row {
-        case 0:
-            return CGSize(width: collectionViewWidth, height: Constant.collectionViewHeight)
-        default:
+        switch items[indexPath.row] {
+        case .statisticsSmall:
             collectionViewWidth = collectionViewWidth - Constant.padding
-            return CGSize(width: collectionViewWidth / 2, height: Constant.collectionViewHeight)
+            return CGSize(width: collectionViewWidth / 2, height: 105)
+        case .statisticsLong:
+            return CGSize(width: collectionViewWidth, height: 56)
+        case .statisticsBig:
+            return CGSize(width: collectionViewWidth, height: 101)
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        store.dispatch(action: .didSelectItem(itemType: items[indexPath.row]))
+//        store.dispatch(action: .didSelectItem(itemType: items[indexPath.row]))
     }
 }

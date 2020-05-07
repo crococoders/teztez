@@ -13,11 +13,15 @@ protocol FeedsPresentable: Presentable {}
 
 final class FeedsViewController: ViewController, FeedsPresentable {
     private let store: FeedsStore
+    private let collectionViewDataSource: FeedsCollectionViewDataSource
+    private let collectionViewDelegate: FeedsCollectionViewDelegate
     private var cancellables = Set<AnyCancellable>()
 
     @IBOutlet private var collectionView: UICollectionView!
     init(store: FeedsStore) {
         self.store = store
+        collectionViewDataSource = FeedsCollectionViewDataSource()
+        collectionViewDelegate = FeedsCollectionViewDelegate(store: store)
         super.init(nibName: String(describing: Self.self), bundle: nil)
     }
 
@@ -27,8 +31,14 @@ final class FeedsViewController: ViewController, FeedsPresentable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         setupObservers()
+
         setupNavigationBar()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         store.dispatch(action: .didLoadView)
     }
 
@@ -38,8 +48,10 @@ final class FeedsViewController: ViewController, FeedsPresentable {
                 let self = self,
                 let state = state else { return }
             switch state {
-            case let .initial(blocks):
-                print(blocks)
+            case let .initial(items):
+                self.collectionViewDataSource.items = items
+                self.collectionViewDelegate.items = items
+                self.collectionView.reloadData()
             }
         }.store(in: &cancellables)
     }
@@ -47,5 +59,12 @@ final class FeedsViewController: ViewController, FeedsPresentable {
     private func setupNavigationBar() {
         navigationItem.title = "Hello!"
         navigationController?.navigationBar.barTintColor = .black
+    }
+
+    private func setupUI() {
+        collectionView.delegate = collectionViewDelegate
+        collectionView.dataSource = collectionViewDataSource
+        [StatisticsSmallCell.self,
+         StatisticsLongCell.self].forEach { collectionView.register(cellClass: $0) }
     }
 }

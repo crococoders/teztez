@@ -8,4 +8,8 @@
 
 import Foundation
 
-enum FeedsItemType {}
+enum FeedsItemType {
+    case statisticsSmall(viewModel: StatisticsSmallViewModel)
+    case statisticsLong(vieWModel: StatisticsLongViewModel)
+    case statisticsBig(viewModel: StatisticsSmallViewModel)
+}

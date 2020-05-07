@@ -110,6 +110,12 @@
 		C471CE81245F14CC00668E98 /* BlenderConvert.strings in Resources */ = {isa = PBXBuildFile; fileRef = FDED4963B01E0294FEDC2B2C /* BlenderConvert.strings */; };
 		C471CE82245F15A000668E98 /* BlenderConvertStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF93C44BBE95AAD0CD0D76B /* BlenderConvertStore.swift */; };
 		C48CF1C5245CC6BF001D577A /* BackwardsConvertTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C48CF1C4245CC6BF001D577A /* BackwardsConvertTextViewController.xib */; };
+		C490F0FE2464653000623DF7 /* StatisticsLongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C490F0FD2464653000623DF7 /* StatisticsLongCell.xib */; };
+		C490F1002464658600623DF7 /* StatisticsLongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F0FF2464658600623DF7 /* StatisticsLongCell.swift */; };
+		C490F1022464688000623DF7 /* StatisticsLongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F1012464688000623DF7 /* StatisticsLongViewModel.swift */; };
+		C490F10624646CF400623DF7 /* StatisticsSmallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F10524646CF400623DF7 /* StatisticsSmallCell.swift */; };
+		C490F10824646D3000623DF7 /* StatisticsSmallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C490F10724646D3000623DF7 /* StatisticsSmallCell.xib */; };
+		C490F10C246475EC00623DF7 /* StatisticsSmallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F10B246475EC00623DF7 /* StatisticsSmallViewModel.swift */; };
 		C4968908245CC9E500CA540E /* BackwardsModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4968907245CC9E500CA540E /* BackwardsModuleFactory.swift */; };
 		C496890A245CCAC400CA540E /* BackwardsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4968909245CCAC400CA540E /* BackwardsCoordinator.swift */; };
 		C499E930245D7B190065FC28 /* BackwardsConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C499E92E245D7B190065FC28 /* BackwardsConfigurationViewController.swift */; };
@@ -305,6 +311,12 @@
 		C463DC95245CB11700E265FF /* ActivitiesIconViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesIconViewModel.swift; sourceTree = "<group>"; };
 		C463DC97245D5F2700E265FF /* PersonalCoachTrainingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonalCoachTrainingViewController.xib; sourceTree = "<group>"; };
 		C48CF1C4245CC6BF001D577A /* BackwardsConvertTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BackwardsConvertTextViewController.xib; sourceTree = "<group>"; };
+		C490F0FD2464653000623DF7 /* StatisticsLongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsLongCell.xib; sourceTree = "<group>"; };
+		C490F0FF2464658600623DF7 /* StatisticsLongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsLongCell.swift; sourceTree = "<group>"; };
+		C490F1012464688000623DF7 /* StatisticsLongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsLongViewModel.swift; sourceTree = "<group>"; };
+		C490F10524646CF400623DF7 /* StatisticsSmallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsSmallCell.swift; sourceTree = "<group>"; };
+		C490F10724646D3000623DF7 /* StatisticsSmallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatisticsSmallCell.xib; sourceTree = "<group>"; };
+		C490F10B246475EC00623DF7 /* StatisticsSmallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsSmallViewModel.swift; sourceTree = "<group>"; };
 		C4968907245CC9E500CA540E /* BackwardsModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsModuleFactory.swift; sourceTree = "<group>"; };
 		C4968909245CCAC400CA540E /* BackwardsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsCoordinator.swift; sourceTree = "<group>"; };
 		C499E92E245D7B190065FC28 /* BackwardsConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsConfigurationViewController.swift; sourceTree = "<group>"; };
@@ -454,6 +466,8 @@
 		3C8E85228F670699AF477546 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C490F1012464688000623DF7 /* StatisticsLongViewModel.swift */,
+				C490F10B246475EC00623DF7 /* StatisticsSmallViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -522,6 +536,8 @@
 		7EEB923FBE74F6B8DEF0C318 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C490F10424646CC400623DF7 /* StatisticsSmall */,
+				C490F10324646CB700623DF7 /* StatisticsLong */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1153,6 +1169,24 @@
 				C463DC86245CAF9500E265FF /* ActivitySelectValueViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C490F10324646CB700623DF7 /* StatisticsLong */ = {
+			isa = PBXGroup;
+			children = (
+				C490F0FF2464658600623DF7 /* StatisticsLongCell.swift */,
+				C490F0FD2464653000623DF7 /* StatisticsLongCell.xib */,
+			);
+			path = StatisticsLong;
+			sourceTree = "<group>";
+		};
+		C490F10424646CC400623DF7 /* StatisticsSmall */ = {
+			isa = PBXGroup;
+			children = (
+				C490F10524646CF400623DF7 /* StatisticsSmallCell.swift */,
+				C490F10724646D3000623DF7 /* StatisticsSmallCell.xib */,
+			);
+			path = StatisticsSmall;
 			sourceTree = "<group>";
 		};
 		C4968904245CC99600CA540E /* Backwards */ = {
@@ -1941,6 +1975,7 @@
 				C41FA85E246096A800E515EC /* SuggestActivity.strings in Resources */,
 				C463DC98245D5F2700E265FF /* PersonalCoachTrainingViewController.xib in Resources */,
 				C4C8FBED2461C541006388FA /* FeedsViewController.xib in Resources */,
+				C490F10824646D3000623DF7 /* StatisticsSmallCell.xib in Resources */,
 				C41FA84C24608CD800E515EC /* SchulteResult.strings in Resources */,
 				C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */,
 				C4F81986244C55D300AE73CE /* SFProDisplay-Bold.otf in Resources */,
@@ -1964,6 +1999,7 @@
 				C48CF1C5245CC6BF001D577A /* BackwardsConvertTextViewController.xib in Resources */,
 				C471CE81245F14CC00668E98 /* BlenderConvert.strings in Resources */,
 				C42B54E7245EE6DE00E3C61D /* BlenderConfigurationViewController.xib in Resources */,
+				C490F0FE2464653000623DF7 /* StatisticsLongCell.xib in Resources */,
 				C41FA84224608CD800E515EC /* SchulteTraining.strings in Resources */,
 				C4C06701245898CA00EF39B8 /* FontSizeChangeViewController.xib in Resources */,
 				C463DC172459D32C00E265FF /* TextInput.strings in Resources */,
@@ -2088,6 +2124,7 @@
 				C471CE82245F15A000668E98 /* BlenderConvertStore.swift in Sources */,
 				C4F8192C244B76CE00AE73CE /* UITextField+Indent.swift in Sources */,
 				C41FA83C24608CD800E515EC /* SchulteTrainingCollectionViewDelegate.swift in Sources */,
+				C490F10C246475EC00623DF7 /* StatisticsSmallViewModel.swift in Sources */,
 				C4F81924244B76A500AE73CE /* UITableView+Register.swift in Sources */,
 				C41FA860246099AE00E515EC /* SuggestActivityTextViewDelegate.swift in Sources */,
 				C41FA85924608EBC00E515EC /* ActivitySwitchViewModel.swift in Sources */,
@@ -2100,6 +2137,7 @@
 				C40AE0BC24535E4B008BC71C /* ActivitiesCell.swift in Sources */,
 				C4197B7D2450A24E00811F37 /* TabBarCoordinator.swift in Sources */,
 				C40AE0C924537E44008BC71C /* ActivitiesViewModel.swift in Sources */,
+				C490F1022464688000623DF7 /* StatisticsLongViewModel.swift in Sources */,
 				C4F81916244B760100AE73CE /* String+Replacing.swift in Sources */,
 				C496890A245CCAC400CA540E /* BackwardsCoordinator.swift in Sources */,
 				C4F81941244B824200AE73CE /* CoordinatorNavigationController.swift in Sources */,
@@ -2110,6 +2148,7 @@
 				C4C8FBF02461C67A006388FA /* FeedsModuleFactory.swift in Sources */,
 				C41FA7CF245D8AA800E515EC /* String+WordList.swift in Sources */,
 				C4F8190E244B730200AE73CE /* Language.swift in Sources */,
+				C490F1002464658600623DF7 /* StatisticsLongCell.swift in Sources */,
 				C4F81912244B75DE00AE73CE /* Device+Constants.swift in Sources */,
 				C463DC94245CB02A00E265FF /* ActivitiesItemType.swift in Sources */,
 				C4F8195F244B891800AE73CE /* StartupAppDelegateConfigurator.swift in Sources */,
@@ -2136,6 +2175,7 @@
 				C4BD0F2A244DEF3D0056E8C1 /* R.generated.swift in Sources */,
 				C4584B6A245EDF0800E7F9BB /* BlenderConfiguration.swift in Sources */,
 				C463DC70245CAF8500E265FF /* PersonalCoachCoordinator.swift in Sources */,
+				C490F10624646CF400623DF7 /* StatisticsSmallCell.swift in Sources */,
 				C463DC202459D7B900E265FF /* UIViewController+ActionSheet.swift in Sources */,
 				C463DC73245CAF8500E265FF /* PersonalCoachPickerViewDelegate.swift in Sources */,
 				C4BD0F33244DF1280056E8C1 /* StartupSceneDelegateConfigurator.swift in Sources */,
@@ -2336,14 +2376,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = URUW664F9J;
+				DEVELOPMENT_TEAM = GB6ZBLUXG3;
 				INFOPLIST_FILE = Teztez/Resources/Plists/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = croco.Teztezz;
+				PRODUCT_BUNDLE_IDENTIFIER = croco.Teztez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -2357,14 +2397,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = URUW664F9J;
+				DEVELOPMENT_TEAM = GB6ZBLUXG3;
 				INFOPLIST_FILE = Teztez/Resources/Plists/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = croco.Teztezz;
+				PRODUCT_BUNDLE_IDENTIFIER = croco.Teztez;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
