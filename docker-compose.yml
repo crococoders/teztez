@@ -3,6 +3,7 @@ version: '3.7'
 volumes:
   content_db_data:
   feedback_db_data:
+  auth_db_data:
 
 x-shared_environment: &shared_environment
   LOG_LEVEL: ${LOG_LEVEL:-debug}
@@ -19,6 +20,7 @@ services:
     env_file:
       - .env
     depends_on:
+      - auth_db
       - feedback
       - content
       - feed
@@ -89,3 +91,15 @@ services:
       - feedback_db_data:/var/lib/postgresql/data/feedback_db
     ports:
       - '5433:5432'
+
+  auth_db:
+    image: postgres:12.1-alpine
+    environment:
+      POSTGRES_USERNAME: ${AUTH_POSTGRES_USERNAME}
+      POSTGRES_PASSWORD: ${AUTH_POSTGRES_PASSWORD}
+      POSTGRES_DB: ${AUTH_POSTGRES_DB}
+      PGDATA: /var/lib/postgresql/data/auth_db
+    volumes:
+      - auth_db_data:/var/lib/postgresql/data/auth_db
+    ports:
+      - '5434:5432'

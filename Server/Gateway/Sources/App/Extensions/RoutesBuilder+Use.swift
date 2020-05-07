@@ -9,12 +9,14 @@ import Vapor
 
 extension RoutesBuilder {
     func use<Response: ResponseEncodable>(handler: @escaping (Request, Service) throws -> Response, service: Service) {
-        HTTPMethod.redirectableMethods.forEach {
-            on($0, .constant("")) {
-                return try handler($0, service)
+        for method in HTTPMethod.redirectableMethods {
+            on(method, .constant("")) { request -> Response in
+                let _ = try request.auth.require(User.self)
+                return try handler(request, service)
             }
-            on($0, .anything) {
-                return try handler($0, service)
+            on(method, .anything) { request -> Response in
+                let _ = try request.auth.require(User.self)
+                return try handler(request, service)
             }
         }
     }
