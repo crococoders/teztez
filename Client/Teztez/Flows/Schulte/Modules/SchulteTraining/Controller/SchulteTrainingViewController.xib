@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProRounded-Regular.otf">
+            <string>SFProRounded-Regular</string>
+        </array>
+        <array key="SFProRounded-Semibold.otf">
+            <string>SFProRounded-Semibold</string>
+        </array>
+        <array key="SFProText-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SchulteTrainingViewController" customModule="Teztez" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="VgA-fx-7tM" id="vjx-Ya-s84"/>
+                <outlet property="messageLabel" destination="qHb-fX-mqg" id="KLD-WN-VdE"/>
+                <outlet property="nextElementLabel" destination="0nB-T6-pnX" id="3eG-Nx-5LL"/>
+                <outlet property="timerLabel" destination="DEl-G9-SDX" id="jZP-ak-ukY"/>
+                <outlet property="view" destination="iN0-l3-epB" id="H8u-j7-b3J"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEl-G9-SDX">
+                    <rect key="frame" x="40" y="120" width="334" height="24"/>
+                    <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nB-T6-pnX">
+                    <rect key="frame" x="40" y="176" width="334" height="29"/>
+                    <fontDescription key="fontDescription" name="SFProRounded-Semibold" family="SF Pro Rounded" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="VgA-fx-7tM">
+                    <rect key="frame" x="39.5" y="237" width="335" height="335"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="335" id="Ogh-TL-l60"/>
+                        <constraint firstAttribute="height" constant="335" id="e7n-jC-xR6"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="Pwy-69-vwA">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concentrate on the center and tap on numbers from 1 to 25 in ascending order" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qHb-fX-mqg">
+                    <rect key="frame" x="20" y="620" width="374" height="41"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="DEl-G9-SDX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="3uC-6P-Xs0"/>
+                <constraint firstItem="0nB-T6-pnX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="40" id="Djy-0L-QTT"/>
+                <constraint firstItem="DEl-G9-SDX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="32" id="Ii1-fb-j73"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="0nB-T6-pnX" secondAttribute="trailing" constant="40" id="LXT-xU-YQm"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qHb-fX-mqg" secondAttribute="trailing" constant="20" id="WLO-JA-IaB"/>
+                <constraint firstItem="qHb-fX-mqg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Z1r-Xx-cGW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qHb-fX-mqg" secondAttribute="bottom" constant="10" id="ZHa-kN-OIh"/>
+                <constraint firstItem="0nB-T6-pnX" firstAttribute="top" secondItem="DEl-G9-SDX" secondAttribute="bottom" constant="32" id="ejL-eb-xaQ"/>
+                <constraint firstItem="qHb-fX-mqg" firstAttribute="top" secondItem="VgA-fx-7tM" secondAttribute="bottom" constant="48" id="f6D-35-8jk"/>
+                <constraint firstItem="VgA-fx-7tM" firstAttribute="top" secondItem="0nB-T6-pnX" secondAttribute="bottom" constant="32" id="hDR-KU-VHh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DEl-G9-SDX" secondAttribute="trailing" constant="40" id="sgj-CX-UMY"/>
+                <constraint firstItem="VgA-fx-7tM" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="w9a-I3-Rhg"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="88"/>
+        </view>
+    </objects>
+</document>
