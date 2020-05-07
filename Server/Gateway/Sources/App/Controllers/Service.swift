@@ -23,7 +23,6 @@ extension Service {
             return PathComponent.constant("feed")
         case .feedback:
             return PathComponent.constant("feedback")
-        }
         case .analytics:
             return PathComponent.constant("analytics")
         }
@@ -37,7 +36,6 @@ extension Service {
             return Environment.get("FEED_HOST")
         case .feedback:
             return Environment.get("FEEDBACK_HOST")
-        }
         case .analytics:
             return Environment.get("ANALYTICS_HOST")
         }
@@ -51,7 +49,6 @@ extension Service {
             return Environment.get("FEED_PORT")
         case .feedback:
             return Environment.get("FEEDBACK_PORT")
-        }
         case .analytics:
             return Environment.get("ANALYTICS_PORT")
         }
