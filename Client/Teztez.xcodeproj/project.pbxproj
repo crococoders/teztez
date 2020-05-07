@@ -130,6 +130,13 @@
 		C4C0670C2458AD2B00EF39B8 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0670B2458AD2B00EF39B8 /* SliderView.swift */; };
 		C4C62B03245B521700EDFC52 /* FontSizeChangeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C62B02245B521700EDFC52 /* FontSizeChangeStore.swift */; };
 		C4C8FBE82461BA2F006388FA /* SuggestActivityModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8FBE72461BA2F006388FA /* SuggestActivityModuleFactory.swift */; };
+		C4C8FBED2461C541006388FA /* FeedsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4C8FBEC2461C541006388FA /* FeedsViewController.xib */; };
+		C4C8FBF02461C67A006388FA /* FeedsModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8FBEF2461C67A006388FA /* FeedsModuleFactory.swift */; };
+		C4C8FBF22461C74E006388FA /* FeedsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8FBF12461C74E006388FA /* FeedsCoordinator.swift */; };
+		C4C8FBF42461CD6A006388FA /* FeedsCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8FBF32461CD6A006388FA /* FeedsCollectionViewDelegate.swift */; };
+		C4C8FBF62461CD86006388FA /* FeedsCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8FBF52461CD86006388FA /* FeedsCollectionViewDataSource.swift */; };
+		C4C8FBF92461CE00006388FA /* FeedsItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C8FBF82461CE00006388FA /* FeedsItemType.swift */; };
+		C4C8FBFC2461CE41006388FA /* Models in Frameworks */ = {isa = PBXBuildFile; productRef = C4C8FBFB2461CE41006388FA /* Models */; };
 		C4CFD594245CC491009B902F /* BackwardsConvertText.strings in Resources */ = {isa = PBXBuildFile; fileRef = 356B830EFE866BDD920275CB /* BackwardsConvertText.strings */; };
 		C4D138DD244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D138DC244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift */; };
 		C4D138DF244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D138DE244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift */; };
@@ -183,7 +190,9 @@
 		C4F8198C244C560C00AE73CE /* SFProRounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4F8198B244C560C00AE73CE /* SFProRounded-Semibold.otf */; };
 		C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4F8198D244C562400AE73CE /* SFProRounded-Regular.otf */; };
 		C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F8198F244C582B00AE73CE /* FontStyles.swift */; };
+		CE0F83E6FBF7E3FA3AEDFE9E /* FeedsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C189F9E15F31D3BA3374F989 /* FeedsStore.swift */; };
 		D2A119A5F8166CAD5364FCA0 /* PersonalCoachResultStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09754A01CF6ECA71035E6AC9 /* PersonalCoachResultStore.swift */; };
+		D90BC9956DACD5DD4B793A8F /* FeedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9250DEFD26F0DDE650567813 /* FeedsViewController.swift */; };
 		D9F4E2B42243C49E92A285BD /* BlenderConvertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 167E23CE4015B5F7A68EB06E /* BlenderConvertViewController.swift */; };
 		DFAD0788A88395F146855A73 /* BlenderConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2ED7191D7E497772177623 /* BlenderConfigurationStore.swift */; };
 /* End PBXBuildFile section */
@@ -197,13 +206,16 @@
 		33D54E55B2D05740B15B068A /* PersonalCoachTrainingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachTrainingViewController.swift; sourceTree = "<group>"; };
 		356B830EFE866BDD920275CB /* BackwardsConvertText.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = BackwardsConvertText.strings; sourceTree = "<group>"; };
 		3C2B78DCD355FF23007B6E35 /* BackwardsConvertTextStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackwardsConvertTextStore.swift; sourceTree = "<group>"; };
+		61E6C5EB61FC4D747BB04A0F /* Feeds.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = Feeds.strings; sourceTree = "<group>"; };
 		71331ABBB051174193E4C4F4 /* BackwardsConvertTextViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackwardsConvertTextViewController.swift; sourceTree = "<group>"; };
 		7F52AA754D5CC7AE1B05C8D2 /* BlenderConfiguration.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = BlenderConfiguration.strings; sourceTree = "<group>"; };
 		8D2ED7191D7E497772177623 /* BlenderConfigurationStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConfigurationStore.swift; sourceTree = "<group>"; };
 		90105D2C8C675D469C5508CF /* PersonalCoachResultViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachResultViewController.swift; sourceTree = "<group>"; };
+		9250DEFD26F0DDE650567813 /* FeedsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedsViewController.swift; sourceTree = "<group>"; };
 		AF942F0B986FA5ADA639D9E9 /* PersonalCoachResult.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = PersonalCoachResult.strings; sourceTree = "<group>"; };
 		AFF93C44BBE95AAD0CD0D76B /* BlenderConvertStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConvertStore.swift; sourceTree = "<group>"; };
 		B4D02F34FE0C7F72B181357D /* SuggestActivity.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = SuggestActivity.strings; sourceTree = "<group>"; };
+		C189F9E15F31D3BA3374F989 /* FeedsStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedsStore.swift; sourceTree = "<group>"; };
 		C40AE0B924535E27008BC71C /* ActivitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesCell.xib; sourceTree = "<group>"; };
 		C40AE0BB24535E4B008BC71C /* ActivitiesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCell.swift; sourceTree = "<group>"; };
 		C40AE0BE245363D3008BC71C /* UICollectionView+Dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Dequeue.swift"; sourceTree = "<group>"; };
@@ -313,6 +325,13 @@
 		C4C0670B2458AD2B00EF39B8 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		C4C62B02245B521700EDFC52 /* FontSizeChangeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSizeChangeStore.swift; sourceTree = "<group>"; };
 		C4C8FBE72461BA2F006388FA /* SuggestActivityModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestActivityModuleFactory.swift; sourceTree = "<group>"; };
+		C4C8FBEC2461C541006388FA /* FeedsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedsViewController.xib; sourceTree = "<group>"; };
+		C4C8FBEF2461C67A006388FA /* FeedsModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsModuleFactory.swift; sourceTree = "<group>"; };
+		C4C8FBF12461C74E006388FA /* FeedsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsCoordinator.swift; sourceTree = "<group>"; };
+		C4C8FBF32461CD6A006388FA /* FeedsCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		C4C8FBF52461CD86006388FA /* FeedsCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		C4C8FBF82461CE00006388FA /* FeedsItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsItemType.swift; sourceTree = "<group>"; };
+		C4C8FBFA2461CE39006388FA /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Models; path = ../Shared/Models; sourceTree = "<group>"; };
 		C4D138DC244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4D138DE244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateConfiguratorFactory.swift; sourceTree = "<group>"; };
 		C4F7AFCC24547229007D6289 /* ActivitiesIntroBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesIntroBlockView.swift; sourceTree = "<group>"; };
@@ -373,6 +392,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4C8FBFC2461CE41006388FA /* Models in Frameworks */,
 				C4F81974244BA02C00AE73CE /* Rswift in Frameworks */,
 				C4F81977244C4F3200AE73CE /* IQKeyboardManagerSwift in Frameworks */,
 				C4F8197D244C508F00AE73CE /* Hero in Frameworks */,
@@ -416,6 +436,22 @@
 				356B830EFE866BDD920275CB /* BackwardsConvertText.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		372665AC0B0C78EEE670EAC0 /* Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				C4C8FBEE2461C667006388FA /* Coordinator */,
+				C4C8FBEA2461C4FE006388FA /* Modules */,
+			);
+			path = Feeds;
+			sourceTree = "<group>";
+		};
+		3C8E85228F670699AF477546 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4B917543DA3909D398836576 /* BlenderConfiguration */ = {
@@ -479,6 +515,13 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		7EEB923FBE74F6B8DEF0C318 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		87C553DC0539439D33438FE8 /* Store */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,11 +540,30 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		92B403916D7FA94A3416C3B8 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				61E6C5EB61FC4D747BB04A0F /* Feeds.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
 		B02B518864ACD50FE3B2BDD6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				167E23CE4015B5F7A68EB06E /* BlenderConvertViewController.swift */,
 				C4521BDC245F050100EF2CB7 /* BlenderConvertViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B38C84607F3C2A2335441592 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C4C8FBF52461CD86006388FA /* FeedsCollectionViewDataSource.swift */,
+				C4C8FBF32461CD6A006388FA /* FeedsCollectionViewDelegate.swift */,
+				9250DEFD26F0DDE650567813 /* FeedsViewController.swift */,
+				C4C8FBEC2461C541006388FA /* FeedsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1291,11 +1353,49 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		C4C8FBEA2461C4FE006388FA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C4C8FBEB2461C503006388FA /* Feeds */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C4C8FBEB2461C503006388FA /* Feeds */ = {
+			isa = PBXGroup;
+			children = (
+				B38C84607F3C2A2335441592 /* Controller */,
+				92B403916D7FA94A3416C3B8 /* Localization */,
+				C4E481CECD8FB7CA2E373FA0 /* Store */,
+				7EEB923FBE74F6B8DEF0C318 /* View */,
+				3C8E85228F670699AF477546 /* ViewModel */,
+			);
+			path = Feeds;
+			sourceTree = "<group>";
+		};
+		C4C8FBEE2461C667006388FA /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C4C8FBEF2461C67A006388FA /* FeedsModuleFactory.swift */,
+				C4C8FBF12461C74E006388FA /* FeedsCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		C4D64A232455DCFF00100993 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4E481CECD8FB7CA2E373FA0 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				C189F9E15F31D3BA3374F989 /* FeedsStore.swift */,
+				C4C8FBF82461CE00006388FA /* FeedsItemType.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 		C4F7AFCB245471FF007D6289 /* View */ = {
@@ -1337,6 +1437,7 @@
 		C4F818D6244B289200AE73CE = {
 			isa = PBXGroup;
 			children = (
+				C4C8FBFA2461CE39006388FA /* Models */,
 				C4F818E1244B289200AE73CE /* Teztez */,
 				C4F818E0244B289200AE73CE /* Products */,
 				C4D64A232455DCFF00100993 /* Frameworks */,
@@ -1414,6 +1515,7 @@
 				C4968904245CC99600CA540E /* Backwards */,
 				C4584B68245EDE3700E7F9BB /* Blender */,
 				C4B88F602450CEC400D1D1BA /* Common */,
+				372665AC0B0C78EEE670EAC0 /* Feeds */,
 				C4197B7A2450A08700811F37 /* MainTabBar */,
 				C463DC5F245CAF8500E265FF /* PersonalCoach */,
 				C41FA81324608CD800E515EC /* Schulte */,
@@ -1753,6 +1855,7 @@
 				C4F81976244C4F3200AE73CE /* IQKeyboardManagerSwift */,
 				C4F81979244C4FCD00AE73CE /* ViewAnimator */,
 				C4F8197C244C508F00AE73CE /* Hero */,
+				C4C8FBFB2461CE41006388FA /* Models */,
 			);
 			productName = Teztez;
 			productReference = C4F818DF244B289200AE73CE /* Teztez.app */;
@@ -1824,6 +1927,7 @@
 				C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */,
 				C41FA85E246096A800E515EC /* SuggestActivity.strings in Resources */,
 				C463DC98245D5F2700E265FF /* PersonalCoachTrainingViewController.xib in Resources */,
+				C4C8FBED2461C541006388FA /* FeedsViewController.xib in Resources */,
 				C41FA84C24608CD800E515EC /* SchulteResult.strings in Resources */,
 				C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */,
 				C4F81986244C55D300AE73CE /* SFProDisplay-Bold.otf in Resources */,
@@ -1955,6 +2059,7 @@
 				C41FA83A24608CD800E515EC /* SchulteModuleFactory.swift in Sources */,
 				C463DC232459DCAD00E265FF /* ActionSheetViewModel.swift in Sources */,
 				C4197B902450AC5700811F37 /* ActivitiesStore.swift in Sources */,
+				C4C8FBF92461CE00006388FA /* FeedsItemType.swift in Sources */,
 				C4197B8C2450ABA400811F37 /* ActivitiesCoordinator.swift in Sources */,
 				C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */,
 				C463DC77245CAF8500E265FF /* PersonalCoachStore.swift in Sources */,
@@ -1965,6 +2070,7 @@
 				C4F81953244B832A00AE73CE /* Router.swift in Sources */,
 				C40AE0C624537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift in Sources */,
 				C4C06700245898CA00EF39B8 /* FontSizeChangeViewController.swift in Sources */,
+				C4C8FBF22461C74E006388FA /* FeedsCoordinator.swift in Sources */,
 				C463DC142459D32C00E265FF /* TextInputTextViewDelegate.swift in Sources */,
 				C471CE82245F15A000668E98 /* BlenderConvertStore.swift in Sources */,
 				C4F8192C244B76CE00AE73CE /* UITextField+Indent.swift in Sources */,
@@ -1988,6 +2094,7 @@
 				C41FA83F24608CD800E515EC /* SchulteTrainingCollectionViewDataSource.swift in Sources */,
 				C4F7AFD424547D75007D6289 /* NibOwnerLoadable.swift in Sources */,
 				C40BB4712457494E00C236C7 /* ActivitiesIntroBlockViewModel.swift in Sources */,
+				C4C8FBF02461C67A006388FA /* FeedsModuleFactory.swift in Sources */,
 				C41FA7CF245D8AA800E515EC /* String+WordList.swift in Sources */,
 				C4F8190E244B730200AE73CE /* Language.swift in Sources */,
 				C4F81912244B75DE00AE73CE /* Device+Constants.swift in Sources */,
@@ -2036,6 +2143,7 @@
 				C4F8194A244B82F000AE73CE /* ModuleFactory.swift in Sources */,
 				C4F81928244B76BA00AE73CE /* UITableViewCell+SelectedBackgroundView.swift in Sources */,
 				C4197B8E2450ABF000811F37 /* ActivitiesModuleFactory.swift in Sources */,
+				C4C8FBF42461CD6A006388FA /* FeedsCollectionViewDelegate.swift in Sources */,
 				C40AE0C124536409008BC71C /* UICollectionView+Register.swift in Sources */,
 				C4F8192F244B76DC00AE73CE /* UIView+CornerRadius.swift in Sources */,
 				C463DC1B2459D35C00E265FF /* UIImageView+Color.swift in Sources */,
@@ -2066,6 +2174,9 @@
 				D9F4E2B42243C49E92A285BD /* BlenderConvertViewController.swift in Sources */,
 				9F86AA6BFF581E551F799928 /* SuggestActivityViewController.swift in Sources */,
 				B5A5E2E623CAC65921821EDD /* SuggestActivityStore.swift in Sources */,
+				D90BC9956DACD5DD4B793A8F /* FeedsViewController.swift in Sources */,
+				C4C8FBF62461CD86006388FA /* FeedsCollectionViewDataSource.swift in Sources */,
+				CE0F83E6FBF7E3FA3AEDFE9E /* FeedsStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2302,6 +2413,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C4C8FBFB2461CE41006388FA /* Models */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Models;
+		};
 		C4F81973244BA02C00AE73CE /* Rswift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C4F81972244BA02C00AE73CE /* XCRemoteSwiftPackageReference "R.swift" */;

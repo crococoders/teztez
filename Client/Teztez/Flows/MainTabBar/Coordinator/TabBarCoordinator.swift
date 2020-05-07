@@ -20,8 +20,20 @@ final class TabBarCoordinator: ParentCoordinator {
 
     override func start() {
         router.setRootModule(tabBarPresentable, hideBar: true)
-        tabBarPresentable.onViewDidLoad = runActivitiesFlow()
+        tabBarPresentable.onViewDidLoad = runFeedsFlow()
+        tabBarPresentable.onFeedsTabDidSelect = runFeedsFlow()
         tabBarPresentable.onActivitiesTabDidSelect = runActivitiesFlow()
+    }
+
+    private func runFeedsFlow() -> ((CoordinatorNavigationController) -> Void) {
+        return { [weak self] navigationController in
+            guard
+                let self = self,
+                navigationController.viewControllers.isEmpty else { return }
+            let feedsCoordinator = self.coordinatorFactory.makeFeedsCoordinator(navigationController: navigationController)
+            self.addDependency(feedsCoordinator)
+            feedsCoordinator.start()
+        }
     }
 
     private func runActivitiesFlow() -> ((CoordinatorNavigationController) -> Void) {
@@ -29,7 +41,7 @@ final class TabBarCoordinator: ParentCoordinator {
             guard
                 let self = self,
                 navigationController.viewControllers.isEmpty else { return }
-            let activitiesCooridnator = self.coordinatorFactory.makeActivitiesCoordiantor(navigationController: navigationController)
+            let activitiesCooridnator = self.coordinatorFactory.makeActivitiesCoordinator(navigationController: navigationController)
             self.addDependency(activitiesCooridnator)
             activitiesCooridnator.start()
         }
