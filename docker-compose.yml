@@ -102,4 +102,4 @@ services:
     volumes:
       - auth_db_data:/var/lib/postgresql/data/auth_db
     ports:
-      - '5432:5432'
+      - '5434:5432'
