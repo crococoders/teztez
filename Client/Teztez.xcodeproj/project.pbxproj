@@ -120,6 +120,9 @@
 		C490F1122464840A00623DF7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C490F1112464840A00623DF7 /* Kingfisher */; };
 		C490F1142464842500623DF7 /* InformationHeadlinedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F1132464842500623DF7 /* InformationHeadlinedCell.swift */; };
 		C490F1172464878500623DF7 /* InformationHeadlinedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F1162464878500623DF7 /* InformationHeadlinedViewModel.swift */; };
+		C490F1192465300700623DF7 /* InformationDetailedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F1182465300700623DF7 /* InformationDetailedCell.swift */; };
+		C490F11C2465302E00623DF7 /* InformationDetailedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C490F11B2465302E00623DF7 /* InformationDetailedCell.xib */; };
+		C490F11E246532EE00623DF7 /* InformationDetailedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C490F11D246532EE00623DF7 /* InformationDetailedViewModel.swift */; };
 		C4968908245CC9E500CA540E /* BackwardsModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4968907245CC9E500CA540E /* BackwardsModuleFactory.swift */; };
 		C496890A245CCAC400CA540E /* BackwardsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4968909245CCAC400CA540E /* BackwardsCoordinator.swift */; };
 		C499E930245D7B190065FC28 /* BackwardsConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C499E92E245D7B190065FC28 /* BackwardsConfigurationViewController.swift */; };
@@ -324,6 +327,9 @@
 		C490F10E2464818C00623DF7 /* InformationHeadlinedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationHeadlinedCell.xib; sourceTree = "<group>"; };
 		C490F1132464842500623DF7 /* InformationHeadlinedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationHeadlinedCell.swift; sourceTree = "<group>"; };
 		C490F1162464878500623DF7 /* InformationHeadlinedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationHeadlinedViewModel.swift; sourceTree = "<group>"; };
+		C490F1182465300700623DF7 /* InformationDetailedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationDetailedCell.swift; sourceTree = "<group>"; };
+		C490F11B2465302E00623DF7 /* InformationDetailedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationDetailedCell.xib; sourceTree = "<group>"; };
+		C490F11D246532EE00623DF7 /* InformationDetailedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationDetailedViewModel.swift; sourceTree = "<group>"; };
 		C4968907245CC9E500CA540E /* BackwardsModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsModuleFactory.swift; sourceTree = "<group>"; };
 		C4968909245CCAC400CA540E /* BackwardsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsCoordinator.swift; sourceTree = "<group>"; };
 		C499E92E245D7B190065FC28 /* BackwardsConfigurationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackwardsConfigurationViewController.swift; sourceTree = "<group>"; };
@@ -477,6 +483,7 @@
 				C490F1012464688000623DF7 /* StatisticsLongViewModel.swift */,
 				C490F10B246475EC00623DF7 /* StatisticsSmallViewModel.swift */,
 				C490F1162464878500623DF7 /* InformationHeadlinedViewModel.swift */,
+				C490F11D246532EE00623DF7 /* InformationDetailedViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -545,6 +552,7 @@
 		7EEB923FBE74F6B8DEF0C318 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C490F11A2465300C00623DF7 /* InformationDetailed */,
 				C490F10D2464813300623DF7 /* InfomationHeadlined */,
 				C490F10424646CC400623DF7 /* StatisticsSmall */,
 				C490F10324646CB700623DF7 /* StatisticsLong */,
@@ -1206,6 +1214,15 @@
 				C490F10E2464818C00623DF7 /* InformationHeadlinedCell.xib */,
 			);
 			path = InfomationHeadlined;
+			sourceTree = "<group>";
+		};
+		C490F11A2465300C00623DF7 /* InformationDetailed */ = {
+			isa = PBXGroup;
+			children = (
+				C490F1182465300700623DF7 /* InformationDetailedCell.swift */,
+				C490F11B2465302E00623DF7 /* InformationDetailedCell.xib */,
+			);
+			path = InformationDetailed;
 			sourceTree = "<group>";
 		};
 		C4968904245CC99600CA540E /* Backwards */ = {
@@ -1979,6 +1996,7 @@
 				C463DC71245CAF8500E265FF /* PersonalCoachViewController.xib in Resources */,
 				C4F7AFDC24547FC9007D6289 /* ActivitiesIntroBlockView.xib in Resources */,
 				C4197B942450B1F900811F37 /* Activities.strings in Resources */,
+				C490F11C2465302E00623DF7 /* InformationDetailedCell.xib in Resources */,
 				C463DC75245CAF8500E265FF /* PersonalCoach.strings in Resources */,
 				C463DC8B245CAF9600E265FF /* ActivityTextInputView.xib in Resources */,
 				C4CFD594245CC491009B902F /* BackwardsConvertText.strings in Resources */,
@@ -2184,6 +2202,7 @@
 				C4C8FBE82461BA2F006388FA /* SuggestActivityModuleFactory.swift in Sources */,
 				C41D2C8B2454F30800A56C2F /* Array+Factory.swift in Sources */,
 				C4F7AFCD24547229007D6289 /* ActivitiesIntroBlockView.swift in Sources */,
+				C490F1192465300700623DF7 /* InformationDetailedCell.swift in Sources */,
 				C4F81955244B834500AE73CE /* ApplicationCoordinator.swift in Sources */,
 				C41FA84A24608CD800E515EC /* SchulteResultViewController.swift in Sources */,
 				C41FA83D24608CD800E515EC /* SchulteTrainingViewController.swift in Sources */,
@@ -2213,6 +2232,7 @@
 				C41FA85224608E3000E515EC /* ActivitySelectValueView.swift in Sources */,
 				C4B88F5B2450BCA700D1D1BA /* PrimaryButton.swift in Sources */,
 				C40AE0BF245363D3008BC71C /* UICollectionView+Dequeue.swift in Sources */,
+				C490F11E246532EE00623DF7 /* InformationDetailedViewModel.swift in Sources */,
 				C41FA83B24608CD800E515EC /* SchulteTrainingViewModel.swift in Sources */,
 				C41FA85A24608EBC00E515EC /* ActivitySwitchView.swift in Sources */,
 				C4197B802450A28600811F37 /* TabBarController.swift in Sources */,
