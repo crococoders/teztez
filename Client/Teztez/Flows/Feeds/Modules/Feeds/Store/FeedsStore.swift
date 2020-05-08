@@ -13,11 +13,14 @@ final class FeedsStore {
     enum Action {
         case didLoadView
         case didSelectAt(index: Int)
+        case didForceRefresh
     }
 
     enum State {
         case initial(items: [FeedsItemType])
         case infomrationSelected(details: InformationDetails)
+        case loading
+        case loaded
     }
 
     @Published private(set) var state: State?
@@ -34,15 +37,19 @@ final class FeedsStore {
             fetchBlocks()
         case let .didSelectAt(index):
             setState(from: index)
+        case .didForceRefresh:
+            break
         }
     }
 
     private func fetchBlocks() {
+        state = .loading
         provider.fetchFeeds { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(blocks):
                 self.compileItems(from: blocks)
+                self.state = .loaded
                 self.state = .initial(items: self.items)
             case .failure:
                 break

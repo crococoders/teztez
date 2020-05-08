@@ -25,6 +25,9 @@ struct InformationHeadlinedViewModel {
     }
 
     private func getWeekDay(from date: Date) -> String {
+        guard !Calendar.current.isDateInToday(date) else {
+            return "TODAY"
+        }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
         return dateFormatter.string(from: date)
@@ -32,7 +35,8 @@ struct InformationHeadlinedViewModel {
 
     private func getDateString(from date: Date) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "d MMM"
+        let isDateinToday = Calendar.current.isDateInToday(date)
+        dateFormatter.dateFormat = isDateinToday ? "EEEE d MMM" : "d MMM"
         return dateFormatter.string(from: date)
     }
 }

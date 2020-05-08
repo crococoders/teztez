@@ -1268,6 +1268,13 @@
 			path = InformationDetailed;
 			sourceTree = "<group>";
 		};
+		C490F126246583E800623DF7 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		C4968904245CC99600CA540E /* Backwards */ = {
 			isa = PBXGroup;
 			children = (
@@ -1482,6 +1489,7 @@
 		C4C8FBEB2461C503006388FA /* Feeds */ = {
 			isa = PBXGroup;
 			children = (
+				C490F126246583E800623DF7 /* Repository */,
 				B38C84607F3C2A2335441592 /* Controller */,
 				92B403916D7FA94A3416C3B8 /* Localization */,
 				C4E481CECD8FB7CA2E373FA0 /* Store */,
