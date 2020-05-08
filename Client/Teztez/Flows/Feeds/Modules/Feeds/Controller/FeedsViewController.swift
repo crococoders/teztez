@@ -9,9 +9,13 @@
 import Combine
 import UIKit
 
-protocol FeedsPresentable: Presentable {}
+protocol FeedsPresentable: Presentable {
+    var onInformationSelected: ((_ details: InformationDetails) -> Void)? { get set }
+}
 
 final class FeedsViewController: ViewController, FeedsPresentable {
+    var onInformationSelected: ((_ details: InformationDetails) -> Void)?
+
     private let store: FeedsStore
     private let collectionViewDataSource: FeedsCollectionViewDataSource
     private let collectionViewDelegate: FeedsCollectionViewDelegate
@@ -52,6 +56,8 @@ final class FeedsViewController: ViewController, FeedsPresentable {
                 self.collectionViewDataSource.items = items
                 self.collectionViewDelegate.items = items
                 self.collectionView.reloadData()
+            case let .infomrationSelected(details):
+                self.onInformationSelected?(details)
             }
         }.store(in: &cancellables)
     }

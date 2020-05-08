@@ -24,7 +24,18 @@ final class FeedsCoordinator: Coordinator, SuggestActivityCoordinatorOutput {
     }
 
     private func showFeeds() {
-        let feeds = moduleFactory.makeFeeds()
+        var feeds = moduleFactory.makeFeeds()
+        feeds.onInformationSelected = { [weak self] details in
+            self?.showInformationDetails(details: details)
+        }
         router.setRootModule(feeds)
+    }
+
+    private func showInformationDetails(details: InformationDetails) {
+        var informationDetails = moduleFactory.makeInformationDetails(details: details)
+        informationDetails.onCloseButtonDidTap = { [weak self] in
+            self?.router.dismissModule()
+        }
+        router.show(informationDetails, with: .presentInFullScreen(animated: true))
     }
 }

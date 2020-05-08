@@ -10,7 +10,7 @@ import UIKit
 
 private enum Constant {
     static let collectionViewHeight: CGFloat = 115
-    static let padding: CGFloat = 12
+    static let padding: CGFloat = 8
 }
 
 final class FeedsCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout {
@@ -43,6 +43,6 @@ final class FeedsCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowL
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        store.dispatch(action: .didSelectItem(itemType: items[indexPath.row]))
+        store.dispatch(action: .didSelectAt(index: indexPath.row))
     }
 }

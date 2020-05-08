@@ -24,8 +24,8 @@ final class InformationHeadlinedCell: UICollectionViewCell {
         titleLabel.text = viewModel.title
         coverImageView.kf.setImage(with: URL(string: viewModel.imageURL))
         gradientView.layer.sublayers?.remove(at: 0)
-        gradientView.applyGradient(colors: [UIColor.black.withAlphaComponent(0.6).cgColor, UIColor.clear.cgColor],
-                                   locations: [0.0, 0.5],
+        gradientView.applyGradient(colors: [UIColor.black.withAlphaComponent(0.8).cgColor, UIColor.clear.cgColor],
+                                   locations: [0.0, 0.8],
                                    direction: .topToBottom)
     }
 }

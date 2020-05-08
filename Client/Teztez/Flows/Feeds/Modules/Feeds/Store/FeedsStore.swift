@@ -12,10 +12,12 @@ import Models
 final class FeedsStore {
     enum Action {
         case didLoadView
+        case didSelectAt(index: Int)
     }
 
     enum State {
         case initial(items: [FeedsItemType])
+        case infomrationSelected(details: InformationDetails)
     }
 
     @Published private(set) var state: State?
@@ -30,6 +32,8 @@ final class FeedsStore {
         switch action {
         case .didLoadView:
             fetchBlocks()
+        case let .didSelectAt(index):
+            setState(from: index)
         }
     }
 
@@ -71,6 +75,19 @@ final class FeedsStore {
             default:
                 break
             }
+        }
+    }
+
+    private func setState(from index: Int) {
+        switch items[index] {
+        case let .informationDetailed(viewModel):
+            let details = InformationDetails(title: viewModel.title, metaTitle: viewModel.metaTitle, imageURL: viewModel.imageURL)
+            state = .infomrationSelected(details: details)
+        case let .informationHeadlined(viewModel):
+            let details = InformationDetails(title: viewModel.title, metaTitle: viewModel.metaTitle, imageURL: viewModel.imageURL)
+            state = .infomrationSelected(details: details)
+        default:
+            break
         }
     }
 }
