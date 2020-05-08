@@ -8,9 +8,9 @@
 import Foundation
 
 public struct UserResponse: Codable {
-    let id: String
-    let name: String
-    let username: String
+    public let id: String
+    public let name: String
+    public let username: String
     
     public init(id: String, name: String, username: String) {
         self.id = id

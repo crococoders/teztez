@@ -21,12 +21,28 @@ final class ApplicationCoordinator: ParentCoordinator {
     }
 
     override func start() {
-        runMainTabBarFlow()
+        switch instructor.flow {
+        case .main:
+            runMainTabBarFlow()
+        case .auth:
+            runAuthFlow()
+        }
     }
 
     private func runMainTabBarFlow() {
         let coordinator = coordinatorFactory.makeMainTabBarCoordinator(router: router)
         addDependency(coordinator)
+        coordinator.start()
+    }
+
+    private func runAuthFlow() {
+        let coordinator = coordinatorFactory.makeAuthCoordinator(router: router)
+        addDependency(coordinator)
+        coordinator.onFlowDidFinish = { [weak self, weak coordinator] in
+            guard let self = self else { return }
+            self.removeDependency(coordinator)
+            self.runMainTabBarFlow()
+        }
         coordinator.start()
     }
 }

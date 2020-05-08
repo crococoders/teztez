@@ -1,0 +1,16 @@
+/*
+  Auth.strings
+  Teztez
+
+  Created by Adlet on 08/05/2020.
+  Copyright © 2020 Crococoders. All rights reserved.
+*/
+
+"title" = "Welcome to Teztez";
+"subtitle" = "Sign up and increase your reading speed";
+"enterName" = "Enter name";
+"enterUsername" = "Enter username";
+"enterPassword" = "Enter password";
+"confirmPassword" = "Confirm Password";
+"signUpTitle" = "Sign up";
+

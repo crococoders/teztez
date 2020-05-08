@@ -10,10 +10,17 @@ import Foundation
 
 enum ApplicationLaunchInstruction {
     case main
+    case auth
 }
 
 final class ApplicationLaunchInstructor {
+    private let userSession = UserSession.shared
+
     var flow: ApplicationLaunchInstruction {
-        return .main
+        if userSession.isExist {
+            return .main
+        } else {
+            return .auth
+        }
     }
 }

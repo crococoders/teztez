@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SFProText-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SFProText-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthViewController" customModule="Teztez" customModuleProvider="target">
+            <connections>
+                <outlet property="confirmPasswordLabel" destination="zWs-yQ-I8s" id="7hg-e4-FOF"/>
+                <outlet property="confirmPasswordTextField" destination="N9w-tj-nb6" id="UbK-R9-lpF"/>
+                <outlet property="iconView" destination="Xle-9d-Ddu" id="pa8-ey-CWJ"/>
+                <outlet property="nameLabel" destination="KaC-7b-k5X" id="53H-MJ-6bv"/>
+                <outlet property="nameTextField" destination="SRR-y7-gdi" id="zgg-HD-3ba"/>
+                <outlet property="passwordLabel" destination="Bph-Dg-T5z" id="SEZ-0P-3uo"/>
+                <outlet property="passwordTextField" destination="bEi-Mz-DDj" id="Pbx-7w-SBj"/>
+                <outlet property="signUpButton" destination="ogc-Oh-YcH" id="mmb-kG-PA6"/>
+                <outlet property="subtitleLabel" destination="dfJ-Ak-D1b" id="cYO-ju-6B6"/>
+                <outlet property="titleLabel" destination="lhL-jl-8r9" id="LAM-N6-Fxu"/>
+                <outlet property="usernameLabel" destination="1Ks-d4-Gay" id="Dkh-Xo-ZHJ"/>
+                <outlet property="usernameTextField" destination="IUG-9j-df8" id="BwI-0j-kVI"/>
+                <outlet property="view" destination="iN0-l3-epB" id="fsl-sO-INF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsb-bC-io1">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAI-ef-Ghg">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xle-9d-Ddu" customClass="ActivityIconView" customModule="Teztez" customModuleProvider="target">
+                                    <rect key="frame" x="170.5" y="76" width="73" height="73"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="73" id="HCH-2M-V8v"/>
+                                        <constraint firstAttribute="height" constant="73" id="QZ4-Db-fYO"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up and increase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfJ-Ak-D1b">
+                                    <rect key="frame" x="133" y="220" width="148" height="18"/>
+                                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TezTez" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhL-jl-8r9">
+                                    <rect key="frame" x="158.5" y="165" width="97.5" height="39"/>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="32"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ks-d4-Gay">
+                                    <rect key="frame" x="40" y="278" width="132" height="21"/>
+                                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUG-9j-df8" customClass="PrimaryTextField" customModule="Teztez" customModuleProvider="target">
+                                    <rect key="frame" x="40" y="304" width="334" height="47"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="47" id="xBu-xN-34r"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaC-7b-k5X">
+                                    <rect key="frame" x="40" y="367" width="95" height="21"/>
+                                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRR-y7-gdi" customClass="PrimaryTextField" customModule="Teztez" customModuleProvider="target">
+                                    <rect key="frame" x="40" y="393" width="334" height="47"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="47" id="pJR-dV-S0b"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bph-Dg-T5z">
+                                    <rect key="frame" x="40" y="456" width="130" height="21"/>
+                                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEi-Mz-DDj" customClass="PrimaryTextField" customModule="Teztez" customModuleProvider="target">
+                                    <rect key="frame" x="40" y="482" width="334" height="47"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="47" id="j2u-Mu-i4D"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWs-yQ-I8s">
+                                    <rect key="frame" x="40" y="545" width="152.5" height="21"/>
+                                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N9w-tj-nb6" customClass="PrimaryTextField" customModule="Teztez" customModuleProvider="target">
+                                    <rect key="frame" x="40" y="571" width="334" height="47"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="47" id="55Z-CV-f2a"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ogc-Oh-YcH" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
+                                    <rect key="frame" x="40" y="650" width="334" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="MPL-Xk-Ifi"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="signUpDidTap:" destination="-1" eventType="touchUpInside" id="ry2-6X-Di8"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="lhL-jl-8r9" firstAttribute="top" secondItem="Xle-9d-Ddu" secondAttribute="bottom" constant="16" id="0zA-bv-3mG"/>
+                                <constraint firstAttribute="trailing" secondItem="N9w-tj-nb6" secondAttribute="trailing" constant="40" id="3Hx-L9-JgI"/>
+                                <constraint firstItem="SRR-y7-gdi" firstAttribute="leading" secondItem="zAI-ef-Ghg" secondAttribute="leading" constant="40" id="4rn-EQ-pVU"/>
+                                <constraint firstItem="dfJ-Ak-D1b" firstAttribute="top" secondItem="lhL-jl-8r9" secondAttribute="bottom" constant="16" id="51K-CV-QaT"/>
+                                <constraint firstAttribute="trailing" secondItem="bEi-Mz-DDj" secondAttribute="trailing" constant="40" id="5Lz-Wj-j6s"/>
+                                <constraint firstAttribute="trailing" secondItem="SRR-y7-gdi" secondAttribute="trailing" constant="40" id="7kd-19-ddB"/>
+                                <constraint firstItem="IUG-9j-df8" firstAttribute="top" secondItem="1Ks-d4-Gay" secondAttribute="bottom" constant="5" id="7zG-lV-cDZ"/>
+                                <constraint firstAttribute="trailing" secondItem="IUG-9j-df8" secondAttribute="trailing" constant="40" id="CYs-3K-Ero"/>
+                                <constraint firstItem="1Ks-d4-Gay" firstAttribute="leading" secondItem="zAI-ef-Ghg" secondAttribute="leading" constant="40" id="Fce-Ya-xbY"/>
+                                <constraint firstItem="KaC-7b-k5X" firstAttribute="top" secondItem="IUG-9j-df8" secondAttribute="bottom" constant="16" id="Hql-Qb-FAO"/>
+                                <constraint firstItem="ogc-Oh-YcH" firstAttribute="leading" secondItem="zAI-ef-Ghg" secondAttribute="leading" constant="40" id="Iqc-Ph-Zk8"/>
+                                <constraint firstItem="N9w-tj-nb6" firstAttribute="top" secondItem="zWs-yQ-I8s" secondAttribute="bottom" constant="5" id="MIS-fE-etv"/>
+                                <constraint firstItem="Xle-9d-Ddu" firstAttribute="centerX" secondItem="zAI-ef-Ghg" secondAttribute="centerX" id="Srl-D4-mXy"/>
+                                <constraint firstAttribute="trailing" secondItem="ogc-Oh-YcH" secondAttribute="trailing" constant="40" id="U0F-F5-uob"/>
+                                <constraint firstItem="dfJ-Ak-D1b" firstAttribute="centerX" secondItem="zAI-ef-Ghg" secondAttribute="centerX" id="VaH-Fq-06k"/>
+                                <constraint firstItem="zWs-yQ-I8s" firstAttribute="top" secondItem="bEi-Mz-DDj" secondAttribute="bottom" constant="16" id="XMg-4q-shw"/>
+                                <constraint firstItem="Bph-Dg-T5z" firstAttribute="leading" secondItem="zAI-ef-Ghg" secondAttribute="leading" constant="40" id="Ypc-7k-17n"/>
+                                <constraint firstItem="ogc-Oh-YcH" firstAttribute="top" secondItem="N9w-tj-nb6" secondAttribute="bottom" constant="32" id="ZT3-vr-0gK"/>
+                                <constraint firstItem="Xle-9d-Ddu" firstAttribute="top" secondItem="zAI-ef-Ghg" secondAttribute="top" constant="76" id="aWg-H4-9Jx"/>
+                                <constraint firstItem="zWs-yQ-I8s" firstAttribute="leading" secondItem="zAI-ef-Ghg" secondAttribute="leading" constant="40" id="cYf-ep-CwH"/>
+                                <constraint firstItem="N9w-tj-nb6" firstAttribute="leading" secondItem="zAI-ef-Ghg" secondAttribute="leading" constant="40" id="frk-bU-fq5"/>
+                                <constraint firstItem="lhL-jl-8r9" firstAttribute="centerX" secondItem="zAI-ef-Ghg" secondAttribute="centerX" id="iDw-Xc-CBf"/>
+                                <constraint firstItem="SRR-y7-gdi" firstAttribute="top" secondItem="KaC-7b-k5X" secondAttribute="bottom" constant="5" id="ksZ-gm-Rwm"/>
+                                <constraint firstItem="bEi-Mz-DDj" firstAttribute="top" secondItem="Bph-Dg-T5z" secondAttribute="bottom" constant="5" id="rTR-2l-lwf"/>
+                                <constraint firstItem="KaC-7b-k5X" firstAttribute="leading" secondItem="zAI-ef-Ghg" secondAttribute="leading" constant="40" id="rwj-SQ-RnV"/>
+                                <constraint firstItem="1Ks-d4-Gay" firstAttribute="top" secondItem="dfJ-Ak-D1b" secondAttribute="bottom" constant="40" id="sW8-Aq-P9I"/>
+                                <constraint firstItem="Bph-Dg-T5z" firstAttribute="top" secondItem="SRR-y7-gdi" secondAttribute="bottom" constant="16" id="tV5-2T-RJA"/>
+                                <constraint firstItem="bEi-Mz-DDj" firstAttribute="leading" secondItem="zAI-ef-Ghg" secondAttribute="leading" constant="40" id="tqs-Xc-kH6"/>
+                                <constraint firstItem="IUG-9j-df8" firstAttribute="leading" secondItem="zAI-ef-Ghg" secondAttribute="leading" constant="40" id="zpr-ww-Znq"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="zAI-ef-Ghg" secondAttribute="trailing" id="Jn6-Q3-d59"/>
+                        <constraint firstAttribute="bottom" secondItem="zAI-ef-Ghg" secondAttribute="bottom" id="Ljs-hk-Tfy"/>
+                        <constraint firstItem="zAI-ef-Ghg" firstAttribute="top" secondItem="fsb-bC-io1" secondAttribute="top" id="Zfz-vc-hF6"/>
+                        <constraint firstItem="zAI-ef-Ghg" firstAttribute="leading" secondItem="fsb-bC-io1" secondAttribute="leading" id="iVO-Ci-gQ0"/>
+                        <constraint firstItem="zAI-ef-Ghg" firstAttribute="width" secondItem="fsb-bC-io1" secondAttribute="width" id="s6N-BY-9fx"/>
+                        <constraint firstItem="zAI-ef-Ghg" firstAttribute="height" secondItem="fsb-bC-io1" secondAttribute="height" priority="750" id="zk9-qj-Jb7"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fsb-bC-io1" firstAttribute="top" secondItem="fUZ-Ks-y39" secondAttribute="top" id="88S-Yj-VKZ"/>
+                <constraint firstItem="fsb-bC-io1" firstAttribute="leading" secondItem="fUZ-Ks-y39" secondAttribute="leading" id="SQd-cb-Nd8"/>
+                <constraint firstItem="fsb-bC-io1" firstAttribute="bottom" secondItem="fUZ-Ks-y39" secondAttribute="bottom" id="jEg-NO-EaT"/>
+                <constraint firstItem="fsb-bC-io1" firstAttribute="trailing" secondItem="fUZ-Ks-y39" secondAttribute="trailing" id="zmE-kk-bMM"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="fUZ-Ks-y39"/>
+            <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
+        </view>
+    </objects>
+</document>
