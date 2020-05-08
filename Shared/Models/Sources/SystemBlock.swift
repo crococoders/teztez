@@ -8,10 +8,10 @@
 import Foundation
 
 public struct SystemBlock: Codable {
-    let icon: String?
-    let title: String
-    let subtitle: String
-    let action: String
+    public let icon: String?
+    public let title: String
+    public let subtitle: String
+    public let action: String
     
     public init(icon: String?, title: String, subtitle: String, action: String) {
         self.icon = icon

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProRounded-Bold.otf">
+            <string>SFProRounded-Bold</string>
+        </array>
+        <array key="SFProText-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SFProText-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StatisticsLongCell" id="Tgs-ng-9R4" customClass="StatisticsLongCell" customModule="Teztez" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="356" height="56"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DLt-3v-45e">
+                <rect key="frame" x="0.0" y="0.0" width="356" height="56"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rpn-dt-Txu">
+                        <rect key="frame" x="12" y="12" width="44.5" height="32"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aQ-ld-fto">
+                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="18"/>
+                                <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="15"/>
+                                <color key="textColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N2Q-zT-QcK">
+                                <rect key="frame" x="0.0" y="18" width="44.5" height="14"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="10"/>
+                                <color key="textColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="275" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QQ-2u-Jpo">
+                        <rect key="frame" x="313" y="18" width="31" height="20.5"/>
+                        <fontDescription key="fontDescription" name="SFProRounded-Bold" family="SF Pro Rounded" pointSize="17"/>
+                        <color key="textColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.10980392156862745" green="0.10980392156862745" blue="0.11764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="8QQ-2u-Jpo" secondAttribute="trailing" constant="12" id="QEl-cr-Np5"/>
+                    <constraint firstAttribute="bottom" secondItem="rpn-dt-Txu" secondAttribute="bottom" constant="12" id="bxQ-60-a5R"/>
+                    <constraint firstItem="8QQ-2u-Jpo" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rpn-dt-Txu" secondAttribute="trailing" constant="16" id="gdG-Rf-oSz"/>
+                    <constraint firstItem="rpn-dt-Txu" firstAttribute="leading" secondItem="DLt-3v-45e" secondAttribute="leading" constant="12" id="gjb-6F-cjt"/>
+                    <constraint firstItem="rpn-dt-Txu" firstAttribute="top" secondItem="DLt-3v-45e" secondAttribute="top" constant="12" id="itX-KN-QFJ"/>
+                    <constraint firstItem="8QQ-2u-Jpo" firstAttribute="centerY" secondItem="DLt-3v-45e" secondAttribute="centerY" id="kBK-M6-XTG"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="356" height="86"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                    <integer key="value" value="13"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="subtitleLabel" destination="N2Q-zT-QcK" id="x0U-Tp-7u7"/>
+                <outlet property="titleLabel" destination="0aQ-ld-fto" id="JZL-eT-ear"/>
+                <outlet property="valueLabel" destination="8QQ-2u-Jpo" id="pON-O1-KPo"/>
+            </connections>
+            <point key="canvasLocation" x="-33.333333333333336" y="59.598214285714285"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -17,10 +17,16 @@ final class CoordinatorFactory {
         return coordinator
     }
 
-    func makeActivitiesCoordiantor(navigationController: CoordinatorNavigationController) -> Coordinator {
+    func makeActivitiesCoordinator(navigationController: CoordinatorNavigationController) -> Coordinator {
         let coordinator = ActivitiesCoordinator(moduleFactory: ModuleFactory.shared,
                                                 coordinatorFactory: CoordinatorFactory(),
                                                 router: Router(rootController: navigationController))
+        return coordinator
+    }
+
+    func makeFeedsCoordinator(navigationController: CoordinatorNavigationController) -> Coordinator {
+        let coordinator = FeedsCoordinator(moduleFactory: ModuleFactory.shared,
+                                           router: Router(rootController: navigationController))
         return coordinator
     }
 

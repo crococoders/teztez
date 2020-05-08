@@ -9,11 +9,13 @@
 import UIKit
 
 protocol TabBarPresentable: Presentable {
+    var onFeedsTabDidSelect: ((CoordinatorNavigationController) -> Void)? { get set }
     var onActivitiesTabDidSelect: ((CoordinatorNavigationController) -> Void)? { get set }
     var onViewDidLoad: ((CoordinatorNavigationController) -> Void)? { get set }
 }
 
 final class TabBarController: UITabBarController, TabBarPresentable {
+    var onFeedsTabDidSelect: ((CoordinatorNavigationController) -> Void)?
     var onViewDidLoad: ((CoordinatorNavigationController) -> Void)?
     var onActivitiesTabDidSelect: ((CoordinatorNavigationController) -> Void)? {
         didSet {
@@ -25,6 +27,14 @@ final class TabBarController: UITabBarController, TabBarPresentable {
         let navigationController = CoordinatorNavigationController()
         navigationController.title = R.string.mainTabBar.activitiesTitle()
         navigationController.tabBarItem.image = R.image.activities()
+        navigationController.navigationBar.prefersLargeTitles = true
+        return navigationController
+    }()
+
+    private lazy var feedsNavigationController: CoordinatorNavigationController = {
+        let navigationController = CoordinatorNavigationController()
+        navigationController.title = R.string.mainTabBar.feeds()
+        navigationController.tabBarItem.image = R.image.feed()
         navigationController.navigationBar.prefersLargeTitles = true
         return navigationController
     }()
@@ -41,7 +51,7 @@ final class TabBarController: UITabBarController, TabBarPresentable {
         tabBar.barTintColor = .systemGray
         tabBar.unselectedItemTintColor = .systemGray4
         tabBar.isTranslucent = false
-        viewControllers = [activitiesNavigationController]
+        viewControllers = [feedsNavigationController, activitiesNavigationController]
     }
 
     private func callOnViewDidLoadCallback() {
@@ -55,6 +65,8 @@ extension TabBarController: UITabBarControllerDelegate {
         guard let navigationController = viewControllers?[selectedIndex] as? CoordinatorNavigationController else { return }
         switch selectedIndex {
         case 0:
+            onFeedsTabDidSelect?(navigationController)
+        case 1:
             onActivitiesTabDidSelect?(navigationController)
         default:
             break

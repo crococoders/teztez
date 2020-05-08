@@ -8,9 +8,9 @@
 import Foundation
 
 public struct HeadlinedInformationBlock: Codable {
-    let coverImage: String
-    let metaTitle: String
-    let title: String
+    public let coverImage: String
+    public let metaTitle: String
+    public let title: String
     
     public init(coverImage: String, metaTitle: String, title: String) {
         self.coverImage = coverImage
