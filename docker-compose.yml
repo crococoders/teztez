@@ -118,7 +118,7 @@ services:
     volumes:
       - analytics_db_data:/var/lib/postgresql/data/analytics_db
     ports:
-      - '5433:5432'
+      - '5434:5432'
       
   auth_db:
     image: postgres:12.1-alpine
@@ -130,4 +130,4 @@ services:
     volumes:
       - auth_db_data:/var/lib/postgresql/data/auth_db
     ports:
-      - '5434:5432'
+      - '5435:5432'
