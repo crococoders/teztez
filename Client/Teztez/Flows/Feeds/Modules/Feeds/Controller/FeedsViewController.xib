@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedsViewController" customModule="Teztez" customModuleProvider="target">
             <connections>
                 <outlet property="collectionView" destination="vGj-W1-VLr" id="ubD-w8-UAO"/>
+                <outlet property="indicatorView" destination="cXn-1e-cmd" id="phm-Ch-Ic7"/>
                 <outlet property="view" destination="iN0-l3-epB" id="EFA-ng-4gm"/>
             </connections>
         </placeholder>
@@ -30,13 +31,20 @@
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
                 </collectionView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="cXn-1e-cmd">
+                    <rect key="frame" x="197" y="383" width="20" height="20"/>
+                    <color key="tintColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="vGj-W1-VLr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="7Yc-pW-HUg"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vGj-W1-VLr" secondAttribute="trailing" constant="16" id="A4o-kY-eu4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="vGj-W1-VLr" secondAttribute="bottom" constant="16" id="BOL-kR-Thk"/>
+                <constraint firstItem="cXn-1e-cmd" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="KJL-sl-PdA"/>
                 <constraint firstItem="vGj-W1-VLr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="16" id="Moy-vP-gIt"/>
+                <constraint firstItem="cXn-1e-cmd" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" constant="-60" id="VGe-7N-IsA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="137.68115942028987" y="107.8125"/>

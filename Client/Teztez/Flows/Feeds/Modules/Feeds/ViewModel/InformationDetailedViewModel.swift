@@ -1,5 +1,5 @@
 //
-//  InformationHeadlinedViewModel.swift
+//  InformationDetailedViewModel.swift
 //  Teztez
 //
 //  Created by Almas Zainoldin on 5/8/20.
@@ -9,16 +9,18 @@
 import Foundation
 import Models
 
-struct InformationHeadlinedViewModel {
+struct InformationDetailedViewModel {
     let title: String
     let metaTitle: String
+    let subtitle: String
     var imageURL: String
     var weekDay: String?
     var date: String?
 
-    init(date: Date, model: HeadlinedInformationBlock) {
+    init(date: Date, model: DetailedInformationBlock) {
         title = model.title
         metaTitle = model.metaTitle.uppercased()
+        subtitle = model.subtitle
         imageURL = model.coverImage
         weekDay = getWeekDay(from: date)
         self.date = getDateString(from: date).uppercased()

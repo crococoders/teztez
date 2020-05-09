@@ -9,15 +9,22 @@
 import Combine
 import UIKit
 
-protocol FeedsPresentable: Presentable {}
+protocol FeedsPresentable: Presentable {
+    var onInformationSelected: ((_ details: InformationDetails) -> Void)? { get set }
+}
 
 final class FeedsViewController: ViewController, FeedsPresentable {
+    var onInformationSelected: ((_ details: InformationDetails) -> Void)?
+
     private let store: FeedsStore
     private let collectionViewDataSource: FeedsCollectionViewDataSource
     private let collectionViewDelegate: FeedsCollectionViewDelegate
     private var cancellables = Set<AnyCancellable>()
+    private let refreshControl = UIRefreshControl()
 
+    @IBOutlet private var indicatorView: UIActivityIndicatorView!
     @IBOutlet private var collectionView: UICollectionView!
+
     init(store: FeedsStore) {
         self.store = store
         collectionViewDataSource = FeedsCollectionViewDataSource()
@@ -33,7 +40,6 @@ final class FeedsViewController: ViewController, FeedsPresentable {
         super.viewDidLoad()
         setupUI()
         setupObservers()
-
         setupNavigationBar()
     }
 
@@ -52,6 +58,15 @@ final class FeedsViewController: ViewController, FeedsPresentable {
                 self.collectionViewDataSource.items = items
                 self.collectionViewDelegate.items = items
                 self.collectionView.reloadData()
+            case let .infomrationSelected(details):
+                self.onInformationSelected?(details)
+            case .loading:
+                self.indicatorView.startAnimating()
+                self.indicatorView.isHidden = false
+                self.collectionView.isHidden = true
+            case .loaded:
+                self.indicatorView.stopAnimating()
+                self.collectionView.isHidden = false
             }
         }.store(in: &cancellables)
     }
@@ -62,10 +77,25 @@ final class FeedsViewController: ViewController, FeedsPresentable {
     }
 
     private func setupUI() {
+        indicatorView.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
         collectionView.delegate = collectionViewDelegate
         collectionView.dataSource = collectionViewDataSource
+        refreshControl.addTarget(self, action: #selector(refreshDidPull), for: .valueChanged)
+        refreshControl.tintColor = .white
+        collectionView.alwaysBounceVertical = true
+        collectionView.refreshControl = refreshControl
+
         [StatisticsSmallCell.self,
          StatisticsLongCell.self,
-         InformationHeadlinedCell.self].forEach { collectionView.register(cellClass: $0) }
+         InformationHeadlinedCell.self,
+         InformationDetailedCell.self].forEach { collectionView.register(cellClass: $0) }
+    }
+
+    @objc
+    func refreshDidPull() {
+        store.dispatch(action: .didForceRefresh)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
+            self?.refreshControl.endRefreshing()
+        }
     }
 }

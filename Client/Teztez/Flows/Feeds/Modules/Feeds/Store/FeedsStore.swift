@@ -12,10 +12,15 @@ import Models
 final class FeedsStore {
     enum Action {
         case didLoadView
+        case didSelectAt(index: Int)
+        case didForceRefresh
     }
 
     enum State {
         case initial(items: [FeedsItemType])
+        case infomrationSelected(details: InformationDetails)
+        case loading
+        case loaded
     }
 
     @Published private(set) var state: State?
@@ -30,15 +35,21 @@ final class FeedsStore {
         switch action {
         case .didLoadView:
             fetchBlocks()
+        case let .didSelectAt(index):
+            setState(from: index)
+        case .didForceRefresh:
+            break
         }
     }
 
     private func fetchBlocks() {
+        state = .loading
         provider.fetchFeeds { [weak self] result in
             guard let self = self else { return }
             switch result {
             case let .success(blocks):
                 self.compileItems(from: blocks)
+                self.state = .loaded
                 self.state = .initial(items: self.items)
             case .failure:
                 break
@@ -65,12 +76,25 @@ final class FeedsStore {
                 switch type {
                 case let .headlined(date, model):
                     items.append(.informationHeadlined(viewModel: InformationHeadlinedViewModel(date: date, model: model)))
-                default:
-                    break
+                case let .detailed(date, model):
+                    items.append(.informationDetailed(viewModel: InformationDetailedViewModel(date: date, model: model)))
                 }
             default:
                 break
             }
+        }
+    }
+
+    private func setState(from index: Int) {
+        switch items[index] {
+        case let .informationDetailed(viewModel):
+            let details = InformationDetails(title: viewModel.title, metaTitle: viewModel.metaTitle, imageURL: viewModel.imageURL)
+            state = .infomrationSelected(details: details)
+        case let .informationHeadlined(viewModel):
+            let details = InformationDetails(title: viewModel.title, metaTitle: viewModel.metaTitle, imageURL: viewModel.imageURL)
+            state = .infomrationSelected(details: details)
+        default:
+            break
         }
     }
 }
