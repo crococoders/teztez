@@ -72,7 +72,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUG-9j-df8" customClass="PrimaryTextField" customModule="Teztez" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IUG-9j-df8" customClass="PrimaryTextField" customModule="Teztez" customModuleProvider="target">
                                     <rect key="frame" x="40" y="304" width="334" height="47"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="47" id="xBu-xN-34r"/>
@@ -86,7 +86,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRR-y7-gdi" customClass="PrimaryTextField" customModule="Teztez" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SRR-y7-gdi" customClass="PrimaryTextField" customModule="Teztez" customModuleProvider="target">
                                     <rect key="frame" x="40" y="393" width="334" height="47"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="47" id="pJR-dV-S0b"/>
@@ -100,7 +100,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEi-Mz-DDj" customClass="PrimaryTextField" customModule="Teztez" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bEi-Mz-DDj" customClass="PrimaryTextField" customModule="Teztez" customModuleProvider="target">
                                     <rect key="frame" x="40" y="482" width="334" height="47"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="47" id="j2u-Mu-i4D"/>
@@ -114,7 +114,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N9w-tj-nb6" customClass="PrimaryTextField" customModule="Teztez" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N9w-tj-nb6" customClass="PrimaryTextField" customModule="Teztez" customModuleProvider="target">
                                     <rect key="frame" x="40" y="571" width="334" height="47"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="47" id="55Z-CV-f2a"/>
