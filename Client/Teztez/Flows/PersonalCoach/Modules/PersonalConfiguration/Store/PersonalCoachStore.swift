@@ -14,10 +14,11 @@ enum PersonalCoachBlockType {
     case selectSpeed(viewModel: ActivitySelectValueViewModel)
 }
 
+// swiftlint:disable all
 private enum Constants {
     static let speedList = [100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350]
     static let defaultSpeed = 100
-    static let defaultText = "Default Text"
+    static let defaultText = "Color is a great way to impart vitality, provide visual continuity, communicate status information, give feedback in response to user actions, and help people visualize data. Look to the system’s color scheme for guidance when picking app tint colors that look great individually and in combination, on both light and dark backgrounds. Use color judiciously for communication. The power of color to call attention to important information is heightened when used sparingly. For example, a red triangle that warns people of a critical problem becomes less effective when red is used elsewhere in an app for noncritical reasons. communication. The power of color to call attention to important information is heightened when used sparingly. For example, a red triangle that warns people of a critical problem becomes less effective when red is used elsewhere in an app for noncritical reasons. The power of color to call attention to important information is heightened when used sparingly. For example, a red triangle that warns people of a critical problem becomes less effective when red is used elsewhere in an app for noncritical reasons."
     static let speedMeasure = "wpm"
 }
 

@@ -40,9 +40,9 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Z5-jE-1Dx">
-                    <rect key="frame" x="0.0" y="722" width="414" height="140"/>
+                    <rect key="frame" x="0.0" y="611" width="414" height="251"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="140" id="4m5-45-yJY"/>
+                        <constraint firstAttribute="height" constant="251" id="4m5-45-yJY"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUM-ws-Eev" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">

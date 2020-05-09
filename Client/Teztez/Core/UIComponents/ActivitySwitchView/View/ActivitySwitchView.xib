@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SFProText-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActivitySwitchView" customModule="Teztez" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLabel" destination="W5e-R4-n3z" id="cr2-j2-VHx"/>
+                <outlet property="switchTitleLabel" destination="Kc4-Q4-x2h" id="z5f-ic-Kx5"/>
+                <outlet property="switchView" destination="ge3-5A-snY" id="JjP-Gy-eJr"/>
+                <outlet property="titleLabel" destination="K4d-gP-Tkf" id="TJD-cJ-E9k"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="qWF-2j-NQo">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="101"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inverse count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4d-gP-Tkf">
+                    <rect key="frame" x="40" y="0.0" width="334" height="21"/>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahb-dj-APe">
+                    <rect key="frame" x="40" y="25" width="334" height="48"/>
+                    <subviews>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ge3-5A-snY">
+                            <rect key="frame" x="277" y="8.5" width="51" height="31"/>
+                            <color key="onTintColor" red="0.10980392156862745" green="0.52941176470588236" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="switchViewValueDidChange:" destination="-1" eventType="valueChanged" id="ukA-zg-tGN"/>
+                            </connections>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kc4-Q4-x2h">
+                            <rect key="frame" x="16" y="15" width="251" height="18"/>
+                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Kc4-Q4-x2h" firstAttribute="centerY" secondItem="ahb-dj-APe" secondAttribute="centerY" id="4Mt-bZ-03z"/>
+                        <constraint firstItem="Kc4-Q4-x2h" firstAttribute="leading" secondItem="ahb-dj-APe" secondAttribute="leading" constant="16" id="Teh-ht-kcV"/>
+                        <constraint firstItem="ge3-5A-snY" firstAttribute="leading" secondItem="Kc4-Q4-x2h" secondAttribute="trailing" constant="10" id="Yuu-x8-j38"/>
+                        <constraint firstItem="ge3-5A-snY" firstAttribute="centerY" secondItem="ahb-dj-APe" secondAttribute="centerY" id="bpf-2d-6DG"/>
+                        <constraint firstAttribute="height" constant="48" id="nNZ-jk-Xyh"/>
+                        <constraint firstAttribute="trailing" secondItem="ge3-5A-snY" secondAttribute="trailing" constant="8" id="uZz-1v-7GP"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can choose any speed which you want to test. Range from 50wpm to 500wpm" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5e-R4-n3z">
+                    <rect key="frame" x="40" y="77" width="334" height="24"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="10"/>
+                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ahb-dj-APe" secondAttribute="trailing" constant="40" id="031-ij-Evo"/>
+                <constraint firstItem="W5e-R4-n3z" firstAttribute="leading" secondItem="9MS-du-e7A" secondAttribute="leading" constant="40" id="4Fl-61-b6V"/>
+                <constraint firstItem="ahb-dj-APe" firstAttribute="top" secondItem="K4d-gP-Tkf" secondAttribute="bottom" constant="4" id="Ado-Za-im7"/>
+                <constraint firstItem="W5e-R4-n3z" firstAttribute="top" secondItem="ahb-dj-APe" secondAttribute="bottom" constant="4" id="Cu6-81-wpW"/>
+                <constraint firstAttribute="trailing" secondItem="K4d-gP-Tkf" secondAttribute="trailing" constant="40" id="K3x-bi-4ZO"/>
+                <constraint firstItem="K4d-gP-Tkf" firstAttribute="leading" secondItem="qWF-2j-NQo" secondAttribute="leading" constant="40" id="LMc-P9-Vtc"/>
+                <constraint firstAttribute="trailing" secondItem="W5e-R4-n3z" secondAttribute="trailing" constant="40" id="Mx2-Cx-mGu"/>
+                <constraint firstItem="ahb-dj-APe" firstAttribute="leading" secondItem="qWF-2j-NQo" secondAttribute="leading" constant="40" id="VhP-mi-qF7"/>
+                <constraint firstItem="K4d-gP-Tkf" firstAttribute="top" secondItem="qWF-2j-NQo" secondAttribute="top" id="oqe-Ml-jQY"/>
+                <constraint firstAttribute="bottom" secondItem="W5e-R4-n3z" secondAttribute="bottom" id="xGT-aM-Ea8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="9MS-du-e7A"/>
+            <point key="canvasLocation" x="46" y="-194"/>
+        </view>
+    </objects>
+</document>

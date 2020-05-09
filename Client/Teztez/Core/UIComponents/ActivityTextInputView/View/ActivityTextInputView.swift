@@ -15,10 +15,10 @@ protocol ActivityTextInputViewDelegate: class {
 final class ActivityTextInputView: UIView, NibOwnerLoadable {
     weak var delegate: ActivityTextInputViewDelegate?
 
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var actionView: UIView!
-    @IBOutlet var actionTitleLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet private var titleLabel: UILabel!
+    @IBOutlet private var actionView: UIView!
+    @IBOutlet private var actionTitleLabel: UILabel!
+    @IBOutlet private var descriptionLabel: UILabel!
 
     override init(frame: CGRect) {
         super.init(frame: frame)

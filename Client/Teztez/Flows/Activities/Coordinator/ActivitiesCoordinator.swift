@@ -34,8 +34,14 @@ final class ActivitiesCoordinator: ParentCoordinator {
         switch itemType {
         case .coach:
             runPersoalCoachFlow()
+        case .schulte:
+            runSchulteFlow()
         case .backwards:
             runBackwardsFlow()
+        case .blender:
+            runBlenderFlow()
+        case .suggestion:
+            runSuggestActivityFlow()
         default:
             break
         }
@@ -50,6 +56,15 @@ final class ActivitiesCoordinator: ParentCoordinator {
         show((coordinator, module), with: .presentInFullScreen(animated: true))
     }
 
+    private func runSchulteFlow() {
+        let (coordinator, module) = coordinatorFactory.makeSchulteCoordinator()
+        coordinator.onFlowDidFinish = { [weak self, weak coordinator] in
+            guard let coordinator = coordinator else { return }
+            self?.dismiss(child: coordinator)
+        }
+        show((coordinator, module), with: .presentInFullScreen(animated: true))
+    }
+
     private func runBackwardsFlow() {
         let (coordinator, module) = coordinatorFactory.makeBackwardsCoordinator()
         coordinator.onFlowDidFinish = { [weak self, weak coordinator] in
@@ -57,5 +72,23 @@ final class ActivitiesCoordinator: ParentCoordinator {
             self?.dismiss(child: coordinator)
         }
         show((coordinator, module), with: .presentInFullScreen(animated: true))
+    }
+
+    private func runBlenderFlow() {
+        let (coordinator, module) = coordinatorFactory.makeBlenderCoordinator()
+        coordinator.onFlowDidFinish = { [weak self, weak coordinator] in
+            guard let coordinator = coordinator else { return }
+            self?.dismiss(child: coordinator)
+        }
+        show((coordinator, module), with: .presentInFullScreen(animated: true))
+    }
+
+    private func runSuggestActivityFlow() {
+        let (coordinator, module) = coordinatorFactory.makeSuggestActivityCoordinator()
+        coordinator.onFlowDidFinish = { [weak self, weak coordinator] in
+            guard let coordinator = coordinator else { return }
+            self?.dismiss(child: coordinator)
+        }
+        show((coordinator, module), with: .presentInSheet(dismissable: false))
     }
 }

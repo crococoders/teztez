@@ -1,0 +1,13 @@
+/*
+  SuggestActivity.strings
+  Teztez
+
+  Created by Almas Zainoldin on 05/05/2020.
+  Copyright © 2020 Crococoders. All rights reserved.
+*/
+
+"feedback" = "Feedback";
+"send" = "Send";
+"title" = "Title";
+"cancel" = "Cancel";
+"navigationTitle" = "Suggest your activity";
