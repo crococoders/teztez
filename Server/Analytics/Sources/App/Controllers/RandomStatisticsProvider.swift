@@ -35,20 +35,21 @@ class RandomStatiticsProvider {
             secondRandomGameType = RandomElementProvider<GameType>(array: GameType.allCases).getRandom()
         }
         
-        let firstRandomGameStatsFuture = try getGameStats(gameType: firstRandomGameType, request: request)
-        let secondRandomGameStatsFuture = try getGameStats(gameType: secondRandomGameType, request: request)
+        let firstRandomGameStatsFutures = try getGameStats(gameType: firstRandomGameType, request: request)
+        let secondRandomGameStatsFutures = try getGameStats(gameType: secondRandomGameType, request: request)
         
-        return request.eventLoop.flatten([firstRandomGameStatsFuture, secondRandomGameStatsFuture]).map{
-            gameStatsArray in
+        return request.eventLoop.flatten(firstRandomGameStatsFutures + secondRandomGameStatsFutures).map{
+            gameStats in
+            
             let userStats = [
-                UserStat(gameType: firstRandomGameType, gameStats: gameStatsArray[0]),
-                UserStat(gameType: secondRandomGameType, gameStats: gameStatsArray[1])
+                UserStat(gameType: firstRandomGameType, gameStats: Array(gameStats[0..<4])),
+                UserStat(gameType: secondRandomGameType, gameStats: Array(gameStats[4...]))
             ]
             return UserStatsPayload(userId: self.userId, userStats: userStats)
         }
     }
     
-    func getGameStats(gameType: GameType, request: Request) throws -> EventLoopFuture<[GameStat]> {
+    func getGameStats(gameType: GameType, request: Request) throws -> [EventLoopFuture<GameStat>] {
         var gameStatsFutures:[EventLoopFuture<GameStat>] = []
         
         for _ in 0..<4{
@@ -58,7 +59,7 @@ class RandomStatiticsProvider {
             gameStatsFutures.append(gameStatFuture)
         }
         
-        return request.eventLoop.flatten(gameStatsFutures)
+        return gameStatsFutures
     }
     
     func getRandomEventStatArgs(gameType: GameType) -> EventStatArgs {
