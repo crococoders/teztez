@@ -153,16 +153,16 @@ final class SchulteTrainingStore {
         let streak = AnalyticsEvent(gameType: .schulteTable,
                                     eventType: .streakOfGuessedNumbers,
                                     value: streakOfGuessedNumbers)
-
         let totalTime = AnalyticsEvent(gameType: .schulteTable,
                                        eventType: .secondsSpentInGame,
                                        value: secondsInGame)
-
         let encountered = AnalyticsEvent(gameType: .schulteTable,
                                          eventType: .numbersEncountered,
                                          value: Constants.maxNumber)
 
-        [correct, missed, streak, totalTime, encountered].forEach { analyticEvents.append($0) }
+        let gamesPlayed = AnalyticsEvent(gameType: .backwards, eventType: .gamePlayed)
+
+        [correct, missed, streak, totalTime, encountered, gamesPlayed].forEach { analyticEvents.append($0) }
         analyticsProvider.postAnalytcis(events: analyticEvents)
     }
 }

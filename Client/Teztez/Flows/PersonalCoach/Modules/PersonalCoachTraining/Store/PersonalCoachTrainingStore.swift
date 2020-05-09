@@ -107,8 +107,9 @@ final class PersonalCoachTrainingStore {
         let words = AnalyticsEvent(gameType: .personalCoach, eventType: .numberOfWordsRead, value: numberOfReadWords)
         let speed = AnalyticsEvent(gameType: .personalCoach, eventType: .wpmSpeedChosen, value: configuration.speed)
         let time = AnalyticsEvent(gameType: .personalCoach, eventType: .secondsSpentInGame, value: secondsInGame)
+        let gamesPlayed = AnalyticsEvent(gameType: .backwards, eventType: .gamePlayed)
 
-        [speed, words, time].forEach { analyticEvents.append($0) }
+        [speed, words, time, gamesPlayed].forEach { analyticEvents.append($0) }
         analyticsProvider.postAnalytcis(events: analyticEvents)
     }
 }

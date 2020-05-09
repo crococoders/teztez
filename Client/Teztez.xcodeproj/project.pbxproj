@@ -1686,6 +1686,15 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		C4CC4449246767E700662628 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				C42D56732466D6D700BF91B7 /* AnalyticsProvider.swift */,
+				C42D56752466DB9C00BF91B7 /* AnalyticsEvent.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 		C4D64A232455DCFF00100993 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1796,6 +1805,7 @@
 			children = (
 				C4F8190D244B730200AE73CE /* Language.swift */,
 				C441A65824655D7700038F74 /* UserSession.swift */,
+				C4CC4449246767E700662628 /* Analytics */,
 				C4F81908244B724700AE73CE /* AppDelegate */,
 				C4F81930244B78CF00AE73CE /* Architecture */,
 				C4F81956244B86C800AE73CE /* Design System */,
@@ -1803,8 +1813,6 @@
 				C4BD0F2D244DF09F0056E8C1 /* SceneDelegate */,
 				C4F8190A244B72C800AE73CE /* Storages */,
 				C4B88F5C2450BCC500D1D1BA /* UIComponents */,
-				C42D56732466D6D700BF91B7 /* AnalyticsProvider.swift */,
-				C42D56752466DB9C00BF91B7 /* AnalyticsEvent.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";

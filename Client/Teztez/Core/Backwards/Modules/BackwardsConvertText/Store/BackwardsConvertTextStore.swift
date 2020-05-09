@@ -85,7 +85,9 @@ final class BackwardsConvertTextStore {
         let spentTime = AnalyticsEvent(gameType: .backwards,
                                        eventType: .secondsSpentInGame, value: secondsSpentInGame)
 
-        [numberOfWordsRead, spentTime].forEach { analyticEvents.append($0) }
+        let gamesPlayed = AnalyticsEvent(gameType: .backwards, eventType: .gamePlayed)
+
+        [numberOfWordsRead, spentTime, gamesPlayed].forEach { analyticEvents.append($0) }
         analyticsProvider.postAnalytcis(events: analyticEvents)
     }
 }

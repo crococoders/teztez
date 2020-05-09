@@ -33,9 +33,9 @@ struct AnalyticsEvent: Codable {
     let gameType: String
     let userId: String
     let eventType: String
-    let value: Int
+    let value: Int?
 
-    init(gameType: GameType, eventType: EventType, value: Int) {
+    init(gameType: GameType, eventType: EventType, value: Int? = nil) {
         self.gameType = gameType.rawValue
         self.eventType = eventType.rawValue
         self.value = value
