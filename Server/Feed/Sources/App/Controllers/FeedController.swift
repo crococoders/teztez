@@ -50,10 +50,15 @@ final class FeedController: RouteCollection {
         guard let userId = request.parameters.get(Parameter.userId.rawValue)
         else {throw Abort(.internalServerError)}
         
+        let client = request.client
         let url = URI(string: "http://\(Service.analytics.host!):\(Service.analytics.port!)/analytics/\(userId)")
+        request.logger.info("url is: \(url.description)")
+        var headers = request.headers
+        headers.replaceOrAdd(name: .host, value: Service.analytics.host!)
+        let request = ClientRequest(method: request.method, url: url, headers: headers, body: request.body.data)
         
-        return request.client.get(url).flatMapThrowing{ request in
-            let userStatsPayload = try request.content.decode(UserStatsPayload.self)
+        return client.send(request).flatMapThrowing{ response in
+            let userStatsPayload = try response.content.decode(UserStatsPayload.self)
             
             var result: [StatisticsBlock] = []
             for gameIndex in 0 ..< userStatsPayload.userStats.count {
@@ -75,10 +80,15 @@ final class FeedController: RouteCollection {
     }
     
     func getContent(request: Request) throws -> EventLoopFuture<[InformationBlock]> {
+        let client = request.client
         let url = URI(string: "http://\(Service.content.host!):\(Service.content.port!)/articles")
+        request.logger.info("url is: \(url.description)")
+        var headers = request.headers
+        headers.replaceOrAdd(name: .host, value: Service.content.host!)
+        let request = ClientRequest(method: request.method, url: url, headers: headers, body: request.body.data)
         
-        return request.client.get(url).flatMapThrowing{ request in
-            let articles:[Article]  = try request.content.decode([Article].self)
+        return client.send(request).flatMapThrowing{ response in
+            let articles:[Article]  = try response.content.decode([Article].self)
             
             var result: [InformationBlock] = []
             for index in 0 ..< articles.count {
