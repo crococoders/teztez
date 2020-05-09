@@ -91,9 +91,16 @@ class RandomStatiticsProvider {
                            return result + (event.value ?? 1)
                        }
                case .average:
-                   return events.reduce(0) { (result, event) -> Int in
+                   let total = events.reduce(0) { (result, event) -> Int in
                            return result + (event.value ?? 1)
-                       } / events.count
+                       }
+                    if total == 0 {
+                        return total 
+                    }
+                    else {
+                        return total / events.count
+                    }
+                   
                case .minimum:
                    return events.sorted{
                            ($0.value ?? 1) > ($1.value ?? 1)
