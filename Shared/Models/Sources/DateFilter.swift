@@ -21,5 +21,6 @@ public enum DateFilter:String,Codable,CaseIterable{
             return "since last month"
         case .overall:
             return "for all time"
+        }
     }
 }
