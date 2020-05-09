@@ -27,12 +27,13 @@ final class Article: Model, Content {
 
     init() { }
 
-    init(id: UUID? = nil, title: String, text: String, type: String, shortDescription: String? = nil, imageUrl: String? = nil) {
+    init(id: UUID? = nil, title: String, text: String, type: String, shortDescription: String? = nil, imageUrl: String? = nil, createdAt: Date? = nil) {
         self.id = id
         self.title = title
         self.text = text
         self.type = type
         self.shortDescription = shortDescription
         self.imageUrl = imageUrl
+        self.createdAt = createdAt
     }
 }

@@ -95,7 +95,7 @@ final class FeedController: RouteCollection {
                 let article = articles[index]
                     
                 if let subtitle = article.shortDescription{
-                    result.append(.detailed(date: article.createAt, model:
+                    result.append(.detailed(date: article.createdAt, model:
                         DetailedInformationBlock(
                             coverImage: article.imageUrl,
                             metaTitle: article.type,
@@ -105,7 +105,7 @@ final class FeedController: RouteCollection {
                     )
                 }
                 else{
-                    result.append(.headlined(date: article.createAt, model:
+                    result.append(.headlined(date: article.createdAt, model:
                         HeadlinedInformationBlock(
                             coverImage: article.imageUrl,
                             metaTitle: article.type,
@@ -128,5 +128,5 @@ struct Article: Content {
     var type: String
     var shortDescription: String?
     var imageUrl: String
-    var createAt: Date
+    var createdAt: Date
 }
