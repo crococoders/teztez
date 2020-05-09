@@ -81,7 +81,7 @@ final class FeedController: RouteCollection {
     
     func getContent(request: Request) throws -> EventLoopFuture<[InformationBlock]> {
         let client = request.client
-        let url = URI(string: "http://\(Service.content.host!):\(Service.content.port!)/articles")
+        let url = URI(string: "http://\(Service.content.host!):\(Service.content.port!)/content/articles")
         request.logger.info("url is: \(url.description)")
         var headers = request.headers
         headers.replaceOrAdd(name: .host, value: Service.content.host!)
