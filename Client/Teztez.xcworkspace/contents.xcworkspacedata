@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../Server/Gateway">
-   </FileRef>
-   <FileRef
       location = "group:../Shared/Models">
    </FileRef>
    <FileRef
