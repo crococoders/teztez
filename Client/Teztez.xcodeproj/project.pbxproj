@@ -11,6 +11,8 @@
 		22E2FABB4D0F6C38AADBF488 /* PersonalCoachResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90105D2C8C675D469C5508CF /* PersonalCoachResultViewController.swift */; };
 		48B246AB6A2B550320B3067B /* PersonalCoachTrainingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0CC5886C0EDB96C1B81B77 /* PersonalCoachTrainingStore.swift */; };
 		5591451CBFCF68860AAB37A8 /* BackwardsConvertTextStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B78DCD355FF23007B6E35 /* BackwardsConvertTextStore.swift */; };
+		8A332C8C7C2E985A6EBECC7C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EAB80513D0202EBC214CFF /* AuthViewController.swift */; };
+		9963934486395B875B4BBE32 /* AuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9E93ED400582E6E35CFD80 /* AuthStore.swift */; };
 		9EE7A3D8BD72294269681BB5 /* BackwardsConvertTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71331ABBB051174193E4C4F4 /* BackwardsConvertTextViewController.swift */; };
 		9F86AA6BFF581E551F799928 /* SuggestActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F0EB04B0F36237A24EC5E6 /* SuggestActivityViewController.swift */; };
 		A4C99ABF8799D15B4E0AEB49 /* PersonalCoachTrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D54E55B2D05740B15B068A /* PersonalCoachTrainingViewController.swift */; };
@@ -74,10 +76,19 @@
 		C41FA85E246096A800E515EC /* SuggestActivity.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4D02F34FE0C7F72B181357D /* SuggestActivity.strings */; };
 		C41FA860246099AE00E515EC /* SuggestActivityTextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA85F246099AE00E515EC /* SuggestActivityTextViewDelegate.swift */; };
 		C41FA86324609FFF00E515EC /* SuggestActivityCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA86224609FFF00E515EC /* SuggestActivityCoordinator.swift */; };
+		C42A90FF2465A77500AF6455 /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42A90FE2465A77500AF6455 /* PrimaryTextField.swift */; };
 		C42B54E5245EE46200E3C61D /* BlenderConfiguration.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F52AA754D5CC7AE1B05C8D2 /* BlenderConfiguration.strings */; };
 		C42B54E7245EE6DE00E3C61D /* BlenderConfigurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42B54E6245EE6DE00E3C61D /* BlenderConfigurationViewController.xib */; };
 		C42B54E9245EE9C600E3C61D /* BlenderModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B54E8245EE9C600E3C61D /* BlenderModuleFactory.swift */; };
 		C42B54EB245EE9D300E3C61D /* BlenderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B54EA245EE9D300E3C61D /* BlenderCoordinator.swift */; };
+		C441A651246540C200038F74 /* Auth.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21193ED1095BEF415EF954EF /* Auth.strings */; };
+		C441A653246540E600038F74 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C441A652246540E600038F74 /* AuthViewController.xib */; };
+		C441A655246541D700038F74 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C441A654246541D700038F74 /* AuthCoordinator.swift */; };
+		C441A657246541F800038F74 /* AuthModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C441A656246541F800038F74 /* AuthModuleFactory.swift */; };
+		C441A65924655D7700038F74 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C441A65824655D7700038F74 /* UserSession.swift */; };
+		C441A65B24655DA600038F74 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C441A65A24655DA600038F74 /* KeychainStorage.swift */; };
+		C441A65E24655E2600038F74 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = C441A65D24655E2600038F74 /* KeychainAccess */; };
+		C441A6622465818300038F74 /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C441A6612465818200038F74 /* AuthProvider.swift */; };
 		C4521BDD245F050100EF2CB7 /* BlenderConvertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4521BDC245F050100EF2CB7 /* BlenderConvertViewController.xib */; };
 		C4584B64245E1BCF00E7F9BB /* CGFloat+Clean.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4584B63245E1BCF00E7F9BB /* CGFloat+Clean.swift */; };
 		C4584B6A245EDF0800E7F9BB /* BlenderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4584B69245EDF0800E7F9BB /* BlenderConfiguration.swift */; };
@@ -222,11 +233,13 @@
 		09754A01CF6ECA71035E6AC9 /* PersonalCoachResultStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachResultStore.swift; sourceTree = "<group>"; };
 		167E23CE4015B5F7A68EB06E /* BlenderConvertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConvertViewController.swift; sourceTree = "<group>"; };
 		1E4CEAED3F3A171DE2A1861C /* BlenderConfigurationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConfigurationViewController.swift; sourceTree = "<group>"; };
+		21193ED1095BEF415EF954EF /* Auth.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = Auth.strings; sourceTree = "<group>"; };
 		22A4B5A77A3E1899CD64FA19 /* SuggestActivityStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SuggestActivityStore.swift; sourceTree = "<group>"; };
 		33D54E55B2D05740B15B068A /* PersonalCoachTrainingViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachTrainingViewController.swift; sourceTree = "<group>"; };
 		356B830EFE866BDD920275CB /* BackwardsConvertText.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = BackwardsConvertText.strings; sourceTree = "<group>"; };
 		3C2B78DCD355FF23007B6E35 /* BackwardsConvertTextStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackwardsConvertTextStore.swift; sourceTree = "<group>"; };
 		61E6C5EB61FC4D747BB04A0F /* Feeds.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = Feeds.strings; sourceTree = "<group>"; };
+		6D9E93ED400582E6E35CFD80 /* AuthStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthStore.swift; sourceTree = "<group>"; };
 		71331ABBB051174193E4C4F4 /* BackwardsConvertTextViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackwardsConvertTextViewController.swift; sourceTree = "<group>"; };
 		7F52AA754D5CC7AE1B05C8D2 /* BlenderConfiguration.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = BlenderConfiguration.strings; sourceTree = "<group>"; };
 		8D2ED7191D7E497772177623 /* BlenderConfigurationStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConfigurationStore.swift; sourceTree = "<group>"; };
@@ -236,6 +249,7 @@
 		AF942F0B986FA5ADA639D9E9 /* PersonalCoachResult.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = PersonalCoachResult.strings; sourceTree = "<group>"; };
 		AFF93C44BBE95AAD0CD0D76B /* BlenderConvertStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConvertStore.swift; sourceTree = "<group>"; };
 		B4D02F34FE0C7F72B181357D /* SuggestActivity.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = SuggestActivity.strings; sourceTree = "<group>"; };
+		B8EAB80513D0202EBC214CFF /* AuthViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		BB4ACB24D75DFFBF1111526C /* InformationDetails.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = InformationDetails.strings; sourceTree = "<group>"; };
 		C189F9E15F31D3BA3374F989 /* FeedsStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FeedsStore.swift; sourceTree = "<group>"; };
 		C40AE0B924535E27008BC71C /* ActivitiesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesCell.xib; sourceTree = "<group>"; };
@@ -291,9 +305,16 @@
 		C41FA85C2460939900E515EC /* SuggestActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuggestActivityViewController.xib; sourceTree = "<group>"; };
 		C41FA85F246099AE00E515EC /* SuggestActivityTextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestActivityTextViewDelegate.swift; sourceTree = "<group>"; };
 		C41FA86224609FFF00E515EC /* SuggestActivityCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestActivityCoordinator.swift; sourceTree = "<group>"; };
+		C42A90FE2465A77500AF6455 /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
 		C42B54E6245EE6DE00E3C61D /* BlenderConfigurationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlenderConfigurationViewController.xib; sourceTree = "<group>"; };
 		C42B54E8245EE9C600E3C61D /* BlenderModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderModuleFactory.swift; sourceTree = "<group>"; };
 		C42B54EA245EE9D300E3C61D /* BlenderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderCoordinator.swift; sourceTree = "<group>"; };
+		C441A652246540E600038F74 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
+		C441A654246541D700038F74 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		C441A656246541F800038F74 /* AuthModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleFactory.swift; sourceTree = "<group>"; };
+		C441A65824655D7700038F74 /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		C441A65A24655DA600038F74 /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		C441A6612465818200038F74 /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
 		C4521BDC245F050100EF2CB7 /* BlenderConvertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlenderConvertViewController.xib; sourceTree = "<group>"; };
 		C4584B63245E1BCF00E7F9BB /* CGFloat+Clean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Clean.swift"; sourceTree = "<group>"; };
 		C4584B69245EDF0800E7F9BB /* BlenderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderConfiguration.swift; sourceTree = "<group>"; };
@@ -432,6 +453,7 @@
 				C4F81974244BA02C00AE73CE /* Rswift in Frameworks */,
 				C490F1122464840A00623DF7 /* Kingfisher in Frameworks */,
 				C4F81977244C4F3200AE73CE /* IQKeyboardManagerSwift in Frameworks */,
+				C441A65E24655E2600038F74 /* KeychainAccess in Frameworks */,
 				C41A56852464231A00969F67 /* Alamofire in Frameworks */,
 				C4F8197D244C508F00AE73CE /* Hero in Frameworks */,
 				C4F8197A244C4FCD00AE73CE /* ViewAnimator in Frameworks */,
@@ -476,6 +498,15 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		144BE41D5D9A3E14393382C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B8EAB80513D0202EBC214CFF /* AuthViewController.swift */,
+				C441A652246540E600038F74 /* AuthViewController.xib */,
+			);
+			path = Controller;
+            sourceTree = "<group>";
+        };
 		2C9B1CC07F961684F8935FE0 /* InformationDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -507,6 +538,24 @@
 				C490F11D246532EE00623DF7 /* InformationDetailedViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		43F7908A7DA6966AEC570875 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				21193ED1095BEF415EF954EF /* Auth.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		4515D94A80A35419506635E7 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C441A6632465818900038F74 /* Provider */,
+				C441A65F2465815C00038F74 /* Coordinator */,
+				C441A6602465816400038F74 /* Modules */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		4B917543DA3909D398836576 /* BlenderConfiguration */ = {
@@ -570,6 +619,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		76D989C182E85AF2A41B6D2C /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				6D9E93ED400582E6E35CFD80 /* AuthStore.swift */,
+            );
+            path = Store;
+            sourceTree = "<group>";
+        };
 		707679ABC709E4918BDE8AB8 /* Store */ = {
 			isa = PBXGroup;
 			children = (
@@ -985,6 +1042,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		C42A91002465A77A00AF6455 /* PrimaryTextField */ = {
+			isa = PBXGroup;
+			children = (
+				C42A90FE2465A77500AF6455 /* PrimaryTextField.swift */,
+			);
+			path = PrimaryTextField;
+			sourceTree = "<group>";
+		};
 		C42B54ED245EE9E200E3C61D /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -992,6 +1057,33 @@
 				C42B54EA245EE9D300E3C61D /* BlenderCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C441A65F2465815C00038F74 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C441A654246541D700038F74 /* AuthCoordinator.swift */,
+				C441A656246541F800038F74 /* AuthModuleFactory.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		C441A6602465816400038F74 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				144BE41D5D9A3E14393382C6 /* Controller */,
+				43F7908A7DA6966AEC570875 /* Localization */,
+				76D989C182E85AF2A41B6D2C /* Store */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C441A6632465818900038F74 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				C441A6612465818200038F74 /* AuthProvider.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		C4584B65245E1BD400E7F9BB /* CGFloat */ = {
@@ -1351,6 +1443,7 @@
 				C4C4BEBA245314B9001244E3 /* PrimaryButton */,
 				C4F7AFD024547A68007D6289 /* Protocols */,
 				C41FA7D0245D99A900E515EC /* SecondaryButton */,
+				C42A91002465A77A00AF6455 /* PrimaryTextField */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -1600,6 +1693,7 @@
 			isa = PBXGroup;
 			children = (
 				C4F8190D244B730200AE73CE /* Language.swift */,
+				C441A65824655D7700038F74 /* UserSession.swift */,
 				C4F81908244B724700AE73CE /* AppDelegate */,
 				C4F81930244B78CF00AE73CE /* Architecture */,
 				C4F81956244B86C800AE73CE /* Design System */,
@@ -1654,6 +1748,7 @@
 				C463DC5F245CAF8500E265FF /* PersonalCoach */,
 				C41FA81324608CD800E515EC /* Schulte */,
 				B652D0DBB592FE284CB793C0 /* SuggestActivity */,
+				4515D94A80A35419506635E7 /* Auth */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -1662,6 +1757,7 @@
 			isa = PBXGroup;
 			children = (
 				C4F8190B244B72D500AE73CE /* UserDefaultsStorage.swift */,
+				C441A65A24655DA600038F74 /* KeychainStorage.swift */,
 			);
 			path = Storages;
 			sourceTree = "<group>";
@@ -2009,6 +2105,7 @@
 				C41A56842464231A00969F67 /* Alamofire */,
 				1C56E07B24644A2E00303141 /* Models */,
 				C490F1112464840A00623DF7 /* Kingfisher */,
+				C441A65D24655E2600038F74 /* KeychainAccess */,
 			);
 			productName = Teztez;
 			productReference = C4F818DF244B289200AE73CE /* Teztez.app */;
@@ -2045,6 +2142,7 @@
 				C4F8197B244C508F00AE73CE /* XCRemoteSwiftPackageReference "Hero" */,
 				C41A56832464231A00969F67 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				C490F1102464840A00623DF7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				C441A65C24655E2600038F74 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = C4F818E0244B289200AE73CE /* Products */;
 			projectDirPath = "";
@@ -2074,6 +2172,7 @@
 				C4521BDD245F050100EF2CB7 /* BlenderConvertViewController.xib in Resources */,
 				C4F818EF244B289400AE73CE /* LaunchScreen.storyboard in Resources */,
 				C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */,
+				C441A651246540C200038F74 /* Auth.strings in Resources */,
 				C463DC8F245CAF9600E265FF /* ActivityHeaderView.xib in Resources */,
 				C4C0670A2458AD1C00EF39B8 /* SliderView.xib in Resources */,
 				C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */,
@@ -2084,6 +2183,7 @@
 				C41FA85E246096A800E515EC /* SuggestActivity.strings in Resources */,
 				C463DC98245D5F2700E265FF /* PersonalCoachTrainingViewController.xib in Resources */,
 				C4C8FBED2461C541006388FA /* FeedsViewController.xib in Resources */,
+				C441A653246540E600038F74 /* AuthViewController.xib in Resources */,
 				C490F1202465447C00623DF7 /* InformationDetailsViewController.xib in Resources */,
 				C490F10824646D3000623DF7 /* StatisticsSmallCell.xib in Resources */,
 				C41FA84C24608CD800E515EC /* SchulteResult.strings in Resources */,
@@ -2250,6 +2350,7 @@
 				C40AE0C924537E44008BC71C /* ActivitiesViewModel.swift in Sources */,
 				C490F1022464688000623DF7 /* StatisticsLongViewModel.swift in Sources */,
 				C4F81916244B760100AE73CE /* String+Replacing.swift in Sources */,
+				C441A65924655D7700038F74 /* UserSession.swift in Sources */,
 				C496890A245CCAC400CA540E /* BackwardsCoordinator.swift in Sources */,
 				C4F81941244B824200AE73CE /* CoordinatorNavigationController.swift in Sources */,
 				C4F8194E244B830D00AE73CE /* Presentable.swift in Sources */,
@@ -2259,6 +2360,7 @@
 				C4C8FBF02461C67A006388FA /* FeedsModuleFactory.swift in Sources */,
 				C41FA7CF245D8AA800E515EC /* String+WordList.swift in Sources */,
 				C4F8190E244B730200AE73CE /* Language.swift in Sources */,
+				C42A90FF2465A77500AF6455 /* PrimaryTextField.swift in Sources */,
 				C490F1002464658600623DF7 /* StatisticsLongCell.swift in Sources */,
 				C4F81912244B75DE00AE73CE /* Device+Constants.swift in Sources */,
 				C463DC94245CB02A00E265FF /* ActivitiesItemType.swift in Sources */,
@@ -2268,12 +2370,14 @@
 				C4F8194B244B82F000AE73CE /* CoordinatorFactory.swift in Sources */,
 				C4F8190C244B72D500AE73CE /* UserDefaultsStorage.swift in Sources */,
 				C4D138DF244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift in Sources */,
+				C441A657246541F800038F74 /* AuthModuleFactory.swift in Sources */,
 				C4F8193C244B817800AE73CE /* ApplicationLaunchInstructor.swift in Sources */,
 				C463DC90245CAF9600E265FF /* ActivitySelectValueViewModel.swift in Sources */,
 				C490F122246574B000623DF7 /* InformationDetails.swift in Sources */,
 				C4C8FBE82461BA2F006388FA /* SuggestActivityModuleFactory.swift in Sources */,
 				C41D2C8B2454F30800A56C2F /* Array+Factory.swift in Sources */,
 				C4F7AFCD24547229007D6289 /* ActivitiesIntroBlockView.swift in Sources */,
+				C441A655246541D700038F74 /* AuthCoordinator.swift in Sources */,
 				C490F1192465300700623DF7 /* InformationDetailedCell.swift in Sources */,
 				C4F81955244B834500AE73CE /* ApplicationCoordinator.swift in Sources */,
 				C41FA84A24608CD800E515EC /* SchulteResultViewController.swift in Sources */,
@@ -2297,6 +2401,7 @@
 				C463DC76245CAF8500E265FF /* PersonalCoachConfiguration.swift in Sources */,
 				C4F8194A244B82F000AE73CE /* ModuleFactory.swift in Sources */,
 				C4DE2521246433870003C85E /* FeedsProvider.swift in Sources */,
+				C441A65B24655DA600038F74 /* KeychainStorage.swift in Sources */,
 				C463DC74245CAF8500E265FF /* PersonalCoachPickerViewDataSource.swift in Sources */,
 				C4F81928244B76BA00AE73CE /* UITableViewCell+SelectedBackgroundView.swift in Sources */,
 				C4B88F662450CF7400D1D1BA /* ActivitiesIntroViewModel.swift in Sources */,
@@ -2332,6 +2437,7 @@
 				C4C0670C2458AD2B00EF39B8 /* SliderView.swift in Sources */,
 				9EE7A3D8BD72294269681BB5 /* BackwardsConvertTextViewController.swift in Sources */,
 				5591451CBFCF68860AAB37A8 /* BackwardsConvertTextStore.swift in Sources */,
+				C441A6622465818300038F74 /* AuthProvider.swift in Sources */,
 				C499E930245D7B190065FC28 /* BackwardsConfigurationViewController.swift in Sources */,
 				A4C99ABF8799D15B4E0AEB49 /* PersonalCoachTrainingViewController.swift in Sources */,
 				48B246AB6A2B550320B3067B /* PersonalCoachTrainingStore.swift in Sources */,
@@ -2347,6 +2453,8 @@
 				D90BC9956DACD5DD4B793A8F /* FeedsViewController.swift in Sources */,
 				C4C8FBF62461CD86006388FA /* FeedsCollectionViewDataSource.swift in Sources */,
 				CE0F83E6FBF7E3FA3AEDFE9E /* FeedsStore.swift in Sources */,
+				8A332C8C7C2E985A6EBECC7C /* AuthViewController.swift in Sources */,
+				9963934486395B875B4BBE32 /* AuthStore.swift in Sources */,
 				EDCCDDC87B29BA0033BA2AC9 /* InformationDetailsViewController.swift in Sources */,
 				B61138CD34446F3370FCA10D /* InformationDetailsStore.swift in Sources */,
 			);
@@ -2562,6 +2670,14 @@
 				version = 5.1.0;
 			};
 		};
+		C441A65C24655E2600038F74 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
 		C490F1102464840A00623DF7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
@@ -2613,6 +2729,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C41A56832464231A00969F67 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		C441A65D24655E2600038F74 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C441A65C24655E2600038F74 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 		C490F1112464840A00623DF7 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;

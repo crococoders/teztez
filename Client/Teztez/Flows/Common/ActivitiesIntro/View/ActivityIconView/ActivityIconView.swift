@@ -32,4 +32,9 @@ final class ActivityIconView: UIView, NibOwnerLoadable {
         imageView.image = viewModel.image
         applyGradient(colors: viewModel.gradientColors)
     }
+
+    func configureLoginIcon(with image: UIImage, and gradientColors: [CGColor]) {
+        imageView.image = image
+        applyGradient(colors: gradientColors)
+    }
 }

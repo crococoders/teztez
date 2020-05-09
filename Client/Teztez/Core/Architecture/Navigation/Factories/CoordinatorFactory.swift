@@ -17,6 +17,12 @@ final class CoordinatorFactory {
         return coordinator
     }
 
+    public func makeAuthCoordinator(router: Router) -> Coordinator & AuthCoordinatorOutput {
+        let coordinator = AuthCoordinator(moduleFactory: ModuleFactory.shared,
+                                          router: router)
+        return coordinator
+    }
+
     func makeActivitiesCoordinator(navigationController: CoordinatorNavigationController) -> Coordinator {
         let coordinator = ActivitiesCoordinator(moduleFactory: ModuleFactory.shared,
                                                 coordinatorFactory: CoordinatorFactory(),
