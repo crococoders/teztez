@@ -45,6 +45,12 @@ final class BackwardsConvertTextViewController: ViewController, BackwardsConvert
         store.dispatch(action: .didLoadView)
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        store.dispatch(action: .didStopGame)
+        store.dispatch(action: .didSendAnalytics)
+    }
+
     @IBAction func primaryButtonDidTap(_ sender: PrimaryButton) {
         guard let isConverted = isConverted else { return }
         isConverted ? store.dispatch(action: .didLoadView)

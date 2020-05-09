@@ -8,10 +8,17 @@
 
 import UIKit
 
+private enum Constants {
+    static let defaultTime = 0
+    static let timeInterval = 1.0
+}
+
 final class BackwardsConvertTextStore {
     enum Action {
         case didLoadView
         case didConverText
+        case didSendAnalytics
+        case didStopGame
     }
 
     enum State {
@@ -22,18 +29,30 @@ final class BackwardsConvertTextStore {
     @Published private(set) var state: State?
 
     private var configuration: BackwardsConfiguration
+    private var analyticsProvider: AnalyticsProvider
+    private var analyticEvents: [AnalyticsEvent] = []
+    private var timer: Timer?
+    private var secondsSpentInGame: Int = Constants.defaultTime
 
     init(configuration: BackwardsConfiguration) {
         self.configuration = configuration
+        analyticsProvider = AnalyticsProvider.shared
     }
 
     func dispatch(action: Action) {
         switch action {
         case .didLoadView:
             state = .initial(text: configuration.text, fontSize: configuration.fontSize)
+            timer = Timer.scheduledTimer(withTimeInterval: Constants.timeInterval, repeats: true) { [weak self] _ in
+                self?.calculateSpentTime()
+            }
+        case .didStopGame:
+            timer?.invalidate()
         case .didConverText:
             let convertedText = makeBackwards(with: configuration.text)
             state = .converted(text: convertedText, fontSize: configuration.fontSize)
+        case .didSendAnalytics:
+            sendAnalytics()
         }
     }
 
@@ -50,5 +69,23 @@ final class BackwardsConvertTextStore {
             return word
         }
         return convertedText.joined(separator: " ")
+    }
+
+    private func calculateSpentTime() {
+        secondsSpentInGame += 1
+    }
+
+    private func getNumberOfWordsRead() -> Int {
+        return configuration.text.components(separatedBy: .whitespacesAndNewlines).count
+    }
+
+    private func sendAnalytics() {
+        let numberOfWordsRead = AnalyticsEvent(gameType: .backwards,
+                                               eventType: .numberOfWordsRead, value: getNumberOfWordsRead())
+        let spentTime = AnalyticsEvent(gameType: .backwards,
+                                       eventType: .secondsSpentInGame, value: secondsSpentInGame)
+
+        [numberOfWordsRead, spentTime].forEach { analyticEvents.append($0) }
+        analyticsProvider.postAnalytcis(events: analyticEvents)
     }
 }

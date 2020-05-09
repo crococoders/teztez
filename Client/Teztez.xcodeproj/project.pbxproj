@@ -80,6 +80,8 @@
 		C42B54E7245EE6DE00E3C61D /* BlenderConfigurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42B54E6245EE6DE00E3C61D /* BlenderConfigurationViewController.xib */; };
 		C42B54E9245EE9C600E3C61D /* BlenderModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B54E8245EE9C600E3C61D /* BlenderModuleFactory.swift */; };
 		C42B54EB245EE9D300E3C61D /* BlenderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B54EA245EE9D300E3C61D /* BlenderCoordinator.swift */; };
+		C42D56742466D6D700BF91B7 /* AnalyticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D56732466D6D700BF91B7 /* AnalyticsProvider.swift */; };
+		C42D56762466DB9C00BF91B7 /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D56752466DB9C00BF91B7 /* AnalyticsEvent.swift */; };
 		C441A651246540C200038F74 /* Auth.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21193ED1095BEF415EF954EF /* Auth.strings */; };
 		C441A653246540E600038F74 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C441A652246540E600038F74 /* AuthViewController.xib */; };
 		C441A655246541D700038F74 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C441A654246541D700038F74 /* AuthCoordinator.swift */; };
@@ -310,6 +312,8 @@
 		C42B54E6245EE6DE00E3C61D /* BlenderConfigurationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlenderConfigurationViewController.xib; sourceTree = "<group>"; };
 		C42B54E8245EE9C600E3C61D /* BlenderModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderModuleFactory.swift; sourceTree = "<group>"; };
 		C42B54EA245EE9D300E3C61D /* BlenderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderCoordinator.swift; sourceTree = "<group>"; };
+		C42D56732466D6D700BF91B7 /* AnalyticsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsProvider.swift; sourceTree = "<group>"; };
+		C42D56752466DB9C00BF91B7 /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
 		C441A652246540E600038F74 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		C441A654246541D700038F74 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		C441A656246541F800038F74 /* AuthModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleFactory.swift; sourceTree = "<group>"; };
@@ -1713,6 +1717,8 @@
 				C4BD0F2D244DF09F0056E8C1 /* SceneDelegate */,
 				C4F8190A244B72C800AE73CE /* Storages */,
 				C4B88F5C2450BCC500D1D1BA /* UIComponents */,
+				C42D56732466D6D700BF91B7 /* AnalyticsProvider.swift */,
+				C42D56752466DB9C00BF91B7 /* AnalyticsEvent.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -2373,6 +2379,7 @@
 				C40BB4712457494E00C236C7 /* ActivitiesIntroBlockViewModel.swift in Sources */,
 				C4C8FBF02461C67A006388FA /* FeedsModuleFactory.swift in Sources */,
 				C41FA7CF245D8AA800E515EC /* String+WordList.swift in Sources */,
+				C42D56762466DB9C00BF91B7 /* AnalyticsEvent.swift in Sources */,
 				C4F8190E244B730200AE73CE /* Language.swift in Sources */,
 				C42A90FF2465A77500AF6455 /* PrimaryTextField.swift in Sources */,
 				C490F1002464658600623DF7 /* StatisticsLongCell.swift in Sources */,
@@ -2465,6 +2472,7 @@
 				C490F1172464878500623DF7 /* InformationHeadlinedViewModel.swift in Sources */,
 				B5A5E2E623CAC65921821EDD /* SuggestActivityStore.swift in Sources */,
 				D90BC9956DACD5DD4B793A8F /* FeedsViewController.swift in Sources */,
+				C42D56742466D6D700BF91B7 /* AnalyticsProvider.swift in Sources */,
 				C4C8FBF62461CD86006388FA /* FeedsCollectionViewDataSource.swift in Sources */,
 				CE0F83E6FBF7E3FA3AEDFE9E /* FeedsStore.swift in Sources */,
 				8A332C8C7C2E985A6EBECC7C /* AuthViewController.swift in Sources */,
