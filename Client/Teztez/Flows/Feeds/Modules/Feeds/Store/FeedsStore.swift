@@ -34,16 +34,16 @@ final class FeedsStore {
     func dispatch(action: Action) {
         switch action {
         case .didLoadView:
+            state = .loading
             fetchBlocks()
         case let .didSelectAt(index):
             setState(from: index)
         case .didForceRefresh:
-            break
+            fetchBlocks()
         }
     }
 
     private func fetchBlocks() {
-        state = .loading
         provider.fetchFeeds { [weak self] result in
             guard let self = self else { return }
             switch result {

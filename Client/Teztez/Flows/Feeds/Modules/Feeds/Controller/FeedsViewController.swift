@@ -83,7 +83,7 @@ final class FeedsViewController: ViewController, FeedsPresentable {
         refreshControl.addTarget(self, action: #selector(refreshDidPull), for: .valueChanged)
         refreshControl.tintColor = .white
         collectionView.alwaysBounceVertical = true
-        collectionView.refreshControl = refreshControl
+//        collectionView.refreshControl = refreshControl
 
         [StatisticsSmallCell.self,
          StatisticsLongCell.self,

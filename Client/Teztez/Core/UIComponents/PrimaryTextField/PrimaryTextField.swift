@@ -25,6 +25,7 @@ class PrimaryTextField: UITextField {
         textColor = .white
         textAlignment = .left
         layer.cornerRadius = 10
+        layer.masksToBounds = true
         addLeftIndent(width: 16)
         addRightIndent(width: 16)
     }

@@ -34,16 +34,16 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HdO-p5-fN2">
-                        <rect key="frame" x="12" y="61" width="141" height="28"/>
+                        <rect key="frame" x="12" y="61" width="145" height="28"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gCS-7q-l4Z">
-                                <rect key="frame" x="0.0" y="0.0" width="141" height="16"/>
+                                <rect key="frame" x="0.0" y="0.0" width="145" height="16"/>
                                 <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="13"/>
                                 <color key="textColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHw-0o-k1j">
-                                <rect key="frame" x="0.0" y="16" width="141" height="12"/>
+                                <rect key="frame" x="0.0" y="16" width="145" height="12"/>
                                 <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="10"/>
                                 <color key="textColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -66,7 +66,7 @@
                     <constraint firstAttribute="trailing" secondItem="1Nh-ef-YKF" secondAttribute="trailing" constant="12" id="8jr-hZ-819"/>
                     <constraint firstItem="1Nh-ef-YKF" firstAttribute="top" secondItem="M5u-oX-Dpn" secondAttribute="top" constant="12" id="BUo-2H-F0h"/>
                     <constraint firstItem="618-hu-DUC" firstAttribute="leading" secondItem="M5u-oX-Dpn" secondAttribute="leading" constant="12" id="J5X-9B-JcP"/>
-                    <constraint firstAttribute="trailing" secondItem="HdO-p5-fN2" secondAttribute="trailing" constant="12" id="TEg-bS-gn9"/>
+                    <constraint firstAttribute="trailing" secondItem="HdO-p5-fN2" secondAttribute="trailing" constant="8" id="TEg-bS-gn9"/>
                     <constraint firstItem="618-hu-DUC" firstAttribute="top" secondItem="M5u-oX-Dpn" secondAttribute="top" constant="8" id="Vy8-Rh-ieb"/>
                     <constraint firstItem="HdO-p5-fN2" firstAttribute="leading" secondItem="M5u-oX-Dpn" secondAttribute="leading" constant="12" id="w6K-75-5Yv"/>
                 </constraints>
