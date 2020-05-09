@@ -20,6 +20,14 @@ final class UserSession {
         KeychainStorage.userID
     }
 
+    var username: String? {
+        KeychainStorage.username
+    }
+
+    var name: String? {
+        KeychainStorage.name
+    }
+
     var isExist: Bool {
         token != nil
     }
@@ -31,6 +39,8 @@ final class UserSession {
     }
 
     func start(credentials: UserResponse) {
+        KeychainStorage.username = credentials.username
+        KeychainStorage.name = credentials.name
         KeychainStorage.userID = credentials.id
     }
 
@@ -45,4 +55,10 @@ private extension KeychainStorage {
 
     @KeychainEnrty("userID")
     static var userID: String?
+
+    @KeychainEnrty("username")
+    static var username: String?
+
+    @KeychainEnrty("name")
+    static var name: String?
 }

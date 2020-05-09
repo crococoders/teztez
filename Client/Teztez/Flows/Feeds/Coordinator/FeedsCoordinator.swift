@@ -8,18 +8,19 @@
 
 import Foundation
 
-final class FeedsCoordinator: Coordinator, SuggestActivityCoordinatorOutput {
+final class FeedsCoordinator: ParentCoordinator {
     var onFlowDidFinish: Callback?
 
+    private let coordinatorFactory: CoordinatorFactory
     private let moduleFactory: FeedsModuleFactory
-    private let router: Router
 
-    init(moduleFactory: FeedsModuleFactory, router: Router) {
+    init(coordinatorFactory: CoordinatorFactory, moduleFactory: FeedsModuleFactory, router: Router) {
+        self.coordinatorFactory = coordinatorFactory
         self.moduleFactory = moduleFactory
-        self.router = router
+        super.init(router: router)
     }
 
-    func start() {
+    override func start() {
         showFeeds()
     }
 
@@ -27,6 +28,9 @@ final class FeedsCoordinator: Coordinator, SuggestActivityCoordinatorOutput {
         var feeds = moduleFactory.makeFeeds()
         feeds.onInformationSelected = { [weak self] details in
             self?.showInformationDetails(details: details)
+        }
+        feeds.onProfileButtonDidTap = { [weak self] in
+            self?.runSettingsFlow()
         }
         router.setRootModule(feeds)
     }
@@ -37,5 +41,16 @@ final class FeedsCoordinator: Coordinator, SuggestActivityCoordinatorOutput {
             self?.router.dismissModule()
         }
         router.show(informationDetails, with: .presentInFullScreen(animated: true))
+    }
+
+    private func runSettingsFlow() {
+        let coordinator = coordinatorFactory.makeSettingsCoordinator(router: router)
+        addDependency(coordinator)
+        coordinator.onFlowDidFinish = { [weak self, weak coordinator] in
+            guard let self = self else { return }
+            self.removeDependency(coordinator)
+            self.router.popModule()
+        }
+        coordinator.start()
     }
 }

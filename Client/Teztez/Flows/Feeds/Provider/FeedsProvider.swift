@@ -12,9 +12,15 @@ import Models
 
 final class FeedsProvider {
     func fetchFeeds(callback: @escaping (Result<[Block], Error>) -> Void) {
+        guard
+            let token = UserSession.shared.token,
+            let userId = UserSession.shared.userId else { return }
+
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
-        AF.request("http://localhost:8080/feed").responseDecodable(of: [Block].self, decoder: decoder) { response in
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(token)",
+                                    "Accept": "application/json"]
+        AF.request("http://139.59.14.251:8080/feed/\(userId)", headers: headers).responseDecodable(of: [Block].self, decoder: decoder) { response in
             switch response.result {
             case let .success(blocks):
                 callback(.success(blocks))

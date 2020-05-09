@@ -26,6 +26,7 @@ final class AuthStore {
     enum State {
         case initial(image: UIImage, gradientColors: [CGColor])
         case registered
+        case loading
     }
 
     private let provider: AuthProvider
@@ -45,6 +46,7 @@ final class AuthStore {
                              gradientColors: [UIColor.lightBlur.cgColor,
                                               UIColor.accentBlue.cgColor])
         case let .didLogin(viewModel):
+            state = .loading
             validate(viewModel: viewModel)
         }
     }

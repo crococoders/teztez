@@ -69,7 +69,10 @@ final class AuthViewController: ViewController, AuthPresentable {
             switch state {
             case let .initial(image, gradientColors):
                 self.iconView.configureLoginIcon(with: image, and: gradientColors)
+            case .loading:
+                self.signUpButton.showLoading()
             case .registered:
+                self.signUpButton.hideLoading()
                 self.onRegisterDidFinish?()
             }
         }.store(in: &cancellables)

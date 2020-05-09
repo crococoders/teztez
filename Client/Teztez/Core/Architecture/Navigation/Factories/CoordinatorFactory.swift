@@ -31,7 +31,8 @@ final class CoordinatorFactory {
     }
 
     func makeFeedsCoordinator(navigationController: CoordinatorNavigationController) -> Coordinator {
-        let coordinator = FeedsCoordinator(moduleFactory: ModuleFactory.shared,
+        let coordinator = FeedsCoordinator(coordinatorFactory: CoordinatorFactory(),
+                                           moduleFactory: ModuleFactory.shared,
                                            router: Router(rootController: navigationController))
         return coordinator
     }
@@ -69,5 +70,10 @@ final class CoordinatorFactory {
         let coordinator = SuggestActivityCoordinator(moduleFactory: ModuleFactory.shared,
                                                      router: Router(rootController: rootCoontroller))
         return (coordinator, rootCoontroller)
+    }
+
+    func makeSettingsCoordinator(router: Router) -> Coordinator & SettingsCoordinatorOutput {
+        let coordinator = SettingsCoordinator(moduleFactory: ModuleFactory.shared, router: router)
+        return coordinator
     }
 }
