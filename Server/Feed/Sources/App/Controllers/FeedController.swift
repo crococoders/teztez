@@ -30,7 +30,7 @@ final class FeedController: RouteCollection {
 
     func boot(routes: RoutesBuilder) throws {
         let group = routes.grouped("feed")
-        group.get(Parametr.userId.queryParameter, use: get)
+        group.get(Parameter.userId.queryParameter, use: get)
     }
 
     private func get(request: Request) throws -> EventLoopFuture<[Block]> {
@@ -44,7 +44,7 @@ final class FeedController: RouteCollection {
                 return facade.getBlocks()
             }
         }
-    }
+    
     
     func getStatistics(request: Request) throws -> EventLoopFuture<[StatisticsBlock]> {
         guard let userId = request.parameters.get(Parameter.userId.rawValue)
@@ -108,7 +108,7 @@ final class FeedController: RouteCollection {
             return result
         }
     }
-
+}
 
 
 struct Article: Content {
