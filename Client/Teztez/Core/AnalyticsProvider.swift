@@ -9,7 +9,7 @@
 import Alamofire
 import UIKit
 
-//TODO: - refactor
+// TODO: - refactor
 final class AnalyticsProvider {
     static let shared = AnalyticsProvider()
 
@@ -19,8 +19,7 @@ final class AnalyticsProvider {
         let body: [String: [AnalyticsEvent]] = ["events": events]
 
         guard let token = UserSession.shared.token else { return }
-        let headers: HTTPHeaders = ["Authorization": "Bearer \(token)",
-                                    "Accept": "application/json"]
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
 
         AF.request("http://139.59.14.251:8080/analytics",
                    method: .post,

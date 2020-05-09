@@ -40,6 +40,11 @@ final class PersonalCoachTrainingViewController: ViewController, PersonalCoachTr
         store.dispatch(action: .didLoadView)
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        store.dispatch(action: .didSendAnalytics)
+    }
+
     private func setupObservers() {
         store.$state.sink { [weak self] state in
             guard

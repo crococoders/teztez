@@ -46,6 +46,11 @@ final class SchulteTrainingViewController: ViewController, SchulteTrainingPresen
         store.dispatch(action: .didLoadView)
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        store.dispatch(action: .didSendAnalytics)
+    }
+
     override func customBackButtonDidTap() {
         store.dispatch(action: .didTapBackButton)
     }

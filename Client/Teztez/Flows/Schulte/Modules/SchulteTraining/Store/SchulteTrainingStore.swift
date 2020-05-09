@@ -12,6 +12,7 @@ private enum Constants {
     static let timeInterval = 1.0
     static let minNumber = 1
     static let maxNumber = 25
+    static let defaultValue = 0
 }
 
 // TODO: Refactor whole module
@@ -20,6 +21,7 @@ final class SchulteTrainingStore {
         case didLoadView
         case didSelectItemAt(index: Int)
         case didTapBackButton
+        case didSendAnalytics
     }
 
     enum State {
@@ -32,10 +34,17 @@ final class SchulteTrainingStore {
     }
 
     private var configuration: SchulteConfiguration
+    private let analyticsProvider: AnalyticsProvider
     private var timer: Timer?
     private var totalTimeInSeconds: Int
     private var nextNumber: Int
     private var viewModels: [SchulteTrainingViewModel] = []
+
+    private var analyticEvents: [AnalyticsEvent] = []
+    private var numbersGuessedCorrectly: Int = Constants.defaultValue
+    private var numbersMissed: Int = Constants.defaultValue
+    private var streakOfGuessedNumbers: Int = Constants.defaultValue
+    private var secondsInGame: Int = 1
 
     @Published private(set) var state: State?
 
@@ -43,6 +52,7 @@ final class SchulteTrainingStore {
         self.configuration = configuration
         totalTimeInSeconds = configuration.totalSeconds
         nextNumber = configuration.nextNumber
+        analyticsProvider = AnalyticsProvider.shared
         generateInitialViewModels()
     }
 
@@ -62,6 +72,8 @@ final class SchulteTrainingStore {
             configuration.nextNumber = nextNumber
             configuration.totalSeconds = totalTimeInSeconds
             state = .configured(configuration: configuration)
+        case .didSendAnalytics:
+            sendAnalytics()
         }
     }
 
@@ -74,6 +86,7 @@ final class SchulteTrainingStore {
 
     private func startTimer() {
         totalTimeInSeconds += 1
+        secondsInGame += 1
         state = .timerUpdated(formattedTime: timeString(time: TimeInterval(totalTimeInSeconds)))
     }
 
@@ -87,10 +100,14 @@ final class SchulteTrainingStore {
         let viewModel = viewModels[index]
         if nextNumber == Int(viewModel.number) {
             nextNumber += 1
+            numbersGuessedCorrectly += 1
+            streakOfGuessedNumbers += 1
             guard nextNumber <= Constants.maxNumber else { return finishTraining() }
             state = .nextNumberUpdated(number: nextNumber)
             updateViewModelStateAt(index: index, isCorrect: true)
         } else {
+            numbersMissed += 1
+            streakOfGuessedNumbers = 0
             updateViewModelStateAt(index: index, isCorrect: false)
         }
     }
@@ -99,10 +116,14 @@ final class SchulteTrainingStore {
         let viewModel = viewModels[index]
         if nextNumber == Int(viewModel.number) {
             nextNumber -= 1
+            numbersGuessedCorrectly += 1
+            streakOfGuessedNumbers += 1
             guard nextNumber >= Constants.minNumber else { return finishTraining() }
             state = .nextNumberUpdated(number: nextNumber)
             updateViewModelStateAt(index: index, isCorrect: true)
         } else {
+            numbersMissed += 1
+            streakOfGuessedNumbers = 0
             updateViewModelStateAt(index: index, isCorrect: false)
         }
     }
@@ -120,5 +141,28 @@ final class SchulteTrainingStore {
 
     deinit {
         timer?.invalidate()
+    }
+
+    private func sendAnalytics() {
+        let correct = AnalyticsEvent(gameType: .schulteTable,
+                                     eventType: .numbersGuessedCorrectly,
+                                     value: numbersGuessedCorrectly)
+        let missed = AnalyticsEvent(gameType: .schulteTable,
+                                    eventType: .numbersMissed,
+                                    value: numbersMissed)
+        let streak = AnalyticsEvent(gameType: .schulteTable,
+                                    eventType: .streakOfGuessedNumbers,
+                                    value: streakOfGuessedNumbers)
+
+        let totalTime = AnalyticsEvent(gameType: .schulteTable,
+                                       eventType: .secondsSpentInGame,
+                                       value: secondsInGame)
+
+        let encountered = AnalyticsEvent(gameType: .schulteTable,
+                                         eventType: .numbersEncountered,
+                                         value: Constants.maxNumber)
+
+        [correct, missed, streak, totalTime, encountered].forEach { analyticEvents.append($0) }
+        analyticsProvider.postAnalytcis(events: analyticEvents)
     }
 }
