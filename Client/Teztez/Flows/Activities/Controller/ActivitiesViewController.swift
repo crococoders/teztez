@@ -67,6 +67,7 @@ final class ActivitiesViewController: UIViewController, ActivitiesPresentable {
     private func setupNavigationBar() {
         title = R.string.activities.navigationTitle()
         navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     private func setupUI() {

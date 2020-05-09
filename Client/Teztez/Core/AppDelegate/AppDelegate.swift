@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private let configurator = AppDelegateConfiguratorFactory.makeDefault()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UserSession.shared.finish()
         _ = configurator.application?(application, didFinishLaunchingWithOptions: launchOptions)
         return true
     }
