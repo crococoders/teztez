@@ -48,6 +48,9 @@ struct UserStatsPayload: Content{
     var userStats: [UserStat]
 }
 
+struct CreateEventsBody: Content{
+    var events: [Event]
+}
 
 struct EventController: RouteCollection {
     private enum Parameter: String {
@@ -76,8 +79,8 @@ struct EventController: RouteCollection {
     }
 
     func create(request: Request) throws -> EventLoopFuture<[Event]> {
-        let events = try request.content.decode([Event].self)
-        let eventsFuture = events.map{event in event.save(on: request.db).map { event }}
+        let body = try request.content.decode(CreateEventsBody.self)
+        let eventsFuture = body.events.map{event in event.save(on: request.db).map { event }}
         return request.eventLoop.flatten(eventsFuture)
     }
 
