@@ -11,9 +11,17 @@ import Models
 extension Block: Content {}
 
 final class FeedController: RouteCollection {
+    private enum Parameter: String {
+        case userId
+
+        var queryParameter: PathComponent {
+            return .init(stringLiteral: ":\(rawValue)")
+        }
+    }
     private let analyticsService: AnalyticsService
     private let contentService: ContentService
-
+    
+    
     init(analyticsService: AnalyticsService = MockAnalyticsService(),
          contentService: ContentService = MockContentService()) {
         self.analyticsService = analyticsService
@@ -22,7 +30,7 @@ final class FeedController: RouteCollection {
 
     func boot(routes: RoutesBuilder) throws {
         let group = routes.grouped("feed")
-        group.get("", use: get)
+        group.get(Parametr.userId.queryParameter, use: get)
     }
 
     private func get(request: Request) throws -> EventLoopFuture<[Block]> {
@@ -39,7 +47,10 @@ final class FeedController: RouteCollection {
     }
     
     func getStatistics(request: Request) throws -> EventLoopFuture<[StatisticsBlock]> {
-        let url = URI(string: "http://\(Service.analytics.host!):\(Service.analytics.port!)/analytics")
+        guard let userId = request.parameters.get(Parameter.userId.rawValue)
+        else {throw Abort(.internalServerError)}
+        
+        let url = URI(string: "http://\(Service.analytics.host!):\(Service.analytics.port!)/analytics/\(userId)")
         
         return request.client.get(url).flatMapThrowing{ request in
             let userStatsPayload = try request.content.decode(UserStatsPayload.self)
