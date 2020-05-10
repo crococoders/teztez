@@ -1,13 +1,13 @@
 //
 //  File.swift
-//  
+//
 //
 //  Created by Aidar Nugmanov on 4/25/20.
 //
 
 import Vapor
 
-enum Service: CaseIterable {    
+enum Service: CaseIterable {
     case content
     case feed
     case feedback

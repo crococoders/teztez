@@ -45,8 +45,8 @@ playground.xcworkspace
 Packages/
 Package.pins
 Package.resolved
-.build/
-.swiftpm/
+**/.build/
+**/.swiftpm/
 
 # Generated files
 Client/Teztez/Resources/Generated
