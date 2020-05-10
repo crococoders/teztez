@@ -10,7 +10,7 @@ import Vapor
 final class GatewayController: RouteCollection {
     func boot(routes: RoutesBuilder) throws {
         for service in Service.allCases {
-            routes.grouped(service.path).use(handler: redirect, service: service)
+            routes.grouped(UserToken.authenticator()).grouped(service.path).use(handler: redirect, service: service)
         }
     }
 

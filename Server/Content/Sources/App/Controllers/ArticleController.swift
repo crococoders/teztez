@@ -18,7 +18,7 @@ struct ArticleController: RouteCollection {
     }
 
     func getAll(request: Request) throws -> EventLoopFuture<[Article]> {
-        return Article.query(on: request.db).sort(\.$createdAt, .descending).all()
+        return Article.query(on: request.db).sort(\.$createdAt, .descending).limit(4).all()
     }
 
     func create(request: Request) throws -> EventLoopFuture<Article> {

@@ -31,10 +31,31 @@ final class CoordinatorFactory {
         return (coordinator, rootController)
     }
 
+    func makeSchulteCoordinator() -> (coordinator: Coordinator & SchulteCoordinatorOutput, module: Presentable) {
+        let rootController = CoordinatorNavigationController()
+        let coordinator = SchulteCoordinator(moduleFactory: ModuleFactory.shared,
+                                             router: Router(rootController: rootController))
+        return (coordinator, rootController)
+    }
+
     func makeBackwardsCoordinator() -> (coordinator: Coordinator & BackwardsCoordinatorOutput, module: Presentable) {
         let rootCoontroller = CoordinatorNavigationController()
         let coordinator = BackwardsCoordinator(moduleFactory: ModuleFactory.shared,
                                                router: Router(rootController: rootCoontroller))
+        return (coordinator, rootCoontroller)
+    }
+
+    func makeBlenderCoordinator() -> (coordinator: Coordinator & BlenderCoordinatorOutput, module: Presentable) {
+        let rootCoontroller = CoordinatorNavigationController()
+        let coordinator = BlenderCoordinator(moduleFactory: ModuleFactory.shared,
+                                             router: Router(rootController: rootCoontroller))
+        return (coordinator, rootCoontroller)
+    }
+
+    func makeSuggestActivityCoordinator() -> (coordinator: Coordinator & SuggestActivityCoordinatorOutput, module: Presentable) {
+        let rootCoontroller = CoordinatorNavigationController()
+        let coordinator = SuggestActivityCoordinator(moduleFactory: ModuleFactory.shared,
+                                                     router: Router(rootController: rootCoontroller))
         return (coordinator, rootCoontroller)
     }
 }

@@ -42,8 +42,8 @@ final class TextInputViewController: ViewController, TextInputPresentable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupObservers()
         setupUI()
+        setupObservers()
     }
 
     override func viewWillAppear(_ animated: Bool) {
