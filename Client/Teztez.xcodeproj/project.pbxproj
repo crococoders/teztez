@@ -1466,7 +1466,7 @@
 			isa = PBXGroup;
 			children = (
 				C499E933245D7B370065FC28 /* BackwardsConfiguration */,
-				CFB5824EC5F70476B8625769 /* BackwardsConvertText */,
+				CFB5824EC5F70476B8625769 /* BackwardsTraining */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -2139,14 +2139,14 @@
 			path = PersonalCoachResult;
 			sourceTree = "<group>";
 		};
-		CFB5824EC5F70476B8625769 /* BackwardsConvertText */ = {
+		CFB5824EC5F70476B8625769 /* BackwardsTraining */ = {
 			isa = PBXGroup;
 			children = (
 				6EE51CCAE907BEF45FBF826B /* Controller */,
 				10F41ACEC7B03B4771CE24B3 /* Localization */,
 				D01F408D161E24CC418888BF /* Store */,
 			);
-			path = BackwardsConvertText;
+			path = BackwardsTraining;
 			sourceTree = "<group>";
 		};
 		D01F408D161E24CC418888BF /* Store */ = {

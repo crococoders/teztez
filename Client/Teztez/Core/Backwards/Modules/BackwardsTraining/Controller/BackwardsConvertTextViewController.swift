@@ -75,24 +75,12 @@ final class BackwardsConvertTextViewController: ViewController, BackwardsConvert
     }
 
     private func setupUI() {
-        bottomView.applyGradient(colors: [UIColor.clear.cgColor,
-                                          UIColor.systemGray.cgColor],
+        bottomView.applyGradient(colors: [UIColor.clear.cgColor, UIColor.systemGray.cgColor],
                                  direction: .topToBottom)
-        setupNavigationBar()
-        setupLocalization()
-        setupTextView()
-    }
-
-    private func setupLocalization() {
-        titleLabel.text = R.string.backwardsConvertText.mainTitle()
-    }
-
-    private func setupTextView() {
-        textView.textContainerInset = Constants.edgeInsets
-    }
-
-    private func setupNavigationBar() {
         navigationController?.navigationBar.barTintColor = .systemGray
+        textView.textContainerInset = Constants.edgeInsets
+        titleLabel.text = R.string.backwardsConvertText.mainTitle()
+        primaryButton.setTitle(R.string.backwardsConvertText.convertTitle(), for: .normal)
     }
 
     private func updateTextView(with text: String, fontSize: CGFloat) {
