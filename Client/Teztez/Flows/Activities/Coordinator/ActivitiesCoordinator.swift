@@ -80,7 +80,7 @@ final class ActivitiesCoordinator: ParentCoordinator {
             guard let coordinator = coordinator else { return }
             self?.dismiss(child: coordinator)
         }
-        show((coordinator, module), with: .presentInFullScreen(animated: true))
+        show((coordinator, module), with: .presentAsPage)
     }
 
     private func runSuggestActivityFlow() {

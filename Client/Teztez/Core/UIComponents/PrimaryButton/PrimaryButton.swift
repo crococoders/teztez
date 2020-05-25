@@ -9,6 +9,12 @@
 import UIKit
 
 final class PrimaryButton: UIButton {
+    override var isHighlighted: Bool {
+        didSet {
+            backgroundColor = isHighlighted ? .accentBlue80 : .accentBlue
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()

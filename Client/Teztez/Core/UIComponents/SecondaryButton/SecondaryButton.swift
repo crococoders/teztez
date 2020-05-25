@@ -9,6 +9,12 @@
 import UIKit
 
 final class SecondaryButton: UIButton {
+    override var isHighlighted: Bool {
+        didSet {
+            backgroundColor = isHighlighted ? .systemGray280 : .systemGray2
+        }
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
