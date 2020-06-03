@@ -58,6 +58,19 @@ final class ActivitiesViewController: UIViewController, ActivitiesPresentable {
                 self.collectionViewDelegate.items = items
                 self.collectionView.reloadData()
             case let .itemSelected(itemType):
+                switch itemType {
+                case .coach:
+                    let store = PersonalCoachStore()
+                    let viewController = PersonalCoachViewController(store: store)
+                    let navigationController = CoordinatorNavigationController(rootViewController: viewController)
+                    navigationController.hero.isEnabled = true
+                    navigationController.hero.modalAnimationType = .selectBy(presenting: .pageIn(direction: .left),
+                                                                             dismissing: .pageOut(direction: .right))
+                    navigationController.modalPresentationStyle = .fullScreen
+                    self.present(navigationController, animated: true)
+                default:
+                    break
+                }
                 self.onItemDidSelect?(itemType)
             }
 

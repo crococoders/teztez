@@ -33,6 +33,7 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
     private let pickerViewDelegate: PersonalCoachPickerViewDelegate
     private let pickerViewDataSource: PersonalCoachPickerViewDataSource
     private var cancellables = Set<AnyCancellable>()
+    private var configuration: PersonalCoachConfiguration?
 
     private lazy var headerView = ActivityHeaderView()
     private lazy var inputTextView = ActivityTextInputView()
@@ -60,12 +61,17 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
         store.dispatch(action: .didLoadView)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setupNavigationBar()
+    }
+
     @IBAction func startButtonDidTap(_ sender: PrimaryButton) {
         switch sender.tag {
         case 0:
             store.dispatch(action: .didStartDidTap)
         case 1:
-            onContinueButtonDidTap?()
+            navigateToTraining(with: configuration!)
         default:
             break
         }
@@ -81,7 +87,8 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
 
     func enablePauseMode() {
         restartButton.isHidden = false
-        startButton.setTitle(R.string.personalCoach.continue(), for: .normal)
+        startButton.setTitle("Continue", for: .normal)
+        startButton.layoutSubviews()
         startButton.tag = 1
     }
 
@@ -96,7 +103,8 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
             case let .updated(block):
                 self.updateBlock(block)
             case let .configured(configuration):
-                self.onStartButtonDidTap?(configuration)
+                self.configuration = configuration
+                self.navigateToTraining(with: configuration)
             }
 
         }.store(in: &cancellables)
@@ -104,12 +112,13 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
 
     private func setupUI() {
         stackView.spacing = Constants.spacing
-        setupNavigationBar()
+        navigationItem.setLeftBarButton(nil, animated: false)
         setupLocalization()
     }
 
     private func setupNavigationBar() {
         navigationController?.navigationBar.barTintColor = .systemGray
+        navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.closeIcon(),
                                                             style: .plain,
                                                             target: self,
@@ -154,12 +163,44 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
 
     @objc
     private func closeButtonDidTap() {
-        onCloseButtonDidTap?()
+        navigationController?.dismiss(animated: true)
+    }
+
+    private func navigateToTraining(with configuration: PersonalCoachConfiguration) {
+        let store = PersonalCoachTrainingStore(configuration: configuration)
+        let viewController = PersonalCoachTrainingViewController(store: store)
+        viewController.onBackButtonDidTap = { [weak self, weak viewController] currentIndex in
+            guard let self = self else { return }
+            self.enablePauseMode()
+            self.configuration?.startWordIndex = currentIndex
+            viewController?.navigationController?.popViewController(animated: true)
+        }
+        viewController.hero.isEnabled = true
+        navigationController?.hero.isEnabled = true
+        navigationController?.navigationBar.backgroundColor = .clear
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.hero.navigationAnimationType = .fade
+
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    private func navigateToTextInput() {
+        let viewController = TextInputViewController(store: TextInputStore())
+        let navController = CoordinatorNavigationController()
+        viewController.onDoneButtonDidTap = { [weak self, weak viewController] text in
+            viewController?.dismiss(animated: true)
+            self?.setUserText(text)
+        }
+        viewController.onCancelButtonDidTap = { [weak viewController] in
+            viewController?.dismiss(animated: true)
+        }
+        navController.setViewControllers([viewController], animated: true)
+        navigationController?.present(navController, animated: true)
     }
 }
 
 extension PersonalCoachViewController: ActivityTextInputViewDelegate {
     func activityTextInputView(_ activityTextInputView: ActivityTextInputView, didTapActionView actionView: UIView) {
-        onTextInputDidTap?()
+        navigateToTextInput()
     }
 }

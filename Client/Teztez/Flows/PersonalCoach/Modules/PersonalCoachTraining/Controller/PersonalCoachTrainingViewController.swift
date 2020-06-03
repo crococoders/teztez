@@ -35,8 +35,8 @@ final class PersonalCoachTrainingViewController: ViewController, PersonalCoachTr
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         setupObservers()
-        setupLocalization()
         store.dispatch(action: .didLoadView)
     }
 
@@ -54,20 +54,34 @@ final class PersonalCoachTrainingViewController: ViewController, PersonalCoachTr
             case let .timerUpdated(second):
                 self.changeableLabel.text = second
             case let .trainingStarted(speed):
-                self.messageLabel.text = speed
-                self.changeableLabel.font = .displayBold48
+                UIView.animate(withDuration: 0.2) {
+                    self.messageLabel.text = speed
+                    self.messageLabel.alpha = 1
+                    self.changeableLabel.alpha = 1
+                    self.changeableLabel.font = .displayBold48
+                }
+                self.messageLabel.heroModifiers = [.fade, .scale(0.5)]
+                self.changeableLabel.heroModifiers = [.fade, .scale(0.5)]
             case let .wordUpdated(word):
                 self.changeableLabel.text = word
             case let .finished(speed):
-                self.onTrainingDidFinish?(speed)
+                self.navigateToResult(speed: speed)
             case let .paused(currentWordIndex):
                 self.onBackButtonDidTap?(currentWordIndex)
             }
         }.store(in: &cancellables)
     }
 
-    private func setupLocalization() {
+    private func setupUI() {
         messageLabel.text = R.string.personalCoachTraining.trainingWillStart()
+        messageLabel.heroModifiers = [.fade, .scale(0.5)]
+        changeableLabel.heroModifiers = [.fade, .scale(0.5)]
+    }
+
+    private func navigateToResult(speed: Int) {
+        let store = PersonalCoachResultStore(speed: speed)
+        let viewController = PersonalCoachResultViewController(store: store)
+        navigationController?.pushViewController(viewController, animated: true)
     }
 
     override func customBackButtonDidTap() {

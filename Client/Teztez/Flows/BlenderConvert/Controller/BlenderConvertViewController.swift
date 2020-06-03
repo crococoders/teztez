@@ -92,7 +92,7 @@ final class BlenderConvertViewController: ViewController, BlenderConvertPresenta
         textView.text = text
         textView.font = R.font.sfProTextRegular(size: fontSize)
     }
-    
+
     private func animate() {
         UIView.animate(withDuration: 0.25) {
             self.view.alpha = 0.7

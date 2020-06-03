@@ -33,7 +33,8 @@ final class ActivitiesCoordinator: ParentCoordinator {
     private func runFlow(by itemType: ActivitiesItemType) {
         switch itemType {
         case .coach:
-            runPersoalCoachFlow()
+            break
+//            runPersoalCoachFlow()
         case .schulte:
             runSchulteFlow()
         case .backwards:
