@@ -43,6 +43,7 @@ final class BlenderConvertViewController: ViewController, BlenderConvertPresenta
         setupObservers()
         setupUI()
         store.dispatch(action: .didLoadView)
+        primaryButton.heroID = "primaryButton"
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -105,5 +106,6 @@ final class BlenderConvertViewController: ViewController, BlenderConvertPresenta
 
     override func customBackButtonDidTap() {
         onBackButtonDidTap?()
+        navigationController?.popViewController(animated: true)
     }
 }

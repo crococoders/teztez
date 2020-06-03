@@ -58,20 +58,7 @@ final class ActivitiesViewController: UIViewController, ActivitiesPresentable {
                 self.collectionViewDelegate.items = items
                 self.collectionView.reloadData()
             case let .itemSelected(itemType):
-                switch itemType {
-                case .coach:
-                    let store = PersonalCoachStore()
-                    let viewController = PersonalCoachViewController(store: store)
-                    let navigationController = CoordinatorNavigationController(rootViewController: viewController)
-                    navigationController.hero.isEnabled = true
-                    navigationController.hero.modalAnimationType = .selectBy(presenting: .pageIn(direction: .left),
-                                                                             dismissing: .pageOut(direction: .right))
-                    navigationController.modalPresentationStyle = .fullScreen
-                    self.present(navigationController, animated: true)
-                default:
-                    break
-                }
-                self.onItemDidSelect?(itemType)
+                self.navigateToNextPage(with: itemType)
             }
 
         }.store(in: &cancellables)
@@ -87,5 +74,24 @@ final class ActivitiesViewController: UIViewController, ActivitiesPresentable {
         collectionView.dataSource = collectionViewDataSource
         collectionView.delegate = collectionViewDelegate
         collectionView.register(cellClass: ActivitiesCell.self)
+    }
+
+    private func navigateToNextPage(with type: ActivitiesItemType) {
+        let viewController: UIViewController
+        switch type {
+        case .coach:
+            let store = PersonalCoachStore()
+            viewController = PersonalCoachViewController(store: store)
+        default:
+            let viewModel = ActivitiesIntroViewModel(type: type)
+            viewController = ActivitiesIntroViewController(viewModel: viewModel)
+        }
+
+        let navigationController = CoordinatorNavigationController(rootViewController: viewController)
+        navigationController.hero.isEnabled = true
+        navigationController.hero.modalAnimationType = .selectBy(presenting: .pageIn(direction: .left),
+                                                                 dismissing: .pageOut(direction: .right))
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true)
     }
 }

@@ -47,8 +47,11 @@ final class FontSizeChangeViewController: UIViewController, FontSizeChangePresen
             switch state {
             case let .initial(value):
                 self.sliderView.configure(with: value)
+                self.titleLabel.font = R.font.sfProTextRegular(size: CGFloat(value))
             case let .changingFontSize(fontSize):
-                self.titleLabel.font = R.font.sfProTextRegular(size: fontSize)
+                print(self.titleLabel.font.pointSize)
+                self.titleLabel.animate(font: R.font.sfProTextRegular(size: fontSize)!, duration: 0.1)
+                print(self.titleLabel.font.pointSize)
             case let .changeFontSizeFinished(fontSize):
                 self.onFontSizeDidSelect?(fontSize)
             case .cancelled:
