@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B5F394D5A628CEBD41DAF49 /* ColorMatchingConfigurationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D25932365E2D39BBC591DA6 /* ColorMatchingConfigurationViewController.swift */; };
 		22E2FABB4D0F6C38AADBF488 /* PersonalCoachResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90105D2C8C675D469C5508CF /* PersonalCoachResultViewController.swift */; };
 		42FA5C5146F2D30BB2AD44C7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B5A4296C52DE8A1EA64E0A /* SettingsViewController.swift */; };
 		48B246AB6A2B550320B3067B /* PersonalCoachTrainingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0CC5886C0EDB96C1B81B77 /* PersonalCoachTrainingStore.swift */; };
 		5591451CBFCF68860AAB37A8 /* BackwardsConvertTextStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B78DCD355FF23007B6E35 /* BackwardsConvertTextStore.swift */; };
+		671F0ECC7379AE95078C9897 /* ColorMatchingConfigurationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F048CD48C30A8FABC70E65C /* ColorMatchingConfigurationStore.swift */; };
 		85A0CEAE7BB174471633BFE2 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463F9C22E23A2EC83E77FA5D /* SettingsStore.swift */; };
 		8A332C8C7C2E985A6EBECC7C /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EAB80513D0202EBC214CFF /* AuthViewController.swift */; };
 		9963934486395B875B4BBE32 /* AuthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D9E93ED400582E6E35CFD80 /* AuthStore.swift */; };
@@ -186,6 +188,13 @@
 		C4DE5C382466D86500434BBB /* SettingsWebCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4DE5C362466D86500434BBB /* SettingsWebCell.xib */; };
 		C4DE5C3A2466DA1100434BBB /* SettingsTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE5C392466DA1100434BBB /* SettingsTableViewDataSource.swift */; };
 		C4DE5C3C2466EF0800434BBB /* SettingsProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE5C3B2466EF0800434BBB /* SettingsProfileViewModel.swift */; };
+		C4F2D662248813F200838527 /* ColorMatchingConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F2D661248813F200838527 /* ColorMatchingConfiguration.swift */; };
+		C4F2D6632488146E00838527 /* ColorMatchingConfiguration.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE2049AD20402B345D4942C3 /* ColorMatchingConfiguration.strings */; };
+		C4F2D6652488155500838527 /* ColorMatchingPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F2D6642488155500838527 /* ColorMatchingPickerViewDelegate.swift */; };
+		C4F2D6672488157C00838527 /* ColorMatchingPickerViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F2D6662488157C00838527 /* ColorMatchingPickerViewDataSource.swift */; };
+		C4F2D6692488161000838527 /* ColorMatchingConfigurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4F2D6682488161000838527 /* ColorMatchingConfigurationViewController.xib */; };
+		C4F2D66C248817E700838527 /* ColorMatchingModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F2D66B248817E700838527 /* ColorMatchingModuleFactory.swift */; };
+		C4F2D66F2488180200838527 /* ColorMatchingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F2D66E2488180200838527 /* ColorMatchingCoordinator.swift */; };
 		C4F7AFCD24547229007D6289 /* ActivitiesIntroBlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7AFCC24547229007D6289 /* ActivitiesIntroBlockView.swift */; };
 		C4F7AFCF24547450007D6289 /* ActivityIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7AFCE24547450007D6289 /* ActivityIconView.swift */; };
 		C4F7AFD224547A8A007D6289 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7AFD124547A8A007D6289 /* NibLoadable.swift */; };
@@ -249,6 +258,7 @@
 		08AF81DB1C1471F891251E7B /* InformationDetailsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InformationDetailsViewController.swift; sourceTree = "<group>"; };
 		09754A01CF6ECA71035E6AC9 /* PersonalCoachResultStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachResultStore.swift; sourceTree = "<group>"; };
 		167E23CE4015B5F7A68EB06E /* BlenderConvertViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConvertViewController.swift; sourceTree = "<group>"; };
+		1D25932365E2D39BBC591DA6 /* ColorMatchingConfigurationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorMatchingConfigurationViewController.swift; sourceTree = "<group>"; };
 		1E4CEAED3F3A171DE2A1861C /* BlenderConfigurationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConfigurationViewController.swift; sourceTree = "<group>"; };
 		21193ED1095BEF415EF954EF /* Auth.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = Auth.strings; sourceTree = "<group>"; };
 		22A4B5A77A3E1899CD64FA19 /* SuggestActivityStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SuggestActivityStore.swift; sourceTree = "<group>"; };
@@ -258,6 +268,7 @@
 		463F9C22E23A2EC83E77FA5D /* SettingsStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		61E6C5EB61FC4D747BB04A0F /* Feeds.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = Feeds.strings; sourceTree = "<group>"; };
 		6D9E93ED400582E6E35CFD80 /* AuthStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthStore.swift; sourceTree = "<group>"; };
+		6F048CD48C30A8FABC70E65C /* ColorMatchingConfigurationStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ColorMatchingConfigurationStore.swift; sourceTree = "<group>"; };
 		71331ABBB051174193E4C4F4 /* BackwardsConvertTextViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BackwardsConvertTextViewController.swift; sourceTree = "<group>"; };
 		7F52AA754D5CC7AE1B05C8D2 /* BlenderConfiguration.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = BlenderConfiguration.strings; sourceTree = "<group>"; };
 		8D2ED7191D7E497772177623 /* BlenderConfigurationStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlenderConfigurationStore.swift; sourceTree = "<group>"; };
@@ -425,6 +436,12 @@
 		C4DE5C362466D86500434BBB /* SettingsWebCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsWebCell.xib; sourceTree = "<group>"; };
 		C4DE5C392466DA1100434BBB /* SettingsTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewDataSource.swift; sourceTree = "<group>"; };
 		C4DE5C3B2466EF0800434BBB /* SettingsProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsProfileViewModel.swift; sourceTree = "<group>"; };
+		C4F2D661248813F200838527 /* ColorMatchingConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatchingConfiguration.swift; sourceTree = "<group>"; };
+		C4F2D6642488155500838527 /* ColorMatchingPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatchingPickerViewDelegate.swift; sourceTree = "<group>"; };
+		C4F2D6662488157C00838527 /* ColorMatchingPickerViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatchingPickerViewDataSource.swift; sourceTree = "<group>"; };
+		C4F2D6682488161000838527 /* ColorMatchingConfigurationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorMatchingConfigurationViewController.xib; sourceTree = "<group>"; };
+		C4F2D66B248817E700838527 /* ColorMatchingModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatchingModuleFactory.swift; sourceTree = "<group>"; };
+		C4F2D66E2488180200838527 /* ColorMatchingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorMatchingCoordinator.swift; sourceTree = "<group>"; };
 		C4F7AFCC24547229007D6289 /* ActivitiesIntroBlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesIntroBlockView.swift; sourceTree = "<group>"; };
 		C4F7AFCE24547450007D6289 /* ActivityIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIconView.swift; sourceTree = "<group>"; };
 		C4F7AFD124547A8A007D6289 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
@@ -475,6 +492,7 @@
 		C4F8198F244C582B00AE73CE /* FontStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontStyles.swift; sourceTree = "<group>"; };
 		CF0CC5886C0EDB96C1B81B77 /* PersonalCoachTrainingStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PersonalCoachTrainingStore.swift; sourceTree = "<group>"; };
 		D4F0EB04B0F36237A24EC5E6 /* SuggestActivityViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SuggestActivityViewController.swift; sourceTree = "<group>"; };
+		DE2049AD20402B345D4942C3 /* ColorMatchingConfiguration.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = ColorMatchingConfiguration.strings; sourceTree = "<group>"; };
 		EC5A354F7522B9EDFE828892 /* Settings.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = Settings.strings; sourceTree = "<group>"; };
 		FDED4963B01E0294FEDC2B2C /* BlenderConvert.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = BlenderConvert.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -515,6 +533,16 @@
 			);
 			name = BlenderConvert;
 			path = ../../BlenderConvert;
+			sourceTree = "<group>";
+		};
+		06CA1784152D77C2BFA16488 /* ColorMatchingConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				BD9DEDF13159A931F2486D8E /* Controller */,
+				307D9F6917D7172A9909395A /* Localization */,
+				AAD866518566A79E40F6FDE2 /* Store */,
+			);
+			path = ColorMatchingConfiguration;
 			sourceTree = "<group>";
 		};
 		0E6B1A8A000BDAE4A5FA7673 /* Store */ = {
@@ -560,6 +588,14 @@
 				B787349865DE34392BE0F992 /* ViewModel */,
 			);
 			path = InformationDetails;
+			sourceTree = "<group>";
+		};
+		307D9F6917D7172A9909395A /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				DE2049AD20402B345D4942C3 /* ColorMatchingConfiguration.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		36239216742820CC5BEF121D /* Settings */ = {
@@ -764,6 +800,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AAD866518566A79E40F6FDE2 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				6F048CD48C30A8FABC70E65C /* ColorMatchingConfigurationStore.swift */,
+				C4F2D661248813F200838527 /* ColorMatchingConfiguration.swift */,
+			);
+			path = Store;
+			sourceTree = "<group>";
+		};
 		B02B518864ACD50FE3B2BDD6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -800,6 +845,17 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BD9DEDF13159A931F2486D8E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D25932365E2D39BBC591DA6 /* ColorMatchingConfigurationViewController.swift */,
+				C4F2D6682488161000838527 /* ColorMatchingConfigurationViewController.xib */,
+				C4F2D6642488155500838527 /* ColorMatchingPickerViewDelegate.swift */,
+				C4F2D6662488157C00838527 /* ColorMatchingPickerViewDataSource.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		C40AE0B824535B31008BC71C /* View */ = {
@@ -1594,6 +1650,15 @@
 			path = SceneDelegate;
 			sourceTree = "<group>";
 		};
+		C4BE9D7A248812AD00E123B4 /* ColorMatching */ = {
+			isa = PBXGroup;
+			children = (
+				C4F2D66D248817EE00838527 /* Coordinator */,
+				C4F2D66A248817D400838527 /* Modules */,
+			);
+			path = ColorMatching;
+			sourceTree = "<group>";
+		};
 		C4C067032458A1A900EF39B8 /* FontSizeChange */ = {
 			isa = PBXGroup;
 			children = (
@@ -1737,6 +1802,23 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		C4F2D66A248817D400838527 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				06CA1784152D77C2BFA16488 /* ColorMatchingConfiguration */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C4F2D66D248817EE00838527 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				C4F2D66B248817E700838527 /* ColorMatchingModuleFactory.swift */,
+				C4F2D66E2488180200838527 /* ColorMatchingCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		C4F7AFCB245471FF007D6289 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -1862,6 +1944,7 @@
 				C41FA81324608CD800E515EC /* Schulte */,
 				36239216742820CC5BEF121D /* Settings */,
 				B652D0DBB592FE284CB793C0 /* SuggestActivity */,
+				C4BE9D7A248812AD00E123B4 /* ColorMatching */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -2283,6 +2366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F2D6692488161000838527 /* ColorMatchingConfigurationViewController.xib in Resources */,
 				C41FA83E24608CD800E515EC /* SchulteTrainingViewController.xib in Resources */,
 				C40ED008245D98BB00EF46D2 /* BackwardsConfiguration.strings in Resources */,
 				C4C067082458A24100EF39B8 /* FontSizeChange.strings in Resources */,
@@ -2303,6 +2387,7 @@
 				C4C0670A2458AD1C00EF39B8 /* SliderView.xib in Resources */,
 				C4197B832450A2D300811F37 /* MainTabBar.strings in Resources */,
 				C41FA7D4245DE2AA00E515EC /* PersonalCoachResultViewController.xib in Resources */,
+				C4F2D6632488146E00838527 /* ColorMatchingConfiguration.strings in Resources */,
 				C4F8198A244C55FB00AE73CE /* SFProRounded-Bold.otf in Resources */,
 				C42B54E5245EE46200E3C61D /* BlenderConfiguration.strings in Resources */,
 				C4F8196D244B9AFF00AE73CE /* Localizable.strings in Resources */,
@@ -2431,6 +2516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F2D662248813F200838527 /* ColorMatchingConfiguration.swift in Sources */,
 				C41FA7D2245D99C300E515EC /* SecondaryButton.swift in Sources */,
 				C463DC8D245CAF9600E265FF /* ActivityHeaderViewModel.swift in Sources */,
 				C41FA84024608CD800E515EC /* SchulteTrainingCell.swift in Sources */,
@@ -2442,6 +2528,7 @@
 				C4F81919244B761700AE73CE /* UIColor+Hex.swift in Sources */,
 				C463DC8A245CAF9600E265FF /* ActivityTextInputViewModel.swift in Sources */,
 				C41FA84924608CD800E515EC /* SchulteConfigurationStore.swift in Sources */,
+				C4F2D66F2488180200838527 /* ColorMatchingCoordinator.swift in Sources */,
 				C4F81958244B86EC00AE73CE /* ColorStyles.swift in Sources */,
 				C41FA84D24608CD800E515EC /* SchulteResultStore.swift in Sources */,
 				C41FA84324608CD800E515EC /* SchulteTrainingStore.swift in Sources */,
@@ -2455,6 +2542,7 @@
 				C463DC96245CB11700E265FF /* ActivitiesIconViewModel.swift in Sources */,
 				C463DC182459D32C00E265FF /* TextInputStore.swift in Sources */,
 				C4F81945244B82BB00AE73CE /* ParentCoordinator.swift in Sources */,
+				C4F2D6672488157C00838527 /* ColorMatchingPickerViewDataSource.swift in Sources */,
 				C40AE0CD24543A04008BC71C /* UIView+GradientLayer.swift in Sources */,
 				C4F81953244B832A00AE73CE /* Router.swift in Sources */,
 				C40AE0C624537ACE008BC71C /* ActivitiesCollectionViewDelegate.swift in Sources */,
@@ -2463,6 +2551,7 @@
 				C463DC142459D32C00E265FF /* TextInputTextViewDelegate.swift in Sources */,
 				C471CE82245F15A000668E98 /* BlenderConvertStore.swift in Sources */,
 				C4F8192C244B76CE00AE73CE /* UITextField+Indent.swift in Sources */,
+				C4F2D66C248817E700838527 /* ColorMatchingModuleFactory.swift in Sources */,
 				C41FA83C24608CD800E515EC /* SchulteTrainingCollectionViewDelegate.swift in Sources */,
 				C490F10C246475EC00623DF7 /* StatisticsSmallViewModel.swift in Sources */,
 				C4F81924244B76A500AE73CE /* UITableView+Register.swift in Sources */,
@@ -2500,6 +2589,7 @@
 				C40ED006245D857A00EF46D2 /* BackwardsConfiguration.swift in Sources */,
 				C4C62B03245B521700EDFC52 /* FontSizeChangeStore.swift in Sources */,
 				C4F8194B244B82F000AE73CE /* CoordinatorFactory.swift in Sources */,
+				C4F2D6652488155500838527 /* ColorMatchingPickerViewDelegate.swift in Sources */,
 				C4F8190C244B72D500AE73CE /* UserDefaultsStorage.swift in Sources */,
 				C4D138DF244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift in Sources */,
 				C441A657246541F800038F74 /* AuthModuleFactory.swift in Sources */,
@@ -2599,6 +2689,8 @@
 				42FA5C5146F2D30BB2AD44C7 /* SettingsViewController.swift in Sources */,
 				85A0CEAE7BB174471633BFE2 /* SettingsStore.swift in Sources */,
 				C4DE5C1E2466C8E400434BBB /* SettingsModuleFactory.swift in Sources */,
+				0B5F394D5A628CEBD41DAF49 /* ColorMatchingConfigurationViewController.swift in Sources */,
+				671F0ECC7379AE95078C9897 /* ColorMatchingConfigurationStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

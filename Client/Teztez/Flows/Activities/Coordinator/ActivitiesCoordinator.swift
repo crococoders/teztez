@@ -42,8 +42,8 @@ final class ActivitiesCoordinator: ParentCoordinator {
             runBlenderFlow()
         case .suggestion:
             runSuggestActivityFlow()
-        default:
-            break
+        case .colorMatch:
+            runMatchingFlow()
         }
     }
 
@@ -90,5 +90,14 @@ final class ActivitiesCoordinator: ParentCoordinator {
             self?.dismiss(child: coordinator)
         }
         show((coordinator, module), with: .presentInSheet(dismissable: false))
+    }
+
+    private func runMatchingFlow() {
+        let (coordinator, module) = coordinatorFactory.makeMatchingCoordinator()
+        coordinator.onFlowDidFinish = { [weak self, weak coordinator] in
+            guard let coordinator = coordinator else { return }
+            self?.dismiss(child: coordinator)
+        }
+        show((coordinator, module), with: .presentInFullScreen(animated: true))
     }
 }

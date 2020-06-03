@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorMatchingConfigurationViewController" customModule="Teztez" customModuleProvider="target">
+            <connections>
+                <outlet property="restartButton" destination="UMA-dc-r8Z" id="El4-mG-8VL"/>
+                <outlet property="stackView" destination="tt2-df-s7g" id="2gU-ex-hHc"/>
+                <outlet property="startButton" destination="vtW-UD-wCX" id="nZq-1t-eyF"/>
+                <outlet property="view" destination="qPp-IV-bUa" id="MiF-wb-zxb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="qPp-IV-bUa">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grT-Ho-nZY">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L8i-eN-f50">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tt2-df-s7g">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="khI-YM-1HG" userLabel="TestView" customClass="ActivityHeaderView" customModule="Teztez" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="MOV-iO-kqj"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="tt2-df-s7g" firstAttribute="top" secondItem="L8i-eN-f50" secondAttribute="top" id="05G-4X-NxC"/>
+                                <constraint firstAttribute="trailing" secondItem="tt2-df-s7g" secondAttribute="trailing" id="9Ec-qy-SdN"/>
+                                <constraint firstAttribute="bottom" secondItem="tt2-df-s7g" secondAttribute="bottom" id="PIj-ys-FEA"/>
+                                <constraint firstItem="tt2-df-s7g" firstAttribute="leading" secondItem="L8i-eN-f50" secondAttribute="leading" id="aSS-Q5-5nB"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="L8i-eN-f50" secondAttribute="trailing" id="10Y-Vc-szf"/>
+                        <constraint firstItem="L8i-eN-f50" firstAttribute="top" secondItem="grT-Ho-nZY" secondAttribute="top" id="KJW-ev-Ygd"/>
+                        <constraint firstItem="L8i-eN-f50" firstAttribute="leading" secondItem="grT-Ho-nZY" secondAttribute="leading" id="oWK-vY-Zga"/>
+                        <constraint firstItem="tt2-df-s7g" firstAttribute="width" secondItem="grT-Ho-nZY" secondAttribute="width" id="qzs-7o-5qd"/>
+                        <constraint firstAttribute="bottom" secondItem="L8i-eN-f50" secondAttribute="bottom" id="vBf-Ut-uXb"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtW-UD-wCX" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
+                    <rect key="frame" x="40" y="714" width="334" height="48"/>
+                    <color key="backgroundColor" red="0.10980392160000001" green="0.52941176469999995" blue="0.98823529409999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="CBO-S7-hFf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                    <state key="normal" title="Start">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="startButtonDidTap:" destination="-1" eventType="touchUpInside" id="j8B-BX-Lk4"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMA-dc-r8Z" customClass="SecondaryButton" customModule="Teztez" customModuleProvider="target">
+                    <rect key="frame" x="40" y="778" width="334" height="48"/>
+                    <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Bzq-PG-jYS"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                    <state key="normal" title="Restart">
+                        <color key="titleColor" red="0.10980392160000001" green="0.52941176469999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="restartButtonDidTap:" destination="-1" eventType="touchUpInside" id="GT0-Pa-iCD"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="grT-Ho-nZY" firstAttribute="leading" secondItem="kCq-Rb-7fs" secondAttribute="leading" id="3N9-8L-cz9"/>
+                <constraint firstItem="kCq-Rb-7fs" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="UMA-dc-r8Z" secondAttribute="bottom" constant="16" id="FmV-US-VES"/>
+                <constraint firstItem="grT-Ho-nZY" firstAttribute="top" secondItem="qPp-IV-bUa" secondAttribute="top" id="HWh-Vh-VNW"/>
+                <constraint firstItem="kCq-Rb-7fs" firstAttribute="trailing" secondItem="vtW-UD-wCX" secondAttribute="trailing" constant="40" id="LjM-R4-aBE"/>
+                <constraint firstItem="kCq-Rb-7fs" firstAttribute="trailing" secondItem="UMA-dc-r8Z" secondAttribute="trailing" constant="40" id="WHv-cD-MIJ"/>
+                <constraint firstItem="kCq-Rb-7fs" firstAttribute="bottom" secondItem="grT-Ho-nZY" secondAttribute="bottom" id="ZcP-BO-9MJ"/>
+                <constraint firstItem="kCq-Rb-7fs" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vtW-UD-wCX" secondAttribute="bottom" constant="71" id="aGX-Q0-cdM"/>
+                <constraint firstItem="vtW-UD-wCX" firstAttribute="leading" secondItem="kCq-Rb-7fs" secondAttribute="leading" constant="40" id="ahW-nH-vRv"/>
+                <constraint firstItem="UMA-dc-r8Z" firstAttribute="leading" secondItem="kCq-Rb-7fs" secondAttribute="leading" constant="40" id="bHI-b3-PCb"/>
+                <constraint firstItem="kCq-Rb-7fs" firstAttribute="trailing" secondItem="grT-Ho-nZY" secondAttribute="trailing" id="fiI-Kq-laW"/>
+                <constraint firstItem="kCq-Rb-7fs" firstAttribute="bottom" secondItem="vtW-UD-wCX" secondAttribute="bottom" priority="250" constant="100" id="h14-xV-KY7"/>
+                <constraint firstItem="vtW-UD-wCX" firstAttribute="top" relation="greaterThanOrEqual" secondItem="L8i-eN-f50" secondAttribute="bottom" priority="750" constant="56" id="nSR-d2-fTZ"/>
+                <constraint firstItem="UMA-dc-r8Z" firstAttribute="top" secondItem="vtW-UD-wCX" secondAttribute="bottom" constant="16" id="qdP-Lq-FYe"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="kCq-Rb-7fs"/>
+            <point key="canvasLocation" x="136.80000000000001" y="96.059113300492612"/>
+        </view>
+    </objects>
+</document>
