@@ -38,6 +38,8 @@ final class BackwardsConfigurationViewController: ViewController, BackwardsConfi
     private lazy var headerView = ActivityHeaderView()
     private lazy var inputTextView = ActivityTextInputView()
     private lazy var selectFontSizeView = ActivityTextInputView()
+    private var configuration: BackwardsConfiguration?
+    private var fontSize: CGFloat = 15
 
     @IBOutlet private var stackView: UIStackView!
     @IBOutlet private var startButton: PrimaryButton!
@@ -64,7 +66,8 @@ final class BackwardsConfigurationViewController: ViewController, BackwardsConfi
         case 0:
             store.dispatch(action: .didStartDidTap)
         case 1:
-            onContinueButtonDidTap?()
+            guard let configuration = configuration else { return }
+            navigateToBackwardsConverter(configuration: configuration)
         default:
             break
         }
@@ -85,6 +88,7 @@ final class BackwardsConfigurationViewController: ViewController, BackwardsConfi
     func setupBackwardsPause() {
         startButton.setTitle(R.string.backwardsConvertText.continueTitle(), for: .normal)
         startButton.tag = 1
+        startButton.layoutIfNeeded()
         restartButton.isHidden = false
     }
 
@@ -97,7 +101,8 @@ final class BackwardsConfigurationViewController: ViewController, BackwardsConfi
             case let .updated(block: block):
                 self.updateBlock(block)
             case let .configured(configuration: configuration):
-                self.onStartButtonDidTap?(configuration)
+                self.configuration = configuration
+                self.navigateToBackwardsConverter(configuration: configuration)
             }
         }.store(in: &cancellables)
     }
@@ -105,10 +110,12 @@ final class BackwardsConfigurationViewController: ViewController, BackwardsConfi
     private func setupUI() {
         stackView.spacing = Constants.spacing
         setupNavigationBar()
+        startButton.heroID = "startButton"
     }
 
     private func setupNavigationBar() {
         navigationController?.navigationBar.barTintColor = .systemGray
+        navigationItem.leftBarButtonItem = nil
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.closeIcon(),
                                                             style: .plain,
                                                             target: self,
@@ -117,7 +124,7 @@ final class BackwardsConfigurationViewController: ViewController, BackwardsConfi
 
     @objc
     private func closeButtonDidTap() {
-        onCloseButtonDidTap?()
+        navigationController?.dismiss(animated: true)
     }
 
     private func setupViews(from blocks: [BackwardsBlockType]) {
@@ -149,15 +156,55 @@ final class BackwardsConfigurationViewController: ViewController, BackwardsConfi
             break
         }
     }
+
+    private func navigateToTextInput() {
+        let viewController = TextInputViewController(store: TextInputStore())
+        viewController.onDoneButtonDidTap = { [weak self, weak viewController] text in
+            viewController?.dismiss(animated: true)
+            self?.setUserText(text)
+        }
+        viewController.onCancelButtonDidTap = { [weak viewController] in
+            viewController?.dismiss(animated: true)
+        }
+        let navController = CoordinatorNavigationController(rootViewController: viewController)
+        viewController.isModalInPresentation = true
+        navigationController?.present(navController, animated: true)
+    }
+
+    private func navigateToTextSizeChange() {
+        let store = FontSizeChangeStore(fontSize: fontSize)
+        let viewController = FontSizeChangeViewController(store: store)
+        viewController.onFontSizeDidSelect = { [weak self, weak viewController] fontSize in
+            guard let self = self else { return }
+            self.fontSize = fontSize
+            self.setUserFontSize(fontSize)
+            viewController?.dismiss(animated: true)
+        }
+        viewController.onCancelButtonDidTap = { [weak viewController] in
+            viewController?.dismiss(animated: true)
+        }
+        let navController = CoordinatorNavigationController(rootViewController: viewController)
+        viewController.isModalInPresentation = true
+        navigationController?.present(navController, animated: true)
+    }
+
+    private func navigateToBackwardsConverter(configuration: BackwardsConfiguration) {
+        let store = BackwardsConvertTextStore(configuration: configuration)
+        let viewController = BackwardsConvertTextViewController(store: store)
+        viewController.onBackButtonDidTap = { [weak self] in
+            self?.setupBackwardsPause()
+        }
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension BackwardsConfigurationViewController: ActivityTextInputViewDelegate {
     func activityTextInputView(_ activityTextInputView: ActivityTextInputView, didTapActionView actionView: UIView) {
         switch activityTextInputView {
         case inputTextView:
-            onTextInputDidTap?()
+            navigateToTextInput()
         case selectFontSizeView:
-            onFontSizeChangeDidTap?()
+            navigateToTextSizeChange()
         default:
             break
         }

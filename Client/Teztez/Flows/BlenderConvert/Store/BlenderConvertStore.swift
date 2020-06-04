@@ -37,7 +37,7 @@ final class BlenderConvertStore {
     private var analyticsProvider: AnalyticsProvider
     private var analyticEvents: [AnalyticsEvent] = []
     private var timer: Timer?
-    private var backwardsAnimationTimer: Timer?
+    private var blenderAnimationTimer: Timer?
     private var secondsSpentInGame = Constants.defaultTime
 
     init(configuration: BlenderConfiguration) {
@@ -71,16 +71,16 @@ final class BlenderConvertStore {
     }
 
     private func setupAnimationState(completion: @escaping Callback) {
-        backwardsAnimationTimer?.invalidate()
+        blenderAnimationTimer?.invalidate()
         var textChangeCount = 0.0
-        backwardsAnimationTimer = Timer.scheduledTimer(withTimeInterval: Constants.animationTextChangeTimeInterval, repeats: true) { [weak self] _ in
+        blenderAnimationTimer = Timer.scheduledTimer(withTimeInterval: Constants.animationTextChangeTimeInterval, repeats: true) { [weak self] _ in
             guard let self = self else { return }
             textChangeCount += 0.1
             let text = self.makeBlender(with: self.configuration.text)
             self.state = .animating(text: text)
 
             if textChangeCount > Constants.animationTime {
-                self.backwardsAnimationTimer?.invalidate()
+                self.blenderAnimationTimer?.invalidate()
                 completion()
             }
         }
@@ -123,6 +123,6 @@ final class BlenderConvertStore {
 
     deinit {
         timer?.invalidate()
-        backwardsAnimationTimer?.invalidate()
+        blenderAnimationTimer?.invalidate()
     }
 }

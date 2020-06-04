@@ -43,6 +43,8 @@ final class ActivitiesIntroViewController: UIViewController, ActivitiesIntroPres
         switch viewModel.type {
         case .blender:
             viewController = BlenderConfigurationViewController(store: BlenderConfigurationStore())
+        case .backwards:
+            viewController = BackwardsConfigurationViewController(store: BackwardsConfigurationStore())
         default:
             viewController = BlenderConfigurationViewController(store: BlenderConfigurationStore())
         }
