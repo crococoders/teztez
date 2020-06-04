@@ -24,6 +24,7 @@ final class SchulteConfigurationViewController: ViewController, SchulteConfigura
 
     private let store: SchulteConfigurationStore
     private var cancellables = Set<AnyCancellable>()
+    private var configuration: SchulteConfiguration?
 
     private lazy var headerView = ActivityHeaderView()
     private lazy var inverseView = ActivitySwitchView()
@@ -53,7 +54,8 @@ final class SchulteConfigurationViewController: ViewController, SchulteConfigura
         case 0:
             store.dispatch(action: .didTapStartButton)
         case 1:
-            onContinueButtonDidTap?()
+            guard let configuration = configuration else { return }
+            naviagateToTraining(configuration: configuration)
         default:
             break
         }
@@ -67,6 +69,7 @@ final class SchulteConfigurationViewController: ViewController, SchulteConfigura
         restartButton.isHidden = false
         startButton.setTitle(R.string.schulteConfiguration.continue(), for: .normal)
         startButton.tag = 1
+        startButton.layoutIfNeeded()
     }
 
     private func setupObservers() {
@@ -78,12 +81,13 @@ final class SchulteConfigurationViewController: ViewController, SchulteConfigura
             case let .initial(blocks):
                 self.setupViews(from: blocks)
             case let .configured(configuration):
-                self.onNextButtonDidTap?(configuration)
+                self.naviagateToTraining(configuration: configuration)
             }
         }.store(in: &cancellables)
     }
 
     private func setupNavigationBar() {
+        navigationItem.leftBarButtonItem = nil
         navigationController?.navigationBar.barTintColor = .systemGray
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.closeIcon(),
                                                             style: .plain,
@@ -108,7 +112,18 @@ final class SchulteConfigurationViewController: ViewController, SchulteConfigura
 
     @objc
     private func closeButtonDidTap() {
-        onCloseButtonDidTap?()
+        navigationController?.dismiss(animated: true)
+    }
+
+    private func naviagateToTraining(configuration: SchulteConfiguration) {
+        let store = SchulteTrainingStore(configuration: configuration)
+        let viewController = SchulteTrainingViewController(store: store)
+        viewController.onBackButtonDidTap = { [weak self] configuration in
+            guard let self = self else { return }
+            self.enablePauseMode()
+            self.configuration = configuration
+        }
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

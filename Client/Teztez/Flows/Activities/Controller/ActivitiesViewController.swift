@@ -58,7 +58,15 @@ final class ActivitiesViewController: UIViewController, ActivitiesPresentable {
                 self.collectionViewDelegate.items = items
                 self.collectionView.reloadData()
             case let .itemSelected(itemType):
-                self.navigateToNextPage(with: itemType)
+                switch itemType {
+                case .suggestion:
+                    let viewController = SuggestActivityViewController(store: SuggestActivityStore())
+                    viewController.isModalInPresentation = true
+                    let navController = UINavigationController(rootViewController: viewController)
+                    self.present(navController, animated: true)
+                default:
+                    self.navigateToNextPage(with: itemType)
+                }
             }
 
         }.store(in: &cancellables)

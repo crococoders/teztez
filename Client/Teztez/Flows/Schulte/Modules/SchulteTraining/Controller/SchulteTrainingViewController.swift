@@ -55,6 +55,7 @@ final class SchulteTrainingViewController: ViewController, SchulteTrainingPresen
         store.dispatch(action: .didTapBackButton)
     }
 
+    // swiftlint:disable all
     private func setupObservers() {
         store.$state.sink { [weak self] state in
             guard
@@ -64,6 +65,7 @@ final class SchulteTrainingViewController: ViewController, SchulteTrainingPresen
             case let .initial(viewModels, isInversed):
                 self.collectionViewDataSource.viewModels = viewModels
                 self.collectionView.reloadData()
+                self.collectionView.heroModifiers = [.cascade]
                 self.messageLabel.text = isInversed ? R.string.schulteTraining.concentrateInverseMessage() :
                     R.string.schulteTraining.concentrateMessage()
             case let .nextNumberUpdated(number):
@@ -77,8 +79,10 @@ final class SchulteTrainingViewController: ViewController, SchulteTrainingPresen
                 self.timerLabel.text = formattedTime
             case let .configured(configuration):
                 self.onBackButtonDidTap?(configuration)
+                self.navigationController?.popViewController(animated: true)
             case let .finished(formattedTime):
-                self.onTrainingDidFinish?(formattedTime)
+                let viewController = SchulteResultViewController(store: SchulteResultStore(totalTime: formattedTime))
+                self.navigationController?.pushViewController(viewController, animated: true)
             }
         }.store(in: &cancellables)
     }
