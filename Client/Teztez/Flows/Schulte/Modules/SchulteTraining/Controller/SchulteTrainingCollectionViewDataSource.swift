@@ -18,6 +18,7 @@ final class SchulteTrainingCollectionViewDataSource: NSObject, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: SchulteTrainingCell = collectionView.dequeueReusableCell(for: indexPath)
         cell.configure(with: viewModels[indexPath.row])
+        cell.heroModifiers = [.fade, .scale(0.5)]
         return cell
     }
 }

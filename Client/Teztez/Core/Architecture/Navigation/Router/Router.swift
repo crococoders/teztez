@@ -6,6 +6,7 @@
 //  Copyright © 2020 Azimut Labs. All rights reserved.
 //
 
+import Hero
 import UIKit
 
 typealias Callback = () -> Void
@@ -32,6 +33,9 @@ final class Router: Presentable {
         case let .presentInSheet(dismissable):
             controller.isModalInPresentation = !dismissable
             present(controller, animated: true, modalPresentationStyle: .automatic)
+        case .presentAsPage:
+            present(controller, animationType: .selectBy(presenting: .pageIn(direction: .left),
+                                                         dismissing: .pageOut(direction: .right)))
         }
     }
 
@@ -75,6 +79,13 @@ final class Router: Presentable {
     private func present(_ controller: UIViewController, animated: Bool, modalPresentationStyle: UIModalPresentationStyle) {
         controller.modalPresentationStyle = modalPresentationStyle
         rootController?.present(controller, animated: animated, completion: nil)
+    }
+
+    private func present(_ controller: UIViewController, animationType: HeroDefaultAnimationType) {
+        controller.isHeroEnabled = true
+        controller.modalPresentationStyle = .fullScreen
+        controller.heroModalAnimationType = animationType
+        rootController?.present(controller, animated: true)
     }
 
     private func runCompletion(for controller: UIViewController) {

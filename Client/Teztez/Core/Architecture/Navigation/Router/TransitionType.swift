@@ -10,4 +10,5 @@ enum TransitionType {
     case push
     case presentInSheet(dismissable: Bool)
     case presentInFullScreen(animated: Bool)
+    case presentAsPage
 }

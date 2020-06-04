@@ -45,7 +45,7 @@
                         <constraint firstAttribute="height" constant="251" id="Yj6-2b-PJf"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGz-px-Lgg" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGz-px-Lgg" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
                     <rect key="frame" x="40" y="795" width="334" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="0p8-U6-m8x"/>

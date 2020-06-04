@@ -72,7 +72,7 @@
                         <constraint firstItem="Q2I-22-sK4" firstAttribute="width" secondItem="tud-lk-ONX" secondAttribute="width" id="T6t-el-0an"/>
                     </constraints>
                 </scrollView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohQ-OX-2LK" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohQ-OX-2LK" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
                     <rect key="frame" x="40" y="714" width="334" height="48"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="48" id="ggq-j3-0L6"/>

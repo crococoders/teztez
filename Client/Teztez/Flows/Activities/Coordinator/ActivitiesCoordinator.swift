@@ -33,7 +33,8 @@ final class ActivitiesCoordinator: ParentCoordinator {
     private func runFlow(by itemType: ActivitiesItemType) {
         switch itemType {
         case .coach:
-            runPersoalCoachFlow()
+            break
+//            runPersoalCoachFlow()
         case .schulte:
             runSchulteFlow()
         case .backwards:
@@ -80,7 +81,7 @@ final class ActivitiesCoordinator: ParentCoordinator {
             guard let coordinator = coordinator else { return }
             self?.dismiss(child: coordinator)
         }
-        show((coordinator, module), with: .presentInFullScreen(animated: true))
+        show((coordinator, module), with: .presentAsPage)
     }
 
     private func runSuggestActivityFlow() {

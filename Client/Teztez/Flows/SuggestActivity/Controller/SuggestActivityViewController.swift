@@ -72,7 +72,7 @@ final class SuggestActivityViewController: ViewController, SuggestActivityPresen
                 self.setResetButtonVisibility(true)
                 self.setDoneButtonAvailability(true)
             case .sended:
-                self.onSendButtonDidTap?()
+                self.navigationController?.dismiss(animated: true)
             }
         }.store(in: &cancellables)
     }
@@ -91,7 +91,7 @@ final class SuggestActivityViewController: ViewController, SuggestActivityPresen
 
     private func setupTextView() {
         feedBackTextView.textContainerInset = Constants.edgeInsets
-        feedBackTextView.becomeFirstResponder()
+        titleTextField.becomeFirstResponder()
         feedBackTextView.delegate = textViewDelegate
     }
 
@@ -142,6 +142,6 @@ final class SuggestActivityViewController: ViewController, SuggestActivityPresen
 
     @objc
     private func cancelButtonDidTap() {
-        onCancelButtonDidTap?()
+        navigationController?.dismiss(animated: true)
     }
 }

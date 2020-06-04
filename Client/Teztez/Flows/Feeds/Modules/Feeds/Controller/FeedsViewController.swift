@@ -101,7 +101,8 @@ final class FeedsViewController: ViewController, FeedsPresentable {
     }
 
     private func setupNavigationBar() {
-        navigationItem.title = "Hello!"
+        guard let name = UserSession.shared.name else { return }
+        navigationItem.title = "Hello! \(name)"
         navigationController?.navigationBar.barTintColor = .black
         navigationController?.navigationBar.prefersLargeTitles = true
     }

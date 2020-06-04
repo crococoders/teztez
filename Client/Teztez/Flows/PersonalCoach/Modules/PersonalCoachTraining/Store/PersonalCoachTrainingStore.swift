@@ -20,6 +20,7 @@ final class PersonalCoachTrainingStore {
     enum Action {
         case didLoadView
         case didTapBackButton
+        case didSendAnalytics
     }
 
     enum State {
@@ -31,6 +32,7 @@ final class PersonalCoachTrainingStore {
     }
 
     private let configuration: PersonalCoachConfiguration
+    private let analyticsProvider: AnalyticsProvider
     private var timer: Timer?
     private var currentWordIndex: Int
     private var attemptingPreparationSeconds = Constants.preparationSeconds
@@ -38,11 +40,16 @@ final class PersonalCoachTrainingStore {
         configuration.text.wordList
     }
 
+    private var analyticEvents: [AnalyticsEvent] = []
+    private var numberOfReadWords: Int = Constants.startIndex
+    private var secondsInGame: Int = 1
+
     @Published private(set) var state: State?
 
     init(configuration: PersonalCoachConfiguration) {
         self.configuration = configuration
         currentWordIndex = configuration.startWordIndex
+        analyticsProvider = AnalyticsProvider.shared
     }
 
     func dispatch(action: Action) {
@@ -54,6 +61,8 @@ final class PersonalCoachTrainingStore {
         case .didTapBackButton:
             timer?.invalidate()
             state = .paused(currentWordIndex: currentWordIndex)
+        case .didSendAnalytics:
+            sendAnalytics()
         }
     }
 
@@ -85,10 +94,22 @@ final class PersonalCoachTrainingStore {
             return
         }
         currentWordIndex += 1
+        numberOfReadWords += 1
+        secondsInGame += 1
         state = .wordUpdated(word: textWordList[currentWordIndex])
     }
 
     deinit {
         timer?.invalidate()
+    }
+
+    private func sendAnalytics() {
+        let words = AnalyticsEvent(gameType: .personalCoach, eventType: .numberOfWordsRead, value: numberOfReadWords)
+        let speed = AnalyticsEvent(gameType: .personalCoach, eventType: .wpmSpeedChosen, value: configuration.speed)
+        let time = AnalyticsEvent(gameType: .personalCoach, eventType: .secondsSpentInGame, value: secondsInGame)
+        let gamesPlayed = AnalyticsEvent(gameType: .backwards, eventType: .gamePlayed)
+
+        [speed, words, time, gamesPlayed].forEach { analyticEvents.append($0) }
+        analyticsProvider.postAnalytcis(events: analyticEvents)
     }
 }

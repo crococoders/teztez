@@ -42,6 +42,7 @@
 		C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4197B912450B16700811F37 /* ActivitiesViewController.xib */; };
 		C4197B942450B1F900811F37 /* Activities.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4197B932450B1EE00811F37 /* Activities.strings */; };
 		C41A56852464231A00969F67 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C41A56842464231A00969F67 /* Alamofire */; };
+		C41B5DCB24881CD600CB3AAB /* UILabel+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B5DCA24881CD600CB3AAB /* UILabel+Animate.swift */; };
 		C41D2C8B2454F30800A56C2F /* Array+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D2C8A2454F30800A56C2F /* Array+Factory.swift */; };
 		C41FA7CF245D8AA800E515EC /* String+WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7CE245D8AA800E515EC /* String+WordList.swift */; };
 		C41FA7D2245D99C300E515EC /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7D1245D99C300E515EC /* SecondaryButton.swift */; };
@@ -82,6 +83,8 @@
 		C42B54E7245EE6DE00E3C61D /* BlenderConfigurationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C42B54E6245EE6DE00E3C61D /* BlenderConfigurationViewController.xib */; };
 		C42B54E9245EE9C600E3C61D /* BlenderModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B54E8245EE9C600E3C61D /* BlenderModuleFactory.swift */; };
 		C42B54EB245EE9D300E3C61D /* BlenderCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42B54EA245EE9D300E3C61D /* BlenderCoordinator.swift */; };
+		C42D56742466D6D700BF91B7 /* AnalyticsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D56732466D6D700BF91B7 /* AnalyticsProvider.swift */; };
+		C42D56762466DB9C00BF91B7 /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D56752466DB9C00BF91B7 /* AnalyticsEvent.swift */; };
 		C441A651246540C200038F74 /* Auth.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21193ED1095BEF415EF954EF /* Auth.strings */; };
 		C441A653246540E600038F74 /* AuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C441A652246540E600038F74 /* AuthViewController.xib */; };
 		C441A655246541D700038F74 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C441A654246541D700038F74 /* AuthCoordinator.swift */; };
@@ -290,6 +293,7 @@
 		C4197B8F2450AC5700811F37 /* ActivitiesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesStore.swift; sourceTree = "<group>"; };
 		C4197B912450B16700811F37 /* ActivitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesViewController.xib; sourceTree = "<group>"; };
 		C4197B932450B1EE00811F37 /* Activities.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Activities.strings; sourceTree = "<group>"; };
+		C41B5DCA24881CD600CB3AAB /* UILabel+Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Animate.swift"; sourceTree = "<group>"; };
 		C41D2C8A2454F30800A56C2F /* Array+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Factory.swift"; sourceTree = "<group>"; };
 		C41FA7CE245D8AA800E515EC /* String+WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+WordList.swift"; sourceTree = "<group>"; };
 		C41FA7D1245D99C300E515EC /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
@@ -326,6 +330,8 @@
 		C42B54E6245EE6DE00E3C61D /* BlenderConfigurationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlenderConfigurationViewController.xib; sourceTree = "<group>"; };
 		C42B54E8245EE9C600E3C61D /* BlenderModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderModuleFactory.swift; sourceTree = "<group>"; };
 		C42B54EA245EE9D300E3C61D /* BlenderCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlenderCoordinator.swift; sourceTree = "<group>"; };
+		C42D56732466D6D700BF91B7 /* AnalyticsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsProvider.swift; sourceTree = "<group>"; };
+		C42D56752466DB9C00BF91B7 /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
 		C441A652246540E600038F74 /* AuthViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewController.xib; sourceTree = "<group>"; };
 		C441A654246541D700038F74 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
 		C441A656246541F800038F74 /* AuthModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModuleFactory.swift; sourceTree = "<group>"; };
@@ -916,6 +922,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		C41B5DC924881CC000CB3AAB /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				C41B5DCA24881CD600CB3AAB /* UILabel+Animate.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
 		C41FA7D0245D99A900E515EC /* SecondaryButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1462,7 +1476,7 @@
 			isa = PBXGroup;
 			children = (
 				C499E933245D7B370065FC28 /* BackwardsConfiguration */,
-				CFB5824EC5F70476B8625769 /* BackwardsConvertText */,
+				CFB5824EC5F70476B8625769 /* BackwardsTraining */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1682,6 +1696,15 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		C4CC4449246767E700662628 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				C42D56732466D6D700BF91B7 /* AnalyticsProvider.swift */,
+				C42D56752466DB9C00BF91B7 /* AnalyticsEvent.swift */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
 		C4D64A232455DCFF00100993 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1792,6 +1815,7 @@
 			children = (
 				C4F8190D244B730200AE73CE /* Language.swift */,
 				C441A65824655D7700038F74 /* UserSession.swift */,
+				C4CC4449246767E700662628 /* Analytics */,
 				C4F81908244B724700AE73CE /* AppDelegate */,
 				C4F81930244B78CF00AE73CE /* Architecture */,
 				C4F81956244B86C800AE73CE /* Design System */,
@@ -1867,6 +1891,7 @@
 				C463DC1C2459D36200E265FF /* Array */,
 				C4584B65245E1BD400E7F9BB /* CGFloat */,
 				C4F81910244B75DE00AE73CE /* Device */,
+				C41B5DC924881CC000CB3AAB /* Label */,
 				C4F81913244B75F500AE73CE /* String */,
 				C4DE5C192466B98100434BBB /* UIButton */,
 				C40AE0BD245363B7008BC71C /* UICollectionView */,
@@ -2125,14 +2150,14 @@
 			path = PersonalCoachResult;
 			sourceTree = "<group>";
 		};
-		CFB5824EC5F70476B8625769 /* BackwardsConvertText */ = {
+		CFB5824EC5F70476B8625769 /* BackwardsTraining */ = {
 			isa = PBXGroup;
 			children = (
 				6EE51CCAE907BEF45FBF826B /* Controller */,
 				10F41ACEC7B03B4771CE24B3 /* Localization */,
 				D01F408D161E24CC418888BF /* Store */,
 			);
-			path = BackwardsConvertText;
+			path = BackwardsTraining;
 			sourceTree = "<group>";
 		};
 		D01F408D161E24CC418888BF /* Store */ = {
@@ -2476,6 +2501,7 @@
 				C40BB4712457494E00C236C7 /* ActivitiesIntroBlockViewModel.swift in Sources */,
 				C4C8FBF02461C67A006388FA /* FeedsModuleFactory.swift in Sources */,
 				C41FA7CF245D8AA800E515EC /* String+WordList.swift in Sources */,
+				C42D56762466DB9C00BF91B7 /* AnalyticsEvent.swift in Sources */,
 				C4F8190E244B730200AE73CE /* Language.swift in Sources */,
 				C42A90FF2465A77500AF6455 /* PrimaryTextField.swift in Sources */,
 				C490F1002464658600623DF7 /* StatisticsLongCell.swift in Sources */,
@@ -2547,6 +2573,7 @@
 				C4F81963244B89ED00AE73CE /* CompositeAppDelegateConfigurator.swift in Sources */,
 				C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */,
 				C4F81923244B76A500AE73CE /* UITableView+Dequeue.swift in Sources */,
+				C41B5DCB24881CD600CB3AAB /* UILabel+Animate.swift in Sources */,
 				C4197B892450A9EC00811F37 /* ActivitiesViewController.swift in Sources */,
 				C463DC6F245CAF8500E265FF /* PersonalCoachModuleFactory.swift in Sources */,
 				C4DE5C372466D86500434BBB /* SettingsWebCell.swift in Sources */,
@@ -2574,6 +2601,7 @@
 				C490F1172464878500623DF7 /* InformationHeadlinedViewModel.swift in Sources */,
 				B5A5E2E623CAC65921821EDD /* SuggestActivityStore.swift in Sources */,
 				D90BC9956DACD5DD4B793A8F /* FeedsViewController.swift in Sources */,
+				C42D56742466D6D700BF91B7 /* AnalyticsProvider.swift in Sources */,
 				C4C8FBF62461CD86006388FA /* FeedsCollectionViewDataSource.swift in Sources */,
 				CE0F83E6FBF7E3FA3AEDFE9E /* FeedsStore.swift in Sources */,
 				8A332C8C7C2E985A6EBECC7C /* AuthViewController.swift in Sources */,

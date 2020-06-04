@@ -11,12 +11,14 @@ import UIKit
 extension UIColor {
     static let systemGray = UIColor(hex: "#1C1C1E")
     static let systemGray2 = UIColor(hex: "#2C2C2E")
+    static let systemGray280 = UIColor(hex: "#2C2C2E").withAlphaComponent(0.8)
     static let systemGray3 = UIColor(hex: "#48484A")
     static let systemGray4 = UIColor(hex: "#636366")
     static let systemGray5 = UIColor(hex: "#8E8E93")
     static let buttonGray = UIColor(hex: "#E8E8E8")
     static let accentBlue = UIColor(hex: "#1C87FC")
     static let accentBlue15 = UIColor(hex: "#1C87FC").withAlphaComponent(0.15)
+    static let accentBlue80 = UIColor(hex: "#1C87FC").withAlphaComponent(0.8)
     static let lightBlur = UIColor(hex: "#5AA7FC")
 
     static let sirenLight = UIColor(hex: "#C76FC3")

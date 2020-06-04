@@ -39,7 +39,24 @@ final class ActivitiesIntroViewController: UIViewController, ActivitiesIntroPres
     }
 
     @IBAction func nextButtonDidTap(_ sender: PrimaryButton) {
-        onNextButtonDidTap?()
+        let viewController: UIViewController
+        switch viewModel.type {
+        case .blender:
+            viewController = BlenderConfigurationViewController(store: BlenderConfigurationStore())
+        case .backwards:
+            viewController = BackwardsConfigurationViewController(store: BackwardsConfigurationStore())
+        case .schulte:
+            viewController = SchulteConfigurationViewController(store: SchulteConfigurationStore())
+        default:
+            viewController = BlenderConfigurationViewController(store: BlenderConfigurationStore())
+        }
+
+        viewController.hero.isEnabled = true
+        navigationController?.hero.isEnabled = true
+        navigationController?.navigationBar.backgroundColor = .clear
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.hero.navigationAnimationType = .fade
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
@@ -48,6 +65,7 @@ private extension ActivitiesIntroViewController {
         nextButton.setTitle(R.string.activitiesIntro.nextButtonTitle(), for: .normal)
         activityTitle.text = viewModel.title
         activityIconView.configure(with: viewModel.iconViewModel)
+        nextButton.heroModifiers = [.fade]
         setupContainerView()
         configureNavigationBar()
     }
@@ -64,12 +82,13 @@ private extension ActivitiesIntroViewController {
 
     @objc
     func closeButtonDidTap() {
-        onCloseButtonDidTap?()
+        navigationController?.dismiss(animated: true)
     }
 
     func configureNavigationBar() {
         navigationController?.view.backgroundColor = .systemGray
         navigationController?.navigationBar.barTintColor = .systemGray
+        navigationItem.leftBarButtonItem = nil
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.closeIcon(),
                                                             style: .plain,
                                                             target: self,
