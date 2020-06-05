@@ -47,6 +47,8 @@ final class ActivitiesIntroViewController: UIViewController, ActivitiesIntroPres
             viewController = BackwardsConfigurationViewController(store: BackwardsConfigurationStore())
         case .schulte:
             viewController = SchulteConfigurationViewController(store: SchulteConfigurationStore())
+        case .colorMatch:
+            viewController = ColorMatchingConfigurationViewController(store: ColorMatchingConfigurationStore())
         default:
             viewController = BlenderConfigurationViewController(store: BlenderConfigurationStore())
         }

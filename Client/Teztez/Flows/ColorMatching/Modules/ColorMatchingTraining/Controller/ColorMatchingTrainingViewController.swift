@@ -73,8 +73,11 @@ final class ColorMatchingTrainingViewController: ViewController, ColorMatchingTr
                 self.updateProgress(withDuration: TimeInterval(duration))
             case let .configured(configuration):
                 self.onBackButtonDidTap?(configuration)
+                self.navigationController?.popViewController(animated: true)
             case let .finished(score: score):
-                self.onTrainingDidFinish?(score)
+                let store = ColorMatchingResultStore(score: score)
+                let viewController = ColorMatchingResultViewController(store: store)
+                self.navigationController?.pushViewController(viewController, animated: true)
             }
         }.store(in: &cancellables)
     }

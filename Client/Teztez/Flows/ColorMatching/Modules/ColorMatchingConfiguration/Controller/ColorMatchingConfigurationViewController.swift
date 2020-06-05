@@ -30,6 +30,7 @@ final class ColorMatchingConfigurationViewController: ViewController, ColorMatch
     private let pickerViewDelegate: ColorMatchingPickerViewDelegate
     private let pickerViewDataSource: ColorMatchingPickerViewDataSource
     private var cancellables = Set<AnyCancellable>()
+    private var configuration: ColorMatchingConfiguration?
 
     private lazy var headerView = ActivityHeaderView()
     private lazy var selectDurationView = ActivitySelectValueView()
@@ -61,7 +62,8 @@ final class ColorMatchingConfigurationViewController: ViewController, ColorMatch
         case 0:
             store.dispatch(action: .didStartDidTap)
         case 1:
-            onContinueButtonDidTap?()
+            guard let configuration = configuration else { return }
+            navigateToTraining(configuration: configuration)
         default:
             break
         }
@@ -75,6 +77,7 @@ final class ColorMatchingConfigurationViewController: ViewController, ColorMatch
         restartButton.isHidden = false
         startButton.setTitle(R.string.colorMatchingConfiguration.continue(), for: .normal)
         startButton.tag = 1
+        startButton.layoutIfNeeded()
     }
 
     private func setupObservers() {
@@ -86,7 +89,7 @@ final class ColorMatchingConfigurationViewController: ViewController, ColorMatch
             case let .updated(block):
                 self.updateBlock(block)
             case let .configured(configuration):
-                self.onStartButtonDidTap?(configuration)
+                self.navigateToTraining(configuration: configuration)
             }
 
         }.store(in: &cancellables)
@@ -99,6 +102,7 @@ final class ColorMatchingConfigurationViewController: ViewController, ColorMatch
     }
 
     private func setupNavigationBar() {
+        navigationItem.leftBarButtonItem = nil
         navigationController?.navigationBar.barTintColor = .systemGray
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.closeIcon(),
                                                             style: .plain,
@@ -138,6 +142,17 @@ final class ColorMatchingConfigurationViewController: ViewController, ColorMatch
 
     @objc
     private func closeButtonDidTap() {
-        onCloseButtonDidTap?()
+        navigationController?.dismiss(animated: true)
+    }
+
+    private func navigateToTraining(configuration: ColorMatchingConfiguration) {
+        let store = ColorMatchingTrainingStore(configuration: configuration)
+        let viewController = ColorMatchingTrainingViewController(store: store)
+        viewController.onBackButtonDidTap = { [weak self] configuration in
+            guard let self = self else { return }
+            self.enablePauseMode()
+            self.configuration = configuration
+        }
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }

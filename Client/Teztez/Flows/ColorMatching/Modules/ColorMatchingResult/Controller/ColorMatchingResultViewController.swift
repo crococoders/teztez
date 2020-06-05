@@ -43,11 +43,13 @@ final class ColorMatchingResultViewController: ViewController, ColorMatchingResu
     }
 
     @IBAction func homeButtonDidTap(_ sender: PrimaryButton) {
-        onHomeButtonDidTap?()
+        navigationController?.dismiss(animated: true)
     }
 
     @IBAction func restartButtonDidTap(_ sender: UIButton) {
-        onRestartButtonDidTap?()
+        let store = ColorMatchingConfigurationStore()
+        let viewController = ColorMatchingConfigurationViewController(store: store)
+        navigationController?.setViewControllers([viewController], animated: true)
     }
 
     private func setupObservers() {
@@ -69,6 +71,7 @@ final class ColorMatchingResultViewController: ViewController, ColorMatchingResu
 
     private func setupNavigationBar() {
         navigationItem.hidesBackButton = true
+        navigationItem.leftBarButtonItem = nil
     }
 
     private func setupLocalization() {
