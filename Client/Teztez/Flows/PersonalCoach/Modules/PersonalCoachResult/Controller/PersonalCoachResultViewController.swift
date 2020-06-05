@@ -44,11 +44,13 @@ final class PersonalCoachResultViewController: ViewController, PersonalCoachResu
     }
 
     @IBAction func homeButtonDidTap(_ sender: PrimaryButton) {
-        onHomeButtonDidTap?()
+        navigationController?.dismiss(animated: true)
     }
 
     @IBAction func restartButtonDidTap(_ sender: UIButton) {
-        onRestartButtonDidTap?()
+        let store = PersonalCoachStore()
+        let viewController = PersonalCoachViewController(store: store)
+        navigationController?.setViewControllers([viewController], animated: true)
     }
 
     private func setupObservers() {
@@ -59,12 +61,17 @@ final class PersonalCoachResultViewController: ViewController, PersonalCoachResu
             switch state {
             case let .initial(speedResult):
                 self.resultLabel.text = R.string.personalCoachResult.resultMessage() + speedResult
+                self.resultLabel.heroModifiers = [.fade, .scale(0.5)]
+                self.messageLabel.heroModifiers = [.fade, .scale(0.5)]
+                self.homeButton.heroModifiers = [.fade]
+                self.restartButton.heroModifiers = [.fade]
             }
         }.store(in: &cancellables)
     }
 
     private func setupNavigationBar() {
         navigationItem.hidesBackButton = true
+        navigationItem.leftBarButtonItem = nil
     }
 
     private func setupLocalization() {

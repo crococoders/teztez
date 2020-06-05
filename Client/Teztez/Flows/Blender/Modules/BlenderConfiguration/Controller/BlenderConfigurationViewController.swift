@@ -34,6 +34,8 @@ final class BlenderConfigurationViewController: ViewController, BlenderConfigura
 
     private let store: BlenderConfigurationStore
     private var cancellables = Set<AnyCancellable>()
+    private var configuration: BlenderConfiguration?
+    private var fontSize: CGFloat = 15
 
     private lazy var headerView = ActivityHeaderView()
     private lazy var inputTextView = ActivityTextInputView()
@@ -64,7 +66,8 @@ final class BlenderConfigurationViewController: ViewController, BlenderConfigura
         case 0:
             store.dispatch(action: .didStartDidTap)
         case 1:
-            onContinueButtonDidTap?()
+            guard let configuration = configuration else { return }
+            navigateToBlenderConverter(configuration: configuration)
         default:
             break
         }
@@ -97,17 +100,20 @@ final class BlenderConfigurationViewController: ViewController, BlenderConfigura
             case let .updated(block: block):
                 self.updateBlock(block)
             case let .configured(configuration: configuration):
-                self.onStartButtonDidTap?(configuration)
+                self.configuration = configuration
+                self.navigateToBlenderConverter(configuration: configuration)
             }
         }.store(in: &cancellables)
     }
 
     private func setupUI() {
         stackView.spacing = Constants.spacing
+        startButton.heroID = "primaryButton"
         setupNavigationBar()
     }
 
     private func setupNavigationBar() {
+        navigationItem.leftBarButtonItem = nil
         navigationController?.navigationBar.barTintColor = .systemGray
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: R.image.closeIcon(),
                                                             style: .plain,
@@ -117,7 +123,7 @@ final class BlenderConfigurationViewController: ViewController, BlenderConfigura
 
     @objc
     private func closeButtonDidTap() {
-        onCloseButtonDidTap?()
+        navigationController?.dismiss(animated: true)
     }
 
     private func setupViews(from blocks: [BlenderBlockType]) {
@@ -126,6 +132,7 @@ final class BlenderConfigurationViewController: ViewController, BlenderConfigura
             switch blockType {
             case let .header(viewModel):
                 headerView.configure(with: viewModel)
+
                 stackView.addArrangedSubview(headerView)
             case let .inputText(viewModel):
                 inputTextView.delegate = self
@@ -149,15 +156,55 @@ final class BlenderConfigurationViewController: ViewController, BlenderConfigura
             break
         }
     }
+
+    private func navigateToTextInput() {
+        let viewController = TextInputViewController(store: TextInputStore())
+        viewController.onDoneButtonDidTap = { [weak self, weak viewController] text in
+            viewController?.dismiss(animated: true)
+            self?.setUserText(text)
+        }
+        viewController.onCancelButtonDidTap = { [weak viewController] in
+            viewController?.dismiss(animated: true)
+        }
+        let navController = CoordinatorNavigationController(rootViewController: viewController)
+        viewController.isModalInPresentation = true
+        navigationController?.present(navController, animated: true)
+    }
+
+    private func navigateToTextSizeChange() {
+        let store = FontSizeChangeStore(fontSize: fontSize)
+        let viewController = FontSizeChangeViewController(store: store)
+        viewController.onFontSizeDidSelect = { [weak self, weak viewController] fontSize in
+            guard let self = self else { return }
+            self.fontSize = fontSize
+            self.setUserFontSize(fontSize)
+            viewController?.dismiss(animated: true)
+        }
+        viewController.onCancelButtonDidTap = { [weak viewController] in
+            viewController?.dismiss(animated: true)
+        }
+        let navController = CoordinatorNavigationController(rootViewController: viewController)
+        viewController.isModalInPresentation = true
+        navigationController?.present(navController, animated: true)
+    }
+
+    private func navigateToBlenderConverter(configuration: BlenderConfiguration) {
+        let store = BlenderConvertStore(configuration: configuration)
+        let viewController = BlenderConvertViewController(store: store)
+        viewController.onBackButtonDidTap = { [weak self] in
+            self?.setupBlenderPause()
+        }
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }
 
 extension BlenderConfigurationViewController: ActivityTextInputViewDelegate {
     func activityTextInputView(_ activityTextInputView: ActivityTextInputView, didTapActionView actionView: UIView) {
         switch activityTextInputView {
         case inputTextView:
-            onTextInputDidTap?()
+            navigateToTextInput()
         case selectFontSizeView:
-            onFontSizeChangeDidTap?()
+            navigateToTextSizeChange()
         default:
             break
         }

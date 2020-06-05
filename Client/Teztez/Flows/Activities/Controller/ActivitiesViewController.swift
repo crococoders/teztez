@@ -58,7 +58,15 @@ final class ActivitiesViewController: UIViewController, ActivitiesPresentable {
                 self.collectionViewDelegate.items = items
                 self.collectionView.reloadData()
             case let .itemSelected(itemType):
-                self.onItemDidSelect?(itemType)
+                switch itemType {
+                case .suggestion:
+                    let viewController = SuggestActivityViewController(store: SuggestActivityStore())
+                    viewController.isModalInPresentation = true
+                    let navController = UINavigationController(rootViewController: viewController)
+                    self.present(navController, animated: true)
+                default:
+                    self.navigateToNextPage(with: itemType)
+                }
             }
 
         }.store(in: &cancellables)
@@ -74,5 +82,24 @@ final class ActivitiesViewController: UIViewController, ActivitiesPresentable {
         collectionView.dataSource = collectionViewDataSource
         collectionView.delegate = collectionViewDelegate
         collectionView.register(cellClass: ActivitiesCell.self)
+    }
+
+    private func navigateToNextPage(with type: ActivitiesItemType) {
+        let viewController: UIViewController
+        switch type {
+        case .coach:
+            let store = PersonalCoachStore()
+            viewController = PersonalCoachViewController(store: store)
+        default:
+            let viewModel = ActivitiesIntroViewModel(type: type)
+            viewController = ActivitiesIntroViewController(viewModel: viewModel)
+        }
+
+        let navigationController = CoordinatorNavigationController(rootViewController: viewController)
+        navigationController.hero.isEnabled = true
+        navigationController.hero.modalAnimationType = .selectBy(presenting: .pageIn(direction: .left),
+                                                                 dismissing: .pageOut(direction: .right))
+        navigationController.modalPresentationStyle = .fullScreen
+        present(navigationController, animated: true)
     }
 }

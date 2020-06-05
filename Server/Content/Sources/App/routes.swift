@@ -5,5 +5,6 @@ func configureRoutes(for app: Application) throws {
     try app.register(collection: gameContentController)
 
     let articleController = ArticleController()
-    try app.register(collection: articleController)
+    let contentRoutes = app.grouped("content")
+    try contentRoutes.register(collection: articleController)
 }

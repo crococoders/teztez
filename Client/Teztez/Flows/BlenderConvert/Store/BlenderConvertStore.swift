@@ -11,12 +11,15 @@ import UIKit
 private enum Constants {
     static let timeInterval = 1.0
     static let defaultTime = 1
+    static let animationTime = 0.5
+    static let animationTextChangeTimeInterval = 0.1
 }
 
 final class BlenderConvertStore {
     enum Action {
         case didLoadView
-        case didConverText
+        case didConvertText
+        case didReturnText
         case didSendAnalytics
         case didStopGame
     }
@@ -24,6 +27,8 @@ final class BlenderConvertStore {
     enum State {
         case initial(text: String, fontSize: CGFloat)
         case converted(text: String, fontSize: CGFloat)
+        case returned(text: String, fontSize: CGFloat)
+        case animating(text: String)
     }
 
     @Published private(set) var state: State?
@@ -32,7 +37,8 @@ final class BlenderConvertStore {
     private var analyticsProvider: AnalyticsProvider
     private var analyticEvents: [AnalyticsEvent] = []
     private var timer: Timer?
-    private var secondsSpentInGame: Int = Constants.defaultTime
+    private var blenderAnimationTimer: Timer?
+    private var secondsSpentInGame = Constants.defaultTime
 
     init(configuration: BlenderConfiguration) {
         self.configuration = configuration
@@ -46,13 +52,37 @@ final class BlenderConvertStore {
             timer = Timer.scheduledTimer(withTimeInterval: Constants.timeInterval, repeats: true) { [weak self] _ in
                 self?.calculateSpentTime()
             }
-        case .didConverText:
-            let convertedText = makeBlender(with: configuration.text)
-            state = .converted(text: convertedText, fontSize: configuration.fontSize)
+        case .didConvertText:
+            setupAnimationState { [weak self] in
+                guard let self = self else { return }
+                let convertedText = self.makeBlender(with: self.configuration.text)
+                self.state = .converted(text: convertedText, fontSize: self.configuration.fontSize)
+            }
+        case .didReturnText:
+            setupAnimationState { [weak self] in
+                guard let self = self else { return }
+                self.state = .returned(text: self.configuration.text, fontSize: self.configuration.fontSize)
+            }
         case .didSendAnalytics:
             sendAnalytics()
         case .didStopGame:
             timer?.invalidate()
+        }
+    }
+
+    private func setupAnimationState(completion: @escaping Callback) {
+        blenderAnimationTimer?.invalidate()
+        var textChangeCount = 0.0
+        blenderAnimationTimer = Timer.scheduledTimer(withTimeInterval: Constants.animationTextChangeTimeInterval, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
+            textChangeCount += 0.1
+            let text = self.makeBlender(with: self.configuration.text)
+            self.state = .animating(text: text)
+
+            if textChangeCount > Constants.animationTime {
+                self.blenderAnimationTimer?.invalidate()
+                completion()
+            }
         }
     }
 
@@ -89,5 +119,10 @@ final class BlenderConvertStore {
             return word
         }
         return convertedText.joined(separator: " ")
+    }
+
+    deinit {
+        timer?.invalidate()
+        blenderAnimationTimer?.invalidate()
     }
 }

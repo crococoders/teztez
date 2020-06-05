@@ -47,6 +47,7 @@
 		C4197B922450B16700811F37 /* ActivitiesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4197B912450B16700811F37 /* ActivitiesViewController.xib */; };
 		C4197B942450B1F900811F37 /* Activities.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4197B932450B1EE00811F37 /* Activities.strings */; };
 		C41A56852464231A00969F67 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C41A56842464231A00969F67 /* Alamofire */; };
+		C41B5DCB24881CD600CB3AAB /* UILabel+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B5DCA24881CD600CB3AAB /* UILabel+Animate.swift */; };
 		C41D2C8B2454F30800A56C2F /* Array+Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D2C8A2454F30800A56C2F /* Array+Factory.swift */; };
 		C41FA7CF245D8AA800E515EC /* String+WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7CE245D8AA800E515EC /* String+WordList.swift */; };
 		C41FA7D2245D99C300E515EC /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FA7D1245D99C300E515EC /* SecondaryButton.swift */; };
@@ -321,6 +322,7 @@
 		C4197B8F2450AC5700811F37 /* ActivitiesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesStore.swift; sourceTree = "<group>"; };
 		C4197B912450B16700811F37 /* ActivitiesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivitiesViewController.xib; sourceTree = "<group>"; };
 		C4197B932450B1EE00811F37 /* Activities.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Activities.strings; sourceTree = "<group>"; };
+		C41B5DCA24881CD600CB3AAB /* UILabel+Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Animate.swift"; sourceTree = "<group>"; };
 		C41D2C8A2454F30800A56C2F /* Array+Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Factory.swift"; sourceTree = "<group>"; };
 		C41FA7CE245D8AA800E515EC /* String+WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+WordList.swift"; sourceTree = "<group>"; };
 		C41FA7D1245D99C300E515EC /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
@@ -1079,6 +1081,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		C41B5DC924881CC000CB3AAB /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				C41B5DCA24881CD600CB3AAB /* UILabel+Animate.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
 		C41FA7D0245D99A900E515EC /* SecondaryButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1633,7 +1643,7 @@
 			isa = PBXGroup;
 			children = (
 				C499E933245D7B370065FC28 /* BackwardsConfiguration */,
-				CFB5824EC5F70476B8625769 /* BackwardsConvertText */,
+				CFB5824EC5F70476B8625769 /* BackwardsTraining */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -2077,6 +2087,7 @@
 				C463DC1C2459D36200E265FF /* Array */,
 				C4584B65245E1BD400E7F9BB /* CGFloat */,
 				C4F81910244B75DE00AE73CE /* Device */,
+				C41B5DC924881CC000CB3AAB /* Label */,
 				C4F81913244B75F500AE73CE /* String */,
 				C4DE5C192466B98100434BBB /* UIButton */,
 				C40AE0BD245363B7008BC71C /* UICollectionView */,
@@ -2335,14 +2346,14 @@
 			path = PersonalCoachResult;
 			sourceTree = "<group>";
 		};
-		CFB5824EC5F70476B8625769 /* BackwardsConvertText */ = {
+		CFB5824EC5F70476B8625769 /* BackwardsTraining */ = {
 			isa = PBXGroup;
 			children = (
 				6EE51CCAE907BEF45FBF826B /* Controller */,
 				10F41ACEC7B03B4771CE24B3 /* Localization */,
 				D01F408D161E24CC418888BF /* Store */,
 			);
-			path = BackwardsConvertText;
+			path = BackwardsTraining;
 			sourceTree = "<group>";
 		};
 		D01F408D161E24CC418888BF /* Store */ = {
@@ -2782,6 +2793,7 @@
 				C4F81963244B89ED00AE73CE /* CompositeAppDelegateConfigurator.swift in Sources */,
 				C4F81990244C582B00AE73CE /* FontStyles.swift in Sources */,
 				C4F81923244B76A500AE73CE /* UITableView+Dequeue.swift in Sources */,
+				C41B5DCB24881CD600CB3AAB /* UILabel+Animate.swift in Sources */,
 				C4197B892450A9EC00811F37 /* ActivitiesViewController.swift in Sources */,
 				C463DC6F245CAF8500E265FF /* PersonalCoachModuleFactory.swift in Sources */,
 				C4DE5C372466D86500434BBB /* SettingsWebCell.swift in Sources */,
