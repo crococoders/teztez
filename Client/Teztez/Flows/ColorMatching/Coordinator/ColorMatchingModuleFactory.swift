@@ -11,8 +11,8 @@ import Foundation
 protocol ColorMatchingModuleFactory {
     func makeMatchingActivityIntro() -> ActivitiesIntroPresentable
     func makeMatchingConfiguration() -> ColorMatchingConfigurationPresentable
-//    func makeMatchingTraining(configuration: ColorMatchingConfiguration) -> ColorMatchingTrainingPresentable
-//    func makeMatchingResult(score: Int) -> ColorMatchingResultPresentable
+    func makeMatchingTraining(configuration: ColorMatchingConfiguration) -> ColorMatchingTrainingPresentable
+    func makeMatchingResult(score: Int) -> ColorMatchingResultPresentable
 }
 
 extension ModuleFactory: ColorMatchingModuleFactory {
@@ -28,15 +28,15 @@ extension ModuleFactory: ColorMatchingModuleFactory {
         return viewController
     }
 
-//    func makeMatchingTraining(configuration: ColorMatchingConfiguration) -> ColorMatchingTrainingPresentable {
-//        let store = ColorMatchingTrainingStore(configuration: configuration)
-//        let viewController = ColorMatchingTrainingViewController(store: store)
-//        return viewController
-//    }
-//
-//    func makeMatchingResult(score: Int) -> ColorMatchingResultPresentable {
-//        let store = ColorMatchingResultStore(score: score)
-//        let viewController = ColorMatchingResultViewController(store: store)
-//        return viewController
-//    }
+    func makeMatchingTraining(configuration: ColorMatchingConfiguration) -> ColorMatchingTrainingPresentable {
+        let store = ColorMatchingTrainingStore(configuration: configuration)
+        let viewController = ColorMatchingTrainingViewController(store: store)
+        return viewController
+    }
+
+    func makeMatchingResult(score: Int) -> ColorMatchingResultPresentable {
+        let store = ColorMatchingResultStore(score: score)
+        let viewController = ColorMatchingResultViewController(store: store)
+        return viewController
+    }
 }
