@@ -59,6 +59,7 @@ final class PersonalCoachViewController: ViewController, PersonalCoachPresentabl
         setupObservers()
         setupUI()
         store.dispatch(action: .didLoadView)
+        startButton.heroID = "button"
     }
 
     override func viewWillAppear(_ animated: Bool) {

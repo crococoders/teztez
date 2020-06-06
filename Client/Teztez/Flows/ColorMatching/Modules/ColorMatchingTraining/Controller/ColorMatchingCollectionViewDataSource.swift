@@ -24,6 +24,7 @@ final class ColorMatchingCollectionViewDataSource: NSObject, UICollectionViewDat
         let cell: BlockCell = collectionView.dequeueReusableCell(for: indexPath)
         let viewModel = viewModels[indexPath.row]
         cell.configure(with: viewModel)
+        cell.heroModifiers = [.fade, .scale(0.7)]
         return cell
     }
 }

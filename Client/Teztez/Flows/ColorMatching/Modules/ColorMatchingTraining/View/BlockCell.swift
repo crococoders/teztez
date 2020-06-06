@@ -8,7 +8,18 @@
 
 import UIKit
 
+private enum Constants {
+    static let animationDuration = 0.2
+    static let customTransform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+}
+
 class BlockCell: UICollectionViewCell {
+    override var isHighlighted: Bool {
+        didSet {
+            animateScale()
+        }
+    }
+
     @IBOutlet private var blockView: UIView!
 
     override func prepareForReuse() {
@@ -28,6 +39,18 @@ class BlockCell: UICollectionViewCell {
         case .none:
             layer.borderColor = UIColor.clear.cgColor
             layer.borderWidth = 0
+        }
+    }
+
+    private func animateScale() {
+        if isHighlighted {
+            UIView.animate(withDuration: Constants.animationDuration) {
+                self.transform = Constants.customTransform
+            }
+        } else {
+            UIView.animate(withDuration: Constants.animationDuration) {
+                self.transform = .identity
+            }
         }
     }
 }

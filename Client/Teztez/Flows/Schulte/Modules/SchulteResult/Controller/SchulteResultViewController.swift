@@ -64,6 +64,7 @@ final class SchulteResultViewController: ViewController, SchulteResultPresentabl
                 self.messageLabel.heroModifiers = [.fade, .scale(0.5)]
                 self.homeButton.heroModifiers = [.fade]
                 self.restartButton.heroModifiers = [.fade]
+                self.restartButton.heroID = "button"
             }
         }.store(in: &cancellables)
     }

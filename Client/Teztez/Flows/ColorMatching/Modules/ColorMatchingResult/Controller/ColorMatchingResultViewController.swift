@@ -40,6 +40,7 @@ final class ColorMatchingResultViewController: ViewController, ColorMatchingResu
         setupUI()
         setupObservers()
         store.dispatch(action: .didLoadView)
+        restartButton.heroID = "button"
     }
 
     @IBAction func homeButtonDidTap(_ sender: PrimaryButton) {
@@ -60,6 +61,10 @@ final class ColorMatchingResultViewController: ViewController, ColorMatchingResu
             switch state {
             case let .initial(scoreResult):
                 self.resultLabel.text = R.string.colorMatchingResult.resultMessage() + scoreResult
+                self.resultLabel.heroModifiers = [.fade, .scale(0.5)]
+                self.messageLabel.heroModifiers = [.fade, .scale(0.5)]
+                self.homeButton.heroModifiers = [.fade]
+                self.restartButton.heroModifiers = [.fade]
             }
         }.store(in: &cancellables)
     }

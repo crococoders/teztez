@@ -56,10 +56,6 @@ final class ColorMatchingTrainingViewController: ViewController, ColorMatchingTr
             case let .initial(viewModel: viewModels):
                 self.collectionViewDataSource.viewModels = viewModels
                 self.collectionView.reloadData()
-//                self.collectionView.performBatchUpdates({
-//                    let indexSet = IndexSet(integersIn: 0 ... 0)
-//                    self.collectionView.reloadSections(indexSet)
-//                }, completion: nil)
             case let .updated(index, viewModels):
                 self.collectionViewDataSource.viewModels = viewModels
                 self.collectionView.performUsingPresentationValues {

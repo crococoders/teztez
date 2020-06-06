@@ -55,6 +55,7 @@ final class ColorMatchingConfigurationViewController: ViewController, ColorMatch
         setupObservers()
         setupUI()
         store.dispatch(action: .didLoadView)
+        startButton.heroID = "button"
     }
 
     @IBAction func startButtonDidTap(_ sender: PrimaryButton) {

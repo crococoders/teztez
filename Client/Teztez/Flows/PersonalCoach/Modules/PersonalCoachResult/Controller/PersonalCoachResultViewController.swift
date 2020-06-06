@@ -41,6 +41,7 @@ final class PersonalCoachResultViewController: ViewController, PersonalCoachResu
         setupNavigationBar()
         setupLocalization()
         store.dispatch(action: .didLoadView)
+        restartButton.heroID = "button"
     }
 
     @IBAction func homeButtonDidTap(_ sender: PrimaryButton) {
