@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProDisplay-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SFProText-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ColorMatchingResultViewController" customModule="Teztez" customModuleProvider="target">
+            <connections>
+                <outlet property="homeButton" destination="j7j-pt-5mG" id="BLo-9o-Vea"/>
+                <outlet property="messageLabel" destination="LRa-7K-uB4" id="SXH-N0-aQc"/>
+                <outlet property="restartButton" destination="wfY-ej-lQm" id="aid-xb-sv4"/>
+                <outlet property="resultLabel" destination="aou-gC-WZc" id="neU-6r-Xc0"/>
+                <outlet property="view" destination="z2A-kK-j7k" id="p5l-1h-evi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="z2A-kK-j7k">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You achieved " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aou-gC-WZc">
+                    <rect key="frame" x="20" y="104" width="374" height="21"/>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Job!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRa-7K-uB4">
+                    <rect key="frame" x="94" y="446" width="226.5" height="58"/>
+                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="48"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7j-pt-5mG" customClass="PrimaryButton" customModule="Teztez" customModuleProvider="target">
+                    <rect key="frame" x="40" y="695" width="334" height="48"/>
+                    <color key="backgroundColor" red="0.10980392160000001" green="0.52941176469999995" blue="0.98823529409999999" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="UgS-Qc-GJ0"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                    <state key="normal" title="Home">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="homeButtonDidTap:" destination="-1" eventType="touchUpInside" id="1Br-Tf-3n5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfY-ej-lQm" customClass="SecondaryButton" customModule="Teztez" customModuleProvider="target">
+                    <rect key="frame" x="40" y="751" width="334" height="48"/>
+                    <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Vfb-x1-qGf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="17"/>
+                    <state key="normal" title="Restart">
+                        <color key="titleColor" red="0.10980392160000001" green="0.52941176469999995" blue="0.98823529409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="restartButtonDidTap:" destination="-1" eventType="touchUpInside" id="dao-zA-2ya"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="LRa-7K-uB4" firstAttribute="centerY" secondItem="4Ya-o2-fVP" secondAttribute="centerY" id="1DF-CP-63M"/>
+                <constraint firstItem="4Ya-o2-fVP" firstAttribute="trailing" secondItem="wfY-ej-lQm" secondAttribute="trailing" constant="40" id="4EU-gX-a2g"/>
+                <constraint firstItem="4Ya-o2-fVP" firstAttribute="trailing" secondItem="j7j-pt-5mG" secondAttribute="trailing" constant="40" id="4dA-ol-pan"/>
+                <constraint firstItem="4Ya-o2-fVP" firstAttribute="trailing" secondItem="aou-gC-WZc" secondAttribute="trailing" constant="20" id="4sp-Uh-qGA"/>
+                <constraint firstItem="j7j-pt-5mG" firstAttribute="top" secondItem="LRa-7K-uB4" secondAttribute="bottom" constant="191" id="AhX-dh-ocB"/>
+                <constraint firstItem="aou-gC-WZc" firstAttribute="top" secondItem="4Ya-o2-fVP" secondAttribute="top" constant="16" id="Dr0-Iz-3yd"/>
+                <constraint firstItem="wfY-ej-lQm" firstAttribute="leading" secondItem="4Ya-o2-fVP" secondAttribute="leading" constant="40" id="EA8-N3-f49"/>
+                <constraint firstItem="aou-gC-WZc" firstAttribute="leading" secondItem="4Ya-o2-fVP" secondAttribute="leading" constant="20" id="RFc-dG-FWU"/>
+                <constraint firstItem="4Ya-o2-fVP" firstAttribute="bottom" secondItem="wfY-ej-lQm" secondAttribute="bottom" constant="63" id="UM7-Be-VTR"/>
+                <constraint firstItem="wfY-ej-lQm" firstAttribute="top" secondItem="j7j-pt-5mG" secondAttribute="bottom" constant="8" id="V8l-no-cQA"/>
+                <constraint firstItem="j7j-pt-5mG" firstAttribute="leading" secondItem="4Ya-o2-fVP" secondAttribute="leading" constant="40" id="YW4-mk-wVQ"/>
+                <constraint firstItem="LRa-7K-uB4" firstAttribute="centerX" secondItem="4Ya-o2-fVP" secondAttribute="centerX" id="hCV-dJ-PnM"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="4Ya-o2-fVP"/>
+            <point key="canvasLocation" x="139" y="85"/>
+        </view>
+    </objects>
+</document>

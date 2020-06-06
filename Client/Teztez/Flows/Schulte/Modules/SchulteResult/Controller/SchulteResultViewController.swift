@@ -47,8 +47,8 @@ final class SchulteResultViewController: ViewController, SchulteResultPresentabl
     }
 
     @IBAction func restartButtonDidTap(_ sender: UIButton) {
-        let store = PersonalCoachStore()
-        let viewController = PersonalCoachViewController(store: store)
+        let store = SchulteConfigurationStore()
+        let viewController = SchulteConfigurationViewController(store: store)
         navigationController?.setViewControllers([viewController], animated: true)
     }
 
@@ -64,6 +64,7 @@ final class SchulteResultViewController: ViewController, SchulteResultPresentabl
                 self.messageLabel.heroModifiers = [.fade, .scale(0.5)]
                 self.homeButton.heroModifiers = [.fade]
                 self.restartButton.heroModifiers = [.fade]
+                self.restartButton.heroID = "button"
             }
         }.store(in: &cancellables)
     }

@@ -1,0 +1,16 @@
+/*
+  ColorMatchingConfiguration.strings
+  Teztez
+
+  Created by Adlet on 03/05/2020.
+  Copyright © 2020 Crococoders. All rights reserved.
+*/
+
+"title" = "Color Matching";
+"description" = "Make your configuration and start \nyour training";
+"durationTitle" = "Select duration";
+"durationDescription" = "You should select the number of blocks on one side. TezTez recommend to start from the lowest number and increase when it was easy";
+"start" = "Start";
+"continue" = "Continue";
+"restart" = "Restart";
+

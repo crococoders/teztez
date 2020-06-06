@@ -76,4 +76,11 @@ final class CoordinatorFactory {
         let coordinator = SettingsCoordinator(moduleFactory: ModuleFactory.shared, router: router)
         return coordinator
     }
+
+    func makeMatchingCoordinator() -> (coordinator: Coordinator & ColorMatchingCoordinatorOutput, module: Presentable) {
+        let rootCoontroller = CoordinatorNavigationController()
+        let coordinator = ColorMatchingCoordinator(moduleFactory: ModuleFactory.shared,
+                                                   router: Router(rootController: rootCoontroller))
+        return (coordinator, rootCoontroller)
+    }
 }

@@ -1,24 +1,24 @@
 //
-//  PersonalCoachResultViewController.swift
+//  ColorMatchingResultViewController.swift
 //  Teztez
 //
-//  Created by Almas Zainoldin on 02/05/2020.
+//  Created by Adlet on 06/05/2020.
 //  Copyright © 2020 Crococoders. All rights reserved.
 //
 
 import Combine
 import UIKit
 
-protocol PersonalCoachResultPresentable: Presentable {
+protocol ColorMatchingResultPresentable: Presentable {
     var onHomeButtonDidTap: Callback? { get set }
     var onRestartButtonDidTap: Callback? { get set }
 }
 
-final class PersonalCoachResultViewController: ViewController, PersonalCoachResultPresentable {
+final class ColorMatchingResultViewController: ViewController, ColorMatchingResultPresentable {
     var onHomeButtonDidTap: Callback?
     var onRestartButtonDidTap: Callback?
 
-    private let store: PersonalCoachResultStore
+    private let store: ColorMatchingResultStore
     private var cancellables = Set<AnyCancellable>()
 
     @IBOutlet var resultLabel: UILabel!
@@ -26,7 +26,7 @@ final class PersonalCoachResultViewController: ViewController, PersonalCoachResu
     @IBOutlet var homeButton: PrimaryButton!
     @IBOutlet var restartButton: SecondaryButton!
 
-    init(store: PersonalCoachResultStore) {
+    init(store: ColorMatchingResultStore) {
         self.store = store
         super.init(nibName: String(describing: Self.self), bundle: nil)
     }
@@ -37,9 +37,8 @@ final class PersonalCoachResultViewController: ViewController, PersonalCoachResu
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         setupObservers()
-        setupNavigationBar()
-        setupLocalization()
         store.dispatch(action: .didLoadView)
         restartButton.heroID = "button"
     }
@@ -49,8 +48,8 @@ final class PersonalCoachResultViewController: ViewController, PersonalCoachResu
     }
 
     @IBAction func restartButtonDidTap(_ sender: UIButton) {
-        let store = PersonalCoachStore()
-        let viewController = PersonalCoachViewController(store: store)
+        let store = ColorMatchingConfigurationStore()
+        let viewController = ColorMatchingConfigurationViewController(store: store)
         navigationController?.setViewControllers([viewController], animated: true)
     }
 
@@ -60,8 +59,8 @@ final class PersonalCoachResultViewController: ViewController, PersonalCoachResu
                 let self = self,
                 let state = state else { return }
             switch state {
-            case let .initial(speedResult):
-                self.resultLabel.text = R.string.personalCoachResult.resultMessage() + speedResult
+            case let .initial(scoreResult):
+                self.resultLabel.text = R.string.colorMatchingResult.resultMessage() + scoreResult
                 self.resultLabel.heroModifiers = [.fade, .scale(0.5)]
                 self.messageLabel.heroModifiers = [.fade, .scale(0.5)]
                 self.homeButton.heroModifiers = [.fade]
@@ -70,14 +69,19 @@ final class PersonalCoachResultViewController: ViewController, PersonalCoachResu
         }.store(in: &cancellables)
     }
 
+    private func setupUI() {
+        setupNavigationBar()
+        setupLocalization()
+    }
+
     private func setupNavigationBar() {
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = nil
     }
 
     private func setupLocalization() {
-        homeButton.setTitle(R.string.personalCoachResult.home(), for: .normal)
-        restartButton.setTitle(R.string.personalCoachResult.restart(), for: .normal)
-        messageLabel.text = R.string.personalCoachResult.goodJob()
+        homeButton.setTitle(R.string.colorMatchingResult.home(), for: .normal)
+        restartButton.setTitle(R.string.colorMatchingResult.restart(), for: .normal)
+        messageLabel.text = R.string.colorMatchingResult.goodJob()
     }
 }

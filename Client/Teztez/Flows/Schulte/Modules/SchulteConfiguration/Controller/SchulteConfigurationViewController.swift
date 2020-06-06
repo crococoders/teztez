@@ -47,6 +47,7 @@ final class SchulteConfigurationViewController: ViewController, SchulteConfigura
         setupNavigationBar()
         setupObservers()
         store.dispatch(action: .didLoadView)
+        startButton.heroID = "button"
     }
 
     @IBAction func startButtonDidTap(_ sender: UIButton) {
