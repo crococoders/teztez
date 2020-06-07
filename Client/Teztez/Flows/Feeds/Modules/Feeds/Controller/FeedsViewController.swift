@@ -87,7 +87,10 @@ final class FeedsViewController: ViewController, FeedsPresentable {
                 self.collectionViewDelegate.items = items
                 self.collectionView.reloadData()
             case let .infomrationSelected(details):
-                self.onInformationSelected?(details)
+                let vc = InformationDetailsViewController(store: InformationDetailsStore(details: details))
+                vc.modalPresentationStyle = .fullScreen
+                vc.isHeroEnabled = true
+                self.present(vc, animated: true)
             case .loading:
                 self.indicatorView.startAnimating()
                 self.indicatorView.isHidden = false

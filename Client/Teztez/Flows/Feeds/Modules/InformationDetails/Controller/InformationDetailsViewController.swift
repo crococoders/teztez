@@ -24,7 +24,6 @@ final class InformationDetailsViewController: ViewController, InformationDetails
     @IBOutlet private var textLabel: UILabel!
     @IBOutlet private var metaTitleLabel: UILabel!
     @IBOutlet private var titleLabel: UILabel!
-    @IBOutlet private var gradientView: UIView!
 
     init(store: InformationDetailsStore) {
         self.store = store
@@ -38,14 +37,16 @@ final class InformationDetailsViewController: ViewController, InformationDetails
     override func viewDidLoad() {
         super.viewDidLoad()
         setupObservers()
-        gradientView.applyGradient(colors: [UIColor.black.withAlphaComponent(0.8).cgColor,
-                                            UIColor.clear.cgColor],
-                                   locations: [0.0, 0.8],
-                                   direction: .topToBottom)
+        metaTitleLabel.heroModifiers = [.fade, .scale(0.5)]
+        titleLabel.heroModifiers = [.fade, .scale(0.5)]
+//        gradientView.applyGradient(colors: [UIColor.black.withAlphaComponent(0.8).cgColor,
+//                                            UIColor.clear.cgColor],
+//                                   locations: [0.0, 0.8],
+//                                   direction: .topToBottom)
     }
 
     @IBAction func closeButtonDidTap() {
-        onCloseButtonDidTap?()
+        dismiss(animated: true)
     }
 
     private func setupObservers() {
@@ -58,6 +59,9 @@ final class InformationDetailsViewController: ViewController, InformationDetails
                 self.titleLabel.text = title
                 self.metaTitleLabel.text = metaTitle
                 self.imageView.kf.setImage(with: imageURL)
+                self.titleLabel.heroID = title
+                self.metaTitleLabel.heroID = metaTitle
+                self.imageView.heroID = imageURL?.absoluteString
             }
         }.store(in: &cancellables)
     }

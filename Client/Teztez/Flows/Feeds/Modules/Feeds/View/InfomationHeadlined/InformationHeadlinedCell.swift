@@ -15,7 +15,6 @@ final class InformationHeadlinedCell: UICollectionViewCell {
     @IBOutlet private var metaTitleLabel: UILabel!
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var coverImageView: UIImageView!
-    @IBOutlet private var gradientView: UIView!
 
     func configure(with viewModel: InformationHeadlinedViewModel) {
         weekDayLabel.text = viewModel.weekDay
@@ -23,9 +22,12 @@ final class InformationHeadlinedCell: UICollectionViewCell {
         metaTitleLabel.text = viewModel.metaTitle
         titleLabel.text = viewModel.title
         coverImageView.kf.setImage(with: URL(string: viewModel.imageURL))
-        gradientView.layer.sublayers?.remove(at: 0)
-        gradientView.applyGradient(colors: [UIColor.black.withAlphaComponent(0.8).cgColor, UIColor.clear.cgColor],
-                                   locations: [0.0, 0.8],
-                                   direction: .topToBottom)
+//        gradientView.layer.sublayers?.remove(at: 0)
+//        gradientView.applyGradient(colors: [UIColor.black.withAlphaComponent(0.8).cgColor, UIColor.clear.cgColor],
+//                                   locations: [0.0, 0.8],
+//                                   direction: .topToBottom)
+        titleLabel.heroID = viewModel.title
+        metaTitleLabel.heroID = viewModel.metaTitle
+        coverImageView.heroID = viewModel.imageURL
     }
 }

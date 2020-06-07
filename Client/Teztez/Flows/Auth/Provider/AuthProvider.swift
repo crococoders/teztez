@@ -20,7 +20,7 @@ final class AuthProvider {
                                      "password": viewModel.password,
                                      "confirmPassword": viewModel.confirmPassword]
 
-        AF.request("http://139.59.14.251:8080/auth/register", method: .post, parameters: params)
+        AF.request("http://159.65.155.64::8080/auth/register", method: .post, parameters: params)
             .responseDecodable(of: UserResponse.self, decoder: decoder) { response in
 
                 switch response.result {
@@ -39,7 +39,7 @@ final class AuthProvider {
 
         let headers: HTTPHeaders = [.authorization(username: username, password: password)]
 
-        AF.request("http://139.59.14.251:8080/auth/login", method: .post, headers: headers)
+        AF.request("http://159.65.155.64::8080/auth/login", method: .post, headers: headers)
             .responseDecodable(of: TokenResponse.self, decoder: decoder) { response in
                 switch response.result {
                 case let .success(token):

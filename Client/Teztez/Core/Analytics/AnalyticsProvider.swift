@@ -21,7 +21,7 @@ final class AnalyticsProvider {
         guard let token = UserSession.shared.token else { return }
         let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
 
-        AF.request("http://139.59.14.251:8080/analytics",
+        AF.request("http://159.65.155.64::8080/analytics",
                    method: .post,
                    parameters: body,
                    encoder: JSONParameterEncoder.default,
