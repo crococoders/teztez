@@ -48,4 +48,15 @@ final class SettingsTableViewDelegate: NSObject, UITableViewDelegate {
                                       cornerRadii: CGSize(width: cornerRadius, height: cornerRadius)).cgPath
         cell.layer.mask = maskLayer
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 3 {
+            switch indexPath.row {
+            case 1:
+                store.dispatch(action: .didTapPrivacyPolicy)
+            default:
+                store.dispatch(action: .didTapTermsOfConditions)
+            }
+        }
+    }
 }

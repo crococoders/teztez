@@ -186,6 +186,10 @@
 		C4CFD594245CC491009B902F /* BackwardsConvertText.strings in Resources */ = {isa = PBXBuildFile; fileRef = 356B830EFE866BDD920275CB /* BackwardsConvertText.strings */; };
 		C4D138DD244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D138DC244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift */; };
 		C4D138DF244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D138DE244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift */; };
+		C4D8A8F9248CC5DE009FF9DD /* TermsAndConditionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8A8F7248CC5DE009FF9DD /* TermsAndConditionsViewController.swift */; };
+		C4D8A8FA248CC5DE009FF9DD /* TermsAndConditionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D8A8F8248CC5DE009FF9DD /* TermsAndConditionsViewController.xib */; };
+		C4D8A8FD248CC64A009FF9DD /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D8A8FB248CC64A009FF9DD /* PrivacyPolicyViewController.swift */; };
+		C4D8A8FE248CC64A009FF9DD /* PrivacyPolicyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4D8A8FC248CC64A009FF9DD /* PrivacyPolicyViewController.xib */; };
 		C4DE2521246433870003C85E /* FeedsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE2520246433870003C85E /* FeedsProvider.swift */; };
 		C4DE5C1B2466B99600434BBB /* UIButton+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE5C1A2466B99600434BBB /* UIButton+ActivityIndicator.swift */; };
 		C4DE5C1E2466C8E400434BBB /* SettingsModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE5C1D2466C8E400434BBB /* SettingsModuleFactory.swift */; };
@@ -450,6 +454,10 @@
 		C4C8FBF82461CE00006388FA /* FeedsItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsItemType.swift; sourceTree = "<group>"; };
 		C4D138DC244DF8DC008215C0 /* CompositeSceneDelegateConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeSceneDelegateConfigurator.swift; sourceTree = "<group>"; };
 		C4D138DE244DFA2C008215C0 /* SceneDelegateConfiguratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegateConfiguratorFactory.swift; sourceTree = "<group>"; };
+		C4D8A8F7248CC5DE009FF9DD /* TermsAndConditionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsViewController.swift; sourceTree = "<group>"; };
+		C4D8A8F8248CC5DE009FF9DD /* TermsAndConditionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TermsAndConditionsViewController.xib; sourceTree = "<group>"; };
+		C4D8A8FB248CC64A009FF9DD /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
+		C4D8A8FC248CC64A009FF9DD /* PrivacyPolicyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PrivacyPolicyViewController.xib; sourceTree = "<group>"; };
 		C4DE2520246433870003C85E /* FeedsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedsProvider.swift; sourceTree = "<group>"; };
 		C4DE5C1A2466B99600434BBB /* UIButton+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		C4DE5C1D2466C8E400434BBB /* SettingsModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsModuleFactory.swift; sourceTree = "<group>"; };
@@ -707,6 +715,10 @@
 				C4DE5C2D2466D44500434BBB /* SettingsTableViewDelegate.swift */,
 				B0B5A4296C52DE8A1EA64E0A /* SettingsViewController.swift */,
 				C4DE5C232466CE8000434BBB /* SettingsViewController.xib */,
+				C4D8A8F7248CC5DE009FF9DD /* TermsAndConditionsViewController.swift */,
+				C4D8A8F8248CC5DE009FF9DD /* TermsAndConditionsViewController.xib */,
+				C4D8A8FB248CC64A009FF9DD /* PrivacyPolicyViewController.swift */,
+				C4D8A8FC248CC64A009FF9DD /* PrivacyPolicyViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2516,6 +2528,7 @@
 				C4F818EF244B289400AE73CE /* LaunchScreen.storyboard in Resources */,
 				C4F8198E244C562400AE73CE /* SFProRounded-Regular.otf in Resources */,
 				C441A651246540C200038F74 /* Auth.strings in Resources */,
+				C4D8A8FE248CC64A009FF9DD /* PrivacyPolicyViewController.xib in Resources */,
 				C463DC8F245CAF9600E265FF /* ActivityHeaderView.xib in Resources */,
 				C489FC11248A553100FB79E3 /* ColorMatchingResultViewController.xib in Resources */,
 				C4C0670A2458AD1C00EF39B8 /* SliderView.xib in Resources */,
@@ -2564,6 +2577,7 @@
 				C4F2D6702488297D00838527 /* ColorMatchingTraining.strings in Resources */,
 				C4C06701245898CA00EF39B8 /* FontSizeChangeViewController.xib in Resources */,
 				C463DC172459D32C00E265FF /* TextInput.strings in Resources */,
+				C4D8A8FA248CC5DE009FF9DD /* TermsAndConditionsViewController.xib in Resources */,
 				C4B79910248925F9005C1DF3 /* BlockCell.xib in Resources */,
 				C41FA84624608CD800E515EC /* SchulteConfigurationViewController.xib in Resources */,
 				C4F81988244C55DF00AE73CE /* SFProDisplay-Medium.otf in Resources */,
@@ -2668,6 +2682,7 @@
 				C41FA84924608CD800E515EC /* SchulteConfigurationStore.swift in Sources */,
 				C4F2D66F2488180200838527 /* ColorMatchingCoordinator.swift in Sources */,
 				C489FBDA248A045300FB79E3 /* ColorMatchingTrainingFacade.swift in Sources */,
+				C4D8A8F9248CC5DE009FF9DD /* TermsAndConditionsViewController.swift in Sources */,
 				C4F81958244B86EC00AE73CE /* ColorStyles.swift in Sources */,
 				C41FA84D24608CD800E515EC /* SchulteResultStore.swift in Sources */,
 				C41FA84324608CD800E515EC /* SchulteTrainingStore.swift in Sources */,
@@ -2676,6 +2691,7 @@
 				C4197B902450AC5700811F37 /* ActivitiesStore.swift in Sources */,
 				C4C8FBF92461CE00006388FA /* FeedsItemType.swift in Sources */,
 				C4197B8C2450ABA400811F37 /* ActivitiesCoordinator.swift in Sources */,
+				C4D8A8FD248CC64A009FF9DD /* PrivacyPolicyViewController.swift in Sources */,
 				C4A98279244E00A5005E98BC /* ThirdPartiesSceneDelegateConfigurator.swift in Sources */,
 				C463DC77245CAF8500E265FF /* PersonalCoachStore.swift in Sources */,
 				C463DC96245CB11700E265FF /* ActivitiesIconViewModel.swift in Sources */,
