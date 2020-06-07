@@ -1,0 +1,20 @@
+{
+  "extends": "@anvilabs/tslint-config",
+  "rules": {
+    // core rules
+    "strict-boolean-expressions": [
+      true,
+      "allow-null-union",
+      "allow-undefined-union",
+      "allow-boolean-or-undefined",
+      "allow-mix",
+      "ignore-rhs"
+    ],
+
+    // tslint-immutable rules
+    "no-object-mutation": [true, {"ignore-prefix": ["this.", "mutable", ""]}],
+
+    // tslint-sonarts rules
+    "no-collapsible-if": false
+  }
+}

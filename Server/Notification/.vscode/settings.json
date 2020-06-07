@@ -1,0 +1,80 @@
+{
+  "editor.formatOnSave": false,
+  "editor.insertSpaces": true,
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": true
+  },
+
+  "emmet.showExpandedAbbreviation": "never",
+
+  "eslint.autoFixOnSave": false,
+  "eslint.options": {
+    "extensions": [".js", ".ts", ".tsx"],
+    "rules": {
+      "sort-imports-es6-autofix/sort-imports-es6": "off"
+    }
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "graphql",
+      "autoFix": true
+    }
+  ],
+
+  "files.associations": {
+    ".graphqlconfig": "json",
+    "Dockerfile-*": "dockerfile",
+    "tslint.json": "jsonc"
+  },
+  "files.autoSave": "off",
+  "files.exclude": {
+    "**/.git/": true,
+    "**/node_modules/": true,
+    "**/.DS_Store": true,
+    "*/build/": true,
+    "*/*/build/": true,
+    ".eslintcache": true
+  },
+
+  "search.exclude": {
+    "**/node_modules/": true,
+  },
+
+  "javascript.implicitProjectConfig.checkJs": true,
+  "javascript.suggestionActions.enabled": false,
+  "javascript.validate.enable": true,
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.disableAutomaticTypeAcquisition": true,
+  "typescript.format.enable": false,
+
+  "css.validate": false,
+  "scss.validate": false,
+  "tslint.enable": false,
+  "java.autobuild.enabled": false,
+  "java.configuration.updateBuildConfiguration": "disabled",
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": false
+  }
+}

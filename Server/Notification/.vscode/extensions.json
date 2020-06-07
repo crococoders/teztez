@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "apollographql.vscode-apollo",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "jpoissonnier.vscode-styled-components",
+    "Orta.vscode-jest",
+    "orta.vscode-react-native-storybooks",
+    "PeterJausovec.vscode-docker",
+    "shinnn.stylelint"
+  ]
+}

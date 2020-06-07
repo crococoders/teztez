@@ -1,0 +1,6 @@
+# Dotfiles
+!.*
+
+# Node.js
+**/node_modules/
+
