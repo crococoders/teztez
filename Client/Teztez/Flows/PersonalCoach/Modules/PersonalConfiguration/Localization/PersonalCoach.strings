@@ -1,0 +1,19 @@
+/*
+  PersonalCoach.strings
+  Teztez
+
+  Created by Almas Zainoldin on 01/05/2020.
+  Copyright © 2020 Crococoders. All rights reserved.
+*/
+
+"title" = "Personal Coach";
+"description" = "Make your configuration and check \nyour reading speed";
+"inputTextTitle" = "Enter your text here";
+"inputTextDescription" = "This text will be used to check your reading speed. If you dont have any text, don’t warry, Teztez has its own text for you ";
+"inputTextYourText" = "Your text";
+"inputTextDefaultText" = "Default text";
+"selectSpeedTitle" = "Select your speed";
+"selectSpeedDescription" = "You can choose any speed which you want to test. Range from 100 wpm to 350 wpm";
+"start" = "Start";
+"continue" = "Continue";
+"restart" = "Restart";

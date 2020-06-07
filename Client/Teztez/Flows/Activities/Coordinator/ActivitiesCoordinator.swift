@@ -10,9 +10,11 @@ import Foundation
 
 final class ActivitiesCoordinator: ParentCoordinator {
     private let moduleFactory: ActivitiesModuleFactory
+    private let coordinatorFactory: CoordinatorFactory
 
-    init(moduleFactory: ActivitiesModuleFactory, router: Router) {
+    init(moduleFactory: ActivitiesModuleFactory, coordinatorFactory: CoordinatorFactory, router: Router) {
         self.moduleFactory = moduleFactory
+        self.coordinatorFactory = coordinatorFactory
         super.init(router: router)
     }
 
@@ -21,7 +23,28 @@ final class ActivitiesCoordinator: ParentCoordinator {
     }
 
     private func showActivites() {
-        let activities = moduleFactory.makeActivities()
+        var activities = moduleFactory.makeActivities()
+        activities.onItemDidSelect = { [weak self] itemType in
+            self?.runFlow(by: itemType)
+        }
         router.setRootModule(activities)
+    }
+
+    private func runFlow(by itemType: ActivitiesItemType) {
+        switch itemType {
+        case .coach:
+            runPersoalCoachFlow()
+        default:
+            break
+        }
+    }
+
+    private func runPersoalCoachFlow() {
+        let (coordinator, module) = coordinatorFactory.makePersonalCoachCoordinator()
+        coordinator.onFlowDidFinish = { [weak self, weak coordinator] in
+            guard let coordinator = coordinator else { return }
+            self?.dismiss(child: coordinator)
+        }
+        show((coordinator, module), with: .presentInFullScreen(animated: true))
     }
 }
