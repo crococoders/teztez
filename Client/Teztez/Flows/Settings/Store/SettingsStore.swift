@@ -12,10 +12,14 @@ import Models
 final class SettingsStore {
     enum Action {
         case didViewLoad
+        case didTapPrivacyPolicy
+        case didTapTermsOfConditions
     }
 
     enum State {
         case initial(sections: [SettingsSectionType])
+        case navigateToPrivacyPolicy
+        case navigateToTermsOfConditions
     }
 
     @Published private(set) var state: State?
@@ -26,6 +30,10 @@ final class SettingsStore {
         case .didViewLoad:
             compileInitialSections()
             state = .initial(sections: sections)
+        case .didTapPrivacyPolicy:
+            state = .navigateToPrivacyPolicy
+        case .didTapTermsOfConditions:
+            state = .navigateToTermsOfConditions
         }
     }
 

@@ -17,9 +17,9 @@ protocol FeedsPresentable: Presentable {
 private enum Constants {
     static let ImageSizeForLargeState: CGFloat = 40
     static let ImageRightMargin: CGFloat = 16
-    static let ImageBottomMarginForLargeState: CGFloat = 4
-    static let ImageBottomMarginForSmallState: CGFloat = 4
-    static let ImageSizeForSmallState: CGFloat = 20
+    static let ImageBottomMarginForLargeState: CGFloat = 12
+    static let ImageBottomMarginForSmallState: CGFloat = 6
+    static let ImageSizeForSmallState: CGFloat = 32
     static let NavBarHeightSmallState: CGFloat = 44
     static let NavBarHeightLargeState: CGFloat = 96.5
 }
@@ -73,7 +73,12 @@ final class FeedsViewController: ViewController, FeedsPresentable {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         profileButton.isHidden = true
-        title = ""
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        guard let height = navigationController?.navigationBar.frame.height else { return }
+        moveAndResizeProfileButton(for: height)
     }
 
     private func setupObservers() {
@@ -107,7 +112,6 @@ final class FeedsViewController: ViewController, FeedsPresentable {
         guard let name = UserSession.shared.name else { return }
         navigationItem.title = "Hello! \(name)"
         navigationController?.navigationBar.barTintColor = .black
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     private func setupUI() {
@@ -139,6 +143,33 @@ final class FeedsViewController: ViewController, FeedsPresentable {
                                      profileButton.bottomAnchor.constraint(equalTo: navigationBar.bottomAnchor, constant: -Constants.ImageBottomMarginForLargeState),
                                      profileButton.heightAnchor.constraint(equalToConstant: Constants.ImageSizeForLargeState),
                                      profileButton.widthAnchor.constraint(equalTo: profileButton.heightAnchor)])
+    }
+
+    private func moveAndResizeProfileButton(for height: CGFloat) {
+        let coeff: CGFloat = {
+            let delta = height - Constants.NavBarHeightSmallState
+            let heightDifferenceBetweenStates = (Constants.NavBarHeightLargeState - Constants.NavBarHeightSmallState)
+            return delta / heightDifferenceBetweenStates
+        }()
+
+        let factor = Constants.ImageSizeForSmallState / Constants.ImageSizeForLargeState
+
+        let scale: CGFloat = {
+            let sizeAddendumFactor = coeff * (1.0 - factor)
+            return min(1.0, sizeAddendumFactor + factor)
+        }()
+
+        let sizeDiff = Constants.ImageSizeForLargeState * (1.0 - factor)
+        let yTranslation: CGFloat = {
+            let maxYTranslation = Constants.ImageBottomMarginForLargeState - Constants.ImageBottomMarginForSmallState + sizeDiff
+            return max(0, min(maxYTranslation, maxYTranslation - coeff * (Constants.ImageBottomMarginForSmallState + sizeDiff)))
+        }()
+
+        let xTranslation = max(0, sizeDiff - coeff * sizeDiff)
+
+        profileButton.transform = CGAffineTransform.identity
+            .scaledBy(x: scale, y: scale)
+            .translatedBy(x: xTranslation, y: yTranslation)
     }
 
     @objc

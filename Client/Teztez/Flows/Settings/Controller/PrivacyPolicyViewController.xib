@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFProText-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrivacyPolicyViewController" customModule="Teztez" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomView" destination="J9U-Kf-5wp" id="zfG-gT-jj6"/>
+                <outlet property="textView" destination="J9U-Kf-5wp" id="O7W-DN-nmn"/>
+                <outlet property="titleLabel" destination="47n-Md-sbx" id="kmf-Yq-SMm"/>
+                <outlet property="view" destination="fJM-ds-Bm0" id="UGm-ca-Hi2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="fJM-ds-Bm0">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47n-Md-sbx">
+                    <rect key="frame" x="20" y="121" width="131" height="24"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9U-Kf-5wp">
+                    <rect key="frame" x="17" y="165" width="377" height="697"/>
+                    <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="20"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="355-pg-q4h">
+                    <rect key="frame" x="0.0" y="711" width="414" height="151"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="151" id="KQd-Fv-Fhh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="rAM-ao-LpJ" firstAttribute="trailing" secondItem="355-pg-q4h" secondAttribute="trailing" id="2dN-lX-h9e"/>
+                <constraint firstItem="J9U-Kf-5wp" firstAttribute="top" secondItem="47n-Md-sbx" secondAttribute="bottom" constant="20" id="4QX-ih-7wH"/>
+                <constraint firstItem="355-pg-q4h" firstAttribute="leading" secondItem="rAM-ao-LpJ" secondAttribute="leading" id="Hgk-hU-8HK"/>
+                <constraint firstItem="J9U-Kf-5wp" firstAttribute="leading" secondItem="rAM-ao-LpJ" secondAttribute="leading" constant="17" id="T91-kW-iD4"/>
+                <constraint firstItem="47n-Md-sbx" firstAttribute="leading" secondItem="rAM-ao-LpJ" secondAttribute="leading" constant="20" id="ZOa-if-dGY"/>
+                <constraint firstItem="47n-Md-sbx" firstAttribute="top" secondItem="rAM-ao-LpJ" secondAttribute="top" constant="33" id="ZqC-PS-512"/>
+                <constraint firstItem="355-pg-q4h" firstAttribute="bottom" secondItem="rAM-ao-LpJ" secondAttribute="bottom" id="axu-lb-6s5"/>
+                <constraint firstItem="rAM-ao-LpJ" firstAttribute="trailing" secondItem="J9U-Kf-5wp" secondAttribute="trailing" constant="20" id="bSq-on-HDH"/>
+                <constraint firstItem="rAM-ao-LpJ" firstAttribute="bottom" secondItem="J9U-Kf-5wp" secondAttribute="bottom" id="qjm-LW-Y5U"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="rAM-ao-LpJ"/>
+            <point key="canvasLocation" x="137.68115942028987" y="124.55357142857142"/>
+        </view>
+    </objects>
+</document>

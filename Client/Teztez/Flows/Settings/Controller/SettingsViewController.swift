@@ -55,6 +55,12 @@ final class SettingsViewController: ViewController, SettingsPresentable {
                 self.tableViewDataSource.sections = sections
                 self.tableViewDelegate.sections = sections
                 self.tableView.reloadData()
+            case .navigateToPrivacyPolicy:
+                let vc = PrivacyPolicyViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
+            case .navigateToTermsOfConditions:
+                let vc = TermsAndConditionsViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }.store(in: &cancellables)
     }
