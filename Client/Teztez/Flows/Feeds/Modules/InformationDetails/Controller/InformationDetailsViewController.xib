@@ -17,7 +17,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InformationDetailsViewController" customModule="Teztez" customModuleProvider="target">
             <connections>
-                <outlet property="gradientView" destination="8TX-2s-5JI" id="mMz-t5-2hf"/>
                 <outlet property="imageView" destination="x6D-aI-D6D" id="SoT-g7-C50"/>
                 <outlet property="metaTitleLabel" destination="Mur-ze-Qnd" id="30F-Nk-oQw"/>
                 <outlet property="textLabel" destination="4p8-0j-waU" id="6dt-DQ-Upc"/>
@@ -43,10 +42,6 @@
                                         <constraint firstAttribute="height" constant="424" id="86n-xx-pwb"/>
                                     </constraints>
                                 </imageView>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8TX-2s-5JI">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="424"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4p8-0j-waU">
                                     <rect key="frame" x="20" y="456" width="374" height="310.5"/>
                                     <attributedString key="attributedText">
@@ -133,16 +128,11 @@ learning to play the ukulele with your phone, but we bet you use your calculator
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="Mur-ze-Qnd" firstAttribute="leading" secondItem="xRU-V1-xO6" secondAttribute="leading" constant="20" id="0DG-Xx-w8c"/>
-                                <constraint firstItem="x6D-aI-D6D" firstAttribute="bottom" secondItem="8TX-2s-5JI" secondAttribute="bottom" id="1cc-xG-JCg"/>
                                 <constraint firstItem="x6D-aI-D6D" firstAttribute="leading" secondItem="xRU-V1-xO6" secondAttribute="leading" id="4jS-k2-2ob"/>
                                 <constraint firstAttribute="trailing" secondItem="x6D-aI-D6D" secondAttribute="trailing" id="EKV-Zk-QSC"/>
                                 <constraint firstAttribute="bottom" secondItem="4p8-0j-waU" secondAttribute="bottom" constant="32" id="JaG-2O-tGx"/>
-                                <constraint firstItem="x6D-aI-D6D" firstAttribute="top" secondItem="8TX-2s-5JI" secondAttribute="top" id="Jfg-jA-uhv"/>
                                 <constraint firstItem="4p8-0j-waU" firstAttribute="leading" secondItem="xRU-V1-xO6" secondAttribute="leading" constant="20" id="M9t-yO-kIu"/>
-                                <constraint firstItem="x6D-aI-D6D" firstAttribute="trailing" secondItem="8TX-2s-5JI" secondAttribute="trailing" id="OUC-Jm-VxT"/>
-                                <constraint firstItem="x6D-aI-D6D" firstAttribute="leading" secondItem="8TX-2s-5JI" secondAttribute="leading" id="PAS-Dt-21l"/>
                                 <constraint firstAttribute="trailing" secondItem="4p8-0j-waU" secondAttribute="trailing" constant="20" id="ZWn-XU-PzO"/>
-                                <constraint firstItem="x6D-aI-D6D" firstAttribute="centerY" secondItem="8TX-2s-5JI" secondAttribute="centerY" id="Zi6-Tg-5Q4"/>
                                 <constraint firstItem="4p8-0j-waU" firstAttribute="top" secondItem="x6D-aI-D6D" secondAttribute="bottom" constant="32" id="Zmj-TP-zjF"/>
                                 <constraint firstItem="YfK-Hx-hB7" firstAttribute="leading" secondItem="xRU-V1-xO6" secondAttribute="leading" constant="20" id="bce-4d-EHg"/>
                                 <constraint firstAttribute="trailing" secondItem="YfK-Hx-hB7" secondAttribute="trailing" constant="120" id="isK-wU-2UH"/>

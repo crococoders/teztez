@@ -20,7 +20,7 @@ final class FeedsProvider {
         decoder.dateDecodingStrategy = .iso8601
         let headers: HTTPHeaders = ["Authorization": "Bearer \(token)",
                                     "Accept": "application/json"]
-        AF.request("http://139.59.14.251:8080/feed/\(userId)", headers: headers).responseDecodable(of: [Block].self, decoder: decoder) { response in
+        AF.request("http://159.65.155.64:8080/feed/\(userId)", headers: headers).responseDecodable(of: [Block].self, decoder: decoder) { response in
             switch response.result {
             case let .success(blocks):
                 callback(.success(blocks))

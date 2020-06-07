@@ -36,10 +36,6 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </imageView>
-                    <view contentMode="scaleToFill" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="Eex-OJ-Scu">
-                        <rect key="frame" x="0.0" y="83" width="343" height="359"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="MONDAY 22 MARCH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rL1-GO-EYJ">
                         <rect key="frame" x="0.0" y="24" width="131" height="16"/>
                         <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="13"/>
@@ -66,16 +62,12 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Eex-OJ-Scu" firstAttribute="top" secondItem="vTU-6J-Ubc" secondAttribute="top" id="0wN-4b-vUH"/>
                     <constraint firstAttribute="trailing" secondItem="vTU-6J-Ubc" secondAttribute="trailing" id="6LH-WV-xGw"/>
                     <constraint firstAttribute="trailing" secondItem="zUv-X4-hL0" secondAttribute="trailing" constant="64" id="6o7-ZA-jaa"/>
                     <constraint firstItem="7Ki-4e-4XY" firstAttribute="top" secondItem="vTU-6J-Ubc" secondAttribute="top" constant="20" id="AcE-Ih-Blk"/>
-                    <constraint firstItem="Eex-OJ-Scu" firstAttribute="trailing" secondItem="vTU-6J-Ubc" secondAttribute="trailing" id="GGH-if-End"/>
                     <constraint firstItem="zUv-X4-hL0" firstAttribute="top" secondItem="7Ki-4e-4XY" secondAttribute="bottom" id="IJY-5G-dgt"/>
-                    <constraint firstItem="Eex-OJ-Scu" firstAttribute="leading" secondItem="vTU-6J-Ubc" secondAttribute="leading" id="Mcv-py-nS4"/>
                     <constraint firstItem="vTU-6J-Ubc" firstAttribute="leading" secondItem="kif-0T-DIN" secondAttribute="leading" id="Sru-SX-xTb"/>
                     <constraint firstItem="1ku-4T-XY1" firstAttribute="top" secondItem="rL1-GO-EYJ" secondAttribute="bottom" id="UDv-36-SDA"/>
-                    <constraint firstItem="Eex-OJ-Scu" firstAttribute="bottom" secondItem="vTU-6J-Ubc" secondAttribute="bottom" id="X7p-Vt-tCW"/>
                     <constraint firstItem="7Ki-4e-4XY" firstAttribute="leading" secondItem="kif-0T-DIN" secondAttribute="leading" constant="20" id="Zqu-OA-wxp"/>
                     <constraint firstItem="vTU-6J-Ubc" firstAttribute="top" secondItem="1ku-4T-XY1" secondAttribute="bottom" constant="16" id="f74-79-QdT"/>
                     <constraint firstItem="1ku-4T-XY1" firstAttribute="leading" secondItem="kif-0T-DIN" secondAttribute="leading" id="jis-hP-1Na"/>
@@ -90,7 +82,6 @@
             <connections>
                 <outlet property="coverImageView" destination="vTU-6J-Ubc" id="NbL-Om-wAQ"/>
                 <outlet property="dateLabel" destination="rL1-GO-EYJ" id="yhQ-94-bmg"/>
-                <outlet property="gradientView" destination="Eex-OJ-Scu" id="AZ1-62-q5i"/>
                 <outlet property="metaTitleLabel" destination="7Ki-4e-4XY" id="HMT-IE-0s8"/>
                 <outlet property="titleLabel" destination="zUv-X4-hL0" id="EtK-wX-JcL"/>
                 <outlet property="weekDayLabel" destination="1ku-4T-XY1" id="k4D-Dg-cRR"/>
