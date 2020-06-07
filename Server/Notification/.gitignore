@@ -1,0 +1,23 @@
+# macOS
+**/.DS_Store
+
+# Node.js
+**/node_modules/
+**/npm-debug.log
+**/yarn-error.log
+
+# JetBrains IDE
+/.idea/
+
+# Private environment variables
+/.env
+**/*.env
+
+# Compilation artifacts
+/*/build/
+
+# Temporary files
+/tmp/
+
+# ESLint
+/.eslintcache

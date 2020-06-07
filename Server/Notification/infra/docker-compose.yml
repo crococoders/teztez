@@ -1,0 +1,39 @@
+version: '3'
+services:
+  # postgres:
+  #   image: postgres:10.5-alpine
+  #   environment:
+  #     - POSTGRES_USER
+  #     - POSTGRES_PASSWORD
+  #     - POSTGRES_DB
+  #   ports:
+  #     - 5432:5432
+  redis:
+    image: redis:4.0-alpine
+    command: redis-server --requirepass redis
+    ports:
+      - 6379:6379
+      
+  api:
+    build:
+      context: ../.
+      dockerfile: Dockerfile
+      args:
+        NODE_ENV: development
+    command: yarn run start:dev
+    depends_on:
+      - redis
+      # - postgres
+    volumes:
+      - ../.:/usr/app/:delegated
+    env_file:
+      - ../.env
+    environment:
+      - NODE_ENV=development
+      - FORCE_MIGRATE
+      - FORCE_SEED
+      - LOAD_TESTING
+      - INSPECT=${INSPECT_API-false}
+    ports:
+      - 3000:3000
+      - 9229:9229
