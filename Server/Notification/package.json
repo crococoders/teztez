@@ -36,7 +36,7 @@
     "http-errors": "^1.7.3",
     "ioredis": "^4.17.3",
     "knex": "^0.20.13",
-    "luxon": "^1.23.0",
+    "luxon": "^2.5.2",
     "node-telegram-bot-api": "^0.50.0",
     "nodemon": "^2.0.2",
     "objection": "^2.1.3",
