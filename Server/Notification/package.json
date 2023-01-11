@@ -35,7 +35,7 @@
     "fp-ts": "^2.5.3",
     "http-errors": "^1.7.3",
     "ioredis": "^4.17.3",
-    "knex": "^0.20.13",
+    "knex": "^2.4.0",
     "luxon": "^1.23.0",
     "node-telegram-bot-api": "^0.50.0",
     "nodemon": "^2.0.2",
